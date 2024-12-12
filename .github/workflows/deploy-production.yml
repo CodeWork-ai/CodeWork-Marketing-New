@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch: 
 
 jobs:
   build_and_deploy_job:
@@ -16,35 +16,17 @@ jobs:
         with:
           submodules: true
           lfs: false
-
-      # Install dependencies before building
-      - name: Install Dependencies
-        run: npm install
-
-      # Build the app with the production flag
-      - name: Build the App
-        run: npm run build:production
-
-      # Ensure you set the correct output folder here (example: build, dist, etc.)
-      - name: Check build output size
-        run: du -sh ./build  # Adjust 'build' to your actual output folder
-
-      - name: Remove Unnecessary Files
-        run: |
-          find ./build -name "*.map" -type f -delete  # Remove source maps if applicable
-          find ./build -name "test*" -type f -delete  # Remove test files if any
-
-      - name: Debugging File Sizes
-        run: du -sh ./build/* | sort -hr  # List files by size in the output folder
-
-      - name: Deploy to Azure Static Web Apps
+      - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_PLANT_0803BCA10 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          app_location: "/"           # App source code path (adjust if necessary)
-          api_location: ""            # Leave blank if no API is present
-          output_location: "build"    # Output folder (adjust to your actual build output folder)
-
+          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "/" # App source code path
+          api_location: "" # Api source code path - optional
+          output_location: "" # Built app content directory - optional
+          app_build_command: 'npm run build:production'
+          api_build_command: 'rm -rf ./node_modules/@next/swc-* && rm -rf ./.next/cache'
