@@ -24,7 +24,7 @@ jobs:
           node-version: '16' # Adjust the version to match your project requirements
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --force
 
       - name: Build and Deploy
         id: builddeploy
