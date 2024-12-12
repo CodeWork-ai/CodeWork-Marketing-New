@@ -1,0 +1,147 @@
+"use client";
+
+import React, { useState, useRef } from "react";
+import { FaHospital, FaChalkboardTeacher, FaShoppingCart, FaChartLine, FaShieldAlt, FaBitcoin, FaRobot } from "react-icons/fa";
+import { cn } from "@/lib/utils";
+import { AnimatedBeam } from "../../../components/ui/animated-beam";
+
+const Circle = React.forwardRef(({ className, children, onMouseEnter, onMouseLeave }, ref) => {
+    return (
+        <div
+            ref={ref}
+            className={cn(
+                "z-10 flex size-12 md:size-28 items-center justify-center rounded-full border-2 border-gray-600 bg-black bg-opacity-40 p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+                className
+            )}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+        >
+            {children}
+        </div>
+    );
+});
+
+Circle.displayName = "Circle";
+
+export function AnimatedBeamDemo() {
+    const containerRef = useRef(null);
+    const divRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+    const [hoveredIcon, setHoveredIcon] = useState(null);
+
+    const iconDetails = [
+        {
+            ref: divRefs[0],
+            icon: <FaHospital className="text-red-400 w-10 h-10" />,
+            title: "AI in healthcare, predictive analytics in healthcare",
+            description: " AI-powered diagnostics, blockchain in healthcare. Enhance patient care with AI-driven diagnostics, personalized treatments, and secure Electronic Health Records (EHR). ",
+        },
+        {
+            ref: divRefs[1],
+            icon: <FaChalkboardTeacher className="text-blue-400 w-10 h-10" />,
+            title: "AI in education, personalized learning",
+            description: "Adaptive learning platforms, blockchain certification. Empower learners with AI-driven platforms that personalize education and enable secure academic record management.",
+        },
+        {
+            ref: divRefs[2],
+            icon: <FaShoppingCart className="text-green-400 w-10 h-10" />,
+            title: "AI in e-commerce, personalized shopping",
+            description: "Predictive analytics, secure online transactions. Transform online shopping experiences with AI-powered product recommendations and blockchain-secured transactions. ",
+        },
+        {
+            ref: divRefs[3],
+            icon: <FaRobot className="text-purple-400 w-10 h-10" />,
+            title: "AI innovations and applications",
+            description: "Cutting-edge AI solutions to accelerate various industries by driving automation, enhancing intelligence systems, and transforming operational efficiency.",
+        },
+
+        {
+            ref: divRefs[4],
+            icon: <FaShieldAlt className="text-indigo-400 w-10 h-10" />,
+            title: "AI in cybersecurity, threat detection",
+            description: " Blockchain security, anomaly detection. Protect your data with AI-powered threat detection and blockchain-based security protocols. ",
+        },
+        {
+            ref: divRefs[5],
+            icon: <FaBitcoin className="text-orange-400 w-10 h-10" />,
+            title: "Blockchain technology, decentralized systems",
+            description: "Smart contracts, blockchain for supply chain. Optimize operations with transparent, secure, and decentralized blockchain solutions. ",
+        },
+        {
+            ref: divRefs[6],
+            icon: <FaChartLine className="text-yellow-400 w-10 h-10" />,
+            title: "AI in finance, fraud detection",
+            description: " Algorithmic trading, secure payment systems. Streamline financial operations with AI algorithms for fraud detection, credit risk analysis, and more. ",
+        },
+
+    ];
+    return (
+        <div
+            className="relative flex h-[500px] md:h-[700px] w-full items-top justify-end overflow-hidden rounded-lg md:shadow-xl py-14 md:py-14 px-10 md:px-44"
+            ref={containerRef}
+        >
+            <div className="flex size-full flex-col items-stretch justify-between gap-10">
+                {iconDetails.slice(0, 2).map((detail, index) => (
+                    <div className="flex flex-row items-center justify-between" key={index}>
+                        <Circle
+                            ref={detail.ref}
+                            onMouseEnter={() => setHoveredIcon(detail)}
+                            onMouseLeave={() => setHoveredIcon(null)}
+                        >
+                            {detail.icon}
+                        </Circle>
+                    </div>
+                ))}
+                <div className="flex flex-row items-center justify-between">
+                    {iconDetails.slice(2, 5).map((detail, index) => (
+                        <Circle
+                            ref={detail.ref}
+                            key={index}
+                            onMouseEnter={() => setHoveredIcon(detail)}
+                            onMouseLeave={() => setHoveredIcon(null)}
+                        >
+                            {detail.icon}
+                        </Circle>
+                    ))}
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                    {iconDetails.slice(5).map((detail, index) => (
+                        <Circle
+                            ref={detail.ref}
+                            key={index}
+                            onMouseEnter={() => setHoveredIcon(detail)}
+                            onMouseLeave={() => setHoveredIcon(null)}
+                        >
+                            {detail.icon}
+                        </Circle>
+                    ))}
+                </div>
+            </div>
+
+            {hoveredIcon && (
+                <div
+                    className="absolute
+           z-20 bg-black w-[180px] h-[180px] md:w-[300px] md:h-[300px] bg-opacity-40 p-4 rounded shadow-lg mr-0 md:mr-20"
+                //   style={hoveredIcon.title == "PDF Docs" ? {
+                //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
+                //     left: hoveredIcon.ref.current?.getBoundingClientRect()?.left - containerRef.current?.getBoundingClientRect()?.left + 100,
+                //   }:{
+                //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
+                //     right: hoveredIcon.ref.current?.getBoundingClientRect()?.right - containerRef.current?.getBoundingClientRect()?.right + 100,
+                //   }}
+                >
+                    <h3 className="text-lg md:text-xl md:font-bold text-gray-200 mb-2 md:mb-5">{hoveredIcon.title}</h3>
+                    <p className="hidden md:flex text-sm md:text-base text-gray-400">{hoveredIcon.description}</p>
+                </div>
+            )}
+
+            {iconDetails.map((fromDetail, index) => (
+                <AnimatedBeam
+                    key={index}
+                    containerRef={containerRef}
+                    fromRef={fromDetail.ref}
+                    toRef={iconDetails[3].ref} // All beams point to the central icon
+                />
+            ))}
+        </div>
+    );
+}

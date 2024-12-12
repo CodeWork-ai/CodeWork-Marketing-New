@@ -1,0 +1,46 @@
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Motive from './motive';
+import { GlobeDemo } from './globe';
+
+const HomeHeader = () => {
+    return (
+        <div>
+            <div className="h-screen">
+                <div className="h-full overflow-hidden">
+                    <section className="relative h-full">
+                        {/* Content on Top of Image */}
+                        <div className="h-full relative z-10 flex justify-center text-white pt-36">
+                            <div>
+                                <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 mb-14">
+                                    <Motive />
+                                </div>
+                                <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 mb-20">
+                                    <div className="hidden md:flex space-x-5">
+                                        <Link href="/vision">
+                                            <button className="bg-[#fd6262] hover:bg-red-400 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 hover:bg-opacity-50 text-sm md:text-sm xl:text-base 2xl:text-lg">
+                                                Discover More
+                                            </button>
+                                        </Link>
+                                    </div>
+                                    <div className="md:hidden w-full space-y-4">
+                                        <div className="w-full">
+                                            <Link href="/vision">
+                                                <button className="bg-[#fd6262] hover:bg-red-400 text-black hover:text-white w-full py-2">
+                                                    Discover More
+                                                </button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            {/* <div className="h-screen"><GlobeDemo/></div> */}
+        </div>
+    );
+};
+
+export default HomeHeader;
