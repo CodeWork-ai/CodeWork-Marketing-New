@@ -6,6 +6,7 @@ import ExploreAiPoweredSolutions from "./components/home/exploreAiPoweredSolutio
 import ParallaxEffect from "./components/home/imageSection";
 import { GlobeDemo } from "./components/home/globe";
 import { AnimatedBeamDemo } from "./components/home/services";
+import { Marquee3D } from "./components/home/aiTech";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <HomeHeader/>
       <AiSolutionsSection/>
       <ExploreAiPoweredSolutions/>
-      <AnimatedBeamDemo/>
+      {/* <Marquee3D/> */}
+      <AnimatedBeamDemo/>  
       <ParallaxEffect/>
       <GlobeDemo/>
     </div>

@@ -9,7 +9,7 @@ export function ShineBorderDemo({item}) {
     >
       <div className="text-white space-y-1 lg:space-y-3 2xl:space-y-5">
         <div>{item.desktop_icon}</div>
-        <h2 className="text-base lg:text-lg 2xl:text-xl text-gray-300">{item.title}</h2>
+        <h2 className="text-base lg:text-lg 2xl:text-xl font-semibold text-gray-300">{item.title}</h2>
         <h3 className="text-sm lg:text-base 2xl:text-lg text-gray-400">{item.description}</h3>
       </div>
     </ShineBorder>

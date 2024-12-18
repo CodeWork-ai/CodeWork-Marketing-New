@@ -15,7 +15,7 @@ const HomeHeader = () => {
                                 <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 mb-14">
                                     <Motive />
                                 </div>
-                                <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 mb-20">
+                                <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40">
                                     <div className="hidden md:flex space-x-5">
                                         <Link href="/getInTouch">
                                             <button className="bg-[#fd6262] hover:bg-red-400 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 hover:bg-opacity-50 text-sm md:text-sm xl:text-base 2xl:text-lg">

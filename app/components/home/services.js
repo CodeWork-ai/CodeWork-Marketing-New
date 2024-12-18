@@ -75,73 +75,83 @@ export function AnimatedBeamDemo() {
 
     ];
     return (
-        <div
-            className="relative flex h-[500px] md:h-[700px] w-full items-top justify-end overflow-hidden rounded-lg md:shadow-xl py-14 md:py-14 px-10 md:px-44"
-            ref={containerRef}
-        >
-            <div className="flex size-full flex-col items-stretch justify-between gap-10">
-                {iconDetails.slice(0, 2).map((detail, index) => (
-                    <div className="flex flex-row items-center justify-between" key={index}>
-                        <Circle
-                            ref={detail.ref}
-                            onMouseEnter={() => setHoveredIcon(detail)}
-                            onMouseLeave={() => setHoveredIcon(null)}
-                        >
-                            {detail.icon}
-                        </Circle>
-                    </div>
-                ))}
-                <div className="flex flex-row items-center justify-between">
-                    {iconDetails.slice(2, 5).map((detail, index) => (
-                        <Circle
-                            ref={detail.ref}
-                            key={index}
-                            onMouseEnter={() => setHoveredIcon(detail)}
-                            onMouseLeave={() => setHoveredIcon(null)}
-                        >
-                            {detail.icon}
-                        </Circle>
-                    ))}
-                </div>
-                <div className="flex flex-row items-center justify-between">
-                    {iconDetails.slice(5).map((detail, index) => (
-                        <Circle
-                            ref={detail.ref}
-                            key={index}
-                            onMouseEnter={() => setHoveredIcon(detail)}
-                            onMouseLeave={() => setHoveredIcon(null)}
-                        >
-                            {detail.icon}
-                        </Circle>
-                    ))}
+        <div className="py-10 bg-white bg-opacity-5">
+            <div className="flex items-center justify-center">
+                <div className="px-10 md:px-52 md:mt-20">
+                    <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-300 font-bold mb-3">Where do we Excel?</h2>
+                    <h3 className="text-center text-sm md:text-base lg:text-xl 2xl:text-2xl text-gray-400">Explore how we leverage innovative AI and blockchain technologies to reshape key sectors, drive efficiency, and unlock new possibilities. </h3>
                 </div>
             </div>
-
-            {hoveredIcon && (
-                <div
-                    className="absolute
-           z-20 bg-black w-[180px] h-[180px] md:w-[300px] md:h-[300px] bg-opacity-40 p-4 rounded shadow-lg mr-0 md:mr-20"
-                //   style={hoveredIcon.title == "PDF Docs" ? {
-                //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
-                //     left: hoveredIcon.ref.current?.getBoundingClientRect()?.left - containerRef.current?.getBoundingClientRect()?.left + 100,
-                //   }:{
-                //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
-                //     right: hoveredIcon.ref.current?.getBoundingClientRect()?.right - containerRef.current?.getBoundingClientRect()?.right + 100,
-                //   }}
-                >
-                    <h3 className="text-lg md:text-xl md:font-bold text-gray-200 mb-2 md:mb-5">{hoveredIcon.title}</h3>
-                    <p className="hidden md:flex text-sm md:text-base text-gray-400">{hoveredIcon.description}</p>
+            <div
+                className="relative flex h-[500px] md:h-[700px] w-full items-top justify-end overflow-hidden rounded-lg md:shadow-xl py-14 md:py-14 px-10 md:px-44"
+                ref={containerRef}
+            >
+                <div>
                 </div>
-            )}
+                <div className="flex size-full flex-col items-stretch justify-between gap-10">
+                    {iconDetails.slice(0, 2).map((detail, index) => (
+                        <div className="flex flex-row items-center justify-between" key={index}>
+                            <Circle
+                                ref={detail.ref}
+                                onMouseEnter={() => setHoveredIcon(detail)}
+                                onMouseLeave={() => setHoveredIcon(null)}
+                            >
+                                {detail.icon}
+                            </Circle>
+                        </div>
+                    ))}
+                    <div className="flex flex-row items-center justify-between">
+                        {iconDetails.slice(2, 5).map((detail, index) => (
+                            <Circle
+                                ref={detail.ref}
+                                key={index}
+                                onMouseEnter={() => setHoveredIcon(detail)}
+                                onMouseLeave={() => setHoveredIcon(null)}
+                            >
+                                {detail.icon}
+                            </Circle>
+                        ))}
+                    </div>
+                    <div className="flex flex-row items-center justify-between">
+                        {iconDetails.slice(5).map((detail, index) => (
+                            <Circle
+                                ref={detail.ref}
+                                key={index}
+                                onMouseEnter={() => setHoveredIcon(detail)}
+                                onMouseLeave={() => setHoveredIcon(null)}
+                            >
+                                {detail.icon}
+                            </Circle>
+                        ))}
+                    </div>
+                </div>
 
-            {iconDetails.map((fromDetail, index) => (
-                <AnimatedBeam
-                    key={index}
-                    containerRef={containerRef}
-                    fromRef={fromDetail.ref}
-                    toRef={iconDetails[3].ref} // All beams point to the central icon
-                />
-            ))}
+                {hoveredIcon && (
+                    <div
+                        className="absolute
+           z-20 bg-black w-[180px] h-[180px] md:w-[300px] md:h-[300px] bg-opacity-40 p-4 rounded shadow-lg mr-0 md:mr-20"
+                    //   style={hoveredIcon.title == "PDF Docs" ? {
+                    //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
+                    //     left: hoveredIcon.ref.current?.getBoundingClientRect()?.left - containerRef.current?.getBoundingClientRect()?.left + 100,
+                    //   }:{
+                    //     top: hoveredIcon.ref.current?.getBoundingClientRect()?.top - containerRef.current?.getBoundingClientRect()?.top + 20,
+                    //     right: hoveredIcon.ref.current?.getBoundingClientRect()?.right - containerRef.current?.getBoundingClientRect()?.right + 100,
+                    //   }}
+                    >
+                        <h3 className="text-lg md:text-xl md:font-bold text-gray-200 mb-2 md:mb-5">{hoveredIcon.title}</h3>
+                        <p className="hidden md:flex text-sm md:text-base text-gray-400">{hoveredIcon.description}</p>
+                    </div>
+                )}
+
+                {iconDetails.map((fromDetail, index) => (
+                    <AnimatedBeam
+                        key={index}
+                        containerRef={containerRef}
+                        fromRef={fromDetail.ref}
+                        toRef={iconDetails[3].ref} // All beams point to the central icon
+                    />
+                ))}
+            </div>
         </div>
     );
 }
