@@ -41,10 +41,10 @@ export default function Navbar() {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full z-50 bg-opacity-40 bg-black transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 ${isVisible ? "translate-y-0" : "-translate-y-full"
+            className={`fixed top-0 left-0 w-full z-50 bg-opacity-0 bg-black transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 ${isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
         >
-            <div className="h-20 flex items-center justify-between bg-opacity-30">
+            <div className="h-20 flex items-center justify-between bg-opacity-100">
                 <Link href="/">
                     <div className="flex items-center">
                         <Image
@@ -59,18 +59,16 @@ export default function Navbar() {
                 <div className="hidden md:flex">
                     <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-10 2xl:space-x-14">
                         {[
-                            { href: "/aiSolution", label: "AI Solutions" },
-                            // { href: "/solution", label: "Expertise" },
+                            { href: "/AiSolutions", label: "AI Solutions" },
+                            { href: "/expertise", label: "Expertise" },
                             { href: "/vision", label: "Vision" },
-                            { href: "/projects", label: "Projects" },
-                            // { href: "/blog", label: "Blog" },
                             { href: "/group", label: "Groups" },
                         ].map((item) => (
                             <button
                                 key={item.href}
                                 className={`hover:text-[#fd6262] ease-in-out duration-150 text-sm lg:text-base 2xl:text-lg ${pathname === item.href
-                                        ? "text-[#fd6262]"
-                                        : "text-gray-50"
+                                    ? "text-[#fd6262]"
+                                    : "text-gray-50"
                                     }`}
                             >
                                 <Link href={item.href}>{item.label}</Link>
@@ -110,23 +108,23 @@ export default function Navbar() {
                                 >
                                     <div className="z-2" role="none">
                                         <a
-                                            href="/aiSolution"
+                                            href="/AiSolutions"
                                             className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
                                             role="menuitem"
                                             tabIndex="-1"
-                                            id="menu-item-1"
+                                            id="menu-item-3"
                                         >
-                                            AI Solutions
+                                            AiSolutions
                                         </a>
-                                        {/* <a
-                                            href="/solution"
+                                        <a
+                                            href="/expertise"
                                             className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
                                             role="menuitem"
                                             tabIndex="-1"
                                             id="menu-item-1"
                                         >
                                             Expertise
-                                        </a> */}
+                                        </a>
                                         <a
                                             href="/vision"
                                             className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
@@ -135,15 +133,6 @@ export default function Navbar() {
                                             id="menu-item-2"
                                         >
                                             Vision
-                                        </a>
-                                        <a
-                                            href="/projects"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-3"
-                                        >
-                                            Projects
                                         </a>
                                         {/* <a
                                             href="/blog"

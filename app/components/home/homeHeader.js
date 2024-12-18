@@ -17,17 +17,17 @@ const HomeHeader = () => {
                                 </div>
                                 <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 mb-20">
                                     <div className="hidden md:flex space-x-5">
-                                        <Link href="/vision">
+                                        <Link href="/getInTouch">
                                             <button className="bg-[#fd6262] hover:bg-red-400 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 hover:bg-opacity-50 text-sm md:text-sm xl:text-base 2xl:text-lg">
-                                                Discover More
+                                                Free Consulting
                                             </button>
                                         </Link>
                                     </div>
                                     <div className="md:hidden w-full space-y-4">
                                         <div className="w-full">
-                                            <Link href="/vision">
+                                            <Link href="/getInTouch">
                                                 <button className="bg-[#fd6262] hover:bg-red-400 text-black hover:text-white w-full py-2">
-                                                    Discover More
+                                                    Free Consulting
                                                 </button>
                                             </Link>
                                         </div>
