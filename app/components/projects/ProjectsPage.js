@@ -7,7 +7,7 @@ export default function ProjectsPage() {
     <div>
       <Hero />
       <HighlightsSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
     </div>
   );
 }

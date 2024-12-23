@@ -23,7 +23,7 @@ const projects = [
     title: "Text Analytics Project",
     description:
       "Leverages speech-to-text analytics, NLP, and sentiment analysis to improve caregiver communication strategies and service quality.",
-    image: "2.png",
+    image: "3.png",
     points: [
       "Accurately transcribes audio recordings using speech-to-text technology.",
       "Applies NLP for understanding conversation context and semantics.",
@@ -37,7 +37,7 @@ const projects = [
     title: "Insight Scan Project",
     description:
       "Enhances radiology report comprehension by embedding educational definitions with NLP and deep learning, empowering patients without altering original content.",
-    image: "3.png",
+    image: "2.png",
     points: [
       "Identifies medical terms and provides clear definitions using NLP.",
       "Employs deep learning for contextual understanding and report classification.",
