@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import ShinyButton from "@/components/ui/shiny-button";
+import MobileNavbar from "./mobileNav";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -96,7 +97,7 @@ export default function Navbar() {
             className={`fixed top-0 left-0 w-full z-50 bg-opacity-0 bg-black transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 ${isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
         >
-            <div className="h-20 flex items-center justify-between bg-opacity-100">
+            <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
                 <Link href="/">
                     <div className="flex items-center">
                         <Image
@@ -145,6 +146,9 @@ export default function Navbar() {
                         </Link>
                     </div>
                 </div>
+            </div>
+            <div className="flex md:hidden">
+                <MobileNavbar />
             </div>
         </div>
     );
