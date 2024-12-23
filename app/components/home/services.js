@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { FaHospital, FaChalkboardTeacher, FaShoppingCart, FaChartLine, FaShieldAlt, FaBitcoin, FaRobot } from "react-icons/fa";
+import { FaHospital, FaChalkboardTeacher, FaShoppingCart, FaChartLine, FaShieldAlt, FaBitcoin, FaRobot } from 'react-icons/fa';
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "../../../components/ui/animated-beam";
 
@@ -27,25 +27,24 @@ export function AnimatedBeamDemo() {
     const containerRef = useRef(null);
     const divRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const [hoveredIcon, setHoveredIcon] = useState(null);
-
     const iconDetails = [
         {
             ref: divRefs[0],
-            icon: <FaHospital className="text-red-400 w-10 h-10" />,
-            title: "AI in healthcare, predictive analytics in healthcare",
-            description: " AI-powered diagnostics, blockchain in healthcare. Enhance patient care with AI-driven diagnostics, personalized treatments, and secure Electronic Health Records (EHR). ",
+            icon: <FaHospital className="text-red-400 w-10 h-10" />, // Healthcare Icon
+            title: "Healthcare",
+            description: "We elevate patient care with AI-driven diagnostics, personalized treatments, and secure management of Electronic Health Records (EHR).",
         },
         {
             ref: divRefs[1],
-            icon: <FaChalkboardTeacher className="text-blue-400 w-10 h-10" />,
-            title: "AI in education, personalized learning",
-            description: "Adaptive learning platforms, blockchain certification. Empower learners with AI-driven platforms that personalize education and enable secure academic record management.",
+            icon: <FaChalkboardTeacher className="text-blue-400 w-10 h-10" />, // Education Icon
+            title: "Education",
+            description: "We personalize learning experiences with adaptive AI platforms and ensure secure academic credentials using blockchain certification.",
         },
         {
             ref: divRefs[2],
-            icon: <FaShoppingCart className="text-green-400 w-10 h-10" />,
-            title: "AI in e-commerce, personalized shopping",
-            description: "Predictive analytics, secure online transactions. Transform online shopping experiences with AI-powered product recommendations and blockchain-secured transactions. ",
+            icon: <FaShoppingCart className="text-green-400 w-10 h-10" />, // E-commerce Icon
+            title: "E-commerce",
+            description: "We redefine online shopping with predictive analytics for smarter recommendations and secure, seamless transactions.",
         },
         {
             ref: divRefs[3],
@@ -53,27 +52,68 @@ export function AnimatedBeamDemo() {
             title: "AI innovations and applications",
             description: "Cutting-edge AI solutions to accelerate various industries by driving automation, enhancing intelligence systems, and transforming operational efficiency.",
         },
-
         {
             ref: divRefs[4],
-            icon: <FaShieldAlt className="text-indigo-400 w-10 h-10" />,
-            title: "AI in cybersecurity, threat detection",
-            description: " Blockchain security, anomaly detection. Protect your data with AI-powered threat detection and blockchain-based security protocols. ",
+            icon: <FaChartLine className="text-yellow-400 w-10 h-10" />, // Finance Icon
+            title: "Finance",
+            description: "We enhance financial systems with AI-powered fraud detection, credit risk analysis, and streamlined payment processes.",
         },
         {
             ref: divRefs[5],
-            icon: <FaBitcoin className="text-orange-400 w-10 h-10" />,
-            title: "Blockchain technology, decentralized systems",
-            description: "Smart contracts, blockchain for supply chain. Optimize operations with transparent, secure, and decentralized blockchain solutions. ",
+            icon: <FaShieldAlt className="text-indigo-400 w-10 h-10" />, // Data Security Icon
+            title: "Data Security",
+            description: "We protect sensitive information with advanced anomaly detection and robust, decentralized security protocols.",
         },
         {
             ref: divRefs[6],
-            icon: <FaChartLine className="text-yellow-400 w-10 h-10" />,
-            title: "AI in finance, fraud detection",
-            description: " Algorithmic trading, secure payment systems. Streamline financial operations with AI algorithms for fraud detection, credit risk analysis, and more. ",
+            icon: <FaBitcoin className="text-orange-400 w-10 h-10" />, // Supply Chain Icon
+            title: "Supply Chain",
+            description: "We optimize operations and boost transparency with smart contract-enabled systems for seamless supply chain management.",
         },
-
     ];
+    
+
+    // const iconDetails = [
+    //     {
+    //         ref: divRefs[0],
+    //         icon: <FaHospital className="text-red-400 w-10 h-10" />,
+    //         title: "Healthcare",
+    //         description: "We elevate patient care with AI-driven diagnostics, personalized treatments, and secure management of Electronic Health Records (EHR). ",
+    //     },
+    //     {
+    //         ref: divRefs[1],
+    //         icon: <FaChalkboardTeacher className="text-blue-400 w-10 h-10" />,
+    //         title: "Education",
+    //         description: "We personalize learning experiences with adaptive AI platforms and ensure secure academic credentials using blockchain certification. ",
+    //     },
+    //     {
+    //         ref: divRefs[2],
+    //         icon: <FaShoppingCart className="text-green-400 w-10 h-10" />,
+    //         title: "AI in e-commerce, personalized shopping",
+    //         description: "Predictive analytics, secure online transactions. Transform online shopping experiences with AI-powered product recommendations and blockchain-secured transactions. ",
+    //     },
+        
+
+    //     {
+    //         ref: divRefs[4],
+    //         icon: <FaShieldAlt className="text-indigo-400 w-10 h-10" />,
+    //         title: "AI in cybersecurity, threat detection",
+    //         description: " Blockchain security, anomaly detection. Protect your data with AI-powered threat detection and blockchain-based security protocols. ",
+    //     },
+    //     {
+    //         ref: divRefs[5],
+    //         icon: <FaBitcoin className="text-orange-400 w-10 h-10" />,
+    //         title: "Blockchain technology, decentralized systems",
+    //         description: "Smart contracts, blockchain for supply chain. Optimize operations with transparent, secure, and decentralized blockchain solutions. ",
+    //     },
+    //     {
+    //         ref: divRefs[6],
+    //         icon: <FaChartLine className="text-yellow-400 w-10 h-10" />,
+    //         title: "AI in finance, fraud detection",
+    //         description: " Algorithmic trading, secure payment systems. Streamline financial operations with AI algorithms for fraud detection, credit risk analysis, and more. ",
+    //     },
+
+    // ];
     return (
         <div className="py-10 bg-white bg-opacity-5">
             <div className="flex items-center justify-center">

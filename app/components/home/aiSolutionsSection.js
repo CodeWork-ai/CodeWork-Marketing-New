@@ -22,7 +22,7 @@ const AiSolutionsSection = () => {
     {
       title: "Data Engineering",
       description:
-        "Our Data Engineering services ensure robust data infrastructure and efficient processing, enabling seamless scalability and informed decision-making.",
+        "Our Data Engineering approach ensure robust data infrastructure and efficient processing, enabling seamless scalability and informed decision-making.",
       icon: <FaDatabase className="text-green-500 text-2xl" />,
       desktop_icon: <FaDatabase className="w-10 h-10 text-red-400" />,
     },
@@ -34,6 +34,7 @@ const AiSolutionsSection = () => {
       desktop_icon: <FaShieldAlt className="w-10 h-10 text-red-400" />,
     },
   ];
+  
   return (
     <div>
       <div className="hidden md:flex w-full h-[1000px] px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 pt-52 overflow-visible">

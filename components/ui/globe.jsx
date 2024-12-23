@@ -111,7 +111,7 @@ export default function Globe({ className, config = GLOBE_CONFIG }) {
           }
         />
       </div>
-      <div className="absolute text-xl lg:text-2xl 2xl:text-4xl right-20 lg:top-40 lg:bottom-20 lg:left-40 z-10 w-[300px]">Ready to Transform Your Business with AI?</div>
+      <div className="absolute text-xl lg:text-2xl 2xl:text-4xl right-20 lg:top-40 lg:bottom-20 lg:left-40 z-10 w-[300px]"></div>
     </div>
   );
 }

@@ -49,6 +49,18 @@ export default function RootLayout({ children }) {
         return "/rbbg.jpg";
       case "/aiSolution":
         return "/bg.jpg";
+      case "/expertise":
+          return "/bg.jpg";
+      case "/team":
+        return "/01.avif";
+      case "/clients":
+        return "/01.avif";
+      case "/service":
+        return "/rbbg.jpg";
+      case "/about-us":
+        return "/bg7.jpg";
+      case "/careers":
+          return "/bg8.jpg";
       default:
         return "/images/bg-default.jpg"; 
     }

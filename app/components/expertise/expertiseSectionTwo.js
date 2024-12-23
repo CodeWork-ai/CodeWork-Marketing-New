@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const SolutionsEcosystem = () => {
+const ExpertiseSectionTwo = () => {
     const [zoomScale, setZoomScale] = useState(1);
 
     // Update zoom scale based on scroll position
@@ -66,4 +66,4 @@ const SolutionsEcosystem = () => {
     );
 };
 
-export default SolutionsEcosystem;
+export default ExpertiseSectionTwo;

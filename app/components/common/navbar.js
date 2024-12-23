@@ -3,17 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { FiMenu } from "react-icons/fi";
 import ShinyButton from "@/components/ui/shiny-button";
 
 export default function Navbar() {
     const pathname = usePathname();
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(null); // Track which dropdown is open
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
-        setIsDropdownOpen(false);
+        setIsDropdownOpen(null); // Close dropdown on navigation
     }, [pathname]);
 
     useEffect(() => {
@@ -39,6 +38,59 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
+    const navLinks = [
+        {
+            href: "/expertise",
+            label: "AI Solutions",
+            dropdown: [
+                { href: "/expertise", label: "Expertise", description: "Explore our expertise in AI." },
+                { href: "/service", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
+            ],
+        },
+        {
+            href: "/clients",
+            label: "Clients",
+            dropdown: [
+                {
+                    href: "/clients",
+                    label: "Clients",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/case-study",
+                    label: "Case Studies",
+                    description: "Explore detailed insights from our successful projects.",
+                },
+            ],
+        },
+        { href: "/ai-community", label: "AI Community", dropdown: [] },
+        {
+            href: "/company", label: "Company",
+            dropdown: [
+                {
+                    href: "/about-us",
+                    label: "About Us",
+                    description: "Learn about our mission, vision, and journey in AI innovation.",
+                },
+                // {
+                //     href: "/team",
+                //     label: "Team",
+                //     description: "Meet the experts driving our success in AI solutions.",
+                // },
+                {
+                    href: "/careers",
+                    label: "Careers",
+                    description: "Join our team and shape the future of AI with us.",
+                },
+                {
+                    href: "/getInTouch",
+                    label: "Contact Us",
+                    description: "Reach out to us for inquiries, collaborations, or support.",
+                },
+            ],
+        },
+    ];
+
     return (
         <div
             className={`fixed top-0 left-0 w-full z-50 bg-opacity-0 bg-black transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 ${isVisible ? "translate-y-0" : "-translate-y-full"
@@ -57,105 +109,40 @@ export default function Navbar() {
                 </Link>
                 {/* Navigation Links */}
                 <div className="hidden md:flex">
-                    <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-10 2xl:space-x-14">
-                        {[
-                            { href: "/AiSolutions", label: "AI Solutions" },
-                            { href: "/expertise", label: "Expertise" },
-                            { href: "/vision", label: "Vision" },
-                            { href: "/group", label: "Groups" },
-                        ].map((item) => (
-                            <button
+                    <div className="relative flex items-center space-x-4 md:space-x-6 lg:space-x-10 2xl:space-x-14">
+                        {navLinks.map((item, index) => (
+                            <div
                                 key={item.href}
-                                className={`hover:text-[#fd6262] ease-in-out duration-150 text-sm lg:text-base 2xl:text-lg ${pathname === item.href
-                                    ? "text-[#fd6262]"
-                                    : "text-gray-50"
-                                    }`}
+                                className=""
+                                onMouseEnter={() => setIsDropdownOpen(index)}
+                                onMouseLeave={() => setIsDropdownOpen(null)}
                             >
-                                <Link href={item.href}>{item.label}</Link>
-                            </button>
+                                <button
+                                    className={`hover:text-[#fd6262] ease-in-out duration-150 text-sm lg:text-base 2xl:text-lg ${pathname === item.href ? "text-[#fd6262]" : "text-gray-50"
+                                        }`}
+                                >
+                                    <Link href={item.href}>{item.label}</Link>
+                                </button>
+                                {/* Dropdown */}
+                                {isDropdownOpen === index && item.dropdown.length > 0 && (
+                                    <div className="absolute left-0 right-0 w-full bg-black rounded-md bg-opacity-80 text-white p-4 shadow-lg z-40">
+                                        {item.dropdown.map((dropdownItem) => (
+                                            <Link key={dropdownItem.href} href={dropdownItem.href}>
+                                                <div className="mb-4 rounded-md px-2 py-2 hover:bg-gradient-to-r hover:from-[#ff3333] hover:to-[#070707]">
+                                                    <h2 className="text-xl font-semibold">{dropdownItem.label}</h2>
+                                                    <p className="text-lg">{dropdownItem.description}</p>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         ))}
                         <Link href="/getInTouch">
                             <ShinyButton className="border border-white">
                                 Get In Touch
                             </ShinyButton>
                         </Link>
-                    </div>
-                </div>
-                <div className="xs:flex md:hidden">
-                    <div className="w-full">
-                        <div className="relative inline-block text-left">
-                            <div className="flex items-center justify-center">
-                                <button
-                                    onClick={() =>
-                                        setIsDropdownOpen(!isDropdownOpen)
-                                    }
-                                    type="button"
-                                    className=""
-                                    id="menu-button"
-                                    aria-expanded="true"
-                                    aria-haspopup="true"
-                                >
-                                    <FiMenu className="w-7 h-7 text-white hover:text-[#fd6262]" />
-                                </button>
-                            </div>
-                            {isDropdownOpen && (
-                                <div
-                                    className="fixed right-14 sm:right-10 w z-10 mt-2 w-32 origin-top-right rounded-md bg-gray-100 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                    role="menu"
-                                    aria-orientation="vertical"
-                                    aria-labelledby="menu-button"
-                                    tabIndex="-1"
-                                >
-                                    <div className="z-2" role="none">
-                                        <a
-                                            href="/AiSolutions"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-3"
-                                        >
-                                            AiSolutions
-                                        </a>
-                                        <a
-                                            href="/expertise"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-1"
-                                        >
-                                            Expertise
-                                        </a>
-                                        <a
-                                            href="/vision"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-2"
-                                        >
-                                            Vision
-                                        </a>
-                                        {/* <a
-                                            href="/blog"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-4"
-                                        >
-                                            Blog
-                                        </a> */}
-                                        <a
-                                            href="/group"
-                                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-black hover:text-[#fd6262]"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-4"
-                                        >
-                                            Groups
-                                        </a>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,7 @@ const features = [
         icon: <FaCommentDots />,
         title: "Natural Language Processing (NLP)",
         description:
-            "Communication is key, and our NLP solutions make it smarter. We harness the power of advanced language processing to help businesses improve text analysis, automate customer support, and extract meaningful insights from unstructured data.",
+            "Shape Communication is key, and our NLP solutions make it smarter. We harness the power of advanced language processing to help businesses improve text analysis, automate customer support, and extract meaningful insights from unstructured data.",
         desktop_icon: <FaCommentDots className="w-16 h-16 text-red-400" />,
     },
     {
@@ -61,7 +61,7 @@ const features = [
 ];
 
 
-const FeatureGrid = () => {
+const ExpertiseGrid = () => {
     return (
         <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40 bg-black bg-opacity-30">
             <div className="flex md:hidden">
@@ -97,4 +97,4 @@ const FeatureGrid = () => {
     );
 };
 
-export default FeatureGrid;
+export default ExpertiseGrid;

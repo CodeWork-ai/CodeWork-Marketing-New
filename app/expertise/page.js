@@ -1,14 +1,16 @@
 "use client"
-import SolutionHeader from "../components/solution/solutionHeader";
-import FeatureGrid from "../components/solution/FeatureGrid";
-import SolutionsEcosystem from "../components/solution/solutionEcosystem";
+import ExpertiseHeader from "../components/expertise/expertiseHeader";
+import ExpertiseSectionTwo from "../components/expertise/expertiseSectionTwo";
+import ExpertiseGrid from "../components/expertise/expertiseGrid";
+import ExpertiseFooter from "../components/expertise/expertiseFooter";
 
 export default function Page() {
   return (
     <div className="text-white pb-5">
-      <SolutionHeader/>
-      <FeatureGrid/>
-      <SolutionsEcosystem/>
+      <ExpertiseHeader/>
+      <ExpertiseGrid/>
+      <ExpertiseSectionTwo/>
+      <ExpertiseFooter/>
     </div>
   );
 }
