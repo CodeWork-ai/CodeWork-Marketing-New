@@ -66,7 +66,7 @@ export default function Navbar() {
         },
         { href: "/ai-community", label: "AI Community", dropdown: [] },
         {
-            href: "/company", label: "Company",
+            href: "/about-us", label: "Company",
             dropdown: [
                 {
                     href: "/about-us",
