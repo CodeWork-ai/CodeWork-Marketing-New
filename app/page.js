@@ -19,7 +19,7 @@ export default function Home() {
       {/* <Marquee3D/> */}
       <AnimatedBeamDemo/>  
       <Clients/>
-      <TechnologyGrid/>
+      {/* <TechnologyGrid/> */}
       <ParallaxEffect/>
       <GlobeDemo/>
     </div>

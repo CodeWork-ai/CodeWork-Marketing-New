@@ -16,7 +16,8 @@ const CareerPage = () => {
         {/* Open Positions Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">Current Opportunities</h2>
-          <ul className="space-y-6">
+          <p className='text-xl text-gray-300'>No opportunities are available at this time.</p>
+          {/* <ul className="space-y-6">
             <li className="bg-blue-500 bg-opacity-20  p-6 rounded-lg text-gray-300">
               <h3 className="text-xl font-semibold text-white">Software Engineer</h3>
               <p className="text-sm mt-2">
@@ -53,7 +54,7 @@ const CareerPage = () => {
                 Apply now <FaArrowRight className="ml-2" />
               </a>
             </li>
-          </ul>
+          </ul> */}
         </section>
 
         {/* Why Join Us Section */}
