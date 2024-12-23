@@ -115,7 +115,7 @@ export function AnimatedBeamDemo() {
 
     // ];
     return (
-        <div className="py-10 bg-white bg-opacity-5">
+        <div className="py-10 bg-black bg-opacity-20">
             <div className="flex items-center justify-center">
                 <div className="px-10 md:px-52 md:mt-20">
                     <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-300 font-bold mb-3">Where do we Excel?</h2>
