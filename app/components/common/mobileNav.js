@@ -40,9 +40,8 @@ export default function MobileNavbar() {
                 },
             ],
         },
-        { href: "/ai-community", label: "AI Community", dropdown: [] },
         {
-            href: "/company", label: "Company",
+            href: "/about-us", label: "Company",
             dropdown: [
                 {
                     href: "/about-us",
@@ -61,6 +60,13 @@ export default function MobileNavbar() {
                 },
             ],
         },
+        { href: "/ai-community", label: "AI Community", dropdown: [
+            {
+                href: "/ai-community",
+                label: "AI Community",
+                description: "Join our AI community to chat AI !",
+            }
+        ], },
     ];
 
     return (
