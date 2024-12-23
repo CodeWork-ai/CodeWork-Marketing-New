@@ -26,7 +26,7 @@ const CareerPage = () => {
                 href="/careers"
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
-                Learn More <FaArrowRight className="ml-2" />
+                Apply now <FaArrowRight className="ml-2" />
               </a>
             </li>
             <li className="bg-blue-500 bg-opacity-20  p-6 rounded-lg text-gray-300">
@@ -38,7 +38,7 @@ const CareerPage = () => {
                 href="/careers"
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
-                Learn More <FaArrowRight className="ml-2" />
+                Apply now <FaArrowRight className="ml-2" />
               </a>
             </li>
             <li className="bg-blue-500 bg-opacity-20 p-6 rounded-lg text-gray-300">
@@ -50,7 +50,7 @@ const CareerPage = () => {
                 href="/careers"
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
-                Learn More <FaArrowRight className="ml-2" />
+                Apply now <FaArrowRight className="ml-2" />
               </a>
             </li>
           </ul>

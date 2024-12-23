@@ -61,6 +61,8 @@ export default function RootLayout({ children }) {
         return "/bg7.jpg";
       case "/careers":
           return "/bg8.jpg";
+      case "ai-community":
+          return "/bg8.jpg"
       default:
         return "/images/bg-default.jpg"; 
     }
