@@ -30,7 +30,7 @@ export default function MobileNavbar() {
             dropdown: [
                 {
                     href: "/clients",
-                    label: "Clients",
+                    label: "Our Clients",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
@@ -47,6 +47,11 @@ export default function MobileNavbar() {
                     href: "/about-us",
                     label: "About Us",
                     description: "Learn about our mission, vision, and journey in AI innovation.",
+                },
+                {
+                    href: "/team",
+                    label: "Our Team",
+                    description: "Meet the experts driving our success in AI solutions.",
                 },
                 {
                     href: "/careers",

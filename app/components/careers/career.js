@@ -87,10 +87,10 @@ const CareerPage = () => {
             Explore our open positions and find the role that’s right for you. Let’s build the future together.
           </p>
           <a
-            href="/careers"
+            href="/join-our-team"
             className="inline-block bg-red-400 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600"
           >
-            View All Careers
+            Join Us
           </a>
         </section>
       </div>

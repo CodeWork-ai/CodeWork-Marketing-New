@@ -50,12 +50,17 @@ const Footer = () => {
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
                     <ul className="space-y-3">
                         {[  
-                            { href: "/aiSolution", label: "AI Solution" },
+                            { href: "/expertise", label: "Expertise" },
                             // { href: "/solution", label: "Expertise" },
-                            { href: "/vision", label: "Vision" },
-                            { href: "/projects", label: "Projects" },
+                            { href: "/service", label: "Services" },
+                            { href: "/clients", label: "Our Clients" },
                             // { href: "/blog", label: "Blog" },
-                            { href: "/group", label: "Groups" },
+                            { href: "/case-study", label: "Case Studies" },
+                            { href: "/about-us", label: "About Us" },
+                            { href: "/team", label: "Our Team" },
+                            { href: "/careers", label: "Careers" },
+                            { href: "/getInTouch", label: "Contact Us" },
+                            { href: "/ai-community", label: "AI Community" },
                         ].map((item) => (
                             <li key={item.href}>
                                 <Link

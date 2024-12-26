@@ -54,7 +54,7 @@ export default function Navbar() {
             dropdown: [
                 {
                     href: "/clients",
-                    label: "Clients",
+                    label: "Our Clients",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
@@ -72,11 +72,11 @@ export default function Navbar() {
                     label: "About Us",
                     description: "Learn about our mission, vision, and journey in AI innovation.",
                 },
-                // {
-                //     href: "/team",
-                //     label: "Team",
-                //     description: "Meet the experts driving our success in AI solutions.",
-                // },
+                {
+                    href: "/team",
+                    label: "Our Team",
+                    description: "Meet the experts driving our success in AI solutions.",
+                },
                 {
                     href: "/careers",
                     label: "Careers",
@@ -126,12 +126,12 @@ export default function Navbar() {
                                 </button>
                                 {/* Dropdown */}
                                 {isDropdownOpen === index && item.dropdown.length > 0 && (
-                                    <div className="absolute left-0 right-0 w-full bg-black rounded-md bg-opacity-80 text-white p-4 shadow-lg z-40">
+                                    <div className="absolute bg-black bg-opacity-80 rounded-md text-white p-1 shadow-lg z-40">
                                         {item.dropdown.map((dropdownItem) => (
                                             <Link key={dropdownItem.href} href={dropdownItem.href}>
-                                                <div className="mb-4 rounded-md px-2 py-2 hover:bg-gradient-to-r hover:from-[#ff3333] hover:to-[#070707]">
-                                                    <h2 className="text-xl font-semibold">{dropdownItem.label}</h2>
-                                                    <p className="text-lg">{dropdownItem.description}</p>
+                                                <div className="mb-1 rounded-md px-4 py-2 hover:text-red-400">
+                                                    <h2 className="text-lg font-thin">{dropdownItem.label}</h2>
+                                                    {/* <p className="text-lg">{dropdownItem.description}</p> */}
                                                 </div>
                                             </Link>
                                         ))}

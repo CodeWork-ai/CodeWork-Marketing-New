@@ -1,15 +1,20 @@
+import ShineBorder from '@/components/ui/shine-border';
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
-    <div className="px-6 py-12 bg-black bg-opacity-10">
+    <div className="px-6 py-12 bg-black bg-opacity-30">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <header className="text-center mb-12">
-          <h1 className="text-2xl text-white mb-4">
+        <ShineBorder className="relative flex flex-col bg-black bg-opacity-30 overflow-hidden rounded-lg md:shadow-xl"
+                color={['#f52e20']}>
+          <h1 className="text-xl p-4">
+          Welcome to Codework, where innovation meets intelligence. We are a technology-driven company leveraging cutting-edge AI technology to transform businesses and drive success.
           Our team combines advanced AI tools, industry expertise, and a human-first approach to deliver results that matter. From startups to enterprises, we partner with businesses to unlock their full potential using AI and emerging technologies. 
           </h1>
+          </ShineBorder>
           {/* <p className="text-lg text-gray-300">
             Welcome to Codework, where innovation meets intelligence. We are a technology-driven company leveraging cutting-edge AI technology to transform businesses and drive success.
           </p> */}

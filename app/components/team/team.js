@@ -4,87 +4,122 @@ import { FaLinkedin } from "react-icons/fa";
 const ManagementTeam = () => {
     const teamMembersLevelOne = [
         {
-            name: 'Vijay',
-            title: 'CEO',
-            imgSrc: '/path/to/image2.jpg', // Replace with actual image path
-        },
-        {
-            name: 'Soorath',
-            title: 'CTO',
-            imgSrc: '/path/to/image3.jpg', // Replace with actual image path
-        },
-        {
-            name: 'Christina',
+            name: 'Christina Arulraj',
             title: 'Managing Director',
-            imgSrc: '/path/to/image1.jpg', // Replace with actual image path
+            imgSrc: 'christy-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/christina-arulraj-24178b60/'
         },
-    ];
-    const teamMembersLevelTwo = [
+        // {
+        //     name: 'Leo Priestly Thomas',
+        //     title: 'Managing Director',
+        //     imgSrc: '/Leo-cw-team.jpeg',
+        //     linkedinUrl: 'https://www.linkedin.com/in/leopriestly/'
+        // },
+        // {
+        //     name: 'Senthil Kumar',
+        //     title: 'Manager- Product Delivery',
+        //     imgSrc: '/senthil-cw-team.jpg',
+        //     linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
+        // },
         {
-            name: 'Christy',
-            title: 'Managing Director',
-            imgSrc: '/path/to/image1.jpg', // Replace with actual image path
+            name: 'Senthil Kumar',
+            title: 'Manager- Product Delivery',
+            imgSrc: '/senthil-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
         },
         {
             name: 'Alagasan',
             title: 'Program Manager',
-            imgSrc: '/path/to/image2.jpg', // Replace with actual image path
+            imgSrc: '/alagasan-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
         },
         {
-            name: 'Vinoth',
-            title: 'Lead',
-            imgSrc: '/path/to/image3.jpg', // Replace with actual image path
+            name: 'Mathumitha',
+            title: 'IT Recruiter',
+            imgSrc: '/mathu-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/mathumitha-chennakesavan-027892168/'
+        },
+    ];
+    const teamMembersLevelTwo = [
+        {
+            name: 'Sainath',
+            title: 'ML Engineer',
+            imgSrc: '/sai-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/sainath-m-a95186186/'
+        },
+        {
+            name: 'Saran Menon',
+            title: 'Deep Learning Specialist',
+            imgSrc: 'saran-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/saran-menon-874a14216/'
         },
     ];
 
     return (
         <div className="bg-black bg-opacity-20 py-10">
             <div className="container mx-auto px-10 md:px-20 space-y-5">
-                {/* <h2 className="text-3xl font-bold text-center mb-6">Management Team</h2>
-        <p className="text-center text-gray-600 mb-10">
-          The management team at CodeWork is composed of visionary leaders with extensive experience in the technology industry. They bring a wealth of knowledge and strategic insight, guiding the company with a clear focus on innovation, quality, and client satisfaction.
-        </p> */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
+                <h2 className="text-3xl font-bold text-center mb-6">Management Team</h2>
+                <p className="text-center text-gray-300 mb-10 md:text-xl">
+                    Our management team boasts over 15 years of experience in driving business excellence and fostering innovation. With a deep understanding of industry trends and a commitment to strategic growth, they ensure Codework remains a trusted partner for cutting-edge AI and technology solutions.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:mt-10">
                     {teamMembersLevelOne.map((member, index) => (
                         <div
                             key={index}
-                            className="relative bg-black bg-opacity-50 shadow-md rounded-lg p-4 text-center"
+                            className="relative rounded-full shadow-md p-4 text-center group"
                         >
                             <img
                                 src={member.imgSrc}
                                 alt={member.name}
-                                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+                                className="w-72 h-72 mx-auto rounded-full object-cover mb-4"
                             />
                             <h3 className="text-xl font-semibold text-white">{member.name}</h3>
                             <p className="text-gray-300">{member.title}</p>
 
                             {/* LinkedIn Button */}
                             <a
-                                href={member.linkedinUrl} // Add LinkedIn profile URL here
+                                href={member.linkedinUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="absolute top-3 right-3 z-10 bg-black text-white p-1 rounded-sm hover:bg-red-500 transition duration-300"
+                                className="flex items-center justify-center z-10 text-white p-1 rounded-sm transition duration-300 opacity-0 group-hover:opacity-100"
                             >
-                                <FaLinkedin className="w-6 h-6" />
+                                <FaLinkedin className="w-9 h-9 hover:text-red-400 text-center" />
                             </a>
                         </div>
+
                     ))}
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <h2 className="text-3xl font-bold text-center mb-6">Technical Team</h2>
+                    <p className="text-center text-gray-300 mb-10 md:text-xl">
+                        Our technical team is the backbone of Codework's innovation. With exceptional proficiency in AI technologies and a passion for solving complex challenges, they deliver transformative solutions that help businesses achieve their goals in today’s digital-first world.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:mt-10">
                     {teamMembersLevelTwo.map((member, index) => (
                         <div
                             key={index}
-                            className="bg-black bg-opacity-50 shadow-md rounded-lg p-4 text-center"
+                            className="relative rounded-full shadow-md p-4 text-center group"
                         >
                             <img
                                 src={member.imgSrc}
                                 alt={member.name}
-                                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+                                className="w-72 h-72 mx-auto rounded-full object-cover mb-4"
                             />
-                            <h3 className="text-xl font-semibold">{member.name}</h3>
-                            <p className="text-gray-400">{member.title}</p>
+                            <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+                            <p className="text-gray-300">{member.title}</p>
+
+                            {/* LinkedIn Button */}
+                            <a
+                                href={member.linkedinUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center z-10 text-white p-1 rounded-sm transition duration-300 opacity-0 group-hover:opacity-100"
+                            >
+                                <FaLinkedin className="w-9 h-9 hover:text-red-400 text-center" />
+                            </a>
                         </div>
+
                     ))}
                 </div>
             </div>
