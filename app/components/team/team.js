@@ -44,7 +44,7 @@ const ManagementTeam = () => {
         {
             name: 'Sainath',
             title: 'ML Engineer',
-            imgSrc: '/sai-cw-team.jpg',
+            imgSrc: '/sai-cw-team.JPG',
             linkedinUrl: 'https://www.linkedin.com/in/sainath-m-a95186186/'
         },
         {
