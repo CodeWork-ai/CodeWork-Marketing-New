@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaLinkedin } from "react-icons/fa";
+import { FadeText } from '../../../components/ui/fade-text';
 
 const ManagementTeam = () => {
     const teamMembersLevelOne = [
@@ -22,15 +23,15 @@ const ManagementTeam = () => {
         //     linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
         // },
         {
-            name: 'Senthil Kumar',
-            title: 'Manager- Product Delivery',
-            imgSrc: '/senthil-cw-team.jpg',
-            linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
-        },
-        {
             name: 'Alagasan',
             title: 'Program Manager',
             imgSrc: '/alagasan-cw-team.jpg',
+            linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
+        },
+        {
+            name: 'Senthil Kumar',
+            title: 'Manager- Product Delivery',
+            imgSrc: '/senthil-cw-team.jpg',
             linkedinUrl: 'https://www.linkedin.com/in/senthil-kumar-l-t-26a9b1132/'
         },
         {
@@ -71,7 +72,7 @@ const ManagementTeam = () => {
                             <img
                                 src={member.imgSrc}
                                 alt={member.name}
-                                className="w-72 h-72 mx-auto rounded-full object-cover mb-4"
+                                className="w-72 h-96 mx-auto rounded-lg object-cover mb-4"
                             />
                             <h3 className="text-xl font-semibold text-white">{member.name}</h3>
                             <p className="text-gray-300">{member.title}</p>
@@ -81,9 +82,9 @@ const ManagementTeam = () => {
                                 href={member.linkedinUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center z-10 text-white p-1 rounded-sm transition duration-300 opacity-0 group-hover:opacity-100"
+                                className="flex absolute bottom-24 right-0 left-0 items-center justify-center z-10 rounded-full text-white p-1 transition duration-1000 opacity-0 group-hover:opacity-100"
                             >
-                                <FaLinkedin className="w-9 h-9 hover:text-red-400 text-center" />
+                                <FaLinkedin className="w-9 h-9 rounded-sm bg-red-400 hover:text-black text-center" />
                             </a>
                         </div>
 
@@ -104,7 +105,7 @@ const ManagementTeam = () => {
                             <img
                                 src={member.imgSrc}
                                 alt={member.name}
-                                className="w-72 h-72 mx-auto rounded-full object-cover mb-4"
+                                className="w-72 h-96 mx-auto rounded-lg object-cover mb-4"
                             />
                             <h3 className="text-xl font-semibold text-white">{member.name}</h3>
                             <p className="text-gray-300">{member.title}</p>
@@ -114,9 +115,9 @@ const ManagementTeam = () => {
                                 href={member.linkedinUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center z-10 text-white p-1 rounded-sm transition duration-300 opacity-0 group-hover:opacity-100"
+                                className="flex absolute bottom-24 right-0 left-0 items-center justify-center z-10 rounded-full text-white p-1 transition duration-1000 opacity-0 group-hover:opacity-100"
                             >
-                                <FaLinkedin className="w-9 h-9 hover:text-red-400 text-center" />
+                                <FaLinkedin className="w-9 h-9 rounded-sm bg-red-400 hover:text-black text-center" />
                             </a>
                         </div>
 

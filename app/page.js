@@ -9,19 +9,25 @@ import { AnimatedBeamDemo } from "./components/home/services";
 import { Marquee3D } from "./components/home/aiTech";
 import { Clients } from "./components/home/clientsCarousel";
 import TechnologyGrid from "./components/home/TechnologyGrid";
+import { BentoDemo } from "./components/common/bentoGrid";
+import Contact from "./components/home/contact";
+import { Example } from "./components/home/shuffleGrid";
 
 export default function Home() {
   return (
     <div className="text-white">
       <HomeHeader/>
       <AiSolutionsSection/>
+      <Clients/>
       <ExploreAiPoweredSolutions/>
       {/* <Marquee3D/> */}
       <AnimatedBeamDemo/>  
-      <Clients/>
+      {/* <BentoDemo/> */}
       {/* <TechnologyGrid/> */}
+      {/* <Example/> */}
       <ParallaxEffect/>
       <GlobeDemo/>
+      <Contact/>
     </div>
   );
 }

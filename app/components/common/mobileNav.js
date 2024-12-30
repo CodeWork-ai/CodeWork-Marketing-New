@@ -41,6 +41,37 @@ export default function MobileNavbar() {
             ],
         },
         {
+            href: "/industries",
+            label: "Industries",
+            dropdown: [
+                {
+                    href: "/industries/healthcare",
+                    label: "HealthCare",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/education",
+                    label: "Education",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/e-commerce",
+                    label: "E-commerce",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/finance",
+                    label: "Finance",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/data-security",
+                    label: "Data Security",
+                    description: "Discover the industries and organizations we serve.",
+                },
+            ],
+        },
+        {
             href: "/about-us", label: "Company",
             dropdown: [
                 {
@@ -113,7 +144,7 @@ export default function MobileNavbar() {
                                             className="block text-sm hover:text-[#fd6262]"
                                         >
                                             <h2 className="font-semibold">{dropdownItem.label}</h2>
-                                            <p className="text-gray-300 text-sm">{dropdownItem.description}</p>
+                                            {/* <p className="text-gray-300 text-sm">{dropdownItem.description}</p> */}
                                         </Link>
                                     ))}
                                 </div>

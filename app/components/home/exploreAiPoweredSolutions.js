@@ -19,7 +19,7 @@ const ExploreAiPoweredSolutions = () => {
     }, []);
 
     return (
-        <div className="w-full h-full md:flex px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 pt-10 md:pt-52">
+        <div className="w-full h-full md:flex px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 pt-10 md:pt-10">
             {/* Left Section with Tilted Background Image and Text */}
             <div className="md:w-6/12 h-[600px] md:h-[700px] relative overflow-hidden border border-gray-700 bg-black bg-opacity-70">
                 {/* Tilted Image */}

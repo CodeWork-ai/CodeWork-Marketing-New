@@ -65,6 +65,37 @@ export default function Navbar() {
             ],
         },
         {
+            href: "/industries",
+            label: "Industries",
+            dropdown: [
+                {
+                    href: "/industries/healthcare",
+                    label: "HealthCare",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/education",
+                    label: "Education",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/e-commerce",
+                    label: "E-commerce",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/finance",
+                    label: "Finance",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/industries/data-security",
+                    label: "Data Security",
+                    description: "Discover the industries and organizations we serve.",
+                },
+            ],
+        },
+        {
             href: "/about-us", label: "Company",
             dropdown: [
                 {

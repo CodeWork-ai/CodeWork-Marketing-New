@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -65,6 +66,16 @@ export default function RootLayout({ children }) {
           return "/bg8.jpg"
       case "/join-our-team":
           return "/bg8.jpg"
+      case "/industries/healthcare":
+          return "/bg8.jpg"
+      case "/industries/education":
+          return "/bg8.jpg"
+      case "/industries/e-commerce":
+          return "/bg8.jpg"
+      case "/industries/finance":
+          return "/bg8.jpg"
+      case "/industries/data-security":
+          return "/bg8.jpg"
       default:
         return "/images/bg-default.jpg"; 
     }
@@ -76,6 +87,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <meta name="google-site-verification" content="googlef261788f910b103f" />
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative bg-black">
           {/* Background Image */}

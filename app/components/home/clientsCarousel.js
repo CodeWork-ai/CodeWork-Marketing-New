@@ -38,7 +38,7 @@ export const Clients = () => {
     };
 
     return (
-        <div className="w-full mt-10 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-0 py-5">
+        <div className="w-full mt-10 px-4 sm:px-6 lg:px-8 md:mt-40 bg-black bg-opacity-0 py-5">
             <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-300 font-bold mb-6">
                 Our Happy Clients
             </h2>
