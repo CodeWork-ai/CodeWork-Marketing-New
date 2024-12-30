@@ -89,6 +89,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <meta name="google-site-verification" content="googlef261788f910b103f" />
+        <meta name="msvalidate.01" content="87116832E44901A848FF915301C97144" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative bg-black">
