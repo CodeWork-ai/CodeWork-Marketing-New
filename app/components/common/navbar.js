@@ -65,7 +65,7 @@ export default function Navbar() {
             ],
         },
         {
-            href: "/industries",
+            href: "/industries/healthcare",
             label: "Industries",
             dropdown: [
                 {

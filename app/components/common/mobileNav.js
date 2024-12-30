@@ -41,7 +41,7 @@ export default function MobileNavbar() {
             ],
         },
         {
-            href: "/industries",
+            href: "/industries/healthcare",
             label: "Industries",
             dropdown: [
                 {
