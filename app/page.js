@@ -12,22 +12,29 @@ import TechnologyGrid from "./components/home/TechnologyGrid";
 import { BentoDemo } from "./components/common/bentoGrid";
 import Contact from "./components/home/contact";
 import { Example } from "./components/home/shuffleGrid";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="text-white">
-      <HomeHeader/>
-      <AiSolutionsSection/>
-      <Clients/>
-      <ExploreAiPoweredSolutions/>
-      {/* <Marquee3D/> */}
-      <AnimatedBeamDemo/>  
-      {/* <BentoDemo/> */}
-      {/* <TechnologyGrid/> */}
-      {/* <Example/> */}
-      <ParallaxEffect/>
-      <GlobeDemo/>
-      <Contact/>
-    </div>
+    <>
+      <Head>
+        <meta name="AI Software Development" content="Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems." />
+        <title>AI Software Development | Codework Solutions</title>
+      </Head>
+      <div className="text-white">
+        <HomeHeader />
+        <AiSolutionsSection />
+        <Clients />
+        <ExploreAiPoweredSolutions />
+        {/* <Marquee3D/> */}
+        <AnimatedBeamDemo />
+        {/* <BentoDemo/> */}
+        {/* <TechnologyGrid/> */}
+        {/* <Example/> */}
+        <ParallaxEffect />
+        <GlobeDemo />
+        <Contact />
+      </div>
+    </>
   );
 }

@@ -90,6 +90,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="google-site-verification" content="googlef261788f910b103f" />
         <meta name="msvalidate.01" content="87116832E44901A848FF915301C97144" />
+        <meta name="AI Services" content="Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems."/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative bg-black">
