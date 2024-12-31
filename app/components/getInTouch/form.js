@@ -53,7 +53,7 @@ const ContactForm = () => {
 
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between bg-black bg-opacity-40 text-white p-8 md:p-16 space-y-8 md:space-y-2">
+        <div className="flex flex-col lg:flex-row justify-between bg-black bg-opacity-40 text-white p-2 md:p-16 space-y-8 md:space-y-2">
             {/* Left Section */}
             <div className="flex-1 space-y-4 mr-5">
                 <h2 className="text-2xl font-bold text-gray-300">At CodeWork</h2>
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 color={["#1dcaf5", "#f04f57"]}>
                 <form
                     onSubmit={handleSubmit}
-                    className="flex-1 bg-black lg:w-[500px] xl:w-[700px] bg-opacity-5 p-6 rounded-md shadow-md space-y-6"
+                    className="flex-1 bg-black lg:w-[500px] xl:w-[700px] bg-opacity-5 p-1 lg:p-6 rounded-md shadow-md space-y-6"
                 >
                     {/* First and Last Name */}
                     <input

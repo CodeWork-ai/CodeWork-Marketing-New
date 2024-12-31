@@ -150,9 +150,9 @@ const Footer = () => {
                 </div>
 
             </div>
-            <div className="lg:hidden grid grid-cols-1 md:grid-cols-4 gap-x-8">
+            <div className="lg:hidden grid grid-cols-1 md:grid-cols-4 gap-x-8 space-y-5">
                 {/* Logo and Contact Info */}
-                <div>
+                <div className="mb-3">
                     <Link href="/">
                         <div className="flex items-center mb-5">
                             <Image
@@ -172,9 +172,9 @@ const Footer = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <div>
+                <div className="mb-3 lg:mb-0">
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-1">
                         {[  
                             { href: "/expertise", label: "Expertise" },
                             // { href: "/solution", label: "Expertise" },
@@ -207,10 +207,10 @@ const Footer = () => {
                 </div>
 
                 {/* Get in Touch */}
-                <div><NewsletterForm /></div>
+                <div className="mb-3 lg:mb-0"><NewsletterForm /></div>
 
                 {/* Additional Section */}
-                <div className="space-y-5">
+                <div className="space-y-5 mb-3 lg:mb-0">
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-gray-200">Follow Us</h3>
                         <div className="flex space-x-4">
