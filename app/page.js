@@ -17,17 +17,6 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>AI Solutions | Next.js Application</title>
-        <meta
-          name="description"
-          content="Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems."
-        />
-        {/* <meta name="keywords" content="AI, Artificial Intelligence, Technology, Solutions, Next.js" />
-        <meta name="author" content="Your Company Name" /> */}
-        <meta property="og:title" content="Codework:AI Software Development |call us-+91 72006 16547	" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="text-white">
         <HomeHeader />
         <AiSolutionsSection />

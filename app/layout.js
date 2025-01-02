@@ -32,6 +32,61 @@ export default function RootLayout({ children }) {
     };
   }, []);
 
+  // Meta tags content based on pathname
+  const getMetaTags = () => {
+    switch (pathname) {
+      case "/":
+        return {
+          title: "Home | AI 	Codework:AI Software Development |call us-+91 72006 16547",
+          description: "Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems.",
+        };
+      case "/expertise":
+        return {
+          title: "AI Innovation | Advanced Tech Solutions",
+          description: "Empowering innovation with AI and advanced technologies at Codework. Transform your business with intelligent and future-ready software solutions.",
+        };
+      case "/service":
+        return {
+          title: "AI Services | Cutting-Edge Innovation",
+          description: "Driving innovation through cutting-edge AI services at Codework. Leverage advanced AI solutions to transform your business and stay ahead in the digital era.",
+        };
+      case "/clients":
+        return {
+          title: "Custom AI Solutions for Engaged Users & Efficient Operations",
+          description: "Discover tailored strategies that align with your brand's identity. Boost user engagement and streamline operations with custom AI solutions at Codework.",
+        };
+      case "/case-study":
+        return {
+          title: "Empowering Businesses Through AI",
+          description: "Transform your business with innovative AI and Machine Learning solutions. Revolutionize operations and unlock new possibilities with Codework's expertise.",
+        };
+      case "/about-us":
+        return {
+          title: "Shaping Tomorrow with AI Technology",
+          description: "Discover how Codework harnesses AI-powered technology to shape a smarter tomorrow. Empowering businesses with innovative and future-ready solutions.",
+        };
+      case "/careers":
+        return {
+          title: "Careers at Codework: Shape the Future",
+          description: "Join Codework and help shape the future with cutting-edge AI technology. Be part of a team that thrives on innovation, collaboration, and excellence.",
+        };
+      case "/getInTouch":
+        return {
+          title: "Contact Codework for AI Solutions",
+          description: "Reach out to Codework and discover how our AI solutions can empower your business. Let us help you innovate, streamline, and achieve your goals.",
+        };
+
+      // Add cases for other routes as needed
+      default:
+        return {
+          title: "Codework",
+          description: "Discover cutting-edge AI-powered solutions for your business.",
+        };
+    }
+  };
+
+  const { title, description } = getMetaTags();
+
   // Determine background image based on pathname
   const getBackgroundImage = () => {
     switch (pathname) {
@@ -50,7 +105,7 @@ export default function RootLayout({ children }) {
       case "/aiSolution":
         return "/bg.jpg";
       case "/expertise":
-          return "/bg.jpg";
+        return "/bg.jpg";
       case "/team":
         return "/01.avif";
       case "/clients":
@@ -60,23 +115,23 @@ export default function RootLayout({ children }) {
       case "/about-us":
         return "/bg7.jpg";
       case "/careers":
-          return "/bg8.jpg";
+        return "/bg8.jpg";
       case "/ai-community":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/join-our-team":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/industries/healthcare":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/industries/education":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/industries/e-commerce":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/industries/finance":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       case "/industries/data-security":
-          return "/bg8.jpg"
+        return "/bg8.jpg"
       default:
-        return "/images/bg-default.jpg"; 
+        return "/images/bg-default.jpg";
     }
   };
 
@@ -86,11 +141,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      {/* <head>
-        <meta name="google-site-verification" content="googlef261788f910b103f" />
-        <meta name="msvalidate.01" content="87116832E44901A848FF915301C97144" />
-        <meta name="AI Services" content="Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems."/>
-      </head> */}
+      <head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative bg-black">
           {/* Background Image */}

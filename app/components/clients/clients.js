@@ -36,10 +36,9 @@ const ClientCard = () => {
       </div> */}
       <div className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 pb-6 md:pb-10">
         {cardData.map((card) => (
-          <ShineBorder className="relative flex flex-col bg-black bg-opacity-30 overflow-hidden rounded-lg md:shadow-xl"
+          <ShineBorder key={card.id} className="relative flex flex-col bg-black bg-opacity-30 overflow-hidden rounded-lg md:shadow-xl"
                           color={["#9d4545", "#9d4545"]}>
           <div
-            key={card.id}
             className="bg-black bg-opacity-0 flex items-center justify-center w-full max-w-[300px] md:max-w-[400px] h-[200px] md:h-[300px] rounded shadow-lg transform transition-transform duration-700 hover:scale-105 p-2 mx-auto"
           >
             <img
