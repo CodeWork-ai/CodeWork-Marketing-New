@@ -1,7 +1,10 @@
 'use client'
 import React, { useState } from 'react';
 import ShineBorder from '../../../components/ui/shine-border';
-import {AnimatedListRoute } from './animatedList';
+import { AnimatedListRoute } from './animatedList';
+import { ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "../../../components/ui/animated-gradient-text";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -58,6 +61,17 @@ const Contact = () => {
             {/* Left Section */}
             <ShineBorder className="relative flex flex-col bg-black bg-opacity-50 overflow-hidden rounded-lg md:shadow-xl"
                 color={["#1dcaf5", "#f04f57"]}>
+                <div className="z-10 flex items-center justify-center">
+                    <AnimatedGradientText>
+                        <span
+                            className={cn(
+                                `inline animate-gradient text:xl md:text-2xl bg-gradient-to-r from-[#ea7b7b] via-[#ee46c1] to-[#40dfff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent mb-2 md:mb-0`,
+                            )}
+                        >
+                            We’re Listening
+                        </span>
+                    </AnimatedGradientText>
+                </div>
                 <form
                     onSubmit={handleSubmit}
                     className="flex-1 bg-black lg:w-[500px] xl:w-[700px] bg-opacity-5 p-0 md:p-6 rounded-md shadow-md space-y-2 md:space-y-6"
@@ -114,12 +128,12 @@ const Contact = () => {
                         type="submit"
                         className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md transition duration-300"
                         disabled={loading}
-                        >
-                            {loading ? 'Submitting...' : 'Submit'}
-                        </button>
-                        {responseMessage && (
-                            <p className="mt-6 text-center text-sm text-gray-400">{responseMessage}</p>
-                        )}
+                    >
+                        {loading ? 'Submitting...' : 'Submit'}
+                    </button>
+                    {responseMessage && (
+                        <p className="mt-6 text-center text-sm text-gray-400">{responseMessage}</p>
+                    )}
                 </form>
             </ShineBorder>
 
@@ -129,7 +143,7 @@ const Contact = () => {
                 <p className="text-gray-400">
                     We are dedicated to leveraging advanced AI, ML, and Data Science to transform your business. Let's collaborate to craft your success story and showcase the potential of AI in driving sustainable growth.
                 </p> */}
-                <AnimatedListRoute/>
+                <AnimatedListRoute />
             </div>
         </div>
     );

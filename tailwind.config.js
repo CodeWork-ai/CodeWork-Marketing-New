@@ -65,7 +65,8 @@ module.exports = {
   			shine: 'shine var(--duration) infinite linear',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			marquee: 'marquee var(--duration) infinite linear',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+  			gradient: 'gradient 8s linear infinite'
   		},
   		keyframes: {
   			rippling: {
@@ -110,6 +111,11 @@ module.exports = {
   				},
   				to: {
   					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			gradient: {
+  				to: {
+  					backgroundPosition: 'var(--bg-size) 0'
   				}
   			}
   		}
