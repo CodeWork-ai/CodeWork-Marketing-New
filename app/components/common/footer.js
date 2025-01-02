@@ -129,7 +129,7 @@ const Footer = () => {
                         <div className="flex space-x-4">
                             <ul className="flex space-x-2 h-14">
                                 {socialMedia.map(({ label, Icon, link }) => (
-                                    <a key={label} href={link} target="_blank" rel="noopener noreferrer">
+                                    <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
                                         <li className="flex items-center justify-center text-gray-300 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
                                             <Icon size={20} />
                                         </li>
@@ -216,7 +216,7 @@ const Footer = () => {
                         <div className="flex space-x-4">
                             <ul className="flex space-x-2 h-14">
                                 {socialMedia.map(({ label, Icon, link }) => (
-                                    <a key={label} href={link} target="_blank" rel="noopener noreferrer">
+                                    <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
                                         <li className="flex items-center justify-center text-gray-300 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
                                             <Icon size={20} />
                                         </li>

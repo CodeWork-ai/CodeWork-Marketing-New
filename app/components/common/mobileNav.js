@@ -96,13 +96,15 @@ export default function MobileNavbar() {
                 },
             ],
         },
-        { href: "/ai-community", label: "AI Community", dropdown: [
-            {
-                href: "/ai-community",
-                label: "AI Community",
-                description: "Join our AI community to chat AI !",
-            }
-        ], },
+        {
+            href: "/ai-community", label: "AI Community", dropdown: [
+                {
+                    href: "/ai-community",
+                    label: "AI Community",
+                    description: "Join our AI community to chat AI !",
+                }
+            ],
+        },
     ];
 
     return (
@@ -116,6 +118,7 @@ export default function MobileNavbar() {
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="text-2xl focus:outline-none md:hidden"
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 >
                     {isMenuOpen ? <FaTimes /> : <FaBars />}
                 </button>
