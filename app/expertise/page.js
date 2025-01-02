@@ -4,7 +4,6 @@ import ExpertiseSectionTwo from "../components/expertise/expertiseSectionTwo";
 import ExpertiseGrid from "../components/expertise/expertiseGrid";
 import ExpertiseFooter from "../components/expertise/expertiseFooter";
 import TechnologyGrid from "../components/home/TechnologyGrid";
-import Head from "next/head";
 
 export default function Page() {
   return (
