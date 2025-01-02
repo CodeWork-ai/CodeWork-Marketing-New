@@ -1,4 +1,3 @@
-"use client"
 import Services from "../components/service/service";
 import ServiceFooter from "../components/service/serviceFooter";
 import ServiceHeader from "../components/service/serviceHeader";

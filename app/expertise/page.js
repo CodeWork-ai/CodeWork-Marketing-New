@@ -1,4 +1,3 @@
-"use client"
 import ExpertiseHeader from "../components/expertise/expertiseHeader";
 import ExpertiseSectionTwo from "../components/expertise/expertiseSectionTwo";
 import ExpertiseGrid from "../components/expertise/expertiseGrid";
