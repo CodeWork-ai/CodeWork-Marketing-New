@@ -144,6 +144,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", "name": "CodeWork", "url": "https://www.codework.ai", "description": "Codework.ai offers innovative AI-software development solutions, specializing in AI-driven applications, full-stack development, and cloud computing. Our tailored services empower businesses with cutting-edge technology for optimal performance and growth.", "address": { "@type": "PostalAddress", "streetAddress": "AKSHAYA HQ, 305, OMR, Kazhipattur, Padur", "addressLocality": "Chennai", "addressRegion": "Tamilnadu", "postalCode": "603103", "addressCountry": "IN" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+91-72006-16547", "contactType": "Customer Service", "areaServed": "IN", "availableLanguage": ["en"] }, "sameAs": ["https://www.linkedin.com/company/codeworkai"] }), }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="relative bg-black">
