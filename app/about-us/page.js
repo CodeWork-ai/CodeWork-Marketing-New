@@ -1,4 +1,3 @@
-"use client"
 import AboutHeader from "../components/aboutUs/aboutHeader";
 import AboutUs from "../components/aboutUs/aboutUs";
 
