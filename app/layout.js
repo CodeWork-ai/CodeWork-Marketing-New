@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title: "Home | AI 	Codework:AI Software Development |call us-+91 72006 16547",
+          title: "Codework:AI Software Development |call us-+91 72006 16547",
           description: "Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems.",
         };
       case "/expertise":
