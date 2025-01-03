@@ -16,7 +16,7 @@ const Footer = () => {
     ];
 
     const routeLink = [
-        { href: "/expertise", label: "Expertise" },
+        { href: "/ai-software-development-solutions-codework", label: "Expertise" },
         // { href: "/solution", label: "Expertise" },
         { href: "/service", label: "Services" },
         { href: "/clients", label: "Our Clients" },
@@ -176,7 +176,7 @@ const Footer = () => {
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
                     <ul className="space-y-1">
                         {[  
-                            { href: "/expertise", label: "Expertise" },
+                            { href: "/ai-software-development-solutions-codework", label: "Expertise" },
                             // { href: "/solution", label: "Expertise" },
                             { href: "/service", label: "Services" },
                             { href: "/clients", label: "Our Clients" },

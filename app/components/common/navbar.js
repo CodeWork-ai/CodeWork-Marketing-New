@@ -41,10 +41,10 @@ export default function Navbar() {
 
     const navLinks = [
         {
-            href: "/expertise",
+            href: "/ai-software-development-solutions-codework",
             label: "AI Solutions",
             dropdown: [
-                { href: "/expertise", label: "Expertise", description: "Explore our expertise in AI." },
+                { href: "/ai-software-development-solutions-codework", label: "Expertise", description: "Explore our expertise in AI." },
                 { href: "/service", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
             ],
         },

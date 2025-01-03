@@ -116,7 +116,7 @@ export function AnimatedListRoute({className}) {
     >
       <AnimatedList>
         {notifications.map((item, idx) => (
-            <Link key={idx} href={'/expertise'}>
+            <Link key={idx} href={'/ai-software-development-solutions-codework'}>
                 <ShineBorder className="relative flex flex-col bg-black bg-opacity-50 overflow-hidden rounded-lg md:shadow-xl" color={["#1dcaf5", "#f04f57"]}>
           <Notification className='bg-black' {...item} />
           </ShineBorder>
