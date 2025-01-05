@@ -5,6 +5,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
+import Link from "next/link";
+import { TbMessageChatbot } from "react-icons/tb";
+import ChatIcon from "./components/common/aichat";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -167,6 +170,7 @@ export default function RootLayout({ children }) {
             <Navbar className="mb-36 px-10 md:px-20" />
             <main>{children}</main>
             <Footer />
+            <ChatIcon/>
           </div>
         </div>
       </body>
