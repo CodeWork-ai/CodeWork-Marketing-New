@@ -170,7 +170,7 @@ export default function RootLayout({ children }) {
             <Navbar className="mb-36 px-10 md:px-20" />
             <main>{children}</main>
             <Footer />
-            <ChatIcon/>
+            {/* <ChatIcon/> */}
           </div>
         </div>
       </body>
