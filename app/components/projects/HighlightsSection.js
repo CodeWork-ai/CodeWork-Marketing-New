@@ -46,6 +46,20 @@ const projects = [
       "Evolves with patient feedback to ensure user-friendly, accurate information.",
     ],
   },
+  {
+    id: 4,
+    title: "Handwritten Text Recognition System",
+    description:
+      "The Signature Recognition project aims to verify handwritten signatures using template matching and correlation techniques, processing signature images to compare against a dataset and determine matches based on a defined correlation value.",
+    image: "signature.webp",
+    points: [
+      "Matching Technique: Utilizes OpenCV for accurate signature recognition.",
+      "Correlation Value: Determines matches based on a normalized correlation coefficient.",
+      "Dataset of Known Signatures: Leverages a comprehensive dataset for comparison.",
+      "Signature Verification: Suitable for form validation and low-security applications.",
+      "Enhancement Opportunities: Potential for integrating machine learning models and optimizing performance.",
+    ],
+  },
 ];
 
 export default function HighlightSection() {
@@ -85,7 +99,7 @@ export default function HighlightSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <span className="mr-3 text-[#fd6262] text-xl lg:text-2xl transform group-hover:scale-125 transition-all duration-300">
+              <span className="mr-3 text-[#FF035B] text-xl lg:text-2xl transform group-hover:scale-125 transition-all duration-300">
                 ✔️
               </span>
               <p className="text-[#ffffff]">{point}</p>
@@ -93,7 +107,7 @@ export default function HighlightSection() {
           ))}
         </ul>
         <motion.button
-          className="px-8 py-3 bg-[#fd6262] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-[0_0_20px_#fd6262] hover:scale-110 transition-transform duration-300 mt-12" // Increased spacing with "mt-12"
+          className="px-8 py-3 bg-[#FF035B] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-[0_0_20px_#fd6262] hover:scale-110 transition-transform duration-300 mt-12" // Increased spacing with "mt-12"
           whileHover={{ scale: 1.1 }}
         >
           Learn More
@@ -140,8 +154,8 @@ export default function HighlightSection() {
               <motion.div
                 onClick={() => setActiveIndex(index)}
                 className={`w-16 h-16 rounded-full border-4 ${index === activeIndex
-                    ? "border-[#fd6262] shadow-lg"
-                    : "border-[#ADD8E6]"
+                  ? "border-[#FF035B] shadow-lg"
+                  : "border-[#ADD8E6]"
                   } cursor-pointer`}
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.3 }}

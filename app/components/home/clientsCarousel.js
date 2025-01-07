@@ -47,7 +47,7 @@ const ReviewCard = ({
 export function Clients() {
     return (
         <div className="relative mt-10 md:mt-40 py-10 md:py-20 flex md:h-[4y00px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl bg-black bg-opacity-10">
-            <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-300 mb-4 md:mb-8">Our Happy Clients</h2>
+            <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-200 mb-4 md:mb-8">Our Happy Clients</h2>
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (
                     <ReviewCard key={review.title} {...review} />

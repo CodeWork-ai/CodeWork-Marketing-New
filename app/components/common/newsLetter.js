@@ -48,7 +48,7 @@ const NewsletterForm = () => {
       <h3 className="text-lg font-semibold mb-4 text-gray-200">Subscribe to Our Newsletter</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* <div>
-          <label className="block text-gray-400 text-sm lg:text-base 2xl:text-lg font-medium mb-1" htmlFor="email">
+          <label className="block text-gray-200 text-sm lg:text-base 2xl:text-lg font-medium mb-1" htmlFor="email">
             Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -61,7 +61,7 @@ const NewsletterForm = () => {
           />
         </div> */}
         <div>
-          <label className="block text-gray-400 text-sm lg:text-base 2xl:text-lg font-medium mb-1" htmlFor="email">
+          <label className="block text-gray-200 text-sm lg:text-base 2xl:text-lg font-medium mb-1" htmlFor="email">
             Email <span className="text-red-500">*</span>
           </label>
           <input
@@ -81,21 +81,21 @@ const NewsletterForm = () => {
             onChange={handleCheckboxChange}
             className="text-blue-500 focus:ring-blue-500"
           />
-          <label htmlFor="subscribe" className="text-sm text-gray-400">
+          <label htmlFor="subscribe" className="text-sm text-gray-200">
             Yes, subscribe me to your newsletter.
           </label>
         </div> */}
         <CoolMode>
           <button
             type="submit"
-            className="w-full bg-[#fd6262] text-black py-2 px-4 rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-[#FF035B] text-black py-2 px-4 rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             disabled={isLoading}
           >
             {isLoading ? 'Subscribing...' : 'Subscribe'}
           </button>
         </CoolMode>
         {message && (
-          <p className="text-center text-sm mt-4 text-gray-400">{message}</p>
+          <p className="text-center text-sm mt-4 text-gray-200">{message}</p>
         )}
       </form>
     </div>

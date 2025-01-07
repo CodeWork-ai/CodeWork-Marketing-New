@@ -16,7 +16,7 @@ export default function ChatIcon() {
             {/* Chat Icon */}
             <button
                 onClick={toggleChat}
-                className="fixed z-50 bottom-5 right-5 text-[#fd6262] hover:text-black bg-black border-2 hover:bg-[#fd6262] border-[#fd6262] hover:border-black rounded-full w-14 h-14 flex justify-center items-center shadow-lg transition"
+                className="fixed z-50 bottom-5 right-5 text-[#FF035B] hover:text-black bg-black border-2 hover:bg-[#FF035B] border-[#FF035B] hover:border-black rounded-full w-14 h-14 flex justify-center items-center shadow-lg transition"
             >
                 <RiRobot3Fill className="w-10 h-10" />
             </button>
@@ -34,7 +34,7 @@ export default function ChatIcon() {
                             className="w-[300px] md:w-[400px] h-full bg-black rounded-lg"
                         ></iframe>
                         </ShineBorder>
-                        <div className="fixed flex items-center justify-center text-center bottom-24 right-5 w-[300px] md:w-[400px] h-10 bg-black text-gray-400 text-xs rounded-b-lg shadow-lg overflow-hidden z-50">
+                        <div className="fixed flex items-center justify-center text-center bottom-24 right-5 w-[300px] md:w-[400px] h-10 bg-black text-gray-200 text-xs rounded-b-lg shadow-lg overflow-hidden z-50">
                             Powered by CodeWork
                         </div>
                     

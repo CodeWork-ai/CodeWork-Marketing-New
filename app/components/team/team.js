@@ -60,7 +60,7 @@ const ManagementTeam = () => {
         <div className="bg-black bg-opacity-20 py-10">
             <div className="container mx-auto px-10 md:px-20 space-y-5">
                 <h2 className="text-3xl font-bold text-center mb-6">Management Team</h2>
-                <p className="text-center text-gray-300 mb-10 md:text-xl">
+                <p className="text-center text-gray-200 mb-10 md:text-xl">
                     Our management team boasts over 15 years of experience in driving business excellence and fostering innovation. With a deep understanding of industry trends and a commitment to strategic growth, they ensure Codework remains a trusted partner for cutting-edge AI and technology solutions.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:mt-10">
@@ -75,7 +75,7 @@ const ManagementTeam = () => {
                                 className="w-72 h-96 mx-auto rounded-lg object-cover mb-4"
                             />
                             <h3 className="text-xl font-semibold text-white">{member.name}</h3>
-                            <p className="text-gray-300">{member.title}</p>
+                            <p className="text-gray-200">{member.title}</p>
 
                             {/* LinkedIn Button */}
                             <a
@@ -92,7 +92,7 @@ const ManagementTeam = () => {
                 </div>
                 <div>
                     <h2 className="text-3xl font-bold text-center mb-6">Technical Team</h2>
-                    <p className="text-center text-gray-300 mb-10 md:text-xl">
+                    <p className="text-center text-gray-200 mb-10 md:text-xl">
                         Our technical team is the backbone of Codework's innovation. With exceptional proficiency in AI technologies and a passion for solving complex challenges, they deliver transformative solutions that help businesses achieve their goals in today’s digital-first world.
                     </p>
                 </div>
@@ -108,7 +108,7 @@ const ManagementTeam = () => {
                                 className="w-72 h-96 mx-auto rounded-lg object-cover mb-4"
                             />
                             <h3 className="text-xl font-semibold text-white">{member.name}</h3>
-                            <p className="text-gray-300">{member.title}</p>
+                            <p className="text-gray-200">{member.title}</p>
 
                             {/* LinkedIn Button */}
                             <a

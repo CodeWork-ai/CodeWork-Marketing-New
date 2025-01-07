@@ -13,6 +13,29 @@ export default function Navbar() {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // Update visibility for sliding effect
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down
+                setIsVisible(false);
+            } else {
+                // Scrolling up
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
+
+    // Determine background opacity based on scroll position
+    const backgroundOpacity = lastScrollY === 0 ? "bg-opacity-0" : "bg-opacity-100";
+
+    useEffect(() => {
         setIsDropdownOpen(null); // Close dropdown on navigation
     }, [pathname]);
 
@@ -125,14 +148,15 @@ export default function Navbar() {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full z-50 bg-opacity-0 bg-black transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 ${isVisible ? "translate-y-0" : "-translate-y-full"
+            className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#07070e] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
         >
+
             <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
                 <Link href="/">
                     <div className="flex items-center">
                         <Image
-                            src="/cw-logo.svg"
+                            src="/cw-logo3.svg"
                             alt="Company Logo"
                             width={200}
                             height={200}
@@ -150,7 +174,7 @@ export default function Navbar() {
                                 onMouseLeave={() => setIsDropdownOpen(null)}
                             >
                                 <button
-                                    className={`hover:text-[#fd6262] ease-in-out duration-150 text-sm lg:text-base 2xl:text-lg ${pathname === item.href ? "text-[#fd6262]" : "text-gray-50"
+                                    className={`hover:text-[#FF035B] ease-in-out duration-150 text-sm lg:text-base 2xl:text-lg ${pathname === item.href ? "text-[#FF035B]" : "text-gray-50"
                                         }`}
                                 >
                                     <Link href={item.href}>{item.label}</Link>

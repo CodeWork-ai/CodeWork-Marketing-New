@@ -74,8 +74,8 @@ const ContactForm = () => {
         <div className="flex flex-col lg:flex-row justify-between bg-black bg-opacity-40 text-white p-8 md:p-16 space-y-8 md:space-y-2">
             {/* Left Section */}
             <div className="flex-1 space-y-4 mr-5">
-                <h2 className="text-2xl font-bold text-gray-300">At CodeWork</h2>
-                <p className="text-gray-400">
+                <h2 className="text-2xl font-bold text-gray-200">At CodeWork</h2>
+                <p className="text-gray-200">
                     We are dedicated to leveraging advanced AI, ML, and Data Science to transform your business. Let's collaborate to craft your success story and showcase the potential of AI in driving sustainable growth.
                 </p>
             </div>
@@ -168,7 +168,7 @@ const ContactForm = () => {
                     </button>
 
                     {responseMessage && (
-                        <p className="mt-6 text-center text-sm text-gray-400">{responseMessage}</p>
+                        <p className="mt-6 text-center text-sm text-gray-200">{responseMessage}</p>
                     )}
                 </form>
             </ShineBorder>

@@ -70,7 +70,7 @@ export default function HighlightSection() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#fd6262] to-[#ADD8E6] bg-clip-text text-transparent">
+        <h2 className="text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#FF035B] to-[#ADD8E6] bg-clip-text text-transparent">
           {activeProject.title}
         </h2>
         <p className="text-lg lg:text-xl text-[#ADD8E6]">
@@ -85,7 +85,7 @@ export default function HighlightSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <span className="mr-3 text-[#fd6262] text-2xl transform group-hover:scale-125 transition-all duration-300">
+              <span className="mr-3 text-[#FF035B] text-2xl transform group-hover:scale-125 transition-all duration-300">
                 ✔️
               </span>
               <p className="text-[#ADD8E6]">{point}</p>
@@ -93,7 +93,7 @@ export default function HighlightSection() {
           ))}
         </ul>
         <motion.button
-          className="px-8 py-3 bg-[#fd6262] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-[0_0_20px_#fd6262] hover:scale-110 transition-transform duration-300"
+          className="px-8 py-3 bg-[#FF035B] text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-[0_0_20px_#fd6262] hover:scale-110 transition-transform duration-300"
           whileHover={{ scale: 1.1 }}
         >
           Learn More
@@ -127,7 +127,7 @@ export default function HighlightSection() {
               onClick={() => setActiveIndex(index)}
               className={`absolute w-16 h-16 rounded-full border-4 ${
                 index === activeIndex
-                  ? "border-[#fd6262] shadow-lg"
+                  ? "border-[#FF035B] shadow-lg"
                   : "border-[#ADD8E6]"
               } cursor-pointer`}
               style={{

@@ -71,9 +71,9 @@ const ExpertiseGrid = () => {
                             key={index}
                             className="flex flex-col items-start space-y-4 p-4 bg-black bg-opacity-50 rounded-lg shadow-lg"
                         >
-                            <div className="text-4xl text-[#fd6262]">{feature.icon}</div>
+                            <div className="text-4xl text-[#FF035B]">{feature.icon}</div>
                             <h3 className="text-xl font-bold">{feature.title}</h3>
-                            <p className="text-sm text-gray-300">{feature.description}</p>
+                            <p className="text-sm text-gray-200">{feature.description}</p>
                         </div>
                     ))}
                 </div>
@@ -85,8 +85,8 @@ const ExpertiseGrid = () => {
                             <div className="W-1/2 border border-transparent border-r-gray-600 px-16 flex items-center">{feature.desktop_icon}</div>
                             <div className="w-1/2 p-2 pl-16 flex items-center">
                                 <div className="">
-                                    <h3 className="text-lg lg:text-xl font-bold mb-1 text-gray-300">{feature.title}</h3>
-                                    <p className="text-sm lg:text-base text-gray-400 leading-7">{feature.description}</p>
+                                    <h3 className="text-lg lg:text-xl font-bold mb-1 text-gray-200">{feature.title}</h3>
+                                    <p className="text-sm lg:text-base text-gray-200 leading-7">{feature.description}</p>
                                 </div>
                             </div>
                         </div>

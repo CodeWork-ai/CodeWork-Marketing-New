@@ -61,9 +61,9 @@ const ServiceGrid = () => {
                             key={index}
                             className="flex flex-col items-start space-y-4 p-4 bg-black bg-opacity-50 rounded-lg shadow-lg"
                         >
-                            <div className="text-4xl text-[#fd6262]">{feature.icon}</div>
+                            <div className="text-4xl text-[#FF035B]">{feature.icon}</div>
                             <h3 className="text-xl font-bold">{feature.title}</h3>
-                            <p className="text-sm text-gray-300">{feature.description}</p>
+                            <p className="text-sm text-gray-200">{feature.description}</p>
                         </div>
                     ))}
                 </div>
@@ -72,7 +72,7 @@ const ServiceGrid = () => {
                 <div className="h-full space-y-1 md:space-y-7 2xl:space-y-8 md:p-2 lg:p-5">
                     {features.map((feature, index) => (
                         <div key={index} className="w-full flex" ref={ref}>
-                            <div className="W-2/8 flex items-start text-[#fd6262]">
+                            <div className="W-2/8 flex items-start text-[#FF035B]">
                                 <motion.div
                                     animate={isInView ? { rotate: 340 } : { rotate: 20 }}
                                     transition={{ duration: 2 }}
@@ -82,8 +82,8 @@ const ServiceGrid = () => {
                             </div>
                             <div className="w-6/8 pl-4 2xl:pl-8 flex items-start">
                                 <div className="">
-                                    <h3 className="text-base lg:text-lg mb-1 text-gray-300">{feature.title}</h3>
-                                    <p className="text-sm lg:text-base text-gray-400">{feature.description}</p>
+                                    <h3 className="text-base lg:text-lg mb-1 text-gray-200 font-semibold">{feature.title}</h3>
+                                    <p className="text-sm lg:text-base text-gray-200">{feature.description}</p>
                                 </div>
                             </div>
                         </div>

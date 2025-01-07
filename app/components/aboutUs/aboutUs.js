@@ -15,7 +15,7 @@ const AboutUs = () => {
           Our team combines advanced AI tools, industry expertise, and a human-first approach to deliver results that matter. From startups to enterprises, we partner with businesses to unlock their full potential using AI and emerging technologies. 
           </h1>
           </ShineBorder>
-          {/* <p className="text-lg text-gray-300">
+          {/* <p className="text-lg text-gray-200">
             Welcome to Codework, where innovation meets intelligence. We are a technology-driven company leveraging cutting-edge AI technology to transform businesses and drive success.
           </p> */}
         </header>
@@ -24,31 +24,31 @@ const AboutUs = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">Why Choose Codework?</h2>
           <ul className="space-y-4">
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">AI-Driven Solutions:</span> We specialize in crafting innovative AI-based products tailored to your business needs.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">End-to-End Expertise:</span> From development to deployment, we ensure seamless technology integration.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">User-Centric Approach:</span> We design solutions that prioritize user experience and real-world impact.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">Proven Technologies:</span> Proficiency in Reactjs, Java, Python, Azure, AWS, R language, Nextjs, and more.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">Scalable & Secure Systems:</span> Ensuring reliability, scalability, and security in every solution we build.
@@ -60,10 +60,10 @@ const AboutUs = () => {
         {/* Mission Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6">Our Mission</h2>
-          <p className="text-gray-300 mb-4">
+          <p className="text-gray-200 mb-4">
             Our mission is to leverage our expertise in software development to create meaningful solutions that benefit society while ensuring that our top talent shares in our organization's success.
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-200">
             At Codework, we’re not just building technology. We’re shaping the future of businesses. Let’s innovate together!
           </p>
         </section>
@@ -72,19 +72,19 @@ const AboutUs = () => {
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">What Makes Us Different?</h2>
           <ul className="space-y-4">
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">Human-Centric Solutions:</span> We don’t just deliver technology; we create human-centric solutions powered by AI.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">Expert Team:</span> Our expert team transforms your ideas into results using artificial intelligence and next-gen technologies.
               </span>
             </li>
-            <li className="text-gray-300 flex items-start">
+            <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />
               <span>
                 <span className="font-semibold text-white">Alignment with Your Goals:</span> With a focus on simplicity, innovation, and business growth, we align technology with your goals.

@@ -54,7 +54,7 @@ export default function Hero() {
           </h1>
 
           {/* Animated Subtext */}
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mt-6 italic animate-fade-in">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mt-6 italic animate-fade-in">
             Empowering businesses through AI, Machine Learning, and beyond.
           </p>
         </div>
@@ -62,13 +62,13 @@ export default function Hero() {
         {/* Right Side: Content */}
         <div className="flex-1 text-center lg:text-left lg:pl-12 mt-10 lg:mt-0">
           {/* Subtitle */}
-          <h2 className="text-lg md:text-xl lg:text-2xl uppercase tracking-wide mb-4 text-[#fd6262]">
+          <h2 className="text-lg md:text-xl lg:text-2xl uppercase tracking-wide mb-4 text-[#FF035B]">
             Discover the Future
-            <span className="block mx-auto lg:mx-0 w-16 h-1 bg-[#fd6262] mt-2"></span>
+            <span className="block mx-auto lg:mx-0 w-16 h-1 bg-[#FF035B] mt-2"></span>
           </h2>
 
           {/* Description */}
-          <p className="text-sm md:text-lg lg:text-xl leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0 text-gray-300">
+          <p className="text-sm md:text-lg lg:text-xl leading-relaxed mb-6 max-w-lg mx-auto lg:mx-0 text-gray-200">
             Welcome to CodeWork, where we specialize in harnessing the transformative
             power of Artificial Intelligence, Machine Learning, Deep Learning, Data Science,
             and Open Source Intelligence.
@@ -76,7 +76,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex justify-center lg:justify-start gap-6">
-            <button className="px-8 py-3 bg-[#fd6262] text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-transform duration-300">
+            <button className="px-8 py-3 bg-[#FF035B] text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-transform duration-300">
               Learn More
             </button>
           </div>

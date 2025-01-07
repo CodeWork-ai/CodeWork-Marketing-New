@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
           <h2 className="text-4xl lg:text-5xl font-extrabold text-[#ffffff] mb-4">
             What People Say
           </h2>
-          <p className="text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto">
             Hear from our amazing clients and collaborators.
           </p>
         </div>

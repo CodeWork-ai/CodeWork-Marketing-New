@@ -7,7 +7,7 @@ export default function TestimonialCard({ quote, name, role, avatar }) {
       </div>
 
       {/* Quote */}
-      <p className="text-gray-300 text-center text-base lg:text-lg leading-relaxed italic mt-6">
+      <p className="text-gray-200 text-center text-base lg:text-lg leading-relaxed italic mt-6">
         {quote}
       </p>
 
@@ -21,7 +21,7 @@ export default function TestimonialCard({ quote, name, role, avatar }) {
       {/* Name and Role */}
       <div className="text-center">
         <h4 className="text-lg font-bold text-blue-400">{name}</h4>
-        <p className="text-sm text-gray-400">{role}</p>
+        <p className="text-sm text-gray-200">{role}</p>
       </div>
     </div>
   );

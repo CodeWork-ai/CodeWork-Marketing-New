@@ -74,7 +74,7 @@ const Contact = () => {
                 </div>
                 <form
                     onSubmit={handleSubmit}
-                    className="flex-1 bg-black lg:w-[500px] xl:w-[700px] bg-opacity-5 p-0 md:p-6 rounded-md shadow-md space-y-2 md:space-y-6"
+                    className="flex-1 bg-black lg:w-[500px] xl:w-[500px] 2xl:w-[600px] bg-opacity-5 p-0 md:p-6 rounded-md shadow-md space-y-2 md:space-y-6"
                 >
                     {/* First and Last Name */}
                     <input
@@ -126,21 +126,21 @@ const Contact = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md transition duration-300"
+                        className="w-full bg-[#FF035B] hover:bg-opacity-80 text-white font-semibold px-4 py-2 rounded-md transition duration-300"
                         disabled={loading}
                     >
                         {loading ? 'Submitting...' : 'Submit'}
                     </button>
                     {responseMessage && (
-                        <p className="mt-6 text-center text-sm text-gray-400">{responseMessage}</p>
+                        <p className="mt-6 text-center text-sm text-gray-200">{responseMessage}</p>
                     )}
                 </form>
             </ShineBorder>
 
             {/* Right Section: Form */}
             <div className="flex-1 space-y-4 ml-0 md:ml-5">
-                {/* <h2 className="text-2xl font-bold text-gray-300">At CodeWork</h2>
-                <p className="text-gray-400">
+                {/* <h2 className="text-2xl font-bold text-gray-200">At CodeWork</h2>
+                <p className="text-gray-200">
                     We are dedicated to leveraging advanced AI, ML, and Data Science to transform your business. Let's collaborate to craft your success story and showcase the potential of AI in driving sustainable growth.
                 </p> */}
                 <AnimatedListRoute />

@@ -112,7 +112,7 @@ export default function MobileNavbar() {
             <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/">
-                    <Image src="/cw-logo.svg" alt="Company Logo" width={150} height={150} />
+                    <Image src="/cw-logo3.svg" alt="Company Logo" width={150} height={150} />
                 </Link>
                 {/* Hamburger Icon */}
                 <button
@@ -130,7 +130,7 @@ export default function MobileNavbar() {
                     {navLinks.map((item, index) => (
                         <div key={item.href}>
                             <button
-                                className="w-full text-left text-lg font-medium hover:text-[#fd6262]"
+                                className="w-full text-left text-lg font-medium hover:text-[#FF035B]"
                                 onClick={() =>
                                     setIsDropdownOpen(isDropdownOpen === index ? null : index)
                                 }
@@ -144,10 +144,10 @@ export default function MobileNavbar() {
                                         <Link
                                             key={dropdownItem.href}
                                             href={dropdownItem.href}
-                                            className="block text-sm hover:text-[#fd6262]"
+                                            className="block text-sm hover:text-[#FF035B]"
                                         >
                                             <h2 className="font-semibold">{dropdownItem.label}</h2>
-                                            {/* <p className="text-gray-300 text-sm">{dropdownItem.description}</p> */}
+                                            {/* <p className="text-gray-200 text-sm">{dropdownItem.description}</p> */}
                                         </Link>
                                     ))}
                                 </div>
@@ -155,7 +155,7 @@ export default function MobileNavbar() {
                         </div>
                     ))}
                     <Link href="/getInTouch">
-                        <button className="w-full px-4 py-2 mt-4 text-center bg-[#fd6262] rounded-md hover:bg-[#e55555]">
+                        <button className="w-full px-4 py-2 mt-4 text-center bg-[#FF035B] rounded-md hover:bg-[#e55555]">
                             Get In Touch
                         </button>
                     </Link>

@@ -6,10 +6,11 @@ import { usePathname } from "next/navigation";
 import ShinyButton from "@/components/ui/shiny-button";
 import NewsletterForm from "./newsLetter";
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     const socialMedia = [
-        { label: "Twitter", Icon: FaTwitter, link: "https://www.x.com/CodeworkAi" },
+        { label: "Twitter", Icon: FaXTwitter, link: "https://www.x.com/CodeworkAi" },
         { label: "LinkedIn", Icon: FaLinkedin, link: "https://www.linkedin.com/company/codeworkai/" },
         { label: "Facebook", Icon: FaFacebook, link: "https://www.facebook.com/share/vZSfbuXSPqAQpz1T/" },
         { label: "Instagram", Icon: FaInstagram, link: "https://www.instagram.com/codework.ai?igsh=dng2NXU0cnppNGRq" },
@@ -49,7 +50,7 @@ const Footer = () => {
                     <Link href="/">
                         <div className="flex items-center mb-5">
                             <Image
-                                src="/cw-logo.svg"
+                                src="/cw-logo3.svg"
                                 alt="Company Logo"
                                 width={150}
                                 height={150}
@@ -58,9 +59,9 @@ const Footer = () => {
                         </div>
                     </Link>
                     <div className="space-y-2 text-center md:text-left">
-                        <p className="text-gray-400">+91 75989 81500</p>
-                        {/* <p className="text-gray-400">+91 75989 81500</p> */}
-                        <p className="text-gray-400">sales@codework.ai</p>
+                        <p className="text-gray-200">+91 75989 81500</p>
+                        {/* <p className="text-gray-200">+91 75989 81500</p> */}
+                        <p className="text-gray-200">sales@codework.ai</p>
                     </div>
                 </div>
 
@@ -75,7 +76,7 @@ const Footer = () => {
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
-                                            className={`hover:text-[#fd6262] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#fd6262]" : "text-gray-400"
+                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
                                                 }`}
                                         >
                                             {item.label}
@@ -90,7 +91,7 @@ const Footer = () => {
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
-                                            className={`hover:text-[#fd6262] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#fd6262]" : "text-gray-400"
+                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
                                                 }`}
                                         >
                                             {item.label}
@@ -105,7 +106,7 @@ const Footer = () => {
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
-                                            className={`hover:text-[#fd6262] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#fd6262]" : "text-gray-400"
+                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
                                                 }`}
                                         >
                                             {item.label}
@@ -130,7 +131,7 @@ const Footer = () => {
                             <ul className="flex space-x-2 h-14">
                                 {socialMedia.map(({ label, Icon, link }) => (
                                     <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
-                                        <li className="flex items-center justify-center text-gray-300 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
+                                        <li className="flex items-center justify-center text-gray-200 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
                                             <Icon size={20} />
                                         </li>
                                     </a>
@@ -156,7 +157,7 @@ const Footer = () => {
                     <Link href="/">
                         <div className="flex items-center mb-5">
                             <Image
-                                src="/cw-logo.svg"
+                                src="/cw-logo3.svg"
                                 alt="Company Logo"
                                 width={150}
                                 height={150}
@@ -165,9 +166,9 @@ const Footer = () => {
                         </div>
                     </Link>
                     <div className="space-y-2 text-center md:text-left">
-                        <p className="text-gray-400">+91 75989 81500</p>
-                        {/* <p className="text-gray-400">+91 75989 81500</p> */}
-                        <p className="text-gray-400">sales@codework.ai</p>
+                        <p className="text-gray-200">+91 75989 81500</p>
+                        {/* <p className="text-gray-200">+91 75989 81500</p> */}
+                        <p className="text-gray-200">sales@codework.ai</p>
                     </div>
                 </div>
 
@@ -196,7 +197,7 @@ const Footer = () => {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className={`hover:text-[#fd6262] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#fd6262]" : "text-gray-400"
+                                    className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
                                         }`}
                                 >
                                     {item.label}
@@ -217,7 +218,7 @@ const Footer = () => {
                             <ul className="flex space-x-2 h-14">
                                 {socialMedia.map(({ label, Icon, link }) => (
                                     <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
-                                        <li className="flex items-center justify-center text-gray-300 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
+                                        <li className="flex items-center justify-center text-gray-200 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
                                             <Icon size={20} />
                                         </li>
                                     </a>
@@ -239,7 +240,7 @@ const Footer = () => {
 
             {/* Footer Bottom */}
             <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-                <p className="text-gray-400 text-sm">© 2024 CodeWork. All Rights Reserved.</p>
+                <p className="text-gray-200 text-sm">© 2024 CodeWork. All Rights Reserved.</p>
             </div>
         </footer>
     );

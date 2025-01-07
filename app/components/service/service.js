@@ -59,11 +59,11 @@ const services = [
     color: "text-orange-500"
   },
   {
-    icon: <FaTools className="text-gray-500 text-4xl" />,
+    icon: <FaTools className="text-gray-200 text-4xl" />,
     title: "DevOps Solutions",
     description:
       "Streamline development and operations with our efficient DevOps practices and tools.",
-    color: "text-gray-500"
+    color: "text-gray-200"
   }
 ];
 
@@ -72,7 +72,7 @@ const ServiceCard = ({ icon, title, description, color }) => {
     <div className="flex flex-col items-center p-6 bg-black bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
       <div className="mb-4 animate-bounce">{icon}</div>
       <h3 className={`text-xl font-semibold mb-2 ${color}`}>{title}</h3>
-      <p className="text-gray-400 text-center">{description}</p>
+      <p className="text-gray-200 text-center">{description}</p>
     </div>
   );
 };

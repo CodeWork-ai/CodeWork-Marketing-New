@@ -26,7 +26,7 @@ const FeatureHighlights = () => {
             className="border border-gray-400 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
           >
             <h3 className="text-base md:text-lg font-semibold mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm md:text-base">{feature.description}</p>
+            <p className="text-gray-200 text-sm md:text-base">{feature.description}</p>
           </div>
         ))}
       </div>

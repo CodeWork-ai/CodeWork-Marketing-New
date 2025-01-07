@@ -118,8 +118,8 @@ export function AnimatedBeamDemo() {
         <div className="py-10 bg-black bg-opacity-20">
             <div className="flex items-center justify-center">
                 <div className="px-10 md:px-52 md:mt-20">
-                    <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-300 font-bold mb-3">Where do we Excel?</h2>
-                    <h3 className="text-center text-sm md:text-base lg:text-xl 2xl:text-2xl text-gray-400">Explore how we leverage innovative AI and blockchain technologies to reshape key sectors, drive efficiency, and unlock new possibilities. </h3>
+                    <h2 className="text-center text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-gray-200 font-bold mb-3">Where do we Excel?</h2>
+                    <h3 className="text-center text-sm md:text-base lg:text-xl 2xl:text-2xl text-gray-200">Explore how we leverage innovative AI and blockchain technologies to reshape key sectors, drive efficiency, and unlock new possibilities. </h3>
                 </div>
             </div>
             <div
@@ -179,7 +179,7 @@ export function AnimatedBeamDemo() {
                     //   }}
                     >
                         <h3 className="text-lg md:text-xl md:font-bold text-gray-200 mb-2 md:mb-5">{hoveredIcon.title}</h3>
-                        <p className="hidden md:flex text-sm md:text-base text-gray-400">{hoveredIcon.description}</p>
+                        <p className="hidden md:flex text-sm md:text-base text-gray-200">{hoveredIcon.description}</p>
                     </div>
                 )}
 
