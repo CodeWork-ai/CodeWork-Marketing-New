@@ -50,7 +50,7 @@ const Footer = () => {
                     <Link href="/">
                         <div className="flex items-center mb-5">
                             <Image
-                                src="/cw-logo3.svg"
+                                src="/cw-logo.svg"
                                 alt="Company Logo"
                                 width={150}
                                 height={150}
@@ -157,7 +157,7 @@ const Footer = () => {
                     <Link href="/">
                         <div className="flex items-center mb-5">
                             <Image
-                                src="/cw-logo3.svg"
+                                src="/cw-logo.svg"
                                 alt="Company Logo"
                                 width={150}
                                 height={150}

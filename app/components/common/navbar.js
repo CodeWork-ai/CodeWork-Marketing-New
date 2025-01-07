@@ -156,7 +156,7 @@ export default function Navbar() {
                 <Link href="/">
                     <div className="flex items-center">
                         <Image
-                            src="/cw-logo3.svg"
+                            src="/cw-logo.svg"
                             alt="Company Logo"
                             width={200}
                             height={200}

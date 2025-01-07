@@ -112,7 +112,7 @@ export default function MobileNavbar() {
             <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/">
-                    <Image src="/cw-logo3.svg" alt="Company Logo" width={150} height={150} />
+                    <Image src="/cw-logo.svg" alt="Company Logo" width={150} height={150} />
                 </Link>
                 {/* Hamburger Icon */}
                 <button
