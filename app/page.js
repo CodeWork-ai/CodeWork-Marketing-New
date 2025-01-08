@@ -7,6 +7,7 @@ import { GlobeDemo } from "./components/home/globe";
 import { AnimatedBeamDemo } from "./components/home/services";
 import { Clients } from "./components/home/clientsCarousel";
 import Contact from "./components/home/contact";
+import TestimonialCarousel from "./components/home/carouselCard";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Clients />
         <ExploreAiPoweredSolutions />
         <AnimatedBeamDemo />
+        <TestimonialCarousel/>
         <ParallaxEffect />
         <GlobeDemo />
         <Contact />
