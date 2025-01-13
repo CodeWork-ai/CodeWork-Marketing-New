@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title: "Codework:AI Software Development |call us-+91 72006 16547",
-          description: "Discover AI software development solutions by Codework. Redefine innovation with cutting-edge technologies, empowering businesses with smart, scalable systems.",
+          title: "Top AI Software Development Company | Custom AI Solutions",
+          description: "Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
         };
       case "/ai-software-development-solutions-codework":
         return {
@@ -77,6 +77,36 @@ export default function RootLayout({ children }) {
         return {
           title: "Contact Codework for AI Solutions",
           description: "Reach out to Codework and discover how our AI solutions can empower your business. Let us help you innovate, streamline, and achieve your goals.",
+        };
+
+      case "/industries/healthcare":
+        return {
+          title: "AI-Driven Healthcare: Diagnostics & EHR Solutions",
+          description: "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
+        };
+
+      case "/industries/education":
+        return {
+          title: "Adaptive AI Learning & Blockchain Certification",
+          description: "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
+        };
+
+      case "/industries/e-commerce":
+        return {
+          title: "Smarter Shopping: Predictive E-commerce Analytics",
+          description: "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
+        };
+
+      case "/industries/finance":
+        return {
+          title: "AI-Powered Fraud Detection & Risk Analysis",
+          description: "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
+        };
+
+      case "/industries/data-security":
+        return {
+          title: "Advanced Data Security: Threat Detection & Decentralized Protection",
+          description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
         };
 
       // Add cases for other routes as needed
