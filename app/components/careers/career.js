@@ -24,7 +24,7 @@ const CareerPage = () => {
                 Collaborate with cross-functional teams to develop scalable, secure, and high-quality software solutions.
               </p>
               <a
-                href="/careers"
+                href="/careers-at-codework"
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
                 Apply now <FaArrowRight className="ml-2" />
@@ -36,7 +36,7 @@ const CareerPage = () => {
                 Analyze complex datasets and create AI-driven models to solve real-world problems.
               </p>
               <a
-                href="/careers"
+                href="/careers-at-codework"
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
                 Apply now <FaArrowRight className="ml-2" />
@@ -48,7 +48,8 @@ const CareerPage = () => {
                 Lead product strategy and execution to deliver impactful solutions that align with business goals.
               </p>
               <a
-                href="/careers"
+                href="/careers-at-codework
+                "
                 className="inline-flex items-center mt-4 text-red-500 hover:underline"
               >
                 Apply now <FaArrowRight className="ml-2" />

@@ -36,7 +36,7 @@ const TechnologyGrid = () => {
         ))}
       </div>
       {/* <div className="flex w-full md:w-auto items-center justify-center mt-6">
-        <Link href="/service" className="w-full md:w-auto">
+        <Link href="/driving-innovation-cutting-edge-ai-services" className="w-full md:w-auto">
           <button className="bg-[#FF035B] w-full md:w-auto hover:bg-red-400 text-black hover:text-white font-medium rounded-sm px-2 py-2 md:px-3 md:py-2 xl:px-5 xl:py-3 hover:bg-opacity-50 text:sm lg:text-base 2xl:text-lg">
             Explore Our Technologies
           </button>

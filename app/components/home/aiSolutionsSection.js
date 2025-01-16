@@ -48,7 +48,7 @@ const AiSolutionsSection = () => {
             </h3>
             <div className="">
               <div className="hidden md:flex space-x-5">
-                <Link href="/ai-software-development-solutions-codework">
+                <Link href="empowering-innovation-ai-advanced-technologies">
                   <button className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg">
                     Discover More
                   </button>
@@ -89,7 +89,7 @@ const AiSolutionsSection = () => {
               </h3>
               <div className="md:hidden w-full space-y-4">
                 <div className="w-full">
-                  <Link href="/ai-software-development-solutions-codework">
+                  <Link href="/empowering-innovation-ai-advanced-technologies">
                     <button className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white w-full py-2">
                       Discover More
                     </button>

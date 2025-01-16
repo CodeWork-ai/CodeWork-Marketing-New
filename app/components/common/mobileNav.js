@@ -17,65 +17,65 @@ export default function MobileNavbar() {
 
     const navLinks = [
         {
-            href: "/ai-software-development-solutions-codework",
+            href: "/empowering-innovation-ai-advanced-technologies",
             label: "AI Solutions",
             dropdown: [
-                { href: "/ai-software-development-solutions-codework", label: "Expertise", description: "Explore our expertise in AI." },
-                { href: "/service", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
+                { href: "/empowering-innovation-ai-advanced-technologies", label: "Expertise", description: "Explore our expertise in AI." },
+                { href: "/driving-innovation-cutting-edge-ai-services", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
             ],
         },
         {
-            href: "/clients",
+            href: "/clients-custom-ai-solutions",
             label: "Clients",
             dropdown: [
                 {
-                    href: "/clients",
+                    href: "/clients-custom-ai-solutions",
                     label: "Our Clients",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
-                    href: "/case-study",
+                    href: "/ai-business-solutions",
                     label: "Case Studies",
                     description: "Explore detailed insights from our successful projects.",
                 },
             ],
         },
         {
-            href: "/industries/healthcare",
+            href: "/industries/ai-in-healthcare-you-must-know",
             label: "Industries",
             dropdown: [
                 {
-                    href: "/industries/healthcare",
+                    href: "/industries/ai-in-healthcare-you-must-know",
                     label: "HealthCare",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
-                    href: "/industries/education",
+                    href: "unique-ai-in-education",
                     label: "Education",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
-                    href: "/industries/e-commerce",
+                    href: "/ai-in-ecommerce",
                     label: "E-commerce",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
-                    href: "/industries/finance",
+                    href: "/new-ai-in-finance",
                     label: "Finance",
                     description: "Discover the industries and organizations we serve.",
                 },
                 {
-                    href: "/industries/data-security",
+                    href: "/ai-in-cybersecurity",
                     label: "Data Security",
                     description: "Discover the industries and organizations we serve.",
                 },
             ],
         },
         {
-            href: "/about-us", label: "Company",
+            href: "/ai-powered-technology", label: "Company",
             dropdown: [
                 {
-                    href: "/about-us",
+                    href: "/ai-powered-technology",
                     label: "About Us",
                     description: "Learn about our mission, vision, and journey in AI innovation.",
                 },
@@ -85,21 +85,21 @@ export default function MobileNavbar() {
                     description: "Meet the experts driving our success in AI solutions.",
                 },
                 {
-                    href: "/careers",
+                    href: "/careers-at-codework",
                     label: "Careers",
                     description: "Join our team and shape the future of AI with us.",
                 },
                 {
-                    href: "/getInTouch",
+                    href: "/contact-ai-solutions",
                     label: "Contact Us",
                     description: "Reach out to us for inquiries, collaborations, or support.",
                 },
             ],
         },
         {
-            href: "/ai-community", label: "AI Community", dropdown: [
+            href: "/build-your-career-with-codework", label: "AI Community", dropdown: [
                 {
-                    href: "/ai-community",
+                    href: "/build-your-career-with-codework",
                     label: "AI Community",
                     description: "Join our AI community to chat AI !",
                 }
@@ -154,7 +154,7 @@ export default function MobileNavbar() {
                             )}
                         </div>
                     ))}
-                    <Link href="/getInTouch">
+                    <Link href="/contact-ai-solutions">
                         <button className="w-full px-4 py-2 mt-4 text-center bg-[#FF035B] rounded-md hover:bg-[#e55555]">
                             Get In Touch
                         </button>
