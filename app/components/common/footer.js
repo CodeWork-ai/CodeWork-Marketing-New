@@ -17,22 +17,22 @@ const Footer = () => {
     ];
 
     const routeLink = [
-        { href: "/ai-software-development-solutions-codework", label: "Expertise" },
+        { href: "/empowering-innovation-ai-advanced-technologies", label: "Expertise" },
         // { href: "/solution", label: "Expertise" },
-        { href: "/service", label: "Services" },
-        { href: "/clients", label: "Our Clients" },
+        { href: "/driving-innovation-cutting-edge-ai-services", label: "Services" },
+        { href: "/clients-custom-ai-solutions", label: "Our Clients" },
         // { href: "/blog", label: "Blog" },
-        { href: "/case-study", label: "Case Studies" },
-        { href: "/about-us", label: "About Us" },
+        { href: "/ai-business-solutions", label: "Case Studies" },
+        { href: "/ai-powered-technology", label: "About Us" },
         { href: "/team", label: "Our Team" },
-        { href: "/careers", label: "Careers" },
-        { href: "/getInTouch", label: "Contact Us" },
-        { href: "/ai-community", label: "AI Community" },
-        { href: "/industries/healthcare", label: "Healthcare" },
-        { href: "/industries/education", label: "Education" },
-        { href: "/industries/e-commerce", label: "E-commerce" },
-        { href: "/industries/finance", label: "Finance" },
-        { href: "/industries/data-security", label: "Data Security" },
+        { href: "/careers-at-codework", label: "Careers" },
+        { href: "/contact-ai-solutions", label: "Contact Us" },
+        { href: "/build-your-career-with-codework", label: "AI Community" },
+        { href: "/ai-in-healthcare-you-must-know", label: "Healthcare" },
+        { href: "/unique-ai-in-education", label: "Education" },
+        { href: "/ai-in-ecommerce", label: "E-commerce" },
+        { href: "/new-ai-in-finance", label: "Finance" },
+        { href: "/ai-in-cybersecurity", label: "Data Security" },
     ]
     const pathname = usePathname();
 
@@ -141,7 +141,7 @@ const Footer = () => {
                     </div>
                     <div className="w-full">
                         <h3 className="text-lg font-semibold mb-4 text-gray-200">Connect with Us</h3>
-                        <Link href="/getInTouch">
+                        <Link href="/contact-ai-solutions">
                             <ShinyButton className="w-full md:w-[170px] border border-white py-2">
                                 Get In Touch
                             </ShinyButton>
@@ -177,22 +177,22 @@ const Footer = () => {
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
                     <ul className="space-y-1">
                         {[  
-                            { href: "/ai-software-development-solutions-codework", label: "Expertise" },
+                            { href: "/empowering-innovation-ai-advanced-technologies", label: "Expertise" },
                             // { href: "/solution", label: "Expertise" },
-                            { href: "/service", label: "Services" },
-                            { href: "/clients", label: "Our Clients" },
+                            { href: "/driving-innovation-cutting-edge-ai-services", label: "Services" },
+                            { href: "/clients-custom-ai-solutions", label: "Our Clients" },
                             // { href: "/blog", label: "Blog" },
-                            { href: "/case-study", label: "Case Studies" },
-                            { href: "/about-us", label: "About Us" },
+                            { href: "/ai-business-solutions", label: "Case Studies" },
+                            { href: "/ai-powered-technology", label: "About Us" },
                             { href: "/team", label: "Our Team" },
-                            { href: "/careers", label: "Careers" },
-                            { href: "/getInTouch", label: "Contact Us" },
-                            { href: "/ai-community", label: "AI Community" },
-                            { href: "/industries/healthcare", label: "Healthcare" },
-                            { href: "/industries/education", label: "Education" },
-                            { href: "/industries/e-commerce", label: "E-commerce" },
-                            { href: "/industries/finance", label: "Finance" },
-                            { href: "/industries/data-security", label: "Data Security" },
+                            { href: "/careers-at-codework", label: "Careers" },
+                            { href: "/contact-ai-solutions", label: "Contact Us" },
+                            { href: "/build-your-career-with-codework", label: "AI Community" },
+                            { href: "/ai-in-healthcare-you-must-know", label: "Healthcare" },
+                            { href: "/unique-ai-in-education", label: "Education" },
+                            { href: "/ai-in-ecommerce", label: "E-commerce" },
+                            { href: "/new-ai-in-finance", label: "Finance" },
+                            { href: "/ai-in-cybersecurity", label: "Data Security" },
                         ].map((item) => (
                             <li key={item.href}>
                                 <Link
@@ -228,7 +228,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-gray-200">Connect with Us</h3>
-                        <Link href="/getInTouch">
+                        <Link href="/contact-ai-solutions">
                             <ShinyButton className="w-full md:w-[170px] border border-white py-2">
                                 Get In Touch
                             </ShinyButton>

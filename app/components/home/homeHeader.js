@@ -17,7 +17,7 @@ const HomeHeader = () => {
                                 </div>
                                 <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 2xl:40">
                                     <div className="hidden md:flex space-x-5">
-                                        <Link href="/getInTouch">
+                                        <Link href="/contact-ai-solutions">
                                             <button className="bg-[#f62a71] hover:bg-opacity-80 text-black font-semibold rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg">
                                                 Free Consulting
                                             </button>
@@ -25,7 +25,7 @@ const HomeHeader = () => {
                                     </div>
                                     <div className="md:hidden w-full space-y-4">
                                         <div className="w-full">
-                                            <Link href="/getInTouch">
+                                            <Link href="/contact-ai-solutions">
                                                 <button className="bg-[#FF035B] hover:bg-red-400 text-black hover:text-white w-full py-2">
                                                     Free Consulting
                                                 </button>

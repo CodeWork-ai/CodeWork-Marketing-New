@@ -40,70 +40,75 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title: "Top AI Software Development Company | Custom AI Solutions",
-          description: "Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
+          title: "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
+          description: "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
+          keywords: "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
         };
-      case "/ai-software-development-solutions-codework":
+      case "/empowering-innovation-ai-advanced-technologies":
         return {
           title: "AI Innovation | Advanced Tech Solutions",
           description: "Empowering innovation with AI and advanced technologies at Codework. Transform your business with intelligent and future-ready software solutions.",
+          keywords: "AI, Artificial Intelligence, Machine Learning, Data Science, Data Engineering, Cyber Security, Predictive Analytics, XGboostNatural Language Processing, AI Consulting, Generative AI, PyTorch, Keras, TensorFlow",
         };
-      case "/service":
+      case "/driving-innovation-cutting-edge-ai-services":
         return {
           title: "AI Services | Cutting-Edge Innovation",
           description: "Driving innovation through cutting-edge AI services at Codework. Leverage advanced AI solutions to transform your business and stay ahead in the digital era.",
+          keywords: "AI services, software development solutions, custom software development, iOS and Android apps, web designing services, and cloud computing solutions, Data Science. Dataset preparation, Data processing",
         };
-      case "/clients":
+      case "/clients-custom-ai-solutions":
         return {
           title: "Custom AI Solutions for Engaged Users & Efficient Operations",
           description: "Discover tailored strategies that align with your brand's identity. Boost user engagement and streamline operations with custom AI solutions at Codework.",
         };
-      case "/case-study":
+      case "/ai-business-solutions":
         return {
           title: "Empowering Businesses Through AI",
           description: "Transform your business with innovative AI and Machine Learning solutions. Revolutionize operations and unlock new possibilities with Codework's expertise.",
+          keywords: "Large language models, real-time web searches, AI-powered information retrieval, user engagement, verified information, citations, diverse audience, colon cancer detection, non-invasive tool, AI-powered diagnostics, 3D modeling, advanced AI algorithms, speech-to-text technology, Natural Language Processing (NLP), sentiment analysis, personalized experiences, decision-making, healthcare solutions, radiology reports, intuitive tools, deep learning, visual aids, diagnostic accuracy, simplified processes, caregiving solutions, efficient solutions",
         };
-      case "/about-us":
+      case "/ai-powered-technology":
         return {
           title: "Shaping Tomorrow with AI Technology",
           description: "Discover how Codework harnesses AI-powered technology to shape a smarter tomorrow. Empowering businesses with innovative and future-ready solutions.",
+          keywords: "AI, Machine Learning, Data Science, Software Development, Web Development, Mobile App Development, Cloud Computing, Cybersecurity, Digital Transformation",
         };
-      case "/careers":
+      case "/careers-at-codework":
         return {
           title: "Careers at Codework: Shape the Future",
           description: "Join Codework and help shape the future with cutting-edge AI technology. Be part of a team that thrives on innovation, collaboration, and excellence.",
         };
-      case "/getInTouch":
+      case "/contact-ai-solutions":
         return {
           title: "Contact Codework for AI Solutions",
           description: "Reach out to Codework and discover how our AI solutions can empower your business. Let us help you innovate, streamline, and achieve your goals.",
         };
 
-      case "/industries/healthcare":
+      case "/ai-in-healthcare-you-must-know":
         return {
           title: "AI-Driven Healthcare: Diagnostics & EHR Solutions",
           description: "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
         };
 
-      case "/industries/education":
+      case "/unique-ai-in-education":
         return {
           title: "Adaptive AI Learning & Blockchain Certification",
           description: "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
         };
 
-      case "/industries/e-commerce":
+      case "/ai-in-ecommerce":
         return {
           title: "Smarter Shopping: Predictive E-commerce Analytics",
           description: "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
         };
 
-      case "/industries/finance":
+      case "/new-ai-in-finance":
         return {
           title: "AI-Powered Fraud Detection & Risk Analysis",
           description: "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
         };
 
-      case "/industries/data-security":
+      case "/ai-in-cybersecurity":
         return {
           title: "Advanced Data Security: Threat Detection & Decentralized Protection",
           description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
@@ -114,11 +119,12 @@ export default function RootLayout({ children }) {
         return {
           title: "Codework",
           description: "Discover cutting-edge AI-powered solutions for your business.",
+          keywords: "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
         };
     }
   };
 
-  const { title, description } = getMetaTags();
+  const { title, description, keywords } = getMetaTags();
 
   // Determine background image based on pathname
   const getBackgroundImage = () => {
@@ -131,37 +137,37 @@ export default function RootLayout({ children }) {
         return "/bg.jpg";
       case "/projects":
         return "/bg5.avif";
-      case "/getInTouch":
+      case "/contact-ai-solutions":
         return "/bg.jpg";
       case "/group":
         return "/rbbg.jpg";
       case "/aiSolution":
         return "/bg.jpg";
-      case "/ai-software-development-solutions-codework":
+      case "/empowering-innovation-ai-advanced-technologies":
         return "/bg.jpg";
       case "/team":
         return "/01.avif";
-      case "/clients":
+      case "/clients-custom-ai-solutions":
         return "/01.avif";
-      case "/service":
+      case "/driving-innovation-cutting-edge-ai-services":
         return "/rbbg.jpg";
-      case "/about-us":
+      case "/ai-powered-technology":
         return "/bg7.jpg";
-      case "/careers":
+      case "/careers-at-codework":
         return "/bg8.jpg";
-      case "/ai-community":
+      case "/build-your-career-with-codework":
         return "/bg8.jpg"
       case "/join-our-team":
         return "/bg8.jpg"
-      case "/industries/healthcare":
+      case "/ai-in-healthcare-you-must-know":
         return "/bg8.jpg"
-      case "/industries/education":
+      case "/unique-ai-in-education":
         return "/bg8.jpg"
-      case "/industries/e-commerce":
+      case "/ai-in-ecommerce":
         return "/bg8.jpg"
-      case "/industries/finance":
+      case "/new-ai-in-finance":
         return "/bg8.jpg"
-      case "/industries/data-security":
+      case "/ai-in-cybersecurity":
         return "/bg8.jpg"
       default:
         return "/images/bg-default.jpg";
@@ -178,6 +184,7 @@ export default function RootLayout({ children }) {
         <title>{title}</title>
         <meta name="google-site-verification" content="ZtfE5LqNkPHF7PIgsNMkzWYVUEIEbJ-Ltyw0j6kMsDo" />
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org", "@type": "Organization", "name": "CodeWork", "url": "https://www.codework.ai", "description": "Codework.ai offers innovative AI-software development solutions, specializing in AI-driven applications, full-stack development, and cloud computing. Our tailored services empower businesses with cutting-edge technology for optimal performance and growth.", "address": { "@type": "PostalAddress", "streetAddress": "AKSHAYA HQ, 305, OMR, Kazhipattur, Padur", "addressLocality": "Chennai", "addressRegion": "Tamilnadu", "postalCode": "603103", "addressCountry": "IN" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+91-72006-16547", "contactType": "Customer Service", "areaServed": "IN", "availableLanguage": ["en"] }, "sameAs": [
