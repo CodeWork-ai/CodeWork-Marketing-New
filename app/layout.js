@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title: "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
+          title: "CODEWORK: Top AI Software Development & Custom Solutions",
           description: "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
           keywords: "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
         };
@@ -88,30 +88,35 @@ export default function RootLayout({ children }) {
         return {
           title: "AI-Driven Healthcare: Diagnostics & EHR Solutions",
           description: "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
+          keywords: "AI in healthcare, EHR management, personalized treatment, secure patient data",
         };
 
       case "/unique-ai-in-education":
         return {
           title: "Adaptive AI Learning & Blockchain Certification",
           description: "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
+          keywords: "personalized learning, adaptive AI, blockchain in education, secure certifications",
         };
 
       case "/ai-in-ecommerce":
         return {
           title: "Smarter Shopping: Predictive E-commerce Analytics",
           description: "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
+          keywords: "e-commerce analytics, personalized shopping, secure transactions, predictive AI",
         };
 
       case "/new-ai-in-finance":
         return {
           title: "AI-Powered Fraud Detection & Risk Analysis",
           description: "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
+          keywords: "AI in finance, fraud detection, credit risk analysis, secure payments",
         };
 
       case "/ai-in-cybersecurity":
         return {
           title: "Advanced Data Security: Threat Detection & Decentralized Protection",
           description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
+          keywords: "data security, anomaly detection, decentralized security, information protection",
         };
 
       // Add cases for other routes as needed

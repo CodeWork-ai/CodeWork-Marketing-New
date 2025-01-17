@@ -14,7 +14,7 @@ export default function Page() {
                 <div>
                     <IndustryDetail
                         heading="Data Security: Advanced Threat Detection and Decentralized Protection"
-                        description="Protect sensitive information with our advanced anomaly detection and decentralized security protocols. Our technology proactively identifies threats, ensuring robust data protection. By employing encryption and decentralized methods, we safeguard your information from breaches and cyberattacks. With our solutions, businesses can confidently manage data, maintaining compliance and building user trust. Keywords: data security, anomaly detection, decentralized security, information protection."
+                        description="Protect sensitive information with our advanced anomaly detection and decentralized security protocols. Our technology proactively identifies threats, ensuring robust data protection. By employing encryption and decentralized methods, we safeguard your information from breaches and cyberattacks. With our solutions, businesses can confidently manage data, maintaining compliance and building user trust."
                         imageUrl="/data-privacy.png"
                         altText="Technology Illustration"
                     />
