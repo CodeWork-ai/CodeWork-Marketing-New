@@ -169,6 +169,8 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg"
       case "/ai-in-cybersecurity":
         return "/bg8.jpg"
+      case "/create-blog":
+        return "/bg8.jpg"
       default:
         return "/images/bg-default.jpg";
     }
