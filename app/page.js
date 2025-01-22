@@ -20,7 +20,7 @@ export default function Home() {
         <ExploreAiPoweredSolutions />
         <AnimatedBeamDemo />
         <TestimonialCarousel/>
-        <BlogComponent/>
+        {/* <BlogComponent/> */}
         <ParallaxEffect />
         <GlobeDemo />
         <Contact />
