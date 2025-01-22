@@ -123,7 +123,7 @@ const InternshipForm = () => {
                         type="text"
                         id="designation"
                         name="designation"
-                        placeholder="Designation *"
+                        placeholder="Area of Interest *"
                         required
                         value={formData.designation}
                         onChange={handleChange}
@@ -135,7 +135,7 @@ const InternshipForm = () => {
                         type="text"
                         id="experience"
                         name="experience"
-                        placeholder="Experience *"
+                        placeholder="Experience if any *"
                         required
                         value={formData.experience}
                         onChange={handleChange}
@@ -147,7 +147,7 @@ const InternshipForm = () => {
                         type="text"
                         id="contact"
                         name="contact"
-                        placeholder="Contact *"
+                        placeholder="Phone Number *"
                         required
                         value={formData.contact}
                         onChange={handleChange}
@@ -155,16 +155,20 @@ const InternshipForm = () => {
                     />
 
                     {/* Resume */}
-                    <input
-                        type="file"
-                        id="resume"
-                        name="resume"
-                        accept="application/pdf"
-                        required
-                        onChange={handleFileChange}
-                        className="py-2 bg-black bg-opacity-5 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-
+                    <div>
+                        <div>
+                            <label className='text-gray-300'>Attach Resume / CV</label>
+                        </div>
+                        <input
+                            type="file"
+                            id="resume"
+                            name="resume"
+                            accept="application/pdf"
+                            required
+                            onChange={handleFileChange}
+                            className="py-2 bg-black bg-opacity-5 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
                     {/* Submit Button */}
                     <button
                         type="submit"
