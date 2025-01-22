@@ -87,7 +87,7 @@ const Footer = () => {
                         </div>
                         <div className="w-1/3">
                             <ul className="space-y-3">
-                                {routeLink.slice(10, 14).map((item) => (
+                                {routeLink.slice(9, 14).map((item) => (
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
