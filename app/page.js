@@ -9,6 +9,7 @@ import { Clients } from "./components/home/clientsCarousel";
 import Contact from "./components/home/contact";
 import TestimonialCarousel from "./components/home/carouselCard";
 import BlogComponent from "@/components/ui/blog-component";
+import CardParallaxComponent from "./components/home/card-parallax";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <AiSolutionsSection />
         <Clients />
         <ExploreAiPoweredSolutions />
-        <AnimatedBeamDemo />
+        {/* <AnimatedBeamDemo /> */}
+        <CardParallaxComponent/>
         <TestimonialCarousel/>
         {/* <BlogComponent/> */}
         <ParallaxEffect />

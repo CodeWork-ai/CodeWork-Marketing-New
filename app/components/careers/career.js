@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const CareerPage = () => {
   return (
-    <div className="px-6 py-12 bg-black bg-opacity-40">
+    <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 py-12 bg-black bg-opacity-40">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         {/* <header className="text-center mb-12">

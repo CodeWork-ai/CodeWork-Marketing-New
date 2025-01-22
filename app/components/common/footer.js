@@ -167,6 +167,7 @@ const Footer = () => {
                     </Link>
                     <div className="space-y-2 text-center md:text-left">
                         <p className="text-gray-200">+91 75989 81500</p>
+                        <p className="text-gray-200">+91 95661 76914</p>
                         {/* <p className="text-gray-200">+91 75989 81500</p> */}
                         <p className="text-gray-200">sales@codework.ai</p>
                     </div>
