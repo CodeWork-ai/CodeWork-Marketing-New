@@ -1,16 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import ViewBlog from "./viewBlog";
+import { useRouter } from "next/navigation";
 
 const Blogs = () => {
     const [allBlogs, setAllBlogs] = useState([]);
+    const [selectedBlog, setSelectedBlog] = useState(null);
+    const [showBlog, setShowBlog] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("https://prod-api.codework.ai/api/v1/blog/list_user_blog");
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/list_user_blog`, {
+                    method: 'GET',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                });
                 const data = await res.json();
                 // Flatten out the blog arrays from each user
-                const flattened = data.flatMap((user) => user.blog || []);
+                const flattened = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
                 setAllBlogs(flattened);
             } catch (error) {
                 console.error("Error fetching blogs:", error);
@@ -22,20 +31,40 @@ const Blogs = () => {
     // Separate the first blog as "featured" and the rest as "others"
     const [featuredBlog, ...otherBlogs] = allBlogs;
 
+    console.log(featuredBlog)
+
+    const openBlog = (blog) => {
+        console.log("Selected Blog:", blog);
+        setSelectedBlog(blog);
+        setShowBlog(true)
+    };
+
+    const closeModel = () => {
+        setSelectedBlog(null);
+        setShowBlog(false)
+    }
+
+    const router = useRouter();
+    
+
+    const navigateWithQuery = (blog) => {
+        router.push(`/blog-lists/${blog.id}`);
+    };
+
     return (
-        <div className="bg-white text-white px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 py-32 font-sans">
+        <div className="text-white px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 font-sans">
             <section className="relative w-full h-[500px] mb-12 rounded-md overflow-hidden shadow-lg">
                 {/* Background image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: featuredBlog?.image
-                            ? `url('data:image/png;base64,${featuredBlog.image}')`
-                            : "url('/placeholder.jpg')", // Fallback if no image
+                        backgroundImage: featuredBlog?.blog[0]?.image
+                            ? `url('data:image/png;base64,${featuredBlog?.blog[0]?.image}')`
+                            : "url('/ecommerce.png')", // Fallback if no image
                     }}
                 />
                 {/* Dark overlay for text contrast */}
-                <div className="absolute inset-0 bg-white bg-opacity-70" />
+                <div className="absolute inset-0 bg-black bg-opacity-70" />
 
                 {/* Text content (overlaid) */}
                 <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
@@ -43,13 +72,15 @@ const Blogs = () => {
                         {featuredBlog?.title || "Untitled Blog"}
                     </h2>
                     <p className="max-w-2xl text-base md:text-lg leading-relaxed mb-6">
-                        {featuredBlog?.description || "No description available."}
+                        {/* {featuredBlog?.description || "No description available."} */}
+                        {featuredBlog?.blog[0]?.description.length > 100
+                            ? `${featuredBlog?.blog[0]?.description.slice(0, 100)}...`
+                            : featuredBlog?.blog[0]?.description}
                     </p>
                     <button
-                        className="px-6 py-3 bg-black bg-opacity-70 hover:bg-opacity-90 transition-colors text-white font-semibold uppercase tracking-wide rounded"
-                        onClick={() => {
-                            // e.g. route to single blog detail page
-                        }}
+                        className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
+                        // onClick={() => openBlog(featuredBlog)}
+                        onClick={() => router.push(`/blog-lists/${featuredBlog.id}`)}
                     >
                         View Blog
                     </button>
@@ -65,13 +96,15 @@ const Blogs = () => {
                         ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
                     >
                         {/* Image side */}
-                        <div className="md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden shadow-md">
+                        <div
+                            className="md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden shadow-md"
+                        >
                             <div
                                 className="w-full h-full bg-contain bg-center"
                                 style={{
-                                    backgroundImage: blog.image
-                                        ? `url('data:image/png;base64,${blog.image}')`
-                                        : "url('/placeholder.jpg')",
+                                    backgroundImage: blog?.blog?.find(section => section?.image && section.image !== "")?.image
+                                        ? `url('data:image/png;base64,${blog.blog.find(section => section?.image && section.image !== "").image}')`
+                                        : "url('/ecommerce.png')", // Fallback if no image
                                 }}
                             />
                         </div>
@@ -82,14 +115,16 @@ const Blogs = () => {
                                 {blog.title || "Untitled Blog"}
                             </h3>
                             <p className="text-base mb-6 leading-relaxed">
-                                {blog.description || "No description available."}
+                                {/* {blog.description || "No description available."} */}
+                                {blog?.blog?.description?.length > 100
+                                  ? `${blog?.blog?.description.slice(0, 100)}...`
+                                  : blog?.blog?.description}
                             </p>
 
                             <button
-                                className="inline-block w-fit px-5 py-2 bg-black text-white font-medium text-sm uppercase tracking-wide rounded hover:bg-gray-800 transition-colors"
-                                onClick={() => {
-                                    // e.g. route to single blog detail page
-                                }}
+                                className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
+                                // onClick={() => openBlog(blog)}
+                                onClick={() => router.push(`/blog-lists/${blog.id}`)}
                             >
                                 View Blog
                             </button>
@@ -97,6 +132,13 @@ const Blogs = () => {
                     </div>
                 ))}
             </section>
+
+            {showBlog && selectedBlog && (
+                <ViewBlog
+                    blog={selectedBlog}
+                    onClose={closeModel}
+                />  
+            )}
         </div>
     );
 };

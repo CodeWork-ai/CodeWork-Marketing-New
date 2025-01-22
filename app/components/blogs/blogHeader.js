@@ -3,7 +3,7 @@ import React from 'react';
 
 const BlogHeader = () => {
     return (
-        <div className='px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 mb-16'>
+        <div className='px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20'>
             <div className="h-full">
                 <div className="h-full overflow-hidden">
                     <section className="relative h-full">
@@ -15,7 +15,7 @@ const BlogHeader = () => {
                                     Discover insights, stories, and updates from our amazing team and contributors. Stay informed and inspired!
                                 </div>
                                 <div>
-                                    <Link href='/create-blog' className="mt-5 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-md text-lg font-medium">
+                                    <Link href='/user-blogs' className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg">
                                         Create Blog
                                     </Link>
                                 </div>
