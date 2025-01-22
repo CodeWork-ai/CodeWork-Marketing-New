@@ -128,6 +128,9 @@ export default function RootLayout({ children }) {
 
   // Determine background image based on pathname
   const getBackgroundImage = () => {
+    if (/^\/blog-lists\/\d+$/.test(pathname)) {
+      return "/bg8.jpg";
+    }
     switch (pathname) {
       case "/":
         return "/bghome.jpg";
@@ -170,6 +173,10 @@ export default function RootLayout({ children }) {
       case "/ai-in-cybersecurity":
         return "/bg8.jpg"
       case "/create-blog":
+        return "/bg8.jpg"
+      case "/blog-lists":
+        return "/bg8.jpg"
+      case "/user-blogs":
         return "/bg8.jpg"
       case "/internship":
         return "/bg8.jpg"
