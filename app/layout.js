@@ -178,6 +178,8 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg"
       case "/user-blogs":
         return "/bg8.jpg"
+      case "/internship":
+        return "/bg8.jpg"
       default:
         return "/images/bg-default.jpg";
     }
