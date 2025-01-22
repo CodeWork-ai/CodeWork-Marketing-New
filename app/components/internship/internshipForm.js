@@ -40,7 +40,7 @@ const InternshipForm = () => {
         setResponseMessage('');
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_candidate`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_internship_profile`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
