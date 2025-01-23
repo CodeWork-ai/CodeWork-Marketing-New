@@ -36,7 +36,7 @@ const ManagementTeam = () => {
         },
         {
             name: 'Mathumitha',
-            title: 'IT Recruiter',
+            title: 'HR Head',
             imgSrc: '/mathu-cw-team.jpg',
             linkedinUrl: 'https://www.linkedin.com/in/mathumitha-chennakesavan-027892168/'
         },
