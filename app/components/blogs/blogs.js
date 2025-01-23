@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Blogs = () => {
     const [allBlogs, setAllBlogs] = useState([]);
@@ -90,47 +91,43 @@ const Blogs = () => {
                     </section>
 
                     {/* 2) OTHER BLOGS IN A VERTICAL “ALTERNATING” LAYOUT */}
-                    <section className="space-y-16">
-                        {otherBlogs.map((blog, index) => (
-                            <div
-                                key={index}
-                                className={`flex flex-col md:flex-row items-center md:items-stretch 
-                                ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-                            >
-                                {/* Image side */}
-                                <div
-                                    className="md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden shadow-md"
-                                >
-                                    <div
-                                        className="w-full h-full bg-contain bg-center"
-                                        style={{
-                                            backgroundImage: blog?.blog?.find(section => section?.image && section.image !== "")?.image
-                                                ? `url('data:image/png;base64,${blog.blog.find(section => section?.image && section.image !== "").image}')`
-                                                : "url('/ecommerce.png')", // Fallback if no image
-                                        }}
-                                    />
-                                </div>
-
-                                {/* Text side */}
-                                <div className="md:w-1/2 flex flex-col justify-center p-6 md:p-10 mt-4 md:mt-0 md:ml-6 dark:text-gray-100">
-                                    <h3 className="text-2xl font-bold mb-3">
-                                        {blog.title || "Untitled Blog"}
-                                    </h3>
-                                    <p className="text-base mb-6 leading-relaxed">
-                                        {/* {blog.description || "No description available."} */}
-                                        {blog?.blog?.description?.length > 100
-                                        ? `${blog?.blog?.description.slice(0, 100)}...`
-                                        : blog?.blog?.description}
+                    <section className="space-y-6">
+                        {otherBlogs.map((blog) => (
+                            <div key={blog.id} className="p-4 bg-gray-800 rounded-lg shadow-md">
+                            <h3 className="text-xl font-bold text-[#FF035B]">{blog.title}</h3>
+                            {blog.blog.length > 0 && (
+                              <div className="mt-3">
+                                <h4 className="text-lg font-semibold text-gray-200">
+                                  {blog.blog[0].title}
+                                </h4>
+                                <p className="text-gray-300">
+                                  {blog.blog[0].description.length > 150
+                                    ? `${blog.blog[0].description.slice(0, 150)}...`
+                                    : blog.blog[0].description}
+                                </p>
+                                
+                              </div>
+                            )}  
+                            <div className="flex justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-400 mt-3">
+                                    By {blog.name} - {new Date(blog.created_at).toLocaleDateString('en-GB', {
+                                        day: '2-digit',
+                                        month: 'short',
+                                        year: 'numeric',
+                                    })}
                                     </p>
-
+                                </div>
+                                <div>
                                     <button
-                                        className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
+                                        className="hover:text-[#FF035B] underline"
                                         onClick={() => router.push(`/blog/${blog.id}`)}
                                     >
                                         View Blog
                                     </button>
                                 </div>
                             </div>
+                          </div>
                         ))}
                     </section>
                 </div>

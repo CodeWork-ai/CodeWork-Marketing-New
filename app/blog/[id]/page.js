@@ -30,41 +30,62 @@ const BlogDetails = () => {
     fetchBlogs();
   }, [id]);
 
+  const Spinner = ({ size = '5', color = 'red-500' }) => {
+    return (
+      <div className="flex items-center justify-center">
+        <div
+        className={`w-${size} h-${size} border-4 border-${color} border-solid rounded-full border-t-transparent animate-spin`}
+        ></div>
+      </div>
+    );
+  };  
+
   if (!blog) {
     return (
-      <div className="h-full flex justify-center items-center text-white py-20">
-        <p className="text-lg">Loading blog...</p>
+      <div className="flex h-screen w-full items-center justify-center">
+        <Spinner size="10" color="white" />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen text-white py-20">
-      <div className="max-w-screen-xl mx-auto px-6">
+      <div className="max-w-screen-xl mx-auto px-6 bg-black opacity-80 rounded-2xl p-6 sm:p-10">
         {/* Blog Header */}
-        <header className="text-center mb-12">
+        <header className="text-center mb-4">
           <h1 className="text-4xl font-extrabold text-gradient mb-4">{blog?.title}</h1>
-          <p className="text-lg text-gray-400">{blog?.description}</p>
         </header>
+        <p className="text-md text-white px-6 sm:px-10">
+          {blog.name}
+        </p>
+        <p className="text-md text-white px-6 sm:px-10 mb-16">
+          {new Date(blog.created_at).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+          })}
+        </p>
 
         {/* Blog Sections */}
         {blog?.blog?.map((section, index) => (
-          <section key={index} className="mb-10">
-            {/* Image Section */}
-            {section?.image && (
-              <div className="flex justify-center mb-6">
-                <img
-                  src={section.image ? `data:image/png;base64,${section.image}` : "/ecommerce.png"}
-                  alt={section.title}
-                  className="w-full sm:w-[500px] h-auto rounded-lg shadow-lg"
-                />
-              </div>
-            )}
+          <section key={index} className="mb-10 px-6 sm:px-16">
+            <div className={`flex ${index % 2 === 0 ? 'flex-col sm:flex-row-reverse' : 'flex-col sm:flex-row'} items-center`}>
+              {/* Image Section */}
+              {section?.image && (
+                <div className="w-full sm:w-[500px] mb-6 sm:mb-0 sm:mr-6">
+                  <img
+                    src={section.image ? `data:image/png;base64,${section.image}` : "/ecommerce.png"}
+                    alt={section.title}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+              )}
 
-            {/* Title and Description */}
-            <div className="space-y-4 px-4 sm:px-10">
-              <h2 className="text-3xl font-bold">{section.title}</h2>
-              <p className="text-lg leading-relaxed text-gray-300">{section.description}</p>
+              {/* Title and Description */}
+              <div className="space-y-4 sm:px-10 flex-1">
+                <h2 className="text-3xl font-bold">{section.title}</h2>
+                <p className="text-lg leading-relaxed text-gray-300">{section.description}</p>
+              </div>
             </div>
           </section>
         ))}

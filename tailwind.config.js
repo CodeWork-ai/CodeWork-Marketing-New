@@ -117,16 +117,8 @@ module.exports = {
   				to: {
   					backgroundPosition: 'var(--bg-size) 0'
   				}
-  			},
-				attention: {
-          '0%': { transform: 'translateX(0%)' },
-          '50%': { transform: 'translateX(30%)' },
-          '100%': { transform: 'translateX(0%)' },
-        },
-  		},
-			animation: {
-        attention: 'attention 1.2s linear infinite',
-      },
+  			}
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -32,7 +32,6 @@ const BlogComponent = () => {
 
   // Show only the first 4 blogs
   const firstFourBlogs = blogs.slice(0, 4);
-  console.log(firstFourBlogs)
 
   return (
     <div className="container mx-auto px-4 py-8">
