@@ -1,4 +1,5 @@
 'use client'
+import { setCookie, getCookie } from 'cookies-next';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
@@ -67,12 +68,13 @@ const CreateBlog = () => {
   const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const token = getCookie('token')
     try {
-      console.log(formData)
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/create_blog`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          ...(token && { Authorization: `Bearer ${token}` }),
         },
         body: JSON.stringify(formData),
       });
@@ -83,7 +85,9 @@ const CreateBlog = () => {
 
       const data = await response.json();
       console.log('Blog created successfully:', data);
-      router.push('/blog-lists')
+      setCookie('token', '');
+      setCookie('email', '')
+      router.push('/user-blogs')
     } catch (error) {
       console.error('Error creating blog:', error);
     }

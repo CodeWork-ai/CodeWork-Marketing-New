@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import BlogHeader from '../components/blogs/blogHeader';
-import ViewBlog from '../components/blogs/viewBlog';
+import { getCookie, setCookie } from 'cookies-next';
+import { useRouter } from 'next/navigation';
 
 const ListUserBlogs = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -11,9 +11,18 @@ const ListUserBlogs = () => {
   const [loginMessage, setLoginMessage] = useState('');
   const [blogMessage, setBlogMessage] = useState('');
   const [blogs, setBlogs] = useState([]);
-  const [email, setEmail] = useState();
-  const [selectedBlog, setSelectedBlog] = useState(null);
-  const [showBlog, setShowBlog] = useState(false);
+  const [email, setEmail] = useState('');
+  const router = useRouter();
+  const [isPageLoading, setIsPageLoading] = useState(false);
+
+  useEffect(() => {
+    const token = getCookie('token');
+    const savedEmail = getCookie('email');
+    if (token && savedEmail) {
+      setIsLoggedIn(true);
+      setEmail(savedEmail);
+    }
+  }, []);
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +42,8 @@ const ListUserBlogs = () => {
       const data = await response.json();
       if (response.ok) {
         setLoginMessage('');
+        setCookie('token', data.jwt_token, { maxAge: 60 * 15 });
+        setCookie('email', data.email, { maxAge: 60 * 15 });
         setEmail(loginData.email);
         setIsLoggedIn(true);
       } else {
@@ -48,17 +59,17 @@ const ListUserBlogs = () => {
 
   const fetchUserBlogs = async() => {
     if (!isLoggedIn) return;
-
-    setIsLoading(true);
+    const token = getCookie('token') ;
+    setIsPageLoading(true);
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/list_user_blog?email=${email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
+          ...(token && { Authorization: `Bearer ${token}` }),
         },
       })
       const data = await response.json();
-      console.log(data)
       if (response.ok) {
         const sortedBlogs = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
         setBlogs(sortedBlogs);
@@ -70,26 +81,27 @@ const ListUserBlogs = () => {
       console.error(error);
       setBlogMessage('Network error. Please try again later.');
     } finally {
-      setIsLoading(false);
+      setIsPageLoading(false);
     }
   }
 
   useEffect(() => {
-    fetchUserBlogs();
+    if (isLoggedIn) {
+      fetchUserBlogs();
+    }
   }, [isLoggedIn])  
 
   const [featuredBlog, ...otherBlogs] = blogs;
 
-  const openBlog = (blog) => {
-    console.log("Selected Blog:", blog);
-    setSelectedBlog(blog);
-    setShowBlog(true)
+  const Spinner = ({ size = '5', color = 'red-500' }) => {
+    return (
+      <div className="flex items-center justify-center">
+        <div
+        className={`w-${size} h-${size} border-4 border-${color} border-solid rounded-full border-t-transparent animate-spin`}
+        ></div>
+      </div>
+    );
   };
-
-  const closeModel = () => {
-    setSelectedBlog(null);
-    setShowBlog(false)
-  }
 
   return (
     <div className="p-6 mt-20 bg-opacity-30 min-h-screen">
@@ -150,7 +162,12 @@ const ListUserBlogs = () => {
       )}
 
       {/* Create Blog Form */}
-      {isLoggedIn && (
+      {isPageLoading ? (
+        <div className="flex h-screen w-full items-center justify-center">
+          <Spinner size="10" color="white" />
+        </div>
+      ) : (
+      isLoggedIn && (
         <div className="text-white pb-5">
           <div className='px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20'>
             <div className="h-full">
@@ -173,6 +190,11 @@ const ListUserBlogs = () => {
               </div>
             </div>
           </div>
+          {blogs.length === 0 ? (
+            <div className="flex h-screen w-full items-center justify-center">
+              <p className="text-xl text-white">No blogs available!</p>
+            </div>
+          ) : (
           <div className="text-white px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 font-sans">
             <section className="relative w-full h-[500px] mb-12 rounded-md overflow-hidden shadow-lg">
               {/* Background image */}
@@ -200,7 +222,7 @@ const ListUserBlogs = () => {
                 </p>
                 <button
                   className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
-                  onClick={() => openBlog(featuredBlog)}
+                  onClick={() => router.push(`/blog/${featuredBlog.id}`)}
                 >
                   View Blog
                 </button>
@@ -243,7 +265,7 @@ const ListUserBlogs = () => {
 
                     <button
                       className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
-                      onClick={() => openBlog(blog)}
+                      onClick={() => router.push(`/blog/${blog.id}`)}
                     >
                       View Blog
                     </button>
@@ -251,20 +273,10 @@ const ListUserBlogs = () => {
                 </div>
               ))}
             </section>
-  
-            {showBlog && selectedBlog && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-black rounded-lg w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-[700px] scroll-container overflow-y-auto">
-                  <ViewBlog
-                    blog={selectedBlog}
-                    onClose={closeModel}
-                  />
-                </div>
-              </div>   
-            )}
           </div>
+          )}
         </div>
-      )}
+      ))}
     </div>
   );
 };
