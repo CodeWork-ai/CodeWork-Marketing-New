@@ -2,20 +2,17 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
-import ViewBlog from "@/app/components/blogs/viewBlog";
 import { IoArrowForward } from "react-icons/io5";
 
 const BlogComponent = () => {
   const router = useRouter();
   const [blogs, setBlogs] = useState([]);
-  const [selectedBlog, setSelectedBlog] = useState(null);
-  const [showBlog, setShowBlog] = useState(false);
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         // Fetch from your API
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/list_user_blog`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/list_blogs_history`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -32,17 +29,6 @@ const BlogComponent = () => {
     };
     fetchBlogs();
   }, []);
-
-  const openBlog = (blog) => {
-    console.log("Selected Blog:", blog);
-    setSelectedBlog(blog);
-    setShowBlog(true)
-  };
-
-  const closeModel = () => {
-    setSelectedBlog(null);
-    setShowBlog(false)
-  }
 
   // Show only the first 4 blogs
   const firstFourBlogs = blogs.slice(0, 4);
@@ -128,7 +114,7 @@ const BlogComponent = () => {
               {/* "View Blog" button (hidden initially, appears on hover) */}
               <button
                 className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
-                onClick={() => router.push(`/blog-lists/${blog.id}`)}
+                onClick={() => router.push(`/blog/${blog.id}`)}
               >
                 View Blog
               </button>
@@ -136,16 +122,6 @@ const BlogComponent = () => {
           </div>
         ))}
       </div>
-      {showBlog && selectedBlog && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-black rounded-lg w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-[700px] scroll-container overflow-y-auto">
-            <ViewBlog
-              blog={selectedBlog}
-              onClose={closeModel}
-            />
-          </div>
-        </div>   
-      )}
 
       <div className="flex justify-end mt-6">
         <Link href='/blog-lists'>
