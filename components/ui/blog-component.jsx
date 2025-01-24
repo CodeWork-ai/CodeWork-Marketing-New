@@ -34,7 +34,7 @@ const BlogComponent = () => {
   const firstFourBlogs = blogs.slice(0, 4);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-40 lg:py-8">
       <h2 className="text-3xl font-bold text-center mb-6">Our Blogs</h2>
 
       {/* Grid container for blog cards */}

@@ -63,24 +63,24 @@ const CardParallaxComponent = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 pt-10 md:pt-10 items-start">
+      <div className="flex flex-col sm:flex-row px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 pt-10 md:pt-10 items-start">
         {/* Left side (sticky) */}
-        <div className="w-[50%] sticky top-0 h-screen flex items-center justify-center">
-          <div className="border border-gray-700 w-full h-[500px] p-10 rounded-2xl">
-            <h3 className="text-4xl">AI innovations and applications</h3>
-            <p className="text-xl mt-10">
+        <div className="w-full sm:w-[50%] sticky top-0 h-auto sm:h-screen flex items-center justify-center p-4">
+          <div className="border border-gray-700 w-full sm:w-[500px] h-[500px] p-10 rounded-2xl">
+            <h3 className="text-2xl sm:text-4xl">AI innovations and applications</h3>
+            <p className="text-lg sm:text-xl mt-5">
               Cutting-edge AI solutions to accelerate various industries by driving
               automation, enhancing intelligence systems, and transforming operational
               efficiency.
             </p>
             <div className="flex justify-center items-center mt-10">
-              <FaRobot className="text-purple-400 w-40 h-40" />
+              <FaRobot className="text-purple-400 w-32 h-32 sm:w-40 sm:h-40" />
             </div>
           </div>
         </div>
 
         {/* Right side (scrolling cards) */}
-        <div className="relative w-[50%] h-full" ref={container}>
+        <div className="relative w-full sm:w-[50%] h-full" ref={container}>
           {projects.map((project, index) => {
             const targetScale = 1 - (projects.length - index) * 0;
             const range = [index * 0.25, 1];
@@ -95,23 +95,23 @@ const CardParallaxComponent = () => {
             return (
               <div
                 key={index}
-                className="cardContainer h-screen flex items-center justify-center sticky top-[-70px]"
+                className="cardContainer h-auto sm:h-screen flex items-center justify-center sticky top-[-70px] sm:top-[-100px]"
               >
                 <motion.div
-                  className="card flex flex-col relative h-[360px] rounded-3xl p-12 border border-gray-700 bg-black"
+                  className="card flex flex-col relative h-auto sm:h-[360px] rounded-3xl p-12 border border-gray-700 bg-black"
                   style={{
                     scale,
                     top: `calc(${index * 25}px)`,
                   }}
                 >
-                  <h2 className="text-center m-0 text-4xl">{project.title}</h2>
-                  <div className="flex h-full mt-12 gap-12">
-                    <div className="desc w-[40%] relative top-[10%]">
-                      <p className="text-xl first-letter:text-2xl">
+                  <h2 className="text-center m-0 text-2xl sm:text-4xl">{project.title}</h2>
+                  <div className="flex flex-col sm:flex-row h-full mt-8 sm:gap-12">
+                    <div className="desc w-full sm:w-[40%] relative top-[10%]">
+                      <p className="text-lg sm:text-xl first-letter:text-2xl">
                         {project.description}
                       </p>
                     </div>
-                    <div className="imgContainer relative w-[60%] h-full rounded-3xl overflow-hidden">
+                    <div className="imgContainer relative w-full sm:w-[60%] h-full rounded-3xl overflow-hidden">
                       <motion.div style={{ scale: imageScale }} className="w-full h-full flex justify-center items-center">
                         {project.icon}
                       </motion.div>
