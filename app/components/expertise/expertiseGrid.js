@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBrain, FaMagic, FaChartLine, FaCommentDots, FaDatabase, FaShieldAlt, FaChartPie, FaRobot } from 'react-icons/fa';
+import { FaBrain, FaMagic, FaChartLine, FaCommentDots, FaDatabase, FaShieldAlt, FaChartPie, FaRobot,  FaLock  } from 'react-icons/fa';
 
 const features = [
     {
@@ -43,6 +43,13 @@ const features = [
         description:
             "Protecting digital assets is critical in today’s connected world. Codework’s cybersecurity solutions leverage advanced technologies, including XGBoost, to analyze threats, detect vulnerabilities, and provide comprehensive protection for your systems, data, and infrastructure. We ensure safety, trust, and resilience for your business in an ever-evolving digital landscape.",
         desktop_icon: <FaShieldAlt className="w-16 h-16 text-red-400" />,
+    },
+    {
+        icon: <FaLock />,
+        title: "Penetration Testing",
+        description:
+            "Identify vulnerabilities before attackers do with our comprehensive penetration testing services. Our experts simulate real-world attacks to evaluate your systems' security, providing actionable insights to fortify your defenses and ensure compliance with industry standards.",
+        desktop_icon: <FaLock className="w-16 h-16 text-red-400" />,
     },
     {
         icon: <FaChartPie />,
