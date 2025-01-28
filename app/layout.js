@@ -114,6 +114,12 @@ export default function RootLayout({ children }) {
           description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
         };
 
+      case "/build-your-career-with-codework":
+        return {
+          title: "Advanced Data Security: Threat Detection & Decentralized Protection",
+          description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
+        };
+
       // Add cases for other routes as needed
       default:
         return {
@@ -193,9 +199,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>{title}</title>
-        <meta name="google-site-verification" content="ZtfE5LqNkPHF7PIgsNMkzWYVUEIEbJ-Ltyw0j6kMsDo" />
+        <meta name="google-site-verification" content="KBq41EUcHtWqRI8Gghz1e_jXoi6D4kKjxhgl9cvCQAs" />
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords}/>
+        <meta name="keywords" content={keywords} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org", "@type": "Organization", "name": "CodeWork", "url": "https://www.codework.ai", "description": "Codework.ai offers innovative AI-software development solutions, specializing in AI-driven applications, full-stack development, and cloud computing. Our tailored services empower businesses with cutting-edge technology for optimal performance and growth.", "address": { "@type": "PostalAddress", "streetAddress": "AKSHAYA HQ, 305, OMR, Kazhipattur, Padur", "addressLocality": "Chennai", "addressRegion": "Tamilnadu", "postalCode": "603103", "addressCountry": "IN" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+91-72006-16547", "contactType": "Customer Service", "areaServed": "IN", "availableLanguage": ["en"] }, "sameAs": [
