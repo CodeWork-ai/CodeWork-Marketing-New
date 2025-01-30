@@ -10,7 +10,7 @@ const testimonials = [
     text: "We are extremely pleased with the Codework team’s exceptional work in developing our website. Their technical expertise, attention to detail, and seamless execution exceeded our expectations. From design to functionality, they ensured that every aspect was well-integrated and user-friendly. Their commitment to meeting deadlines and delivering high-quality results made this project a great success. We look forward to collaborating with them again on future projects.",
     name: "Surabi Groups",
     company: "",
-    url: '',
+    url: false,
     img: "",
   },
   {
@@ -22,10 +22,11 @@ const testimonials = [
     img: "",
   },
   {
-    text: "The CodeWork team demonstrated exceptional expertise by collaborating in developing our ticket booking application project.Their attention to detail, seamless integration of features, and commitment to meeting deadlines made this project a success.We are throughly impressed with their technical proficiency and look forward to future collaborations",
+    text: "The Codework team demonstrated exceptional expertise by collaborating in developing our ticket booking application project.Their attention to detail, seamless integration of features, and commitment to meeting deadlines made this project a success.We are throughly impressed with their technical proficiency and look forward to future collaborations",
     name: "Jhonson R",
     role: "Delivery Manager - IT Projects",
     company: "WebSignX Technologies",
+    url: false,
     img: "",
   },
 ];
@@ -37,8 +38,8 @@ const TestimonialCarousel = () => {
     const total = testimonials.length;
 
     if (index === activeIndex) return "scale-110 z-20"; // Center card zoomed
-    if ((index + 1) % total === activeIndex) return "translate-x-60 -rotate-0 z-10"; // Right card
-    if ((index - 1 + total) % total === activeIndex) return "-translate-x-60 rotate-0 z-10"; // Left card
+    if ((index + 1) % total === activeIndex) return "translate-x-60 -rotate-0 z-10 blur-[2px]"; // Right card
+    if ((index - 1 + total) % total === activeIndex) return "-translate-x-60 rotate-0 z-10 blur-[2px]"; // Left card
 
     return "opacity-0"; // Hidden for non-visible cards
   };
@@ -75,9 +76,15 @@ const TestimonialCarousel = () => {
                   className="rounded-full w-10 h-10"
                 /> */}
                 <div className="ml-3">
-                  <Link href='https://www.linkedin.com/in/bikramsbakshi/'>
-                    <p className="font-bold text-sm text-white">-{testimonial.name}</p>
-                  </Link>
+                  {testimonial?.url ?
+                    (
+                      <Link href={testimonial.url} target="_blank" rel="noopener noreferrer">
+                        <p className="font-bold text-sm text-white">-{testimonial.name}</p>
+                      </Link>
+                    ) : (
+                      <p className="font-bold text-sm text-white">-{testimonial.name}</p>
+                  )
+                  }
                   <p className="text-xs text-gray-400">{testimonial.role}</p>
                   <p className="text-xs text-gray-400">{testimonial.company}</p>
                 </div>
