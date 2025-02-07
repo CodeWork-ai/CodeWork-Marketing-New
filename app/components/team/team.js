@@ -40,50 +40,50 @@ const ManagementTeam = () => {
             imgSrc: '/mathu-cw-team.jpg',
             linkedinUrl: 'https://www.linkedin.com/in/mathumitha-chennakesavan-027892168/'
         },
-        {
-            name: 'Geetha',
-            title: 'Technical Project Manager', 
-            imgSrc: '/geetha-cw-team.jpg',
-            linkedinUrl: 'https://www.linkedin.com/in/geetha-s-a9836b24a/'
-        }
+        // {
+        //     name: 'Geetha',
+        //     title: 'Technical Project Manager', 
+        //     imgSrc: '/geetha-cw-team.jpg',
+        //     linkedinUrl: 'https://www.linkedin.com/in/geetha-s-a9836b24a/'
+        // }
     ];
     const teamMembersLevelTwo = [
         {
             name: 'Sangaralingam',
-            title: 'Senior database administrator',
+            title: 'Sr. DB Developer',
             imgSrc: '/sangaralingam-cw-team.jpeg',
             linkedinUrl: 'https://www.linkedin.com/in/sangaralingam-a-35323b244/'
         },
-        {
-            name: 'Vijay Anand',
-            title: 'QA Automation lead',
-            imgSrc: '/vijayanand-cw-team.jpeg',
-            linkedinUrl: 'https://www.linkedin.com/in/vijay-anand-ab9ba121/'
-        },
+        // {
+        //     name: 'Vijay Anand',
+        //     title: 'QA Automation lead',
+        //     imgSrc: '/vijayanand-cw-team.jpeg',
+        //     linkedinUrl: 'https://www.linkedin.com/in/vijay-anand-ab9ba121/'
+        // },
         {
             name: 'Sathiyamoorthy',
-            title: 'Lead Developer', 
+            title: 'Technical Lead Consultant', 
             imgSrc: '/sathiyamoorthy-cw-team.PNG',
             linkedinUrl: 'https://www.linkedin.com/in/sathyamoorthy-rethinam-475a6aa9/'
         },
         {
             name: 'Krishnaswamy',
-            title: 'API Developer', 
+            title: 'Sr. Software Developer', 
             imgSrc: '/krishnaswamy-cw-team.jpg',
             linkedinUrl: 'https://www.linkedin.com/in/krishnasamy-iyyanperumal-853219144/'
         },
         {
             name: 'Sainath',
-            title: 'ML Engineer',
+            title: 'Software Developer',
             imgSrc: '/sai-cw-team.JPG',
             linkedinUrl: 'https://www.linkedin.com/in/sainath-m-a95186186/'
         },
-        {
-            name: 'Saran Menon',
-            title: 'Deep Learning Specialist',
-            imgSrc: 'saran-cw-team.jpg',
-            linkedinUrl: 'https://www.linkedin.com/in/saran-menon-874a14216/'
-        },
+        // {
+        //     name: 'Saran Menon',
+        //     title: 'Deep Learning Specialist',
+        //     imgSrc: 'saran-cw-team.jpg',
+        //     linkedinUrl: 'https://www.linkedin.com/in/saran-menon-874a14216/'
+        // },
     ];
 
     return (
