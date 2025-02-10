@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
+import Script from "next/script";
 import Link from "next/link";
 import { TbMessageChatbot } from "react-icons/tb";
 import ChatIcon from "./components/common/aichat";
@@ -274,6 +275,24 @@ export default function RootLayout({ children }) {
                 "https://x.com/home?lang=en",
               ],
             }),
+          }}
+        />
+        <Script
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(ss,ex){ 
+            window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; 
+            (function(d,s){ 
+              fs=d.getElementsByTagName(s)[0]; 
+              function ce(src){ 
+                var cs=d.createElement(s); 
+                cs.src=src; 
+                cs.async=1; 
+                fs.parentNode.insertBefore(cs,fs); 
+              }; 
+              ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); 
+            })(document,'script'); 
+          })('DzLR5a5YrWZaBoQ2');`,
           }}
         />
       </head>
