@@ -13,7 +13,7 @@ export default function Page() {
             <div>
                 <IndustryDetail
                     heading="Education: Adaptive AI Learning and Blockchain Certification"
-                    description="Transforming education, our adaptive AI platforms create personalized learning journeys for every student, matching content to individual learning styles. This interactive approach fosters engagement and retention, making education accessible and enjoyable. With blockchain-backed certifications, academic credentials are secure, tamper-proof, and easily verifiable, building trust in institutions. We empower learners and educators alike by promoting transparency and innovation in education. Keywords: personalized learning, adaptive AI, blockchain in education, secure certifications."
+                    description="Transforming education, our adaptive AI platforms create personalized learning journeys for every student, matching content to individual learning styles. This interactive approach fosters engagement and retention, making education accessible and enjoyable. With blockchain-backed certifications, academic credentials are secure, tamper-proof, and easily verifiable, building trust in institutions. We empower learners and educators alike by promoting transparency and innovation in education."
                     imageUrl="/education.png"
                     altText="Technology Illustration"
                 />

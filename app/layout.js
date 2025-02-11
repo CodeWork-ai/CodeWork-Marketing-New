@@ -5,7 +5,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
-import Script from "next/script";
 import Link from "next/link";
 import { TbMessageChatbot } from "react-icons/tb";
 import ChatIcon from "./components/common/aichat";
@@ -41,12 +40,9 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title:
-            "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
-          description:
-            "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
-          keywords:
-            "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
+          title: "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
+          description: "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
+          keywords: "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
         };
       case "/empowering-innovation-ai-advanced-technologies":
         return {
@@ -102,45 +98,31 @@ export default function RootLayout({ children }) {
       case "/ai-in-healthcare-you-must-know":
         return {
           title: "AI-Driven Healthcare: Diagnostics & EHR Solutions",
-          description:
-            "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
+          description: "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
         };
 
       case "/unique-ai-in-education":
         return {
           title: "Adaptive AI Learning & Blockchain Certification",
-          description:
-            "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
+          description: "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
         };
 
       case "/ai-in-ecommerce":
         return {
           title: "Smarter Shopping: Predictive E-commerce Analytics",
-          description:
-            "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
+          description: "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
         };
 
       case "/new-ai-in-finance":
         return {
           title: "AI-Powered Fraud Detection & Risk Analysis",
-          description:
-            "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
+          description: "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
         };
 
       case "/ai-in-cybersecurity":
         return {
-          title:
-            "Advanced Data Security: Threat Detection & Decentralized Protection",
-          description:
-            "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
-        };
-
-      case "/build-your-career-with-codework":
-        return {
-          title:
-            "Advanced Data Security: Threat Detection & Decentralized Protection",
-          description:
-            "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
+          title: "Advanced Data Security: Threat Detection & Decentralized Protection",
+          description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
         };
 
       // Add cases for other routes as needed
@@ -244,6 +226,11 @@ export default function RootLayout({ children }) {
         `}
         </script>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ var fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('DzLR5a5YrWZaBoQ2');`,
+          }}
+        ></script>
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -275,24 +262,6 @@ export default function RootLayout({ children }) {
                 "https://x.com/home?lang=en",
               ],
             }),
-          }}
-        />
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(ss,ex){ 
-            window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; 
-            (function(d,s){ 
-              fs=d.getElementsByTagName(s)[0]; 
-              function ce(src){ 
-                var cs=d.createElement(s); 
-                cs.src=src; 
-                cs.async=1; 
-                fs.parentNode.insertBefore(cs,fs); 
-              }; 
-              ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); 
-            })(document,'script'); 
-          })('DzLR5a5YrWZaBoQ2');`,
           }}
         />
       </head>

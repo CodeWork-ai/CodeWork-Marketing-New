@@ -13,7 +13,7 @@ export default function Page() {
             <div>
                 <IndustryDetail
                     heading="E-commerce: Predictive Analytics for Smarter Shopping"
-                    description="Redefine the online shopping experience with our predictive analytics solutions. We deliver personalized product recommendations that increase customer satisfaction and drive sales. Our secure payment gateways ensure seamless transactions, building trust with shoppers. By analysing customer behaviour, we create intuitive, tailored experiences that keep buyers coming back. Businesses benefit from higher conversion rates, while customers enjoy stress-free shopping. Keywords: e-commerce analytics, personalized shopping, secure transactions, predictive AI."
+                    description="Redefine the online shopping experience with our predictive analytics solutions. We deliver personalized product recommendations that increase customer satisfaction and drive sales. Our secure payment gateways ensure seamless transactions, building trust with shoppers. By analysing customer behaviour, we create intuitive, tailored experiences that keep buyers coming back. Businesses benefit from higher conversion rates, while customers enjoy stress-free shopping."
                     imageUrl="/ecommercebot.png"
                     altText="Technology Illustration"
                 />

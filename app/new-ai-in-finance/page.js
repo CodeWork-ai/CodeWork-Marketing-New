@@ -13,7 +13,7 @@ export default function Page() {
             <div>
                 <IndustryDetail
                     heading="Finance: AI-Powered Fraud Detection and Risk Analysis"
-                    description="Revolutionizing financial systems, our AI solutions provide accurate fraud detection, credit risk analysis, and streamlined payment processes. These innovations enhance operational efficiency, minimize risks, and boost customer trust. By automating complex financial tasks, we save time and ensure precision, supporting smarter financial decisions. Our technology fosters a secure, efficient, and reliable financial ecosystem. Keywords: AI in finance, fraud detection, credit risk analysis, secure payments."
+                    description="Revolutionizing financial systems, our AI solutions provide accurate fraud detection, credit risk analysis, and streamlined payment processes. These innovations enhance operational efficiency, minimize risks, and boost customer trust. By automating complex financial tasks, we save time and ensure precision, supporting smarter financial decisions. Our technology fosters a secure, efficient, and reliable financial ecosystem."
                     imageUrl="/finance.png"
                     altText="Technology Illustration"
                 />
