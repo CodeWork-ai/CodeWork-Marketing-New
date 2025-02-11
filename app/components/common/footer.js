@@ -87,7 +87,7 @@ const Footer = () => {
                         </div>
                         <div className="w-1/3">
                             <ul className="space-y-3">
-                                {routeLink.slice(10, 14).map((item) => (
+                                {routeLink.slice(9, 14).map((item) => (
                                     <li key={item.href}>
                                         <Link
                                             href={item.href}
@@ -167,6 +167,7 @@ const Footer = () => {
                     </Link>
                     <div className="space-y-2 text-center md:text-left">
                         <p className="text-gray-200">+91 75989 81500</p>
+                        <p className="text-gray-200">+91 95661 76914</p>
                         {/* <p className="text-gray-200">+91 75989 81500</p> */}
                         <p className="text-gray-200">sales@codework.ai</p>
                     </div>
@@ -240,7 +241,7 @@ const Footer = () => {
 
             {/* Footer Bottom */}
             <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-                <p className="text-gray-200 text-sm">© 2024 CodeWork. All Rights Reserved.</p>
+                <p className="text-gray-200 text-sm">© 2024 Pro Codework. All Rights Reserved.</p>
             </div>
         </footer>
     );

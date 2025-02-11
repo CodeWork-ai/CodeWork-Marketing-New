@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCloud, FaMobileAlt, FaCode, FaCogs, FaBrain, FaLaptopCode, FaUserPlus, FaShieldAlt, FaTools } from "react-icons/fa";
+import { FaCloud, FaMobileAlt, FaCode, FaCogs, FaBrain, FaLaptopCode, FaUserPlus, FaShieldAlt, FaTools , FaLock } from "react-icons/fa";
 
 const services = [
   {
@@ -57,6 +57,13 @@ const services = [
     description:
       "Protect your business with advanced cybersecurity solutions, ensuring data integrity and safety.",
     color: "text-orange-500"
+  },
+  {
+    icon: <FaLock className="text-purple-300 text-4xl"/>,
+    title: "Penetration Testing",
+    description:
+      "Identify vulnerabilities before attackers do with our comprehensive penetration testing services.",
+    color: "text-purple-300",
   },
   {
     icon: <FaTools className="text-gray-200 text-4xl" />,

@@ -94,6 +94,11 @@ export default function MobileNavbar() {
                     label: "Contact Us",
                     description: "Reach out to us for inquiries, collaborations, or support.",
                 },
+                {
+                    href: "/blog-lists",
+                    label: "Our Blogs",
+                    description: "Reach out to us for inquiries, collaborations, or support.",
+                },
             ],
         },
         {

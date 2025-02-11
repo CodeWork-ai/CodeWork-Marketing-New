@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const CareerPage = () => {
   return (
-    <div className="px-6 py-12 bg-black bg-opacity-40">
+    <div className="px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 py-12 bg-black bg-opacity-40">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         {/* <header className="text-center mb-12">
@@ -87,12 +87,24 @@ const CareerPage = () => {
           <p className="text-gray-200 mb-6">
             Explore our open positions and find the role that’s right for you. Let’s build the future together.
           </p>
+          <div className='md:flex items-center justify-center'>
+            <div className='p-2'>
           <a
             href="/join-our-team"
-            className="inline-block bg-red-400 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600"
+            className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700"
           >
-            Join Us
+            Apply for Jobs
           </a>
+          </div>
+          <div className='p-2'>
+          <a
+            href="/internship"
+            className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700"
+          >
+            Apply for Internships
+          </a>
+          </div>
+          </div>
         </section>
       </div>
     </div>

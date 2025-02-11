@@ -3,7 +3,7 @@ import AnimatedGridPattern from "../../../components/ui/animated-grid-pattern";
 
 export function AnimatedGridPatternDemo() {
   return (
-    <div className="relative flex h-[560px] w-full items-center justify-center overflow-hidden rounded-lg p-20 md:shadow-xl">
+    <div className="relative flex h-[560px] w-full items-center justify-center overflow-hidden rounded-lg p-20 mt-28 lg:mt-0 md:shadow-xl">
       {/* <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter ">
         Animated Grid Pattern
       </p> */}
