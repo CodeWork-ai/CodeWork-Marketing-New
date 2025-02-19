@@ -241,7 +241,7 @@ const Footer = () => {
 
             {/* Footer Bottom */}
             <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-                <p className="text-gray-200 text-sm">© 2024 Pro Codework. All Rights Reserved.</p>
+                <p className="text-gray-200 text-sm">© 2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All Rights Reserved.</p>
             </div>
         </footer>
     );
