@@ -65,7 +65,7 @@ const services = [
     description:
       "Protect your business with advanced cybersecurity solutions, ensuring data integrity and safety.",
     color: "text-orange-500",
-    link: "/cybersecurity-services"
+    link: "/cybersecurity-service"
   },
   {
     icon: <FaLock className="text-purple-300 text-4xl"/>,

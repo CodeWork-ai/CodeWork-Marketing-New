@@ -68,9 +68,9 @@ const Notification = ({ name, description, icon, color, time }) => {
   return (
     <figure
       className={cn(
-        "relative min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-3",
+        "relative min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-10",
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
-        "bg-black bg-opacity-50 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        " [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
@@ -113,7 +113,7 @@ const WebDesignProcess = () => {
           {notifications.map((item, idx) => (
             <Link key={idx} href={'/empowering-innovation-ai-advanced-technologies'}>
               <ShineBorder 
-                className="relative flex flex-col bg-black bg-opacity-50 overflow-hidden rounded-lg md:shadow-xl" 
+                className="relative flex flex-col gap-6 bg-black bg-opacity-50 overflow-hidden rounded-lg md:shadow-xl" 
                 color={["#1dcaf5", "#f04f57"]}
               >
                 <Notification className='bg-black' {...item} />
