@@ -57,7 +57,7 @@ const services = [
     description:
       "Building reliable offshore teams with skilled professionals to scale your projects.",
     color: "text-teal-500",
-    link: "/it-staff-augmentation"
+    link: "/it-staff-service"
   },
   {
     icon: <FaShieldAlt className="text-orange-500 text-4xl" />,
