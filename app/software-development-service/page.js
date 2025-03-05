@@ -1,9 +1,9 @@
 import React from 'react'
-import SoftwareLanding from '../software-development/softwareLanding'
-import SoftwareSolution from '../software-development/softwareSolutions'
-import AgileSoftwareProcess from '../software-development/agileSoftwareProcess'
-import SoftwareProcessCycle from '../software-development/softwareProcessCycle'
-import InnovativeSoftware from '../software-development/innovativeSoftware'
+import SoftwareLanding from '../softwareDevelopment/softwareLanding'
+import SoftwareSolution from '../softwareDevelopment/softwareSolutions'
+import AgileSoftwareProcess from '../softwareDevelopment/agileSoftwareProcess'
+import InnovativeSoftware from '../softwareDevelopment/innovativeSoftware'
+
 
 const page = () => {
   return (

@@ -199,6 +199,10 @@ export default function RootLayout({ children }) {
           return "/bg8.jpg";
           case "/custom-software-development":
           return "/bg8.jpg";
+          case "/mobile-software-development":
+            return "/bg8.jpg";
+            case "/web-design-service":
+              return "/bg8.jpg";
       default:
         return "/images/bg-default.jpg";
     }
