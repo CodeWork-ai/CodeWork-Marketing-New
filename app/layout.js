@@ -203,7 +203,11 @@ export default function RootLayout({ children }) {
             return "/bg8.jpg";
             case "/web-design-service":
               return "/bg8.jpg";
-      default:
+              case "/cloud-computing":
+              return "/bg8.jpg";
+              case "/cloud-computing":
+              return "/bg8.jpg";
+              default:
         return "/images/bg-default.jpg";
     }
   };
