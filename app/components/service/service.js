@@ -1,5 +1,6 @@
 import React from "react";
-import { FaCloud, FaMobileAlt, FaCode, FaCogs, FaBrain, FaLaptopCode, FaUserPlus, FaShieldAlt, FaTools , FaLock } from "react-icons/fa";
+import { FaCloud, FaMobileAlt, FaCode, FaCogs, FaBrain, FaLaptopCode, FaUserPlus, FaShieldAlt, FaTools, FaLock } from "react-icons/fa";
+import Link from "next/link"; 
 
 const services = [
   {
@@ -7,21 +8,24 @@ const services = [
     title: "AI Model Training",
     description:
       "Optimizing machine learning models with expertise in deep learning, neural networks, and computer vision.",
-    color: "text-indigo-500"
+    color: "text-indigo-500",
+    link: "/ai-modal-training" // Added link property
   },
   {
     icon: <FaCode className="text-blue-500 text-4xl" />,
     title: "Software Development",
     description:
       "Creating robust and scalable software to meet business needs with speed and accuracy.",
-    color: "text-blue-500"
+    color: "text-blue-500",
+    link: "/software-development-service"  // Added link property
   },
   {
     icon: <FaCogs className="text-green-500 text-4xl" />,
     title: "Custom Software Development",
     description:
       "Tailored software solutions to match specific business processes and goals.",
-    color: "text-green-500"
+    color: "text-green-500",
+    link: "/custom-software-development"  // Added link property
   },
   {
     icon: <FaMobileAlt className="text-yellow-500 text-4xl" />,
@@ -74,12 +78,24 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ icon, title, description, color }) => {
+const ServiceCard = ({ icon, title, description, color, link }) => {  
   return (
-    <div className="flex flex-col items-center p-6 bg-black bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <div className="mb-4 animate-bounce">{icon}</div>
-      <h3 className={`text-xl font-semibold mb-2 ${color}`}>{title}</h3>
-      <p className="text-gray-200 text-center">{description}</p>
+    <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      {link ? (
+        <Link href={link} passHref>
+          <div className="w-full h-full cursor-pointer flex flex-col items-center">
+            <div className="mb-4 animate-bounce flex justify-center">{icon}</div>
+            <h3 className={`text-xl font-semibold mb-2 ${color}`}>{title}</h3>
+            <p className="text-gray-200">{description}</p>
+          </div>
+        </Link>
+      ) : (
+        <div className="flex flex-col items-center">
+          <div className="mb-4 animate-bounce flex justify-center">{icon}</div>
+          <h3 className={`text-xl font-semibold mb-2 ${color}`}>{title}</h3>
+          <p className="text-gray-200">{description}</p>
+        </div>
+      )}
     </div>
   );
 };
@@ -99,6 +115,7 @@ const Services = () => {
               title={service.title}
               description={service.description}
               color={service.color}
+              link={service.link}  // Pass the link prop
             />
           ))}
         </div>
@@ -108,8 +125,3 @@ const Services = () => {
 };
 
 export default Services;
-
-/* Tailwind CSS animations used: 
-   - animate-bounce for icons
-   - animate-fade-in for the section heading (custom animation can be added in tailwind.config.js)
-*/

@@ -193,6 +193,12 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg";
       case "/internship":
         return "/bg8.jpg";
+        case "/ai-modal-training":
+          return "/bg8.jpg";
+          case "/software-development-service":
+          return "/bg8.jpg";
+          case "/custom-software-development":
+          return "/bg8.jpg";
       default:
         return "/images/bg-default.jpg";
     }
