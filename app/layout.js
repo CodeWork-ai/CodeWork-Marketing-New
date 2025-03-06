@@ -211,6 +211,10 @@ export default function RootLayout({ children }) {
               return "/bg8.jpg";
               case "/cybersecurity-service":
                 return "/bg8.jpg";
+                case "/penetration-testing-service":
+                  return "/bg8.jpg";
+                case "/devops-solutions":
+                  return "/bg8.jpg";
               default:
         return "/images/bg-default.jpg";
     }

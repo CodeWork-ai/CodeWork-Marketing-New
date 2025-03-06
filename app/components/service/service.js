@@ -73,7 +73,7 @@ const services = [
     description:
       "Identify vulnerabilities before attackers do with our comprehensive penetration testing services.",
     color: "text-purple-300",
-    link: "/penetration-testing"
+    link: "/penetration-testing-service"
   },
   {
     icon: <FaTools className="text-gray-200 text-4xl" />,
