@@ -3,53 +3,48 @@ import ShineBorder from "../../../components/ui/shine-border";
 
 const AiModalLanding = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="max-w-4xl w-full">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6">
+      <div className="w-full max-w-4xl">
         {/* Title Section */}
-        <h2 className="text-white text-2xl font-semibold mb-6 -ml-48 flex items-center justify-start">
-          <span className="inline-block w-2 h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-4 rounded-tr-md rounded-br-md"></span>
-          Our AI Model Training Process
-        </h2>
+<h2 className="text-white text-lg sm:text-xl md:text-2xl font-semibold mb-4 sm:mb-6 ml-4 sm:-ml-24 md:-ml-48 flex items-center justify-start">
+  <span className="inline-block w-1 h-6 sm:w-2 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-2 sm:mr-4 rounded-tr-md rounded-br-md"></span>
+  Our AI Model Training Process
+</h2>
 
         {/* Black Container 1 with ShineBorder */}
         <ShineBorder
-          className="pt-12 mt-16 bg-black text-white py-8 px-32 w-[1200px] h-[456px] 
-          rounded-tr-[530px] rounded-br-[530px] relative overflow-hidden ml-[-320px]"
+          className="pt-6 sm:pt-10 mt-8 sm:mt-16 bg-black text-white py-6 sm:py-8 px-4 sm:px-8 md:px-32 w-full sm:w-[800px] md:w-[1200px] h-[300px] sm:h-[400px] md:h-[456px] 
+          rounded-tr-[200px] sm:rounded-tr-[400px] md:rounded-tr-[530px] rounded-br-[200px] sm:rounded-br-[400px] md:rounded-br-[530px] relative overflow-hidden ml-0 sm:ml-[-100px] md:ml-[-320px]"
           color={["#1dcaf5", "#f04f57"]}
           borderRadius="0 530px 530px 0"
         >
           <div className="relative z-10">
-              {/* Section 1 */}
-              <div className="mb-6">
-              <h3 className="text-lg font-semibold pt-16 pb-1">
-              Understanding Business Requirements
+            {/* Section 1 */}
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-sm sm:text-base font-semibold pt-6 sm:pt-12 pb-1">
+                Understanding Business Requirements
               </h3>
-              <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
-                  <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
+              <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
+                    animate-[shine_2s_linear_infinite]"></div>
               </div>
-              <p className="text-gray-300 w-[70%] mt-2">
-              A successful AI implementation starts with a clear goal. We collaborate with you to understand your business challenges, 
-industry-specific needs, and available datasets, ensuring the development of an AI model that delivers measurable results.
+              <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                A successful AI implementation starts with a clear goal. We collaborate with you to understand your business challenges, 
+                industry-specific needs, and available datasets, ensuring the development of an AI model that delivers measurable results.
               </p>
             </div>
             {/* Section 2 */}
             <div>
-              <h3 className="text-lg font-semibold pb-1">
+              <h3 className="text-sm sm:text-base font-semibold pb-1">
                 Data Collection and Preprocessing
               </h3>
-              <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
-                  <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
+              <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
+                    animate-[shine_2s_linear_infinite]"></div>
               </div>
-              <p className="text-gray-300 w-[70%] mt-2">
-                Quality data is the foundation of any AI model. Our experts
-                assist in data collection, cleaning, and preprocessing,
-                eliminating inconsistencies to ensure that the model is trained
-                on accurate, structured, and relevant datasets for optimal
-                performance.
+              <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                Quality data is the foundation of any AI model. Our experts assist in data collection, cleaning, and preprocessing,
+                eliminating inconsistencies to ensure that the model is trained on accurate, structured, and relevant datasets for optimal performance.
               </p>
             </div>
           </div>
@@ -57,43 +52,37 @@ industry-specific needs, and available datasets, ensuring the development of an 
 
         {/* Black Container 2 with ShineBorder */}
         <ShineBorder
-          className="w-[1200px] h-[456px] bg-black relative ml-2 overflow-hidden flex flex-col mt-32 rounded-tl-[530px] rounded-bl-[530px]"
+          className="w-full sm:w-[800px] md:w-[1200px] h-[300px] sm:h-[400px] md:h-[456px] bg-black relative ml-0 sm:ml-2 overflow-hidden flex flex-col mt-8 sm:mt-16 md:mt-32 rounded-tl-[200px] sm:rounded-tl-[400px] md:rounded-tl-[530px] rounded-bl-[200px] sm:rounded-bl-[400px] md:rounded-bl-[530px]"
           color={["#1dcaf5", "#f04f57"]}
           borderRadius="530px 530px"
         >
-          <div className="pt-12 text-white py-8 px-32 w-full flex flex-col text-left">
+          <div className="pt-6 sm:pt-10 text-white py-6 sm:py-8 px-4 sm:px-8 md:px-32 w-full flex flex-col text-left">
             <div className="relative z-10 w-full">
               {/* Section 1 */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold pt-16 pb-1">
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-sm sm:text-base font-semibold pt-6 sm:pt-12 pb-1">
                   Model Training and Evaluation
                 </h3>
-                <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
                   <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
+                    animate-[shine_2s_linear_infinite]"></div>
                 </div>
-                <p className="text-gray-300 w-[70%] mt-2">
-                  Our AI model undergoes rigorous training using advanced
-                  techniques. We continuously test, validate, and refine the
-                  model to ensure it meets performance benchmarks and aligns
-                  with your business goals.
+                <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                  Our AI model undergoes rigorous training using advanced techniques. We continuously test, validate, and refine the
+                  model to ensure it meets performance benchmarks and aligns with your business goals.
                 </p>
               </div>
-
               {/* Section 2 */}
               <div>
-                <h3 className="text-lg font-semibold pb-1">
+                <h3 className="text-sm sm:text-base font-semibold pb-1">
                   Deployment and Optimization
                 </h3>
-                <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
                   <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
-              </div>
-                <p className="text-gray-300 w-[70%] mt-2">
-                  Once trained, the AI model is deployed into your environment.
-                  We continuously monitor and optimize its performance,
+                    animate-[shine_2s_linear_infinite]"></div>
+                </div>
+                <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                  Once trained, the AI model is deployed into your environment. We continuously monitor and optimize its performance,
                   adapting to new data and improving accuracy over time.
                 </p>
               </div>
@@ -103,44 +92,38 @@ industry-specific needs, and available datasets, ensuring the development of an 
 
         {/* Black Container 3 with ShineBorder */}
         <ShineBorder
-          className="pt-12 mt-32 bg-black text-white py-8 px-32 w-[1200px] h-[456px] 
-          rounded-tr-[530px] rounded-br-[530px] relative overflow-hidden ml-[-320px]"
+          className="pt-6 sm:pt-10 mt-8 sm:mt-16 md:mt-32 bg-black text-white py-6 sm:py-8 px-4 sm:px-8 md:px-32 w-full sm:w-[800px] md:w-[1200px] h-[300px] sm:h-[400px] md:h-[456px] 
+          rounded-tr-[200px] sm:rounded-tr-[400px] md:rounded-tr-[530px] rounded-br-[200px] sm:rounded-br-[400px] md:rounded-br-[530px] relative overflow-hidden ml-0 sm:ml-[-200px] md:ml-[-320px]"
           color={["#1dcaf5", "#f04f57"]}
           borderRadius="0 530px 530px 0"
         >
           <div className="relative z-10">
             {/* Section 1 */}
-            <div className="mb-6">
-              <h3 className="text-lg font-semibold pt-16 pb-1">
+            <div className="mb-4 sm: movingmb-6">
+              <h3 className="text-sm sm:text-base font-semibold pt-6 sm:pt-12 pb-1">
                 Continuous Learning and Improvement
               </h3>
-              <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
-                  <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
+              <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
+                    animate-[shine_2s_linear_infinite]"></div>
               </div>
-              <p className="text-gray-300 w-[70%] mt-2">
-                AI is ever-evolving. We integrate feedback loops, retrain models
-                with new data, and implement adaptive learning strategies to
+              <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                AI is ever-evolving. We integrate feedback loops, retrain models with new data, and implement adaptive learning strategies to
                 ensure your AI solutions remain relevant and effective.
               </p>
             </div>
-
             {/* Section 2 */}
             <div>
-              <h3 className="text-lg font-semibold pb-1">
+              <h3 className="text-sm sm:text-base font-semibold pb-1">
                 Business Impact and Insights
               </h3>
-              <div className="relative w-[450px] h-[1px] bg-white overflow-hidden">
-                  <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
-                      animate-[shine_2s_linear_infinite]"
-                  ></div>
+              <div className="relative w-[200px] sm:w-[300px] md:w-[450px] h-[1px] bg-white overflow-hidden">
+                <div className="absolute inset-0 h-full bg-gradient-to-r from-[#1dcaf5] via-white to-[#f04f57] 
+                    animate-[shine_2s_linear_infinite]"></div>
               </div>
-              <p className="text-gray-300 w-[70%] mt-2">
-                Our AI-driven solutions are designed to provide actionable
-                insights. We analyze model performance, extract key trends, and
-                enable data-driven decision-making for sustained business
-                success.
+              <p className="text-gray-300 w-full sm:w-[70%] mt-2 text-xs sm:text-sm">
+                Our AI-driven solutions are designed to provide actionable insights. We analyze model performance, extract key trends, and
+                enable data-driven decision-making for sustained business success.
               </p>
             </div>
           </div>

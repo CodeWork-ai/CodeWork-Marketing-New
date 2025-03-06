@@ -2,8 +2,8 @@
 import { BsTools } from "react-icons/bs";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import React, { useEffect, useState } from "react";
-import { WiCloudy } from "react-icons/wi";
-import { TbCloudComputing, TbCloudLock } from "react-icons/tb";
+import { FaAward } from "react-icons/fa";;
+import { TbAdjustmentsCode } from "react-icons/tb";
 import { GoRocket } from "react-icons/go";
 import { TbDevicesPc } from "react-icons/tb";
 import { VscNote } from "react-icons/vsc";
@@ -37,8 +37,8 @@ const SoftwareProcessCycle = () => {
     { icon: <AiOutlineFileSearch size={40} />, borderColor: "border-yellow-500", textColor: "text-yellow-500" },
     { icon: <VscNote size={40} />, borderColor: "border-blue-500", textColor: "text-blue-500" },
     { icon: <BsTools size={40} />, borderColor: "border-red-500", textColor: "text-red-500" },
-    { icon: <HiOutlineLightBulb size={40} />, borderColor: "border-purple-500", textColor: "text-purple-500" },
-    { icon: <TbDevicesPc size={40} />, borderColor: "border-green-500", textColor: "text-green-500" },
+    { icon: <TbAdjustmentsCode size={40} />, borderColor: "border-purple-500", textColor: "text-purple-500" },
+    { icon: <FaAward size={40} />, borderColor: "border-green-500", textColor: "text-green-500" },
     { icon: <GoRocket size={40} />, borderColor: "border-orange-500", textColor: "text-orange-500" },
   ];
 

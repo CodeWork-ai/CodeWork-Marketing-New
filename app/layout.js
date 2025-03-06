@@ -193,7 +193,7 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg";
       case "/internship":
         return "/bg8.jpg";
-        case "/ai-modal-training":
+        case "/ai-model-training":
           return "/bg8.jpg";
           case "/software-development-service":
           return "/bg8.jpg";

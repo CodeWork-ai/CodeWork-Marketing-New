@@ -23,9 +23,9 @@ const DevelopmentProcess = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#c0b62b] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Understanding business goals
+            Discovery & Planning
             </p>
-            <p className="text-white">Identify business objectives, analyze bottlenecks, and create a DevOps roadmap.</p>
+            <p className="text-white">Understanding business goals</p>
           </div>
 
           {/* Desktop/Tablet Arrow */}
@@ -60,9 +60,9 @@ const DevelopmentProcess = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#3667ee] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Creating intuitive UI/UX
+            Prototyping & Design
             </p>
-            <p className="text-white">Implement CI/CD, cloud provisioning, and security automation tools.</p>
+            <p className="text-white">Creating intuitive UI/UX</p>
           </div>
 
           {/* Desktop/Tablet Arrow */}
@@ -97,9 +97,9 @@ const DevelopmentProcess = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#d333de] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Iterative and scalable approach
+            Agile Development
             </p>
-            <p className="text-white">Enable real-time tracking, seamless deployment, and issue resolution.</p>
+            <p className="text-white">Iterative and scalable approach</p>
           </div>
 
           {/* Desktop/Tablet Arrow */}
@@ -126,7 +126,7 @@ const DevelopmentProcess = () => {
           <div className="flex flex-col items-center w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[239px]">
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-[100px] lg:h-[100px] flex items-center justify-center rounded-full border-4 sm:border-[5px] border-[#ff5733] shadow-md">
               <Image
-                src="/TestingQuality.svg" // Replace with your desired image path
+                src="/rocket.svg" // Replace with your desired image path
                 alt="icon"
                 width={40}
                 height={40}
@@ -134,9 +134,9 @@ const DevelopmentProcess = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#ff5733] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Testing and validation
+            Deployment & Integration
             </p>
-            <p className="text-white">Ensure quality through automated testing and performance validation.</p>
+            <p className="text-white w-full">Seamless software implementation</p>
           </div>
 
           {/* Desktop/Tablet Arrow */}
@@ -171,9 +171,9 @@ const DevelopmentProcess = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#2dd563] mt-2 sm:mt-3 md:mt-4 text-center">
-              Continuous enhancements
+            Support & Optimization
             </p>
-            <p className="text-white">Continuously improve workflows for efficiency and agility.</p>
+            <p className="text-white">Continuous enhancements</p>
           </div>
         </div>
       </div>
