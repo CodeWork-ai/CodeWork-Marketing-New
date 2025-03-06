@@ -1,5 +1,6 @@
 import React from "react";
 import ShineBorder from "../../../components/ui/shine-border";
+import { IoIosCheckbox } from "react-icons/io";
 
 const CustomSoftwareSolution = () => {
   return (
@@ -7,30 +8,36 @@ const CustomSoftwareSolution = () => {
       <div className="max-w-4xl w-full">
         {/* Black Container 1 with ShineBorder */}
         <ShineBorder
-          className="pt-12 mt-16 bg-black text-white py-8 px-32 w-[1200px] h-[556px] 
-          rounded-tr-[530px] rounded-br-[530px] relative overflow-hidden ml-[-320px]"
+          className="pt-8 sm:pt-12 mt-12 sm:mt-16 bg-black text-white py-6 sm:py-8 px-8 sm:px-16 md:px-32 
+                         w-full sm:w-[1200px] h-auto sm:h-[556px] rounded-tr-[200px] sm:rounded-tr-[530px] 
+                         rounded-br-[200px] sm:rounded-br-[530px] relative overflow-hidden ml-0 sm:ml-[-320px]"
           color={["#1dcaf5", "#f04f57"]}
           borderRadius="0 530px 530px 0"
         >
           {/* Title Section */}
           <div className="relative w-full">
-            <h2 className="absolute left-[-10px] text-white text-2xl font-semibold flex items-center">
-              <span className="inline-block w-2 h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-4 rounded-tr-md rounded-br-md"></span>
-              Our AI Model Training Process
+            <h2 className="text-white text-lg sm:text-2xl font-semibold flex items-center">
+              <span
+                className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 
+                             mr-3 sm:mr-4 rounded-tr-md rounded-br-md"
+              ></span>
+              Key Benefits of DevOps Solutions
             </h2>
           </div>
 
-          <div className="flex justify-start  w-full">
+          <div className="flex justify-start w-full">
             {/* New Section Matching Image Layout */}
-            <div className="space-y-6  mt-24">
+            <div className="space-y-4 sm:space-y-6 mt-12 sm:mt-24">
               {[
                 {
-                  title: "Personalized Functionality",
-                  description: "Tailored to specific workflows and operations.",
+                  title: "Faster Time-to-Market",
+                  description:
+                    "Accelerates software development and deployment.",
                 },
                 {
-                  title: "Scalability & Adaptability",
-                  description: "Grows with business expansion.",
+                  title: "Enhanced Collaboration",
+                  description:
+                    "Ensures seamless communication between development and operations teams.",
                 },
                 {
                   title: "Seamless Integration",
@@ -47,25 +54,32 @@ const CustomSoftwareSolution = () => {
                     "Offers exclusive features to enhance market positioning.",
                 },
               ].map((item, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-[#f04f57] text-white flex items-center justify-center rounded-full font-bold text-xl">
-                    ✔
+                <div
+                  key={index}
+                  className="flex items-start space-x-3 sm:space-x-4"
+                >
+                  <div className="w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center text-lg sm:text-xl">
+                    <IoIosCheckbox className="text-[#F62A5A] w-5 sm:w-6 h-5 sm:h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#1dcaf5]">
+                    <h3 className="text-sm sm:text-lg font-semibold text-[#1dcaf5]">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300">{item.description}</p>
+                    <p className="text-gray-300 text-xs sm:text-base">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </ShineBorder>
- {/* Title Section */}
- <h2 className="text-white text-2xl font-semibold pt-32  -ml-48 flex items-center justify-start">
+
+        {/* Title Section */}
+        <h2 className="text-white text-2xl font-semibold pt-32  -ml-48 flex items-center justify-start">
           <span className="inline-block w-2 h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-4 rounded-tr-md rounded-br-md"></span>
-          Comprehensive Software Development Solutions        </h2>
+          Comprehensive Software Development Solutions{" "}
+        </h2>
 
         {/* Black Container 2 with ShineBorder */}
         <ShineBorder
@@ -111,8 +125,8 @@ const CustomSoftwareSolution = () => {
                   to new data and improving accuracy over time.
                 </p>
               </div>
-               {/* Section 3 */}
-               <div>
+              {/* Section 3 */}
+              <div>
                 <h3 className="text-lg font-semibold pb-1">
                   Deployment and Optimization
                 </h3>

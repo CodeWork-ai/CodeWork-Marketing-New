@@ -7,34 +7,47 @@ const ItStaffCycle = () => {
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
-    const radius = 120; // Adjusted for better spacing
-    const centerX = 150; // Center of the container
-    const centerY = 150;
-    const angleStep = (2 * Math.PI) / 5; // Divides circle into 5 equal parts
+    // Function to calculate positions based on container size
+    const calculatePositions = () => {
+      const containerSize = window.innerWidth < 640 ? 240 : 340; // Smaller on mobile (<640px), original 340px otherwise
+      const radius = containerSize === 240 ? 110 : 160; // Adjusted radius: 110px for mobile, 160px for larger screens
+      const centerX = containerSize / 2; // Dynamic center based on container size
+      const centerY = containerSize / 2;
+      const angleStep = (2 * Math.PI) / 5; // Divide circle into 5 equal parts
+      const iconContainerSize = containerSize === 240 ? 60 : 90; // 60px on mobile (40px icon + 20px padding), 90px otherwise
 
-    const newPositions = [...Array(5)].map((_, i) => ({
-      left: `${centerX + radius * Math.cos(i * angleStep)}px`,
-      top: `${centerY + radius * Math.sin(i * angleStep)}px`,
-    }));
+      const newPositions = [
+        { left: `${centerX + radius * Math.cos(0 * angleStep) - iconContainerSize / 2}px`, top: `${centerY + radius * Math.sin(0 * angleStep) - iconContainerSize / 2}px` }, // Search
+        { left: `${centerX + radius * Math.cos(1 * angleStep) - iconContainerSize / 2}px`, top: `${centerY + radius * Math.sin(1 * angleStep) - iconContainerSize / 2}px` }, // Monitor
+        { left: `${centerX + radius * Math.cos(2 * angleStep) - iconContainerSize / 2}px`, top: `${centerY + radius * Math.sin(2 * angleStep) - iconContainerSize / 2}px` }, // Rocket
+        { left: `${centerX + radius * Math.cos(3 * angleStep) - iconContainerSize / 2}px`, top: `${centerY + radius * Math.sin(3 * angleStep) - iconContainerSize / 2}px` }, // Server
+        { left: `${centerX + radius * Math.cos(4 * angleStep) - iconContainerSize / 2}px`, top: `${centerY + radius * Math.sin(4 * angleStep) - iconContainerSize / 2}px` }, // CheckCircle
+      ];
 
-    setPositions(newPositions);
+      setPositions(newPositions);
+    };
+
+    calculatePositions(); // Initial calculation
+    window.addEventListener("resize", calculatePositions); // Recalculate on resize
+
+    return () => window.removeEventListener("resize", calculatePositions); // Cleanup
   }, []);
 
   return (
-    <div className="relative w-96 h-96 mx-auto flex items-center justify-center">
+    <div className="relative w-[240px] sm:w-[340px] h-[240px] sm:h-[340px] mx-auto flex items-center justify-center">
       {/* Rotating Container */}
       <div className="absolute w-full h-full rounded-full border-dashed border-2 border-gray-500 animate-spinSlow">
         {[
-          { icon: <Search size={30} className="text-black" />, bg: "bg-yellow-500" },
-          { icon: <Monitor size={30} className="text-black" />, bg: "bg-blue-500" },
-          { icon: <Server size={30} className="text-black" />, bg: "bg-purple-500" },
-          { icon: <CheckCircle size={30} className="text-black" />, bg: "bg-green-500" },
-          { icon: <Rocket size={30} className="text-black" />, bg: "bg-red-500" },
+          { icon: <Search size={40} className="text-black sm:text-black" />, bg: "bg-yellow-500" },      // Index 0
+          { icon: <Monitor size={40} className="text-black sm:text-black" />, bg: "bg-blue-500" },       // Index 1
+          { icon: <Rocket size={40} className="text-black sm:text-black" />, bg: "bg-red-500" },         // Index 2
+          { icon: <Server size={40} className="text-black sm:text-black" />, bg: "bg-purple-500" },      // Index 3
+          { icon: <CheckCircle size={40} className="text-black sm:text-black" />, bg: "bg-green-500" },  // Index 4
         ].map(({ icon, bg }, index) => (
           <div
             key={index}
-            className={`absolute flex items-center justify-center ${bg} p-4 rounded-full`}
-            style={positions[index] || { visibility: "hidden" }} // Prevents flash before positions are calculated
+            className={`absolute flex items-center justify-center ${bg} p-3 sm:p-5 rounded-full`}
+            style={positions[index] || { visibility: "hidden" }} // Ensures position is applied correctly
           >
             {icon}
           </div>

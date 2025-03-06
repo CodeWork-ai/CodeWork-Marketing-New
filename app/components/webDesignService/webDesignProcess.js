@@ -6,8 +6,7 @@ import { FaRobot, FaPalette, FaChartLine, FaCommentDots, FaDatabase, FaLock, FaC
 import Link from "next/link";
 import ShineBorder from "@/components/ui/shine-border";
 import { AnimatedList } from "@/components/ui/animated-list";
-import CloudAdoptionCycle from "../cloudComputing/CloudAdoptionCycle";
-
+import WebDesignCycle from "./webDesignCycle";
 
 let notifications = [
   {
@@ -59,7 +58,6 @@ let notifications = [
     icon: <FaChartBar className="w-8 h-8 text-[#0288D1]" />,
     color: "#0288D1",
   },
- 
 ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
@@ -68,9 +66,9 @@ const Notification = ({ name, description, icon, color, time }) => {
   return (
     <figure
       className={cn(
-        "relative min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-10",
+        "relative min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-6 sm:p-10",
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
-        " [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        "[box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
@@ -87,7 +85,7 @@ const Notification = ({ name, description, icon, color, time }) => {
           <figcaption className="flex flex-row items-center whitespace-pre text-base font-medium">
             <span className="text-xs sm:text-base text-gray-200">{name}</span>
           </figcaption>
-          <p className="text-[10px] md:text-xs font-normal text-gray-200">
+          <p className="text-[10px] sm:text-xs font-normal text-gray-200">
             {description}
           </p>
           <div className="text-xs mt-1 text-red-400 hover:font-semibold">Read More</div>
@@ -101,12 +99,12 @@ const WebDesignProcess = () => {
   return (
     <div
       className={cn(
-        "flex justify-start w-full pl-28 mb-12", // Changed px-4 to pl-5 for 20px left spacing
+        "flex flex-col md:flex-row justify-start w-full pl-5 md:pl-28 mb-12",
       )}
     >
       <div
         className={cn(
-          "relative h-[400px] w-[450px] flex-col overflow-hidden rounded-lg md:shadow-xl bg-black bg-opacity-0",
+          "relative h-[400px] w-full md:w-[450px] flex-col overflow-hidden rounded-lg md:shadow-xl bg-black bg-opacity-0",
         )}
       >
         <AnimatedList>
@@ -121,18 +119,16 @@ const WebDesignProcess = () => {
             </Link>
           ))}
         </AnimatedList>
-        
       </div>
-       {/* Right Section: Form */}
-                  <div className="flex-1 space-y-4 ml-0 md:ml-5">
-                      {/* <h2 className="text-2xl font-bold text-gray-200">At CodeWork</h2>
-                      <p className="text-gray-200">
-                          We are dedicated to leveraging advanced AI, ML, and Data Science to transform your business. Let's collaborate to craft your success story and showcase the potential of AI in driving sustainable growth.
-                      </p> */}
-                     <CloudAdoptionCycle/>
-                  </div>
+      {/* Right Section: Form */}
+      <div className="flex-1 space-y-4 ml-0 md:ml-5 mt-5 md:mt-0">
+        {/* <h2 className="text-2xl font-bold text-gray-200">At CodeWork</h2>
+        <p className="text-gray-200">
+          We are dedicated to leveraging advanced AI, ML, and Data Science to transform your business. Let's collaborate to craft your success story and showcase the potential of AI in driving sustainable growth.
+        </p> */}
+        <WebDesignCycle />
+      </div>
     </div>
-    
   );
 }
 
