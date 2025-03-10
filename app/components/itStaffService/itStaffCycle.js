@@ -1,9 +1,10 @@
 "use client"; // Ensures the component only runs on the client side
-
+import { HiCubeTransparent } from "react-icons/hi";
 import React, { useEffect, useState } from "react";
-import { Search, Monitor, Rocket, Server, CheckCircle } from "lucide-react";
-
-const ItStaffCycle = () => {
+import { FaHandshake } from "react-icons/fa";
+import { MdPersonSearch } from "react-icons/md";
+import { TbLocationSearch } from "react-icons/tb";
+import { LuNotepadText } from "react-icons/lu";const ItStaffCycle = () => {
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
@@ -38,11 +39,11 @@ const ItStaffCycle = () => {
       {/* Rotating Container */}
       <div className="absolute w-full h-full rounded-full border-dashed border-2 border-gray-500 animate-spinSlow">
         {[
-          { icon: <Search size={40} className="text-black sm:text-black" />, bg: "bg-yellow-500" },      // Index 0
-          { icon: <Monitor size={40} className="text-black sm:text-black" />, bg: "bg-blue-500" },       // Index 1
-          { icon: <Rocket size={40} className="text-black sm:text-black" />, bg: "bg-red-500" },         // Index 2
-          { icon: <Server size={40} className="text-black sm:text-black" />, bg: "bg-purple-500" },      // Index 3
-          { icon: <CheckCircle size={40} className="text-black sm:text-black" />, bg: "bg-green-500" },  // Index 4
+          { icon: <LuNotepadText size={40} className="text-black sm:text-black" />, bg: "bg-yellow-500" },      // Index 0
+          { icon: <MdPersonSearch size={40} className="text-black sm:text-black" />, bg: "bg-blue-500" },       // Index 1
+          { icon: <HiCubeTransparent size={40} className="text-black sm:text-black" />, bg: "bg-red-500" },         // Index 2
+          { icon: <FaHandshake size={40} className="text-black sm:text-black" />, bg: "bg-purple-500" },      // Index 3
+          { icon: <TbLocationSearch size={40} className="text-black sm:text-black" />, bg: "bg-green-500" },  // Index 4
         ].map(({ icon, bg }, index) => (
           <div
             key={index}

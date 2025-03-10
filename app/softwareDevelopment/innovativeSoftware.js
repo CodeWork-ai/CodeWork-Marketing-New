@@ -25,7 +25,6 @@ const EnhancingBusinessSuccess = () => {
         deliver seamless user experiences. Explore software development services
         at Codework.ai and unlock the potential of technology-driven solutions.
       </p>
-      <div className="h-6 sm:h-8"></div> {/* Responsive spacer */}
     </div>
   );
 };

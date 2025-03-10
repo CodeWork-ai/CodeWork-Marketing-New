@@ -24,7 +24,6 @@ const MobileSolution = () => {
         services at Codework.ai—transforming ideas into market-leading
         applications. Contact today for a tailored mobile development strategy.
       </p>
-      <div className="h-6 sm:h-8"></div> {/* Responsive spacer */}
     </div>
   );
 };

@@ -14,7 +14,7 @@ const DevelopmentProcessDevops = () => {
           <div className="flex flex-col items-center w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[239px]">
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-[118px] lg:h-[118px] flex items-center justify-center rounded-full border-4 sm:border-[5px] border-[#c0b62b] shadow-md">
               <Image
-                src="/DiscoveryPlanning.svg"
+                src="/cyIcon1.svg"
                 alt="icon"
                 width={40}
                 height={40}
@@ -22,7 +22,7 @@ const DevelopmentProcessDevops = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#c0b62b] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Understanding business goals
+            Assess & Plan
             </p>
             <p className="text-white">Identify business objectives, analyze bottlenecks, and create a DevOps roadmap.</p>
           </div>
@@ -51,7 +51,7 @@ const DevelopmentProcessDevops = () => {
           <div className="flex flex-col items-center w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[239px]">
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-[118px] lg:h-[118px] flex items-center justify-center rounded-full border-4 sm:border-[5px] border-[#3667ee] shadow-md">
               <Image
-                src="\PrototypingDesign.svg"
+                src="\devIcon2.svg"
                 alt="icon"
                 width={40}
                 height={40}
@@ -59,7 +59,7 @@ const DevelopmentProcessDevops = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#3667ee] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Creating intuitive UI/UX
+            Automate & Integrate
             </p>
             <p className="text-white">Implement CI/CD, cloud provisioning, and security automation tools.</p>
 
@@ -89,7 +89,7 @@ const DevelopmentProcessDevops = () => {
           <div className="flex flex-col items-center w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[239px]">
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-[118px] lg:h-[118px] flex items-center justify-center rounded-full border-4 sm:border-[5px] border-[#d333de] shadow-md">
               <Image
-                src="/AgileDevelopment.svg"
+                src="/devIcon3.svg"
                 alt="icon"
                 width={40}
                 height={40}
@@ -97,7 +97,7 @@ const DevelopmentProcessDevops = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#d333de] font-normal mt-2 sm:mt-3 md:mt-4 text-center">
-              Iterative and scalable approach
+            Deploy & Monitor
             </p>
             <p className="text-white">Enable real-time tracking, seamless deployment, and issue resolution.</p>
 
@@ -126,7 +126,7 @@ const DevelopmentProcessDevops = () => {
           <div className="flex flex-col items-center w-full max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[239px]">
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-[118px] lg:h-[118px] flex items-center justify-center rounded-full border-4 sm:border-[5px] border-[#2dd563] shadow-md">
               <Image
-                src="/SupportOptimization.svg"
+                src="/devIcon4.svg"
                 alt="icon"
                 width={40}
                 height={40}
@@ -134,7 +134,7 @@ const DevelopmentProcessDevops = () => {
               />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#2dd563] mt-2 sm:mt-3 md:mt-4 text-center">
-              Continuous enhancements
+            Optimize & Scale
             </p>
             <p className="text-white">Continuously improve workflows for efficiency and agility.</p>
 

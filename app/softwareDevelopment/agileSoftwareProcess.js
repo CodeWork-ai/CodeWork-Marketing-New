@@ -67,51 +67,39 @@ const SoftwareProcessCycle = () => {
 // AgileSoftwareProcess Component
 let notifications = [
   {
-    name: "AI Consulting",
-    description: "Custom AI solutions to automate workflows and drive business growth.",
+    name: "Requirement Analysis",
+    description: "In-depth understanding of business needs and software objectives.",
     time: "15m ago",
     icon: <AiOutlineFileSearch className="w-8 h-8 text-yellow-500" />,
     color: "#FFFF00", // Yellow-500 approximate
   },
   {
-    name: "Generative AI",
-    description: "Transform workflows with AI-powered content creation.",
+    name: "UI/UX Design",
+    description: "Intuitive, user-friendly interface design for enhanced user engagement.",
     time: "10m ago",
     icon: <VscNote className="w-8 h-8 text-blue-500" />,
     color: "#3B82F6", // Blue-500 approximate
   },
   {
-    name: "Machine Learning",
-    description: "Leverage frameworks for predictive insights.",
+    name: "Agile Development",
+    description: "Iterative development using modern frameworks for rapid deployment.",
     time: "8m ago",
     icon: <BsTools className="w-8 h-8 text-red-500" />,
     color: "#EF4444", // Red-500 approximate
   },
   {
-    name: "NLP",
-    description: "Smarter communication with NLP solutions.",
+    name: "Testing & Quality Assurance",
+    description: "Comprehensive testing ensures bug-free, high-performance software.",
     time: "6m ago",
     icon: <TbAdjustmentsCode className="w-8 h-8 text-purple-500" />,
     color: "#8B5CF6", // Purple-500 approximate
   },
   {
-    name: "Data Engineering",
-    description: "Build a robust data foundation.",
+    name: "Deployment & Support",
+    description: "Seamless software launch with ongoing updates and optimization.",
     time: "4m ago",
     icon: <FaAward className="w-8 h-8 text-green-500" />,
     color: "#10B981", // Green-500 approximate
-  },
-  {
-    name: "UI/UX Design",
-    description: "Intuitive, user-friendly interface design for enhanced user engagement.",
-    icon: <GoRocket className="w-8 h-8 text-orange-500" />,
-    color: "#F97316", // Orange-500 approximate
-  },
-  {
-    name: "Requirement Analysis",
-    description: "In-depth understanding of business needs and software objectives.",
-    icon: <AiOutlineFileSearch className="w-8 h-8 text-yellow-500" />, // Reusing icon for simplicity
-    color: "#FFFF00", // Yellow-500 approximate
   },
 ];
 

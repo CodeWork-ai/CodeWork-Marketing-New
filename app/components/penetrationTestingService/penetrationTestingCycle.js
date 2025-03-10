@@ -2,6 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import { Search, Monitor, Rocket, Server, CheckCircle } from "lucide-react";
+import { BsTools } from "react-icons/bs";
+import { TbMapSearch } from "react-icons/tb";
+import { MdOutlineNoteAdd } from "react-icons/md";
+import { MdOutlineSecurity } from "react-icons/md";
 
 const PenetrationTestingCycle = () => {
   const [positions, setPositions] = useState([]);
@@ -39,10 +43,10 @@ const PenetrationTestingCycle = () => {
       <div className="absolute w-full h-full rounded-full border-dashed border-2 border-gray-500 animate-spinSlow">
         {[
           { icon: <Search size={40} className="text-black sm:text-black" />, bg: "bg-yellow-500" },      // Index 0
-          { icon: <Monitor size={40} className="text-black sm:text-black" />, bg: "bg-blue-500" },       // Index 1
-          { icon: <Rocket size={40} className="text-black sm:text-black" />, bg: "bg-red-500" },         // Index 2
-          { icon: <Server size={40} className="text-black sm:text-black" />, bg: "bg-purple-500" },      // Index 3
-          { icon: <CheckCircle size={40} className="text-black sm:text-black" />, bg: "bg-green-500" },  // Index 4
+          { icon: <MdOutlineSecurity size={40} className="text-black sm:text-black" />, bg: "bg-blue-500" },       // Index 1
+          { icon: <BsTools size={40} className="text-black sm:text-black" />, bg: "bg-red-500" },         // Index 2
+          { icon: <TbMapSearch size={40} className="text-black sm:text-black" />, bg: "bg-purple-500" },      // Index 3
+          { icon: <MdOutlineNoteAdd size={40} className="text-black sm:text-black" />, bg: "bg-green-500" },  // Index 4
         ].map(({ icon, bg }, index) => (
           <div
             key={index}
