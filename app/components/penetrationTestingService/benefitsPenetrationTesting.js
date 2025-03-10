@@ -20,7 +20,7 @@ const BenefitsPenetrationTesting = () => {
             },
           }}
         >
-          <h2 className="text-white text-lg sm:text-2xl font-semibold -ml-16 sm:-ml-96 pt-4 flex items-center justify-start">
+          <h2 className="text-white text-lg sm:text-2xl font-semibold -ml-2 sm:-ml-96 pt-4 flex items-center justify-start">
   <span className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-3 sm:mr-4 rounded-tr-md rounded-br-md"></span>
   What is Penetration Testing?
 </h2>

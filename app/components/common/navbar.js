@@ -72,22 +72,6 @@ export default function Navbar() {
             ],
         },
         {
-            href: "/clients-custom-ai-solutions",
-            label: "Clients",
-            dropdown: [
-                {
-                    href: "/clients-custom-ai-solutions",
-                    label: "Our Clients",
-                    description: "Discover the industries and organizations we serve.",
-                },
-                {
-                    href: "/ai-business-solutions",
-                    label: "Case Studies",
-                    description: "Explore detailed insights from our successful projects.",
-                },
-            ],
-        },
-        {
             href: "/ai-in-healthcare-you-must-know",
             label: "Industries",
             dropdown: [
@@ -145,6 +129,16 @@ export default function Navbar() {
                     href: "/blog-lists",
                     label: "Our Blogs",
                     description: "Reach out to us for inquiries, collaborations, or support.",
+                },
+                {
+                    href: "/clients-custom-ai-solutions",
+                    label: "Our Clients",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/ai-business-solutions",
+                    label: "Case Studies",
+                    description: "Explore detailed insights from our successful projects.",
                 },
             ],
         },
