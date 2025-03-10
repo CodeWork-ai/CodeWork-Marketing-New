@@ -11,8 +11,8 @@ import { VscNote } from "react-icons/vsc";
 import Link from "next/link";
 import ShineBorder from "@/components/ui/shine-border";
 import { AnimatedList } from "@/components/ui/animated-list";
-import CloudAdoptionCycle from "./cloudAdoptionCycle";
 import { TbCloudComputing, TbVirusSearch, TbCloudLock } from "react-icons/tb";
+import CloudAdoptionCycle from "./CloudAdoptionCycle";
 
 // SoftwareProcessCycle Component
 const SoftwareProcessCycle = () => {

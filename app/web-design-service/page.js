@@ -1,8 +1,11 @@
 import React from 'react'
-import WebDesignLanding from '../components/webDesignService/webDesignLanding'
-import WebDesignProcess from '../components/webDesignService/webDesignProcess'
-import BenefitsProfessionalWebDesign from '../components/webDesignService/benefitsProfessionalWebDesign'
-import ElevateWebDesign from '../components/webDesignService/elevateWebDesign'
+import WebDesignLanding from '@/app/components/webDesignService/webDesignLanding'
+import WebDesignProcess from '@/app//components/webDesignService/webDesignProcess'
+import ElevateWebDesign from '@/app/components/webDesignService/elevateWebDesign'
+import BenefitsProfessionalWebDesign from '@/app/components/webDesignService/BenefitsProfessionalWebDesign'
+
+
+
 const page = () => {
   return (
     <div>
