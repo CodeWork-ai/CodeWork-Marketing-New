@@ -193,7 +193,29 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg";
       case "/internship":
         return "/bg8.jpg";
-      default:
+        case "/ai-model-training":
+          return "/bg8.jpg";
+          case "/software-development-service":
+          return "/bg8.jpg";
+          case "/custom-software-development":
+          return "/bg8.jpg";
+          case "/mobile-software-development":
+            return "/bg8.jpg";
+            case "/web-design-service":
+              return "/bg8.jpg";
+              case "/cloud-computing":
+              return "/bg8.jpg";
+              case "/cloud-computing":
+              return "/bg8.jpg";
+               case "/it-staff-service":
+              return "/bg8.jpg";
+              case "/cybersecurity-service":
+                return "/bg8.jpg";
+                case "/penetration-testing-service":
+                  return "/bg8.jpg";
+                case "/devops-solutions":
+                  return "/bg8.jpg";
+              default:
         return "/images/bg-default.jpg";
     }
   };
