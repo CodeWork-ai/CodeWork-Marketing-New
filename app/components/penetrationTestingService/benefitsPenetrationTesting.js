@@ -15,15 +15,15 @@ const BenefitsPenetrationTesting = () => {
             borderRadius:
               "0 100px 100px 0" /* Mobile default (right-side rounding) */,
             ["@media (min-width: 640px)"]: {
-              /* sm: breakpoint */  
+              /* sm: breakpoint */
               borderRadius: "0 530px 530px 0" /* Small screens and above */,
             },
           }}
         >
           <h2 className="text-white text-lg sm:text-2xl font-semibold -ml-2 sm:-ml-96 pt-4 flex items-center justify-start">
-  <span className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-3 sm:mr-4 rounded-tr-md rounded-br-md"></span>
-  What is Penetration Testing?
-</h2>
+            <span className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-3 sm:mr-4 rounded-tr-md rounded-br-md"></span>
+            What is Penetration Testing?
+          </h2>
           <div className="mb-6">
             <div className="relative w-full sm:w-[450px] overflow-hidden">
               <div
@@ -41,65 +41,75 @@ const BenefitsPenetrationTesting = () => {
           </div>
         </ShineBorder>
 
-       {/* Black Container 2 with ShineBorder */}
-<ShineBorder
-  className="w-full sm:w-[1200px] h-[450px] sm:h-[556px] bg-black relative ml-[20px] sm:ml-2 overflow-hidden 
+        {/* Black Container 2 with ShineBorder */}
+        <ShineBorder
+          className="w-full sm:w-[1200px] h-[450px] sm:h-[556px] bg-black relative ml-[20px] sm:ml-2 overflow-hidden 
     flex flex-col mt-8 sm:mt-32 rounded-tl-[100px] sm:rounded-tl-[530px] rounded-bl-[100px] sm:rounded-bl-[530px]"
-  color={["#1dcaf5", "#f04f57"]}
-  style={{
-    borderRadius: "100px 0 0 100px", /* Mobile default (left-side rounding) */
-    ["@media (min-width: 640px)"]: { /* sm: breakpoint */
-      borderRadius: "530px 0 0 530px", /* Small screens and above */
-    },
-  }}
->
-  <div className="relative pt-8 sm:pt-14 w-full">
-    <h2 className="absolute left-0 sm:left-[-10px] text-white text-lg sm:text-2xl pl-4 sm:pl-72 font-semibold flex items-center">
-      <span className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-3 sm:mr-4 rounded-tr-md rounded-br-md"></span>
-      Benefits of Penetration Testing
-    </h2>
-  </div>
-  <div className="flex justify-start pl-4 sm:pl-80 pt-16 sm:pt-20 w-full">
-    <div className="space-y-4 sm:space-y-6">
-      {[
-        {
-          title: "Detect Security Weaknesses",
-          description: "Uncover network, application, and cloud infrastructure vulnerabilities.",
-        },
-        {
-          title: "SPrevent Cyberattacks",
-          description: "Address security flaws before they lead to data breaches.",
-        },
-        {
-          title: "Ensure Regulatory Compliance",
-          description: "Meet security and data protection requirements.",
-        },
-        {
-          title: "Enhance Incident Response",
-          description: "Strengthen detection and response capabilities.",
-        },
-        {
-          title: "Protect Brand Reputation",
-          description: "Prevent costly security incidents that could impact customer trust.",
-        },
-      ].map((item, index) => (
-        <div key={index} className="flex items-start space-x-3 sm:space-x-4">
-          <div className="w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center">
-            <IoIosCheckbox className="text-[#f04f57] w-5 sm:w-6 h-5 sm:h-6" />
+          color={["#1dcaf5", "#f04f57"]}
+          style={{
+            borderRadius:
+              "100px 0 0 100px" /* Mobile default (left-side rounding) */,
+            ["@media (min-width: 640px)"]: {
+              /* sm: breakpoint */
+              borderRadius: "530px 0 0 530px" /* Small screens and above */,
+            },
+          }}
+        >
+          <div className="relative pt-8 sm:pt-14 w-full">
+            <h2 className="absolute left-0 sm:left-[-10px] text-white text-lg sm:text-2xl pl-4 sm:pl-72 font-semibold flex items-center">
+              <span className="inline-block w-2 h-8 sm:h-10 bg-gradient-to-b to-blue-500 from-pink-500 mr-3 sm:mr-4 rounded-tr-md rounded-br-md"></span>
+              Benefits of Penetration Testing
+            </h2>
           </div>
-          <div>
-            <h3 className="text-sm sm:text-lg font-semibold text-[#1dcaf5]">
-              {item.title}
-            </h3>
-            <p className="text-gray-300 text-xs sm:text-base">
-              {item.description}
-            </p>
+          <div className="flex justify-start pl-4 sm:pl-80 pt-16 sm:pt-20 w-full">
+            <div className="space-y-4 sm:space-y-6">
+              {[
+                {
+                  title: "Detect Security Weaknesses",
+                  description:
+                    "Uncover network, application, and cloud infrastructure vulnerabilities.",
+                },
+                {
+                  title: "SPrevent Cyberattacks",
+                  description:
+                    "Address security flaws before they lead to data breaches.",
+                },
+                {
+                  title: "Ensure Regulatory Compliance",
+                  description:
+                    "Meet security and data protection requirements.",
+                },
+                {
+                  title: "Enhance Incident Response",
+                  description:
+                    "Strengthen detection and response capabilities.",
+                },
+                {
+                  title: "Protect Brand Reputation",
+                  description:
+                    "Prevent costly security incidents that could impact customer trust.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-start space-x-3 sm:space-x-4"
+                >
+                  <div className="w-6 sm:w-8 h-6 sm:h-8 flex items-center justify-center">
+                    <IoIosCheckbox className="text-[#f04f57] w-5 sm:w-6 h-5 sm:h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm sm:text-lg font-semibold text-[#1dcaf5]">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300 text-xs sm:text-base">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</ShineBorder>
+        </ShineBorder>
 
         {/* Title Section */}
         <div className="relative pt-16 sm:pt-32 w-full">
