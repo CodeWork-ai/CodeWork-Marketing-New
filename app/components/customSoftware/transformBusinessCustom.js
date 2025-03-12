@@ -13,7 +13,7 @@ const TransformBusinessCustom = () => {
       </h2>
       <p className="w-full sm:w-3/4 md:w-3/4 min-h-[16rem] sm:min-h-64 mt-4 sm:mt-6 
         text-gray-300 text-sm sm:text-base leading-relaxed pl-6 sm:pl-16 md:pl-28">
-Explore tailored software solutions with Codework.ai to drive efficiency and growth. Contact us today for a consultation.
+Explore tailored software solutions with Codework to drive efficiency and growth. Contact us today for a consultation.
 
       </p>
     </div>

@@ -13,7 +13,7 @@ const EnablingCloudComputing = () => {
       <p className="w-full sm:w-3/4 md:w-3/4 min-h-[16rem] sm:min-h-64 mt-4 sm:mt-6 
         text-gray-300 text-sm sm:text-base leading-relaxed pl-6 sm:pl-16 md:pl-28">
         Adopting DevOps solutions enables automated workflows, cloud-native applications, 
-        and seamless deployments. Codework.ai specializes in scalable, secure, and 
+        and seamless deployments. Codework specializes in scalable, secure, and 
         high-performance DevOps strategies tailored to business needs. Explore 
         cutting-edge DevOps consulting and implementation services to enhance 
         operational efficiency.

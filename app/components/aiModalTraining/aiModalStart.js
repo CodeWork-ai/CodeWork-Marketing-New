@@ -13,7 +13,7 @@ const EnablingCloudComputing = () => {
       </h2>
       <p className="w-full sm:w-3/4 md:w-3/4 min-h-[16rem] sm:min-h-64 mt-4 sm:mt-6 
         text-gray-300 text-sm sm:text-base leading-relaxed pl-6 sm:pl-16 md:pl-28">
-        Enhance your business operations with AI-powered solutions. Let Codework.ai help you build and deploy AI models that drive innovation and efficiency. Contact us today to discuss your AI requirements and take the next step in digital transformation.  
+        Enhance your business operations with AI-powered solutions. Let Codework help you build and deploy AI models that drive innovation and efficiency. Contact us today to discuss your AI requirements and take the next step in digital transformation.  
       </p>
      
     </div>

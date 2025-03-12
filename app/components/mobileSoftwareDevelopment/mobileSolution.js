@@ -21,7 +21,7 @@ const MobileSolution = () => {
       >
         Leverage the power of mobile technology to enhance digital presence and
         operational efficiency. Explore expert mobile software development
-        services at Codework.ai—transforming ideas into market-leading
+        services at Codework—transforming ideas into market-leading
         applications. Contact today for a tailored mobile development strategy.
       </p>
     </div>

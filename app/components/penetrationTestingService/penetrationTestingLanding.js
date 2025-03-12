@@ -12,7 +12,7 @@ const PenetrationTestingLanding = () => {
       <p className="mt-4 w-full sm:w-3/4 ml-0 sm:ml-10 md:ml-20 text-gray-300 text-sm sm:text-base md:text-lg">
         Cyber threats continue to evolve, making it crucial to identify and
         eliminate security vulnerabilities before malicious hackers exploit
-        them. Codework.ai provides comprehensive penetration testing services,
+        them. Codework provides comprehensive penetration testing services,
         simulating real-world cyberattacks to detect security flaws across
         networks, applications, and cloud environments. By proactively
         addressing security risks, businesses can maintain a robust
