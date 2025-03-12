@@ -12,7 +12,7 @@ const PenetrationTestingLanding = () => {
         Transforming Businesses with Cloud Technology
       </p>
       <p className="mt-4 w-full sm:w-3/4 ml-0 sm:ml-10 md:ml-20 text-gray-300 text-sm sm:text-base md:text-lg">
-        Codework.ai delivers cutting-edge cloud computing solutions, helping
+        Codework delivers cutting-edge cloud computing solutions, helping
         enterprises migrate, manage, and optimize operations efficiently. With
         expertise in cloud infrastructure, serverless computing, and AI-driven
         automation, solutions are designed to enhance security, scalability, and

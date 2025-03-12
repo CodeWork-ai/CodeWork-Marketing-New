@@ -13,7 +13,7 @@ const EnhancingBusinessSuccess = () => {
       </h2>
       <p className="w-full sm:w-3/4 md:w-3/4 min-h-[16rem] sm:min-h-64 mt-4 sm:mt-6 
         text-gray-300 text-sm sm:text-base leading-relaxed pl-6 sm:pl-16 md:pl-28">
-       Codework.ai ensures businesses gain access to top IT professionals at the right time, keeping projects aligned with strategic objectives. Whether an individual expert or a complete development team is required, specialized staffing solutions drive growth and innovation.
+       Codework ensures businesses gain access to top IT professionals at the right time, keeping projects aligned with strategic objectives. Whether an individual expert or a complete development team is required, specialized staffing solutions drive growth and innovation.
 
 Connect today to build a high-performing IT workforce.
 
