@@ -129,55 +129,76 @@ export default function RootLayout({ children }) {
           return {
             title: "AI Model Training Services | Custom AI Solutions – Codework.ai",
             description: "Boost business efficiency with Codework.ai's AI model training services. Get tailored AI solutions for predictive analytics, NLP, automation & more.",
+            keywords: "Machine learning models, Deep learning ,Neural networks ,Computer vision",
+
           };
 
           case "/software-development-service":
           return {
             title: "Scalable Software Development | High-Performance Solutions",
             description: "Codework.ai builds scalable, high-performance software solutions. Get custom development for startups & enterprises using cutting-edge technology.",
+            keywords: "Robust software solutions, Scalable applications, Business needs",
+
           };
           
           case "/custom-software-development":
           return {
             title: "Custom Software Development | Scalable Business Solutions",
             description: "Codework.ai delivers custom software solutions for enterprises, web & mobile apps, ensuring efficiency, seamless UX & business scalability.",
+            keywords: "Tailored software solutions, Specific business processes, Business goals",
+
           };
           case "/mobile-software-development":
             return {
               title: "Mobile App Development | Scalable & High-Performance Solutions",
               description: "Codework creates innovative mobile apps with AI, cross-platform & native development. Enhance user engagement & optimize business operations.",
+              keywords: "Intuitive mobile apps, User engagement, iOS development, Android development",
+
             };
 
             case "/web-design-service":
             return {
               title: "Expert Web Design Services | Codework.ai",
               description: "Boost your brand with high-performance, user-centric web design. Codework.ai crafts engaging websites for businesses, e-commerce, and web apps.",
+              keywords: "User-friendly websites, Seamless user experience, Stunning web designs",
+
             };
             case "/cloud-computing":
               return {
                 title: "Scalable Cloud Computing Solutions | Codework",
                 description: "Optimize your business with secure, scalable cloud computing. Codework offers AI-driven automation, serverless computing & cost-effective cloud solutions.",
+                keywords: "Secure cloud solutions, Scalable cloud services, AWS solutions, Azure solutions, API integrations",
+
               };
               case "/it-staff-service":
                 return {
                   title: "IT Staff Augmentation Services",
                   description: "Bridge the IT talent gap with expert staff augmentation. Codework provides skilled professionals for software development, cloud, AI & cybersecurity.",
+                  keywords: "Offshore teams, Skilled professionals, Project scaling",
+
+                  
                 };
 
                 case "/cybersecurity-service":
                   return {
                     title: "Advanced Cybersecurity Solutions | Codework",
                     description: "Protect your business with cutting-edge cybersecurity solutions. Codework safeguards data, prevents cyber threats & ensures compliance with industry standards.",
+                    keywords: "Advanced cybersecurity, Data protection, Security solutions",
+
                   };
                   case "/penetration-testing-service":
                     return {
                       title: "Penetration Testing Services | Codework",
                       description: "Identify & fix security vulnerabilities with expert penetration testing. Codework simulates real-world cyberattacks to protect networks, apps & cloud data.",
+                      keywords: "Identify vulnerabilities , SecurThreat detection, ity assessments",
+
                     };
                     case "/devops-solutions":
                       return {
                         title: "Scalable DevOps Solutions | Codework",
                         description: "Streamline development with scalable DevOps solutions. Codework enhances collaboration, automates workflows & optimizes deployment for faster software delivery.",
+                        keywords: "Development and operations Efficient, DevOps practices, DevOps tools",
+
                       };  
       // Add cases for other routes as needed
       default:
