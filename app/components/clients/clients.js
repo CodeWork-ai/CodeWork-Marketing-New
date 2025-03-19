@@ -2,13 +2,13 @@ import React from "react";
 import ShineBorder from "../../../components/ui/shine-border";
 
 const cardData = [
-  { id: 1, image: "/client1.png" },
-  { id: 3, image: "/client3.png" },
-  { id: 4, image: "/client4.png" },
-  { id: 5, image: "/client5.png" },
-  { id: 6, image: "/client6.png" },
-  { id: 7, image: "/client7.png" },
-  { id: 2, image: "/client2.png" },
+  { id: 1, image: "littlesparkslogo.png" },
+  { id: 3, image: "/Storefries.svg" },
+  { id: 4, image: "/mtm.svg" },
+  { id: 5, image: "/nalamlogo.png" },
+  { id: 6, image: "/intulogic.png" },
+  { id: 7, image: "/alkyne.png" },
+  { id: 2, image: "/websignx.png" },
 ];
 
 const clientData = [

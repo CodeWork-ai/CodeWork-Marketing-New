@@ -5,13 +5,13 @@ import { useTheme } from "next-themes";
 import { MagicCard } from "../../../components/ui/magic-card";
 
 const reviews = [
-    { title: 'Client One', logo: '/client1.png', width: 200, height: 50 },
-    { title: 'Client Two', logo: '/client2.png', width: 2000, height: 60 },
-    { title: 'Client Three', logo: '/client3.png', width: 130, height: 70 },
-    { title: 'Client Four', logo: '/client4.png', width: 100, height: 50 },
-    { title: 'Client Five', logo: '/client5.png', width: 120, height: 60 },
-    { title: 'Client Six', logo: '/client6.png', width: 130, height: 70 },
-    { title: 'Client Seven', logo: '/client7.png', width: 130, height: 70 },
+    { title: 'Client One', logo: '/littlesparkslogo.png', width: 300, height: 100 },
+    { title: 'Client Two', logo: '/Storefries.svg', width: 70, height: 30 },
+    { title: 'Client Three', logo: '/mtm.svg', width: 130, height: 70 },
+    { title: 'Client Four', logo: '/nalamlogo.png', width: 50, height: 10 },
+    { title: 'Client Five', logo: '/intulogic.png', width: 120, height: 60 },
+    { title: 'Client Six', logo: '/alkyne.png', width: 130, height: 70 },
+    { title: 'Client Seven', logo: '/websignx.png', width: 120, height: 80 },
 ];
 
 const firstRow = reviews
@@ -29,14 +29,14 @@ const ReviewCard = ({
             className="flex justify-center items-center bg-transparent bg-black bg-opacity-30 p-2 rounded-lg"
         >
             <MagicCard
-                className="flex border border-gray-600 items-center justify-center w-28 h-24 sm:w-32 sm:h-28 md:w-40 md:h-32 lg:w-44 lg:h-36 mx-2 bg-transparent"
+                className="flex border border-gray-600 items-center justify-center w-32 h-24 sm:w-32 sm:h-28 md:w-40 md:h-32 lg:w-44 lg:h-36 mx-2 bg-transparent"
                 gradientColor={theme === "dark" ? "#fc0335" : "#541522"}
             >
                 <Image
                     alt={title}
                     src={logo}
-                    width={200}
-                    height={200}
+                    width={width}
+                    height={height}
                     className="object-contain w-full h-full"
                 />
             </MagicCard>
