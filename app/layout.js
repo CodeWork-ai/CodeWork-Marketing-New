@@ -425,14 +425,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Google Tag Manager (noscript) - Body Tag */}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `
-                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9K57N9L"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-              `,
-          }}
-        />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W9K57N9L"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <div className="relative bg-black">
           {/* Background Image */}
           <div
