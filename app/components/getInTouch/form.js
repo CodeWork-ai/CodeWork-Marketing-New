@@ -51,6 +51,7 @@ const ContactForm = () => {
         }
     };
 
+    const linkedInToken = process.env.LINKEDIN_ACCESS_TOKEN || "AQWRAwGV89oBP15sqD-_BsB9c8kaJc3u9jNnPyI-Ld2G1ZbxlXcLcUaLkd40eXeNGg5TyZOgIdfsgrZ98xrwVTRkeYQwlKhZZdrdTLYFjgZQUab2rW8Wapj8pzYolJoWTZm6w2BOITGh98Y-7uCvZvtBBjPynY8_qRrM4XarzWoj213UNTsLk_re9c0OufpHTsSTsdlYStx-ntos8Zg7HmyxM-vTvKTpofBheNSmt1NWUC9Qs1RRSFdfyZERwi9UJrODiVI7cpc_fhQYuPwsnW6HyDLVUs7JuKTrxkCEfqIjuMLRQqBzp5o6hXI3LB41o6D3WvvrUtn3R-DOX6moT6N5NNTC_A";
 
     return (
         <div className="flex flex-col lg:flex-row justify-between bg-black bg-opacity-40 text-white p-2 md:p-16 space-y-8 md:space-y-2">
@@ -119,6 +120,8 @@ const ContactForm = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
+                        id="contact-form-submit"
+                        data-linkedin-token={linkedInToken} 
                         className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md transition duration-300"
                         disabled={loading}
                         >
