@@ -41,9 +41,12 @@ export default function RootLayout({ children }) {
     switch (pathname) {
       case "/":
         return {
-          title: "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
-          description: "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
-          keywords: "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
+          title:
+            "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
+          description:
+            "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
+          keywords:
+            "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
         };
       case "/empowering-innovation-ai-advanced-technologies":
         return {
@@ -99,108 +102,124 @@ export default function RootLayout({ children }) {
       case "/ai-in-healthcare-you-must-know":
         return {
           title: "AI-Driven Healthcare: Diagnostics & EHR Solutions",
-          description: "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
+          description:
+            "Enhance healthcare with AI-powered diagnostics and secure EHR management. Deliver personalized treatments, streamline workflows, and improve patient outcomes.",
         };
 
       case "/unique-ai-in-education":
         return {
           title: "Adaptive AI Learning & Blockchain Certification",
-          description: "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
+          description:
+            "Transform education with adaptive AI for personalized learning and blockchain-backed certifications. Ensure secure, accessible, and innovative learning experiences.",
         };
 
       case "/ai-in-ecommerce":
         return {
           title: "Smarter Shopping: Predictive E-commerce Analytics",
-          description: "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
+          description:
+            "Enhance e-commerce with predictive analytics. Deliver personalized shopping, secure transactions, and intuitive experiences to boost sales and customer loyalty.",
         };
 
       case "/new-ai-in-finance":
         return {
           title: "AI-Powered Fraud Detection & Risk Analysis",
-          description: "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
+          description:
+            "Optimize finance with AI for fraud detection, credit risk analysis, and secure payments. Enhance trust, efficiency, and smarter financial decision-making.",
         };
 
       case "/ai-in-cybersecurity":
         return {
-          title: "Advanced Data Security: Threat Detection & Decentralized Protection",
-          description: "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
+          title:
+            "Advanced Data Security: Threat Detection & Decentralized Protection",
+          description:
+            "Safeguard data with advanced anomaly detection and decentralized security. Protect sensitive information, ensure compliance, and build user trust.",
         };
 
-        case "/ai-model-training":
-          return {
-            title: "AI Model Training Services | Custom AI Solutions – Codework.ai",
-            description: "Boost business efficiency with Codework.ai's AI model training services. Get tailored AI solutions for predictive analytics, NLP, automation & more.",
-            keywords: "Machine learning models, Deep learning ,Neural networks ,Computer vision",
+      case "/ai-model-training":
+        return {
+          title:
+            "AI Model Training Services | Custom AI Solutions – Codework.ai",
+          description:
+            "Boost business efficiency with Codework.ai's AI model training services. Get tailored AI solutions for predictive analytics, NLP, automation & more.",
+          keywords:
+            "Machine learning models, Deep learning ,Neural networks ,Computer vision",
+        };
 
-          };
+      case "/software-development-service":
+        return {
+          title: "Scalable Software Development | High-Performance Solutions",
+          description:
+            "Codework.ai builds scalable, high-performance software solutions. Get custom development for startups & enterprises using cutting-edge technology.",
+          keywords:
+            "Robust software solutions, Scalable applications, Business needs",
+        };
 
-          case "/software-development-service":
-          return {
-            title: "Scalable Software Development | High-Performance Solutions",
-            description: "Codework.ai builds scalable, high-performance software solutions. Get custom development for startups & enterprises using cutting-edge technology.",
-            keywords: "Robust software solutions, Scalable applications, Business needs",
+      case "/custom-software-development":
+        return {
+          title: "Custom Software Development | Scalable Business Solutions",
+          description:
+            "Codework.ai delivers custom software solutions for enterprises, web & mobile apps, ensuring efficiency, seamless UX & business scalability.",
+          keywords:
+            "Tailored software solutions, Specific business processes, Business goals",
+        };
+      case "/mobile-software-development":
+        return {
+          title:
+            "Mobile App Development | Scalable & High-Performance Solutions",
+          description:
+            "Codework creates innovative mobile apps with AI, cross-platform & native development. Enhance user engagement & optimize business operations.",
+          keywords:
+            "Intuitive mobile apps, User engagement, iOS development, Android development",
+        };
 
-          };
-          
-          case "/custom-software-development":
-          return {
-            title: "Custom Software Development | Scalable Business Solutions",
-            description: "Codework.ai delivers custom software solutions for enterprises, web & mobile apps, ensuring efficiency, seamless UX & business scalability.",
-            keywords: "Tailored software solutions, Specific business processes, Business goals",
+      case "/web-design-service":
+        return {
+          title: "Expert Web Design Services | Codework.ai",
+          description:
+            "Boost your brand with high-performance, user-centric web design. Codework.ai crafts engaging websites for businesses, e-commerce, and web apps.",
+          keywords:
+            "User-friendly websites, Seamless user experience, Stunning web designs",
+        };
+      case "/cloud-computing":
+        return {
+          title: "Scalable Cloud Computing Solutions | Codework",
+          description:
+            "Optimize your business with secure, scalable cloud computing. Codework offers AI-driven automation, serverless computing & cost-effective cloud solutions.",
+          keywords:
+            "Secure cloud solutions, Scalable cloud services, AWS solutions, Azure solutions, API integrations",
+        };
+      case "/it-staff-service":
+        return {
+          title: "IT Staff Augmentation Services",
+          description:
+            "Bridge the IT talent gap with expert staff augmentation. Codework provides skilled professionals for software development, cloud, AI & cybersecurity.",
+          keywords: "Offshore teams, Skilled professionals, Project scaling",
+        };
 
-          };
-          case "/mobile-software-development":
-            return {
-              title: "Mobile App Development | Scalable & High-Performance Solutions",
-              description: "Codework creates innovative mobile apps with AI, cross-platform & native development. Enhance user engagement & optimize business operations.",
-              keywords: "Intuitive mobile apps, User engagement, iOS development, Android development",
-
-            };
-
-            case "/web-design-service":
-            return {
-              title: "Expert Web Design Services | Codework.ai",
-              description: "Boost your brand with high-performance, user-centric web design. Codework.ai crafts engaging websites for businesses, e-commerce, and web apps.",
-              keywords: "User-friendly websites, Seamless user experience, Stunning web designs",
-
-            };
-            case "/cloud-computing":
-              return {
-                title: "Scalable Cloud Computing Solutions | Codework",
-                description: "Optimize your business with secure, scalable cloud computing. Codework offers AI-driven automation, serverless computing & cost-effective cloud solutions.",
-                keywords: "Secure cloud solutions, Scalable cloud services, AWS solutions, Azure solutions, API integrations",
-
-              };
-              case "/it-staff-service":
-                return {
-                  title: "IT Staff Augmentation Services",
-                  description: "Bridge the IT talent gap with expert staff augmentation. Codework provides skilled professionals for software development, cloud, AI & cybersecurity.",
-                  keywords: "Offshore teams, Skilled professionals, Project scaling",
-
-                  
-                };
-
-                case "/cybersecurity-service":
-                  return {
-                    title: "Advanced Cybersecurity Solutions | Codework",
-                    description: "Protect your business with cutting-edge cybersecurity solutions. Codework safeguards data, prevents cyber threats & ensures compliance with industry standards.",
-                    keywords: "Advanced cybersecurity, Data protection, Security solutions",
-
-                  };
-                  case "/penetration-testing-service":
-                    return {
-                      title: "Penetration Testing Services | Codework",
-                      description: "Identify & fix security vulnerabilities with expert penetration testing. Codework simulates real-world cyberattacks to protect networks, apps & cloud data.",
-                      keywords: "Identify vulnerabilities , SecurThreat detection, ity assessments",
-
-                    };
-                    case "/devops-solutions":
-                      return {
-                        title: "Scalable DevOps Solutions | Codework",
-                        description: "Streamline development with scalable DevOps solutions. Codework enhances collaboration, automates workflows & optimizes deployment for faster software delivery.",
-                        keywords: "Development and operations Efficient, DevOps practices, DevOps tools",
-
-                      };  
+      case "/cybersecurity-service":
+        return {
+          title: "Advanced Cybersecurity Solutions | Codework",
+          description:
+            "Protect your business with cutting-edge cybersecurity solutions. Codework safeguards data, prevents cyber threats & ensures compliance with industry standards.",
+          keywords:
+            "Advanced cybersecurity, Data protection, Security solutions",
+        };
+      case "/penetration-testing-service":
+        return {
+          title: "Penetration Testing Services | Codework",
+          description:
+            "Identify & fix security vulnerabilities with expert penetration testing. Codework simulates real-world cyberattacks to protect networks, apps & cloud data.",
+          keywords:
+            "Identify vulnerabilities , SecurThreat detection, ity assessments",
+        };
+      case "/devops-solutions":
+        return {
+          title: "Scalable DevOps Solutions | Codework",
+          description:
+            "Streamline development with scalable DevOps solutions. Codework enhances collaboration, automates workflows & optimizes deployment for faster software delivery.",
+          keywords:
+            "Development and operations Efficient, DevOps practices, DevOps tools",
+        };
       // Add cases for other routes as needed
       default:
         return {
@@ -269,29 +288,29 @@ export default function RootLayout({ children }) {
         return "/bg8.jpg";
       case "/internship":
         return "/bg8.jpg";
-        case "/ai-model-training":
-          return "/bg8.jpg";
-          case "/software-development-service":
-          return "/bg8.jpg";
-          case "/custom-software-development":
-          return "/bg8.jpg";
-          case "/mobile-software-development":
-            return "/bg8.jpg";
-            case "/web-design-service":
-              return "/bg8.jpg";
-              case "/cloud-computing":
-              return "/bg8.jpg";
-              case "/cloud-computing":
-              return "/bg8.jpg";
-               case "/it-staff-service":
-              return "/bg8.jpg";
-              case "/cybersecurity-service":
-                return "/bg8.jpg";
-                case "/penetration-testing-service":
-                  return "/bg8.jpg";
-                case "/devops-solutions":
-                  return "/bg8.jpg";
-              default:
+      case "/ai-model-training":
+        return "/bg8.jpg";
+      case "/software-development-service":
+        return "/bg8.jpg";
+      case "/custom-software-development":
+        return "/bg8.jpg";
+      case "/mobile-software-development":
+        return "/bg8.jpg";
+      case "/web-design-service":
+        return "/bg8.jpg";
+      case "/cloud-computing":
+        return "/bg8.jpg";
+      case "/cloud-computing":
+        return "/bg8.jpg";
+      case "/it-staff-service":
+        return "/bg8.jpg";
+      case "/cybersecurity-service":
+        return "/bg8.jpg";
+      case "/penetration-testing-service":
+        return "/bg8.jpg";
+      case "/devops-solutions":
+        return "/bg8.jpg";
+      default:
         return "/images/bg-default.jpg";
     }
   };
@@ -315,6 +334,17 @@ export default function RootLayout({ children }) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1E2S2FY962"
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-W9K57N9L');
+              `,
+          }}
+        />
         <script id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
@@ -383,12 +413,24 @@ export default function RootLayout({ children }) {
           `}
         </script>
         <noscript>
-          <img height="1" width="1" style={{ display: "none" }} alt="" src="https://px.ads.linkedin.com/collect/?pid=7050068&fmt=gif" />
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=7050068&fmt=gif"
+          />
         </noscript>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript) - Body Tag */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9K57N9L" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
         <div className="relative bg-black">
           {/* Background Image */}
           <div
