@@ -8,6 +8,7 @@ import Footer from "./components/common/footer";
 import Link from "next/link";
 import { TbMessageChatbot } from "react-icons/tb";
 import ChatIcon from "./components/common/aichat";
+import PopGifModal from "./components/popImageModal";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -447,6 +448,7 @@ export default function RootLayout({ children }) {
           {/* Foreground Content */}
           <div className="relative z-10">
             <Navbar className="mb-36 px-10 md:px-20" />
+            <PopGifModal/>
             <main>{children}</main>
             <Footer />
             {/* <ChatIcon/> */}
