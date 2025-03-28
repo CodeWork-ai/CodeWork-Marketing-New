@@ -35,6 +35,51 @@ export default function RootLayout({ children }) {
     };
   }, []);
 
+  useEffect(() => {
+    const logVisitor = async () => {
+      try {
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        const ip = ipData.ip || 'Unknown';
+  
+        const now = new Date();
+        const istOffset = 5.5 * 60 * 60 * 1000;
+        const istTime = new Date(now.getTime() + istOffset);
+
+        const timestamp = istTime.toISOString().replace('Z', '+05:30');
+  
+        const page = pathname || '/';
+        const userAgent = navigator.userAgent || 'Unknown';
+  
+        const geoResponse = await fetch(`http://ip-api.com/json/${ip}`);
+        const geoData = await geoResponse.json();
+        const location = `${geoData.city || 'Unknown'}, ${geoData.country || 'Unknown'}`;
+        const company = geoData.org || 'Unknown';
+  
+        const response = await fetch('/api/visitor-logs', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ip, timestamp, page, userAgent, location, company }),
+        });
+  
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(`Failed to log visitor: ${errorData.message}`);
+        }
+  
+        console.log('Visitor logged successfully');
+      } catch (err) {
+        console.error('Visitor logging failed:', err);
+      }
+    };
+  
+    if (typeof window !== 'undefined') {
+      logVisitor();
+    }
+  }, [pathname]);
+
   // Meta tags content based on pathname
   const getMetaTags = () => {
     switch (pathname) {
