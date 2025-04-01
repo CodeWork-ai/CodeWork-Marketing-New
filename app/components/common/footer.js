@@ -18,10 +18,8 @@ const Footer = () => {
 
     const routeLink = [
         { href: "/empowering-innovation-ai-advanced-technologies", label: "Expertise" },
-        // { href: "/solution", label: "Expertise" },
         { href: "/driving-innovation-cutting-edge-ai-services", label: "Services" },
         { href: "/clients-custom-ai-solutions", label: "Our Clients" },
-        // { href: "/blog", label: "Blog" },
         { href: "/ai-business-solutions", label: "Case Studies" },
         { href: "/ai-powered-technology", label: "About Us" },
         { href: "/team", label: "Our Team" },
@@ -33,7 +31,7 @@ const Footer = () => {
         { href: "/ai-in-ecommerce", label: "E-commerce" },
         { href: "/new-ai-in-finance", label: "Finance" },
         { href: "/ai-in-cybersecurity", label: "Data Security" },
-    ]
+    ];
     const pathname = usePathname();
 
     useEffect(() => {
@@ -60,62 +58,75 @@ const Footer = () => {
                     </Link>
                     <div className="space-y-2 text-center md:text-left">
                         <p className="text-gray-200">+91 75989 81500</p>
-                        {/* <p className="text-gray-200">+91 75989 81500</p> */}
                         <p className="text-gray-200">sales@codework.ai</p>
+                        {/* Added the two images below the email */}
+                        <div className="flex justify-center md:justify-start space-x-3 mt-2">
+                            <Image
+                                src="/logo22.svg"
+                                alt="Logo 22"
+                                width={40}
+                                height={40}
+                                className="rounded-full"
+                            />
+                            <Image
+                                src="/logo23.svg"
+                                alt="Logo 23"
+                                width={40}
+                                height={40}
+                                className="rounded-full"
+                            />
+                        </div>
                     </div>
                 </div>
 
                 {/* Navigation Links */}
                 <div className="flex w-5/12">
                     <div className="w-full">
-                    <h3 className="text-lg font-semibold mb-4 text-start text-gray-200">Quick Links</h3>
-                    <div className="w-full flex">
-                        <div className="w-1/3">
-                            <ul className="space-y-3">
-                                {routeLink.slice(0, 4).map((item) => (
-                                    <li key={item.href}>
-                                        <Link
-                                            href={item.href}
-                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
-                                                }`}
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+                        <h3 className="text-lg font-semibold mb-4 text-start text-gray-200">Quick Links</h3>
+                        <div className="w-full flex">
+                            <div className="w-1/3">
+                                <ul className="space-y-3">
+                                    {routeLink.slice(0, 4).map((item) => (
+                                        <li key={item.href}>
+                                            <Link
+                                                href={item.href}
+                                                className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"}`}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="w-1/3">
+                                <ul className="space-y-3">
+                                    {routeLink.slice(9, 14).map((item) => (
+                                        <li key={item.href}>
+                                            <Link
+                                                href={item.href}
+                                                className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"}`}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="w-1/3">
+                                <ul className="space-y-3">
+                                    {routeLink.slice(4, 9).map((item) => (
+                                        <li key={item.href}>
+                                            <Link
+                                                href={item.href}
+                                                className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"}`}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className="w-1/3">
-                            <ul className="space-y-3">
-                                {routeLink.slice(9, 14).map((item) => (
-                                    <li key={item.href}>
-                                        <Link
-                                            href={item.href}
-                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
-                                                }`}
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="w-1/3">
-                            <ul className="space-y-3">
-                                {routeLink.slice(4, 9).map((item) => (
-                                    <li key={item.href}>
-                                        <Link
-                                            href={item.href}
-                                            className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
-                                                }`}
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
                     </div>
                 </div>
 
@@ -124,29 +135,29 @@ const Footer = () => {
 
                 {/* Additional Section */}
                 <div className="w-2/12 flex justify-end space-y-5">
-                <div className="w-full">
                     <div className="w-full">
-                        <h3 className="text-lg font-semibold mb-4 text-gray-200">Follow Us</h3>
-                        <div className="flex space-x-4">
-                            <ul className="flex space-x-2 h-14">
-                                {socialMedia.map(({ label, Icon, link }) => (
-                                    <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
-                                        <li className="flex items-center justify-center text-gray-200 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
-                                            <Icon size={20} />
-                                        </li>
-                                    </a>
-                                ))}
-                            </ul>
+                        <div className="w-full">
+                            <h3 className="text-lg font-semibold mb-4 text-gray-200">Follow Us</h3>
+                            <div className="flex space-x-4">
+                                <ul className="flex space-x-2 h-14">
+                                    {socialMedia.map(({ label, Icon, link }) => (
+                                        <a key={label} alt={label} href={link} target="_blank" rel="noopener noreferrer">
+                                            <li className="flex items-center justify-center text-gray-200 w-10 h-10 rounded-full shadow-lg hover:text-white transition">
+                                                <Icon size={20} />
+                                            </li>
+                                        </a>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div className="w-full">
-                        <h3 className="text-lg font-semibold mb-4 text-gray-200">Connect with Us</h3>
-                        <Link href="/contact-ai-solutions">
-                            <ShinyButton className="w-full md:w-[170px] border border-white py-2">
-                                Get In Touch
-                            </ShinyButton>
-                        </Link>
-                    </div>
+                        <div className="w-full">
+                            <h3 className="text-lg font-semibold mb-4 text-gray-200">Connect with Us</h3>
+                            <Link href="/contact-ai-solutions">
+                                <ShinyButton className="w-full md:w-[170px] border border-white py-2">
+                                    Get In Touch
+                                </ShinyButton>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -168,8 +179,24 @@ const Footer = () => {
                     <div className="space-y-2 text-center md:text-left">
                         <p className="text-gray-200">+91 75989 81500</p>
                         <p className="text-gray-200">+91 95661 76914</p>
-                        {/* <p className="text-gray-200">+91 75989 81500</p> */}
                         <p className="text-gray-200">sales@codework.ai</p>
+                        {/* Two round images added below the email */}
+                        <div className="flex justify-center md:justify-start space-x-3 mt-2">
+                            <Image
+                                src="/logo22.svg"
+                                alt="Logo 22"
+                                width={60}
+                                height={60}
+                                className="rounded-full"
+                            />
+                            <Image
+                                src="/logo23.svg"
+                                alt="Logo 23"
+                                width={60}
+                                height={60}
+                                className="rounded-full"
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -177,12 +204,10 @@ const Footer = () => {
                 <div className="mb-3 lg:mb-0">
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
                     <ul className="space-y-1">
-                        {[  
+                        {[
                             { href: "/empowering-innovation-ai-advanced-technologies", label: "Expertise" },
-                            // { href: "/solution", label: "Expertise" },
                             { href: "/driving-innovation-cutting-edge-ai-services", label: "Services" },
                             { href: "/clients-custom-ai-solutions", label: "Our Clients" },
-                            // { href: "/blog", label: "Blog" },
                             { href: "/ai-business-solutions", label: "Case Studies" },
                             { href: "/ai-powered-technology", label: "About Us" },
                             { href: "/team", label: "Our Team" },
@@ -198,8 +223,7 @@ const Footer = () => {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"
-                                        }`}
+                                    className={`hover:text-[#FF035B] transition duration-150 text-sm md:text-base ${pathname === item.href ? "text-[#FF035B]" : "text-gray-200"}`}
                                 >
                                     {item.label}
                                 </Link>
