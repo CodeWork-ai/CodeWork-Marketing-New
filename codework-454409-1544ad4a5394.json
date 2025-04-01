@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "codework-454409",
+  "private_key_id": "1544ad4a53945c9c6c7edcbf0c2275116e242421",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCfgz3dAFvpw4op\nD5Rc2WDlcJbUiG6h9EQOYrLg4WhPQuXBA7DGSms6NxMJ4oLNf0tYBh1+HApfoevY\nUNv+RpRy/9Y/dhG/PtTsjvSNaEsPZKsK1JM/G1Ww/3v2yvfUV2DRyaPYT0aopTL7\nNROktfhJvh8rDR2nfeVj8PqQZo8FZDU8muiOD3xNOpOMsm4D+GHmHA8RXcv6vTdi\n6+UpG7iQNHLJChN0yuw7yi9zIavycGYGI2QXeGRHgQKuHT0qre6Pbxm543pG8G9B\nCm0lAfMW6WerMzE6lrZxtS6wq+eWbbjo62WxRHLW2Ns50QlpZVuzCuj9B6ifIrbd\n6dYkS4eXAgMBAAECggEABqryRZAzx2BEoLXFgmIV0lF0BJtVYJC43Y8ToiHZ/eIy\nf3B7jbZjqBHQSmv9AsEM8beDuRdL+bZniOnMYGMr5mi6WHnDgSaLuP26zERtSs3u\n9mtvYkZuvRDY6jaOyIIEipBuuGaL8hXBvU15LjvrDo4TeHW6ZRt2oMhcePfIh7WZ\nOLBLhOw7cqSKty+lFxRFjiRDbcx5PKAxQts5xMtdrj+L5hOZN+YxjmHCz9ltzDF4\ndU7SGKoRX/mvDFTf3QucLL9/xSb3LJmJvAzfZpEP0JzLwB6iiiWAIoBHimC5YBPn\nymL7QIAoP2Mjhdp9EOrUarD4sKvmlGJkPQJsq1/BcQKBgQDTfKdDwBAyEwJ5Q9h9\nq0TsnmCTKZvgjjGSVON4xqh62CegamPW/FU9F43w8breoMpICEny3RdDPEGUrFYC\n5w7EfxNUjcz+3AmpBdCk19nGZoDccx1KXvhd0MN9KGvCrHwlsf3/bmdITr/tiD/6\nRePdmHbx72qAn+w5kbAoHWkLsQKBgQDBFhvmemJ/LV79ezuQ3mQPzdjF9PFXTNOc\nLDe+MjfzatdPKFtDerXvAYld/K7uD5pgFHAKz42nOxZnat4OraQAxfU1q0t7sRuK\ngpAh+FtNMU8ji/cwd+f063oHoS0mkVQ4ruOHHBd0Te/R5MZg6guTvCjWnQwyBBMn\nnY5rjsPBxwKBgF3NUDMQoR5UqCg5G3DB4lRA+vzK28SBzSLmW+5ZzqiN7yWLirT0\nPqpWJDLWRNgx4QaKBqKdxY+gzkWvGoc3DKnC40QBkQcJeY9qcNxskL8a/9THihpO\nfUK/MbX1k7ZI4telVs9QnKbJpv8oC5hqH2NOGJO+aTKbvB7cq5FfWhRBAoGBAJvv\n/xhkPqf3PH/6xmB5OtaIqEk3SLH4me3GyD4S0J0F7F1BenNE5ynfU9FUAPLCJyrx\nVotklEI6th1PcYbpNUpqlV6CuLNslZGHYGAO862j5QYQQ9IhBHQIuMTwpkY/mIUu\nuRKk3UxQpR4eZRhf7HmjvFeW/gJmyBF2bU7wPaiBAoGAOTODmxc4PaxnTWowq4+e\niB9rF1uPTWNrchBnB7jsbta9gSo6EIiOwlLOwJHWfA0rlNqKEdYBQqvVVAU4QWY/\n/dukVhoHdp8EYMy5GgHIhn5qakxlS4EK5TQwm5DyZeAtplxelXJDlbwMJBFKjvFk\nTCymCnkqPZP5d3gdicAoXw8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "codework@codework-454409.iam.gserviceaccount.com",
+  "client_id": "102695529610484398533",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/codework%40codework-454409.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

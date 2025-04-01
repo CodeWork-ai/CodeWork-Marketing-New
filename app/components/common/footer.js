@@ -62,16 +62,16 @@ const Footer = () => {
                         {/* Added the two images below the email */}
                         <div className="flex justify-center md:justify-start space-x-3 mt-2">
                             <Image
-                                src="/logo22.svg"
-                                alt="Logo 22"
-                                width={40}
-                                height={40}
+                                src="/iso1.svg"
+                                alt="iso1"
+                                width={60}
+                                height={60}
                                 className="rounded-full"
                             />
                             <Image
-                                src="/logo23.svg"
-                                alt="Logo 23"
-                                width={40}
+                                src="/iso2.svg"
+                                alt="iso2"
+                                width={60}
                                 height={40}
                                 className="rounded-full"
                             />
@@ -183,14 +183,14 @@ const Footer = () => {
                         {/* Two round images added below the email */}
                         <div className="flex justify-center md:justify-start space-x-3 mt-2">
                             <Image
-                                src="/logo22.svg"
+                                src="/iso1.svg"
                                 alt="Logo 22"
                                 width={60}
                                 height={60}
                                 className="rounded-full"
                             />
                             <Image
-                                src="/logo23.svg"
+                                src="/iso2.svg"
                                 alt="Logo 23"
                                 width={60}
                                 height={60}

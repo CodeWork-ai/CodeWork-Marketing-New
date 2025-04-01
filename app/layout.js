@@ -36,6 +36,89 @@ export default function RootLayout({ children }) {
     };
   }, []);
 
+  useEffect(() => {
+    const logVisitor = async () => {
+      try {
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        const ip = ipData.ip || 'Unknown';
+  
+        const now = new Date();
+        const istOffset = 5.5 * 60 * 60 * 1000;
+        const istTime = new Date(now.getTime() + istOffset);
+        const timestamp = istTime.toISOString().replace('Z', '+05:30');
+  
+        const page = pathname || '/';
+        const userAgent = navigator.userAgent || 'Unknown';
+  
+        const screenResolution = `${window.screen.width}x${window.screen.height}` || 'Unknown';
+        const browserLanguage = navigator.language || 'Unknown';
+        const referrer = document.referrer || 'Direct';
+  
+        const geoResponse = await fetch(`/api/proxy-ip-api?ip=${ip}`);
+        const geoData = await geoResponse.json();
+  
+        const location = `${geoData.city || 'Unknown'}, ${geoData.regionName || 'Unknown'}, ${geoData.country || 'Unknown'}`;
+        const country = geoData.country || 'Unknown';
+        const countryCode = geoData.countryCode || 'Unknown';
+        const region = geoData.region || 'Unknown';
+        const regionName = geoData.regionName || 'Unknown';
+        const city = geoData.city || 'Unknown';
+        const zip = geoData.zip || 'Unknown';
+        const latitude = geoData.lat || 'Unknown';
+        const longitude = geoData.lon || 'Unknown';
+        const timeZone = geoData.timezone || 'Unknown';
+        const isp = geoData.isp || 'Unknown';
+        const company = geoData.org || 'Unknown';
+        const as = geoData.as || 'Unknown';
+        const proxy = geoData.proxy ? 'Yes' : 'No';
+  
+        const response = await fetch('/api/visitor-logs', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ip,
+            timestamp,
+            page,
+            userAgent,
+            location,
+            country,
+            countryCode,
+            region,
+            regionName,
+            city,
+            zip,
+            latitude,
+            longitude,
+            timeZone,
+            isp,
+            company,
+            as,
+            proxy,
+            screenResolution,
+            browserLanguage,
+            referrer,
+          }),
+        });
+  
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(`Failed to log visitor: ${errorData.message}`);
+        }
+  
+        console.log('Visitor logged successfully');
+      } catch (err) {
+        console.error('Visitor logging failed:', err);
+      }
+    };
+  
+    if (typeof window !== 'undefined') {
+      logVisitor();
+    }
+  }, [pathname]);
+
   // Meta tags content based on pathname
   const getMetaTags = () => {
     switch (pathname) {

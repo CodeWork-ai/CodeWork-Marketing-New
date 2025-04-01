@@ -152,16 +152,32 @@ export default function Navbar() {
         >
 
             <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
-                <Link href="/">
-                    <div className="flex items-center">
-                        <Image
-                            src="/cw-logo.svg"
-                            alt="Company Logo"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
-                </Link>
+            <Link href="/">
+  <div className="flex items-center">
+    <Image
+      src="/cw-logo.svg"
+      alt="Company Logo"
+      width={200}
+      height={200}
+    />
+    {/* New container for ISO images */}
+    <div className="flex gap-2 ml-4">
+      <Image
+         src="/iso2.svg"
+        alt="ISO 1"
+        width={40}
+        height={40}
+      />
+      <Image
+       src="/iso1.svg"
+        alt="ISO 2"
+        width={40}
+        height={40}
+      />
+    </div>
+  </div>
+</Link>
+
                 {/* Navigation Links */}
                 <div className="hidden md:flex">
                     <div className="relative flex items-center space-x-4 md:space-x-6 lg:space-x-10 2xl:space-x-14">

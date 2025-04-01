@@ -11,7 +11,7 @@ const AboutUs = () => {
         <ShineBorder className="relative flex flex-col bg-black bg-opacity-30 overflow-hidden rounded-lg md:shadow-xl"
                 color={['#f52e20']}>
           <h1 className="text-xl p-4">
-          Welcome to Pro Codework, where innovation meets intelligence. We are a technology-driven company leveraging cutting-edge AI technology to transform businesses and drive success.
+          We are a technology-driven company leveraging cutting-edge AI technology to transform businesses and drive success.
           Our team combines advanced AI tools, industry expertise, and a human-first approach to deliver results that matter. From startups to enterprises, we partner with businesses to unlock their full potential using AI and emerging technologies. 
           </h1>
           </ShineBorder>
@@ -22,7 +22,7 @@ const AboutUs = () => {
 
         {/* Why Choose Pro Codework Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Why Choose Pro Codework?</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Why Choose  Codework?</h2>
           <ul className="space-y-4">
             <li className="text-gray-200 flex items-start">
               <FaCheckCircle className="text-green-500 mr-2 mt-1" />

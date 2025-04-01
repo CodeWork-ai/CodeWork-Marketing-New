@@ -25,7 +25,7 @@ export default function PopGifModal() {
     >
       {/* Modal content container */}
       <div
-        className="relative bg-white p-4 rounded shadow-md"
+        className="relative bg-white p-4 rounded shadow-md mx-4 sm:mx-8"
         onClick={(e) => e.stopPropagation()} // Prevent closing if clicked inside
       >
         {/* Close button */}
@@ -40,8 +40,8 @@ export default function PopGifModal() {
         <img
           src="/gif.gif"
           alt="Pop-up GIF"
-          // Tailwind: fixed width & height of 500px
-          className="w-[500px] h-[500px] object-cover"
+          // Responsive image: fills 11/12 of the container width, up to a maximum of 500px.
+          className="w-11/12 max-w-[550px] h-auto object-cover"
         />
       </div>
     </div>
