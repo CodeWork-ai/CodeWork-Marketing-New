@@ -29,7 +29,7 @@ const AiSolutionsSection = () => {
     {
       title: "Cyber Security",
       description:
-        "Protect digital assets with Codework's comprehensive Cyber Security solutions, ensuring unparalleled protection and peace of mind for organizations.",
+        "Protect digital assets with Codework's comprehensive Cyber Security solutions, ensuring unparalleled protection.",
       icon: <FaShieldAlt className="text-purple-500 text-2xl" />,
       desktop_icon: <FaShieldAlt className="w-10 h-10 text-[#FF035B]" />,
     },
