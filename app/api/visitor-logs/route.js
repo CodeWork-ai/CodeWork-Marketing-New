@@ -7,6 +7,40 @@ const credentials = JSON.parse(fs.readFileSync(credentialsPath, 'utf8'));
 
 const SPREADSHEET_ID = '1AoreO8IJ3H8RUsNmVdAu8d6J97azcYDWbCliIp3MS2M';
 
+const ispKeywords = [
+  'hathway',
+  'airtel',
+  'bsnl',
+  'jio',
+  'vodafone',
+  'idea',
+  'reliance',
+  'comcast',
+  'verizon',
+  'at&t',
+  'spectrum',
+  'centurylink',
+  'cox',
+  'frontier',
+  'telstra',
+  'optus',
+  'isp',
+  'telecom',
+  'broadband',
+  'internet service',
+  'network',
+  'cable',
+  'datacom',
+  'communications',
+  'telecommunications',
+  'mobile',
+  'wireless',
+  'fiber',
+  'dsl',
+  'satellite',
+  'provider',
+];
+
 export async function POST(request) {
   try {
     const {
@@ -33,6 +67,18 @@ export async function POST(request) {
       referrer,
     } = await request.json();
 
+    const isISP = ispKeywords.some(keyword =>
+      company.toLowerCase().includes(keyword.toLowerCase())
+    );
+
+    if (isISP) {
+      return new Response(JSON.stringify({ message: 'ISP company skipped' }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    // Proceed with logging if the company is not an ISP
     const auth = new google.auth.GoogleAuth({
       credentials,
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
