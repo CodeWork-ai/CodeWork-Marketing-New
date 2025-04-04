@@ -84,7 +84,14 @@ const BlogDetails = () => {
               {/* Title and Description */}
               <div className="space-y-4 sm:px-10 flex-1">
                 <h2 className="text-3xl font-bold">{section.title}</h2>
-                <p className="text-lg leading-relaxed text-gray-300">{section.description}</p>
+                <p className="text-lg leading-relaxed text-gray-300">
+                  {section.description.split('\n').map((line, idx, arr) => (
+                    <span key={idx}>
+                      {line}
+                      {idx < arr.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
               </div>
             </div>
           </section>

@@ -78,8 +78,19 @@ const Blogs = () => {
                             <p className="max-w-2xl text-base md:text-lg leading-relaxed mb-6">
                                 {/* {featuredBlog?.description || "No description available."} */}
                                 {featuredBlog?.blog[0]?.description.length > 100
-                                    ? `${featuredBlog?.blog[0]?.description.slice(0, 100)}...`
-                                    : featuredBlog?.blog[0]?.description}
+                                    ? featuredBlog?.blog[0]?.description.slice(0, 100).split('\n').map((line, idx, arr) => (
+                                        <span key={idx}>
+                                          {line}
+                                          {idx < arr.length - 1 && <br />}
+                                        </span>
+                                      ))
+                                    : featuredBlog?.blog[0]?.description.split('\n').map((line, idx, arr) => (
+                                        <span key={idx}>
+                                          {line}
+                                          {idx < arr.length - 1 && <br />}
+                                        </span>
+                                      ))}
+                                {featuredBlog?.blog[0]?.description.length > 100 && '...'}
                             </p>
                             <button
                                 className="bg-[#FF035B] hover:bg-opacity-80 text-black hover:text-white font-medium rounded-sm px-2 py-1 md:px-3 md:py-2 xl:px-5 xl:py-3 text-sm md:text-sm xl:text-base 2xl:text-lg"
@@ -102,10 +113,20 @@ const Blogs = () => {
                                 </h4>
                                 <p className="text-gray-300">
                                   {blog.blog[0].description.length > 150
-                                    ? `${blog.blog[0].description.slice(0, 150)}...`
-                                    : blog.blog[0].description}
+                                    ? blog.blog[0].description.slice(0, 150).split('\n').map((line, idx, arr) => (
+                                        <span key={idx}>
+                                          {line}
+                                          {idx < arr.length - 1 && <br />}
+                                        </span>
+                                      ))
+                                    : blog.blog[0].description.split('\n').map((line, idx, arr) => (
+                                        <span key={idx}>
+                                          {line}
+                                          {idx < arr.length - 1 && <br />}
+                                        </span>
+                                      ))}
+                                  {blog.blog[0].description.length > 150 && '...'}
                                 </p>
-                                
                               </div>
                             )}  
                             <div className="flex justify-between">
