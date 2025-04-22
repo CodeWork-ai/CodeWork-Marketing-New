@@ -39,44 +39,47 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const logVisitor = async () => {
       try {
-        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipResponse = await fetch("https://api.ipify.org?format=json");
         const ipData = await ipResponse.json();
-        const ip = ipData.ip || 'Unknown';
-  
+        const ip = ipData.ip || "Unknown";
+
         const now = new Date();
         const istOffset = 5.5 * 60 * 60 * 1000;
         const istTime = new Date(now.getTime() + istOffset);
-        const timestamp = istTime.toISOString().replace('Z', '+05:30');
-  
-        const page = pathname || '/';
-        const userAgent = navigator.userAgent || 'Unknown';
-  
-        const screenResolution = `${window.screen.width}x${window.screen.height}` || 'Unknown';
-        const browserLanguage = navigator.language || 'Unknown';
-        const referrer = document.referrer || 'Direct';
-  
+        const timestamp = istTime.toISOString().replace("Z", "+05:30");
+
+        const page = pathname || "/";
+        const userAgent = navigator.userAgent || "Unknown";
+
+        const screenResolution =
+          `${window.screen.width}x${window.screen.height}` || "Unknown";
+        const browserLanguage = navigator.language || "Unknown";
+        const referrer = document.referrer || "Direct";
+
         const geoResponse = await fetch(`/api/proxy-ip-api?ip=${ip}`);
         const geoData = await geoResponse.json();
-  
-        const location = `${geoData.city || 'Unknown'}, ${geoData.regionName || 'Unknown'}, ${geoData.country || 'Unknown'}`;
-        const country = geoData.country || 'Unknown';
-        const countryCode = geoData.countryCode || 'Unknown';
-        const region = geoData.region || 'Unknown';
-        const regionName = geoData.regionName || 'Unknown';
-        const city = geoData.city || 'Unknown';
-        const zip = geoData.zip || 'Unknown';
-        const latitude = geoData.lat || 'Unknown';
-        const longitude = geoData.lon || 'Unknown';
-        const timeZone = geoData.timezone || 'Unknown';
-        const isp = geoData.isp || 'Unknown';
-        const company = geoData.org || 'Unknown';
-        const as = geoData.as || 'Unknown';
-        const proxy = geoData.proxy ? 'Yes' : 'No';
-  
-        const response = await fetch('/api/visitor-logs', {
-          method: 'POST',
+
+        const location = `${geoData.city || "Unknown"}, ${
+          geoData.regionName || "Unknown"
+        }, ${geoData.country || "Unknown"}`;
+        const country = geoData.country || "Unknown";
+        const countryCode = geoData.countryCode || "Unknown";
+        const region = geoData.region || "Unknown";
+        const regionName = geoData.regionName || "Unknown";
+        const city = geoData.city || "Unknown";
+        const zip = geoData.zip || "Unknown";
+        const latitude = geoData.lat || "Unknown";
+        const longitude = geoData.lon || "Unknown";
+        const timeZone = geoData.timezone || "Unknown";
+        const isp = geoData.isp || "Unknown";
+        const company = geoData.org || "Unknown";
+        const as = geoData.as || "Unknown";
+        const proxy = geoData.proxy ? "Yes" : "No";
+
+        const response = await fetch("/api/visitor-logs", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             ip,
@@ -102,19 +105,19 @@ export default function RootLayout({ children }) {
             referrer,
           }),
         });
-  
+
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(`Failed to log visitor: ${errorData.message}`);
         }
-  
-        console.log('Visitor logged successfully');
+
+        console.log("Visitor logged successfully");
       } catch (err) {
-        console.error('Visitor logging failed:', err);
+        console.error("Visitor logging failed:", err);
       }
     };
-  
-    if (typeof window !== 'undefined') {
+
+    if (typeof window !== "undefined") {
       logVisitor();
     }
   }, [pathname]);
@@ -302,6 +305,38 @@ export default function RootLayout({ children }) {
             "Streamline development with scalable DevOps solutions. Codework enhances collaboration, automates workflows & optimizes deployment for faster software delivery.",
           keywords:
             "Development and operations Efficient, DevOps practices, DevOps tools",
+        };
+      case "/build-your-career-with-codework":
+        return {
+          title: "build-your-career-with-codework",
+        };
+      case "/internship":
+        return {
+          title: "internship",
+        };
+      case "/join-our-team":
+        return {
+          title: "join-our-team",
+        };
+      case "/team":
+        return {
+          title: "team",
+        };
+      case "/blog-lists":
+        return {
+          title: "blog-lists",
+        };
+      case "/create-blog":
+        return {
+          title: "create-blog",
+        };
+      case "/join-our-team":
+        return {
+          title: "join-our-team",
+        };
+      case "/user-blogs":
+        return {
+          title: "user-blogs",
         };
       // Add cases for other routes as needed
       default:
@@ -531,7 +566,7 @@ export default function RootLayout({ children }) {
           {/* Foreground Content */}
           <div className="relative z-10">
             <Navbar className="mb-36 px-10 md:px-20" />
-            <PopGifModal/>
+            <PopGifModal />
             <main>{children}</main>
             <Footer />
             {/* <ChatIcon/> */}
