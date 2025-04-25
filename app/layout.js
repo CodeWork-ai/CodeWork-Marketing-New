@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/common/navbar";
@@ -22,8 +22,8 @@ const geistMono = localFont({
 });
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname(); // Get the current pathname
-  const [scrollY, setScrollY] = useState(0); // Track scroll position
+  const pathname = usePathname(); 
+  const [scrollY, setScrollY] = useState(0); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -367,7 +367,7 @@ export default function RootLayout({ children }) {
       case "/projects":
         return "/bg5.avif";
       case "/contact-ai-solutions":
-        return "/bg.jpg";
+        return "/contactusBG.jpg";
       case "/group":
         return "/rbbg.jpg";
       case "/aiSolution":
@@ -427,6 +427,8 @@ export default function RootLayout({ children }) {
       case "/penetration-testing-service":
         return "/bg8.jpg";
       case "/devops-solutions":
+        return "/bg8.jpg";
+      case "/privacy-policy":
         return "/bg8.jpg";
       default:
         return "/images/bg-default.jpg";
@@ -565,7 +567,12 @@ export default function RootLayout({ children }) {
 
           {/* Foreground Content */}
           <div className="relative z-10">
-            <Navbar className="mb-36 px-10 md:px-20" />
+          {!["/contact-ai-solutions", "/privacy-policy"].includes(pathname) && (
+  <Navbar className="mb-36 px-10 md:px-20" />
+)}
+
+
+            
             <PopGifModal />
             <main>{children}</main>
             <Footer />
