@@ -17,7 +17,7 @@ const ContactButton = () => {
         Every business is unique. Request a tailored solution crafted specifically for your organization's challenges and goals.
       </p>
       <Link href="/contact-ai-solutions"> {/* Replace '/contact-landing' with the actual route */}
-        <button className="bg-teal-500 text-white py-2 px-6 rounded-lg text-lg hover:bg-teal-600 transition duration-300">
+        <button className="bg-[#2c44ba] text-white py-2 px-6 rounded-lg text-lg hover:bg-[#2c44ba]transition duration-300">
           CONTACT US
         </button>
       </Link>

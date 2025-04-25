@@ -1,136 +1,174 @@
 "use client";
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 
 const accordionData = [
   {
-    title: 'AI consulting services :',
+    title: "AI consulting services:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
         Get expert guidance to streamline your digital transformation journey.
         We help businesses innovate with strategic technology solutions.
       </p>
-    )
+    ),
   },
   {
-    title: 'IT Staffing solutions :',
+    title: "IT Staffing solutions:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
         We provide skilled IT professionals to meet your project needs. Our
         staffing solutions ensure you have the right talent at the right time.
       </p>
-    )
+    ),
   },
   {
-    title: 'Software Development :',
+    title: "Software Development:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        From web and mobile apps to full-stack enterprise systems, our
+        engineers build scalable, maintainable software tailored to your
+        requirements.
       </p>
-    )
+    ),
   },
   {
-    title: 'AI in Healthcare :',
+    title: "AI in Healthcare:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        Leverage AI for better diagnostics, patient monitoring, and
+        personalized care. We help healthcare providers deploy safe,
+        compliant ML solutions.
       </p>
-    )
+    ),
   },
   {
-    title: 'Cybersecurity Services :',
+    title: "Cybersecurity Services:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        Protect your assets with our vulnerability assessments, penetration
+        testing, and ongoing security monitoring services.
       </p>
-    )
+    ),
   },
   {
-    title: 'Finance Technology Solutions :',
+    title: "Finance Technology Solutions:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        Build secure, high-performance fintech platforms, from trading
+        applications to regulatory compliance tooling.
       </p>
-    )
+    ),
   },
   {
-    title: 'E-commerce Solutions :',
+    title: "E-commerce Solutions:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        Our team delivers custom e-commerce stores, payment integrations, and
+        scalable architectures to grow your online business.
       </p>
-    )
+    ),
   },
   {
-    title: 'Smart Recommendation Systems :',
+    title: "Smart Recommendation Systems:",
     content: (
       <p className="text-[#5C5C5C] text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+        Personalize user experiences with ML-driven recommendations for
+        content, products, or services.
       </p>
-    )
-  }
+    ),
+  },
 ];
 
 const ContactLanding = () => {
+  // ─── Form State ─────────────────────────────────────────────────────────
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    mobile: "",
+    referral: "",
+    agreement: false,
+  });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  // ─── Accordion State ─────────────────────────────────────────────────────
   const [activeIndex, setActiveIndex] = useState(0);
   const toggle = (idx) => setActiveIndex(activeIndex === idx ? -1 : idx);
 
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    referral: '',
-    agreement: false,
-  });
-
-  const [errors, setErrors] = useState({});
-
+  // ─── Handlers ────────────────────────────────────────────────────────────
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
-    if (name === 'phone' && !/^\d*$/.test(value)) return; // Only allow numbers
-
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
-
-    setErrors((prev) => ({
+    if (name === "mobile" && !/^\d*$/.test(value)) return; // digits only
+    setFormData((prev) => ({
       ...prev,
-      [name]: '',
+      [name]: type === "checkbox" ? checked : value,
     }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validate = () => {
     const newErrors = {};
-    if (!formData.firstName) newErrors.firstName = 'First name is required';
-    if (!formData.lastName) newErrors.lastName = 'Last name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.phone) newErrors.phone = 'Phone number is required';
-    if (!formData.referral) newErrors.referral = 'This field is required';
-    if (!formData.agreement) newErrors.agreement = 'You must agree to proceed';
+    if (!formData.first_name) newErrors.first_name = "First name is required";
+    if (!formData.last_name) newErrors.last_name = "Last name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.mobile) newErrors.mobile = "mobile number is required";
+    if (!formData.referral) newErrors.referral = "This field is required";
+    if (!formData.agreement) newErrors.agreement = "You must agree to proceed";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      console.log('Form submitted successfully:', formData);
+    if (!validate()) return;
+
+    setLoading(true);
+    setResponseMessage("");
+
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_demo_contact`;
+    console.log("Submitting to:", url);
+
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      // parse JSON to extract server message
+      const result = await res.json();
+
+      if (!res.ok) {
+        setResponseMessage(result.message || "Failed to send contact details.");
+      } else {
+        setResponseMessage(result.message || "Thank you! We’ll be in touch.");
+        // reset form on success
+        setFormData({
+          first_name: "",
+          last_name: "",
+          email: "",
+          mobile: "",
+          referral: "",
+          agreement: false,
+        });
+      }
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setResponseMessage(
+        err.message || "Something went wrong. Please try again later."
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="relative px-4 sm:px-6 lg:px-10">
-      {/* Logo Section */}
+      {/* Logo */}
       <div className="absolute pt-6 left-4">
         <Link href="/">
           <img
@@ -141,80 +179,91 @@ const ContactLanding = () => {
         </Link>
       </div>
 
-      {/* Main Content */}
       <div className="flex flex-col lg:flex-row gap-10 pt-36 pb-10">
-        {/* Form Section */}
+        {/* ─── Form Section ───────────────────────────────────────────────── */}
         <div className="flex-1 bg-white p-6 sm:p-8 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
-          <h2 className="text-[#00ACA9] font-semibold text-2xl mb-6">
+          <h2 className="text-[#2c44ba] font-semibold text-2xl mb-6">
             REQUEST A DEMO
           </h2>
-          <form className="flex text-gray-900 flex-col space-y-4" onSubmit={handleSubmit}>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-              <div className="flex-1 flex flex-col">
-                <label className="text-sm mb-2">First Name *</label>
-                <input
-                  name="firstName"
-                  type="text"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="p-3 text-sm border border-[#00ACA9] rounded-lg placeholder-[#00ACA9] outline-none"
-                  placeholder="Enter First Name"
-                />
-                {errors.firstName && <span className="text-red-500 text-xs mt-1">{errors.firstName}</span>}
-              </div>
-              <div className="flex-1 flex flex-col">
-                <label className="text-sm mb-2">Last Name *</label>
-                <input
-                  name="lastName"
-                  type="text"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="p-3 text-sm border border-[#00ACA9] rounded-lg placeholder-[#00ACA9] outline-none"
-                  placeholder="Enter Last Name"
-                />
-                {errors.lastName && <span className="text-red-500 text-xs mt-1">{errors.lastName}</span>}
-              </div>
+
+          <form onSubmit={handleSubmit} className="flex  text-black flex-col space-y-4">
+            {/* Name Fields */}
+            <div className="flex flex-col  sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+              {["first_name", "last_name"].map((field) => (
+                <div className="flex-1" key={field}>
+                  <label className="text-sm mb-2 block">
+                    {field === "first_name" ? "First Name *" : "Last Name *"}
+                  </label>
+                  <input
+                    name={field}
+                    type="text"
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className="w-full p-3 text-sm border border-[#2c44ba] rounded-lg placeholder-[#2c44ba] outline-none"
+                    placeholder={`Enter ${
+                      field === "first_name" ? "First" : "Last"
+                    } Name`}
+                  />
+                  {errors[field] && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors[field]}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
 
-            <div className="flex flex-col">
-              <label className="text-sm mb-2">Business Email Id *</label>
+            {/* Email */}
+            <div>
+              <label className="text-sm mb-2 block">Business Email Id *</label>
               <input
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="p-3 text-sm border border-[#00ACA9] rounded-lg placeholder-[#00ACA9] outline-none"
-                placeholder="Enter Mail Id"
+                className="w-full p-3 text-sm border border-[#2c44ba] rounded-lg placeholder-[#2c44ba] outline-none"
+                placeholder="Enter Email"
               />
-              {errors.email && <span className="text-red-500 text-xs mt-1">{errors.email}</span>}
+              {errors.email && (
+                <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              )}
             </div>
 
-            <div className="flex flex-col">
-              <label className="text-sm mb-2">Phone Number *</label>
+            {/* mobile */}
+            <div>
+              <label className="text-sm mb-2 block">mobile Number *</label>
               <input
-                name="phone"
+                name="mobile"
                 type="tel"
-                value={formData.phone}
+                value={formData.mobile}
                 onChange={handleChange}
-                className="p-3 text-sm border border-[#00ACA9] rounded-lg placeholder-[#00ACA9] outline-none"
-                placeholder="Enter Phone Number"
+                className="w-full p-3 text-sm border border-[#2c44ba] rounded-lg placeholder-[#2c44ba] outline-none"
+                placeholder="Enter mobile Number"
               />
-              {errors.phone && <span className="text-red-500 text-xs mt-1">{errors.phone}</span>}
+              {errors.mobile && (
+                <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>
+              )}
             </div>
 
-            <div className="flex flex-col">
-              <label className="text-sm mb-2">How did you hear about Codework? *</label>
+            {/* Referral */}
+            <div>
+              <label className="text-sm mb-2 block">
+                How did you hear about Codework? *
+              </label>
               <input
                 name="referral"
                 type="text"
                 value={formData.referral}
                 onChange={handleChange}
-                className="p-3 text-sm border border-[#00ACA9] rounded-lg placeholder-[#00ACA9] outline-none"
+                className="w-full p-3 text-sm border border-[#2c44ba] rounded-lg placeholder-[#2c44ba] outline-none"
                 placeholder="Message"
               />
-              {errors.referral && <span className="text-red-500 text-xs mt-1">{errors.referral}</span>}
+              {errors.referral && (
+                <p className="text-red-500 text-xs mt-1">{errors.referral}</p>
+              )}
             </div>
 
+            {/* Agreement */}
             <div className="flex items-start space-x-2 text-xs text-[#5C5C5C]">
               <input
                 name="agreement"
@@ -224,42 +273,65 @@ const ContactLanding = () => {
                 className="mt-1"
               />
               <label>
-                Allow Codework to contact me for scheduling and marketing as per the{' '}
-                <a href="#" className="text-[#00838D] underline">Privacy Policy</a>.
+                Allow Codework to contact me for scheduling and marketing per the{" "}
+                <a href="#" className="text-[#2c44ba] underline">
+                  Privacy Policy
+                </a>
+                .
               </label>
             </div>
-            {errors.agreement && <span className="text-red-500 text-xs">{errors.agreement}</span>}
+            {errors.agreement && (
+              <p className="text-red-500 text-xs">{errors.agreement}</p>
+            )}
 
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full mt-4 py-3.5 text-base font-medium bg-[#00ACA9] text-white rounded-lg hover:opacity-90 transition"
+              disabled={loading}
+              className={`w-full mt-4 py-3.5 text-base font-medium rounded-lg transition ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[#2c44ba] text-white hover:opacity-90"
+              }`}
             >
-              Get a Demo Free
+              {loading ? "Submitting…" : "Submit"}
             </button>
+
+            {/* Response Message */}
+            {responseMessage && (
+              <p className="mt-4 text-center text-sm text-[#2c44ba]">
+                {responseMessage}
+              </p>
+            )}
           </form>
         </div>
 
-        {/* Accordion Section */}
+        {/* ─── Accordion Section ──────────────────────────────────────────────── */}
         <div className="flex-1">
-          <h1 className="text-3xl font-semibold text-black mb-6">
+          <h1 className="text-3xl font-semibold text-black -m-3 mb-6">
             Codework AI for Service Professionals
           </h1>
           {accordionData.map((item, idx) => (
-            <div key={idx} className="border border-[#00ACA9] rounded-lg mb-3 overflow-hidden">
+            <div
+              key={idx}
+              className="border border-[#2c44ba] rounded-lg mb-3 overflow-hidden"
+            >
               <div
-                className={`flex justify-between items-center px-4 py-3 cursor-pointer text-base font-medium ${
-                  activeIndex === idx ? 'bg-[#00ACA9] text-white' : 'bg-white text-[#00ACA9]'
-                }`}
                 onClick={() => toggle(idx)}
+                className={`flex justify-between items-center px-4 py-3 cursor-pointer text-base font-medium ${
+                  activeIndex === idx
+                    ? "bg-[#2c44ba] text-white"
+                    : "bg-white text-[#2c44ba]"
+                }`}
               >
-                <div>{item.title}</div>
+                <span>{item.title}</span>
                 {activeIndex === idx ? (
                   <HiChevronUp className="text-xl" />
                 ) : (
                   <HiChevronDown className="text-xl" />
                 )}
               </div>
-              {activeIndex === idx && item.content && (
+              {activeIndex === idx && (
                 <div className="p-4 bg-white">{item.content}</div>
               )}
             </div>
