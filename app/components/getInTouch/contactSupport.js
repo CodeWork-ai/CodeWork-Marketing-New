@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSupport = () => {
   return (
-    <div className="py-20 sm:py-28 md:py-44 px-4 sm:px-6 md:px-8 lg:px-9">
+    <div className="py-20 bg-gray-300 sm:py-28 md:py-44 px-4 sm:px-6 md:px-8 lg:px-9">
       {/* Heading and Description */}
       <div className="text-left mb-8 sm:mb-12 px-2 sm:px-9">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
@@ -75,10 +75,9 @@ const ContactSupport = () => {
 
         {/* Card 6 */}
         <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-sm mt-0 sm:-mt-11">
-
-        <img
-            src="/Support.png"
-            alt="24/7 Support"
+          <img
+            src="/contact.png"
+            alt="Client Satisfaction"
             className="w-full h-40 sm:h-72 object-cover"
           />
           <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-[#2c44ba] text-white font-bold text-xl sm:text-2xl rounded-md p-2 sm:p-4">
@@ -86,7 +85,7 @@ const ContactSupport = () => {
           </div>
           <div className="absolute top-1/2 left-0 transform -translate-y-1/2 pl-2 sm:pl-4">
             <p className="text-lg sm:text-2xl font-semibold text-white">
-              Support Availability for Our Global Clients
+            Support Availability for Our Global Clients
             </p>
           </div>
         </div>

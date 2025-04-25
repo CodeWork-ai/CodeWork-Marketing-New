@@ -167,7 +167,7 @@ const ContactLanding = () => {
   };
 
   return (
-    <div className="relative px-4 sm:px-6 lg:px-10">
+    <div className="relative bg-gray-300 px-4 sm:px-6 lg:px-10">
       {/* Logo */}
       <div className="absolute pt-6 left-4">
         <Link href="/">
@@ -179,7 +179,7 @@ const ContactLanding = () => {
         </Link>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-10 pt-36 pb-10">
+      <div className="flex flex-col bg-gray-300 lg:flex-row gap-10 pt-36 pb-10">
         {/* ─── Form Section ───────────────────────────────────────────────── */}
         <div className="flex-1 bg-white p-6 sm:p-8 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
           <h2 className="text-[#2c44ba] font-semibold text-2xl mb-6">

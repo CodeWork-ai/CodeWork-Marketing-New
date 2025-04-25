@@ -8,7 +8,7 @@ import Client from "../components/getInTouch/client";
 
 export default function Page() {
     return (
-        <div className="text-white pb-5">
+        <div className="">
             <ContactLanding/>
             <ContactSupport/>
             <ContactButton/>
