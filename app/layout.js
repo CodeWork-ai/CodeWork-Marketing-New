@@ -367,7 +367,7 @@ export default function RootLayout({ children }) {
       case "/projects":
         return "/bg5.avif";
       case "/contact-ai-solutions":
-        return "/contactusBG.jpg";
+        return "/contactusbg.jpg";
       case "/group":
         return "/rbbg.jpg";
       case "/aiSolution":
