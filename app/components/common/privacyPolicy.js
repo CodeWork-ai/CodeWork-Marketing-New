@@ -18,7 +18,7 @@ const PrivacyPolicyPage = () => (
     <div className="absolute top-0 left-4">
       <Link href="/">
         <img
-          src="/cw-logo.svg"
+          src="/logo.svg"
           alt="Company Logo"
           className="w-36 h-36 cursor-pointer"
         />
