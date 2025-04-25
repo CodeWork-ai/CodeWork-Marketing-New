@@ -265,7 +265,12 @@ const Footer = () => {
 
             {/* Footer Bottom */}
             <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-                <p className="text-gray-200 text-sm">© 2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All Rights Reserved.</p>
+                <p className="text-gray-200 text-sm">
+                    © 2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All Rights Reserved. 
+                    <Link href="/privacy-policy" className="text-[#4252ff] hover:underline ml-2">
+                        Privacy Policy
+                    </Link>
+                </p>
             </div>
         </footer>
     );
