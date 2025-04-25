@@ -76,7 +76,7 @@ const ContactSupport = () => {
         {/* Card 6 */}
         <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-sm mt-0 sm:-mt-11">
           <img
-            src="/Support.svg"
+            src="/Supportmail.svg"
             alt="24/7 Support"
             className="w-full h-40 sm:h-72 object-cover"
           />
