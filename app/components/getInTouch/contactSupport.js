@@ -74,7 +74,8 @@ const ContactSupport = () => {
         </div>
 
         {/* Card 6 */}
-        <div className="group relative bg-white border-[2px] border-[#75def9] border-t-0 border-l-0 rounded-tl-2xl rounded-tr-[200px] rounded-bl-2xl rounded-br-2xl p-6 sm:p-8 mb-4 shadow-md w-full max-w-lg min-h-[170px] transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#7C9AEF] hover:to-[#79D0FD]">
+        <div className="relative bg-gray-100 rounded-lg overflow-hidden shadow-sm mt-0 sm:-mt-11">
+
         <img
             src="/Support.png"
             alt="24/7 Support"
