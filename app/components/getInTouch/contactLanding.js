@@ -274,7 +274,7 @@ const ContactLanding = () => {
               />
               <label>
                 Allow Codework to contact me for scheduling and marketing per the{" "}
-                <a href="#" className="text-[#2c44ba] underline">
+                <a href="https://codework.ai/privacy-policy" className="text-[#2c44ba] underline">
                   Privacy Policy
                 </a>
                 .
