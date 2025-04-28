@@ -95,7 +95,6 @@ const PrivacyPolicyPage = () => (
           </p>
         </section>
 
-        ...
 {/* Cookies */}
 <section id="cookies" className="p-6 rounded-lg mb-8 bg-white">
   <h2 className="flex items-center text-2xl font-semibold mb-4">
