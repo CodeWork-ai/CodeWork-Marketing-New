@@ -172,7 +172,7 @@ const ContactLanding = () => {
       <div className="absolute pt-6 left-4">
         <Link href="/">
           <img
-            src="/Logo.svg"
+            src="/logoContact.svg"
             alt="Company Logo"
             className="w-32 sm:w-36 md:w-40 h-auto cursor-pointer"
           />
