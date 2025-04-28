@@ -167,19 +167,21 @@ const ContactLanding = () => {
   };
 
   return (
-    <div className="relative bg-gray-300 px-4 sm:px-6 lg:px-10">
-      {/* Logo */}
-      <div className="absolute pt-6 left-4">
-        <Link href="/">
-          <img
-            src="/logoContact.svg"
-            alt="Company Logo"
-            className="w-32 sm:w-36 md:w-40 h-auto cursor-pointer"
-          />
-        </Link>
-      </div>
+    <div className="">
+       {/* ─── Header with Logo + Wave ───────────────────────────────────── */}
+       <header className="relative z-10">
+        <div className="bg-[#091241] h-24  flex items-center">
+          <Link href="/">
+            <img
+              src="/Logo.svg"
+              alt="Company Logo"
+              className="w-32 sm:w-40 md:w-40 pl-5 h-auto cursor-pointer"
+            />
+          </Link>
+        </div>
+      </header>
 
-      <div className="flex flex-col bg-gray-300 lg:flex-row gap-10 pt-36 pb-10">
+      <div className="flex flex-col  lg:flex-row px-7 gap-10 pt-36 pb-10">
         {/* ─── Form Section ───────────────────────────────────────────────── */}
         <div className="flex-1 bg-white p-6 sm:p-8 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
           <h2 className="text-[#2c44ba] font-semibold text-2xl mb-6">

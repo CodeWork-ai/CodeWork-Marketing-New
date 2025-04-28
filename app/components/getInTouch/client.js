@@ -2,7 +2,7 @@ import React from 'react';
 
 const Client = () => {
   return (
-    <div className="flex bg-slate-100 flex-wrap justify-center items-center gap-6 sm:gap-12 lg:gap-12 py-10 sm:py-14 px-4 sm:px-6 md:px-8">
+    <div className="flex  flex-wrap justify-center items-center gap-6 sm:gap-12 lg:gap-12 py-10 sm:py-14 px-4 sm:px-6 md:px-8">
       <img
         src="/alkyne.png"
         alt="Client 1"

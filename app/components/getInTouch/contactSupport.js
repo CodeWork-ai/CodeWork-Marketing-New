@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSupport = () => {
   return (
-    <div className="py-20 bg-gray-300 sm:py-28 md:py-44 px-4 sm:px-6 md:px-8 lg:px-9">
+    <div className="py-20  sm:py-28 md:py-44 px-4 sm:px-6 md:px-8 lg:px-9">
       {/* Heading and Description */}
       <div className="text-left mb-8 sm:mb-12 px-2 sm:px-9">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
