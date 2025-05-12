@@ -25,8 +25,6 @@ const SoftwareLanding = () => {
         <div className="heading-container mb-24">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
          Innovative Software Development for Scalable & High-Performance Solutions
-            <br />
-            <span className="mt-2 inline-block"> & High-Performance Solutions</span>
           </h1>
         </div>
 

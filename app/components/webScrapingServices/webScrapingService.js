@@ -4,11 +4,8 @@ function WebScrapingService() {
     <div className="container mx-auto px-16 py-12">
       {/* Top headline + intro */}
       <h2 className="text-3xl font-bold text-gray-800">
-      Our service helps you
+      Smart Data Extraction
       </h2>
-      <p className="mt-4 text-gray-700 leading-relaxed max-w-2xl">
-  Our service helps you in the following ways:
-</p>
 <ul className="mt-4 list-disc list-inside space-y-2 text-gray-700">
   <li>
     <span className="font-medium">Automatically extract data from any website.</span> 
@@ -93,9 +90,6 @@ function WebScrapingService() {
               </span> 
             </li>
           </ul>
-          <p className='pt-7 text-gray-600'>
-          Hyperflx.AI is reshaping academic research by making it faster and easier to understand. With features like personalized recommendations and real-time help, it’s well-positioned to attract students, educators, and researchers looking for smarter learning tools.
-          </p>
         </div>
       </div>
 

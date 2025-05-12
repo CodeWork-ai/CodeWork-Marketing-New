@@ -95,16 +95,6 @@ function InsightScan() {
         </div>
       </div>
 
-      {/* Full-width Problem-Solving section */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-semibold text-gray-800">
-        Conclusion
-        </h3>
-        <p className='pt-4 text-gray-600'>
-        Radi Insight Scan transforms healthcare by fostering transparency and empowering patients to confidently take charge of their health.
-
-        </p>
-      </div>
     </div>
   )
 }
