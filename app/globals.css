@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-gilroy-semibold: 'Gilroy-Semibold', sans-serif;
+  --font-gilroy-regular: 'Gilroy-Regular', sans-serif;
+  --font-gilroy-medium: 'Gilroy-Medium', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans);
+}
+
+
+.font-gilroy-semibold {
+  font-family: var(--font-gilroy-semibold);
+}
+
+.font-gilroy-regular {
+  font-family: var(--font-gilroy-regular);
+}
+
+.font-gilroy-medium {
+  font-family: var(--font-gilroy-medium);
+}
