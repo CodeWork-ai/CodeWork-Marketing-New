@@ -44,7 +44,7 @@ function SignatureOverView() {
         <div>
           <h3 className="text-2xl font-semibold text-gray-800">Key Features</h3>
           <p className="text-gray-600 pt-7">
-            This system uses OpenCV for precise template matching, ensuring
+            This system uses OpenCV (Open Source Computer Vision Library) for precise template matching, ensuring
             effective recognition. It applies correlation-based matching by
             computing a normalized correlation coefficient to determine
             authentication accuracy. A structured signature dataset further

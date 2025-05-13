@@ -24,14 +24,15 @@ const ItStaffLanding = () => {
         {/* Heading Container */}
         <div className="heading-container mb-24">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
-         Management Services for Software Development
+      Managed Services - Simplifying IT for Business Growth
           </h1>
         </div>
 
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
-Management services play a vital role in fostering innovation and ensuring operational excellence. These services focus on:          </p>
+Managed Services involve outsourcing key IT functions to a specialized third-party provider who ensures continuous management, monitoring, and maintenance of your systems. It allows businesses to concentrate on growth while leaving technical operations in expert hands.
+Key Components of Managed Services: </p>
         </div>
       </div>
     </section>

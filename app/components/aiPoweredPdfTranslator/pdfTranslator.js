@@ -13,7 +13,7 @@ function PdfTranslator() {
       {/* Illustration */}
       <div className="mt-8 flex space-x-36">
   <img
-    src="/CaseStudies/caseStudy.svg"
+    src="/CaseStudies/pdftranslated.jpg"
     alt="Person translating a PDF on their laptop"
     className="w-[400px] h-[300px]"
   />

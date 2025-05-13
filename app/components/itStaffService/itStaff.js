@@ -6,19 +6,19 @@ const ItStaff = () => {
   const benefits = [
     {
       title: "Project Management",
-      hoverText: "Coordinating software development lifecycles"
+      hoverText: "Oversees the entire software development lifecycle, ensuring timely delivery and seamless coordination between teams and stakeholders."
     },
     {
       title: "Strategic Planning",
-      hoverText: "Aligning technical capabilities with business goals."
+      hoverText: "Aligns technology solutions with business objectives, ensuring IT investments directly support long-term goals."
     },
     {
       title: "Team Optimization",
-      hoverText: "Structuring teams for maximum productivity"
+      hoverText: "Builds and organizes high-performing IT teams tailored to client needs, enhancing collaboration and productivity."
     },
     {
       title: "Resource Allocation",
-      hoverText: "Efficiently distributing talent and tools across projects."
+      hoverText: "Efficiently manages talent, tools, and infrastructure, distributing them across projects to maximize impact and minimize waste."
     },
   ];
 
