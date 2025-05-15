@@ -1,22 +1,34 @@
+// app/layout.js
 import "./globals.css";
 import Footer from "./components/common/footer";
 import Navbar from "./components/common/nav";
 import localFont from "next/font/local";
 
-const gilroySemibold = localFont({
-  src: "./fonts/gilroy-semibold.ttf",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+// 1) Regular (400)
 const gilroyRegular = localFont({
   src: "./fonts/gilroy-regular.ttf",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  weight: "400",
+  style: "normal",
+  variable: "--font-gilroy-regular",
+  display: "swap",
 });
+
+// 2) Medium (500)
 const gilroyMedium = localFont({
   src: "./fonts/gilroy-medium.ttf",
+  weight: "500",
+  style: "normal",
   variable: "--font-gilroy-medium",
-  weight: "100 900",
+  display: "swap",
+});
+
+// 3) SemiBold (600)
+const gilroySemibold = localFont({
+  src: "./fonts/gilroy-semibold.ttf",
+  weight: "600",
+  style: "normal",
+  variable: "--font-gilroy-semibold",
+  display: "swap",
 });
 
 export const metadata = {
@@ -25,17 +37,16 @@ export const metadata = {
   icons: {
     icon: "/favicon.svg",
   },
-  // (you generally don’t need to set viewport or charset—they’re
-  // automatically included—but you can override if desired via
-  // the `viewport` export or Metadata API)
 };
 
 export default function RootLayout({ children }) {
   return (
+    // Make sure this <html> is NOT self‐closed!
     <html
       lang="en"
-      className={`${gilroyRegular.variable} ${gilroySemibold.variable} ${gilroyMedium.variable}`}
+      className={`${gilroyRegular.variable} ${gilroyMedium.variable} ${gilroySemibold.variable}`}
     >
+      {/* And now the <body> lives INSIDE that <html> */}
       <body className="bg-white">
         <Navbar className="mb-36 px-10 md:px-20" />
         <main>{children}</main>

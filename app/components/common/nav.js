@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import MobileNavbar from "./mobileNav";
-// import MobileNavbar from "./mobileNav";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -15,12 +14,9 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            // Update visibility for sliding effect
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down
                 setIsVisible(false);
             } else {
-                // Scrolling up
                 setIsVisible(true);
             }
             setLastScrollY(currentScrollY);
@@ -30,7 +26,6 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
 
-    // Determine background opacity based on scroll position
     const backgroundOpacity = lastScrollY === 0 ? "bg-opacity-0" : "bg-opacity-100";
 
     useEffect(() => {
@@ -43,7 +38,6 @@ export default function Navbar() {
         }
     }, [pathname]);
 
-    // Nav links data
     const navLinks = [
         {
             href: "/ai-solutions",
@@ -53,39 +47,40 @@ export default function Navbar() {
                 { href: "/ai-services", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
             ],
         },
-        { href: "/our-company-case-studies", label: "Resources", dropdown: [
-               
-            {
-                href: "/our-company-case-studies",
-                label: "Case Studies",
-                description: "Discover the industries and organizations we serve.",
-            },
-            {
-                href: "/our-blog-lists",
-                label: "Blogs",
-                description: "Discover the industries and organizations we serve.",
-            },
-            {
-                href: "/testimonials",
-                label: "Testimonial",
-                description: "Discover the industries and organizations we serve.",
-            },
-
-        ] },
+        {
+            href: "/our-company-case-studies",
+            label: "Resources",
+            dropdown: [
+                {
+                    href: "/our-company-case-studies",
+                    label: "Case Studies",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/our-blog-lists",
+                    label: "Blogs",
+                    description: "Discover the industries and organizations we serve.",
+                },
+                {
+                    href: "/testimonials",
+                    label: "Testimonial",
+                    description: "Discover the industries and organizations we serve.",
+                },
+            ],
+        },
         {
             href: "/industries-you-must-know",
             label: "Industries",
-            dropdown: [
-            ]
+            dropdown: [],
         },
         { href: "/about-us", label: "About Us", dropdown: [] },
-        { href: "/careers-at-codework", label: "Career ", dropdown: [] },
+        { href: "/careers-at-codework", label: "Career", dropdown: [] },
         { href: "/build-your-career-with-codework", label: "AI Community", dropdown: [] },
     ];
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full border-2 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#ffffff] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
+            className={`fixed top-0 left-0 w-full border-4 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#ffffff] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
         >
             <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
                 <Link href="/">
@@ -107,6 +102,7 @@ export default function Navbar() {
                                 key={`${item.href}-${index}`}
                                 onMouseEnter={() => setIsDropdownOpen(index)}
                                 onMouseLeave={() => setIsDropdownOpen(null)}
+                                className="relative"
                             >
                                 <button
                                     className={`relative text-black text-base font-regular ease-in-out duration-300 group hover:text-cyan-400 ${pathname === item.href ? "text-cyan-400" : ""}`}
@@ -118,15 +114,23 @@ export default function Navbar() {
                                 </button>
                                 {/* Dropdown */}
                                 {isDropdownOpen === index && item.dropdown.length > 0 && (
-                                    <div className="absolute bg-white bg-opacity-80 rounded-md text-black p-1 shadow-lg z-40">
+                                    <div
+                                        className={`absolute bg-white rounded-lg text-black p-4 shadow-xl z-40 min-w-[220px] border border-gray-100 transform ${item.label === "Resources" ? "left-[10%] -translate-x-[10%]" : "left-0"} transition-all duration-200`}
+                                    >
                                         {item.dropdown.map((dropdownItem, idx) => (
                                             <Link key={`${dropdownItem.href}-${idx}`} href={dropdownItem.href}>
-                                                <div className="mb-1 rounded-md px-4 py-2 group hover:text-cyan-400">
-                                                    <h2 className="relative text-base font-regular text-center transition-colors duration-300 ease-in-out">
+                                                <div
+                                                    className="mb-2 px-4 py-3 group hover:bg-cyan-50 hover:scale-105 transition-all duration-200 rounded-md"
+                                                >
+                                                    <h2
+                                                        className="relative text-base font-medium text-gray-800 group-hover:text-cyan-600 transition-colors duration-200"
+                                                    >
                                                         {dropdownItem.label}
-                                                        <span className="absolute bottom-[-6px] left-1/2 w-0 h-[2px] bg-cyan-400 group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"></span>
+                                                        <span
+                                                            className="absolute bottom-[-4px] left-1/2 w-0 h-[2px] bg-cyan-400 group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"
+                                                        ></span>
                                                     </h2>
-                                                    {/* <p className="text-lg">{dropdownItem.description}</p> */}
+                                                    <p className="text-sm text-gray-500 mt-1">{dropdownItem.description}</p>
                                                 </div>
                                             </Link>
                                         ))}
@@ -152,7 +156,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="flex md:hidden">
-                <MobileNavbar/>
+                <MobileNavbar />
             </div>
         </div>
     );

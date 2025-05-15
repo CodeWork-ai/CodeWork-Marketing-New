@@ -6,27 +6,27 @@ const blogPosts = [
     id: 1,
     date: '2025-01-15',
     image: '/blog/blog1.jpg',
-    title: 'Noteworthy technology acquisitions 2021',
+    title: 'Deep Dive Into Activity Launch Modes in Android.',
     description:
-      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+      'In Android, Activity Launch Modes determine how new instances of an activity are created and how they interact with existing activities. The four main launch modes are:',
     link: '/launch-modes-andorid',
   },
   {
     id: 2,
     date: '2025-02-10',
     image: 'blog/blog2.jpg',
-    title: 'Other big tech deals of 2021',
+    title: 'From Algorithms to Agents',
     description:
-      'A deep dive into the major enterprise deals of last year.',
+      'Artificial Intelligence (AI) has become a transformative force in today’s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create. But how did we get here? In this blog,',
     link: '/algorithms-to-agents',
   },
   {
     id: 3,
     date: '2025-03-05',
     image: '/blog/blog3.jpg',
-    title: 'Cloud migrations to watch',
+    title: 'WorkManager. AlarmManager. JobScheduler : A Detailed Guide',
     description:
-      'Which enterprises are moving to the cloud and how it’s reshaping IT stacks.',
+      'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
     link: '/workmanager-alarmmanager-Jobscheduler',
   },
 ]
