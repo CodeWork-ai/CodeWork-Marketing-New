@@ -27,10 +27,10 @@ const DrivingInnovation = () => {
         <div className="w-full px-4 sm:px-8 md:px-14 flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-16 md:gap-20 lg:gap-24">
           {/* Left Side: Text Content (65% width) */}
           <div className="w-full md:w-[65%] space-y-4 sm:space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A3C5E]">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-bold text-[#1A3C5E]">
             Driving Innovation, Efficiency, and Growth with Excellence
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#1A3C5E] leading-relaxed">
+            <p className="text-base sm:text-lg md:text-lg text-[#1A3C5E] leading-relaxed">
              our Areas of Excellence represent more than just capabilities – they are the foundation of your business's innovation, efficiency, and growth. 
             By combining advanced AI technologies, human-centric solutions, and a relentless drive for excellence, we empower you to confidently embrace the future.
             </p>

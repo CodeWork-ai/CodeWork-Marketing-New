@@ -85,7 +85,7 @@ const ServicesCarousel = () => {
           >
             {/* Card Container with stroke instead of shadow */}
             <div 
-              className="flex items-center border-[4px] border-[#75def9] border-t-0 border-l-0 bg-white rounded-tl-2xl rounded-tr-[200px] rounded-bl-2xl rounded-br-2xl overflow-hidden h-[160px] sm:h-[180px] md:h-[180px] lg:h-[200px]"
+              className="flex items-center border-[4px] border-[#75def9] border-t-0 border-l-0 bg-white rounded-tl-2xl rounded-tr-[100px] rounded-bl-2xl rounded-br-2xl overflow-hidden h-[160px] sm:h-[180px] md:h-[180px] lg:h-[200px]"
             >
               <div>
                 <img

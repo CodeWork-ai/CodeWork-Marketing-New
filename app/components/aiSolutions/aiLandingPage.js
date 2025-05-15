@@ -22,11 +22,10 @@ const AiLandingPage = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-24">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
-            Empowering Innovation with AI and
-            <br />
-            <span className="mt-2 inline-block"> Advanced Technologies</span>
+        <div className="heading-container mb-11">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-bold">
+            Empowering Innovation with AI and  Advanced Technologies
+            
           </h1>
         </div>
 

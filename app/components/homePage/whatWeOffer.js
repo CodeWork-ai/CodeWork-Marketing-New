@@ -10,10 +10,10 @@ const WhatWeOffer = () => {
         <div className="w-full px-4 sm:px-8 md:px-14 flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-16 md:gap-20 lg:gap-24">
           {/* Left Side: Text Content (65% width) */}
           <div className="w-full md:w-[65%] space-y-4 sm:space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1A3C5E]">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-[#1A3C5E]">
               What do we Offer?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#1A3C5E] leading-relaxed">
+            <p className=" sm:text-base md:text-base text-[#1A3C5E] leading-relaxed">
               Codework redefines possibilities with cutting-edge AI services
               designed to empower businesses in the digital era. From AI model
               training that enhances system intelligence to custom software
@@ -43,7 +43,7 @@ const WhatWeOffer = () => {
           {/* Right Side: Big Image (35% width) */}
           <div className="w-full md:w-[35%]">
             <Image
-              src="/WhatweOffer.svg"
+              src="/WhatweOffer.png"
               alt="Team working"
               width={700}
               height={600}

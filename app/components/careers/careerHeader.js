@@ -28,7 +28,7 @@ const CareersHeader = () => {
         </div>
 
         {/* Paragraph Container */}
-        <div className="paragraph-container mb-8">
+        <div className="paragraph-container mb-4">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
            we’re on a mission to shape the future with cutting-edge AI technology. Become part of a team that values innovation, collaboration, and excellence.          </p>
         </div>

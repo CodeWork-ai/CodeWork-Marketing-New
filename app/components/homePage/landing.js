@@ -25,7 +25,7 @@ const Landing = () => {
       <div className="relative z-10 pt-11 max-w-7xl px-20   text-left text-gray-800">
         {/* Heading Container */}
         <div className="heading-container mb-11">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl w lg:text-5xl xl:text-5xl font-bold">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl w lg:text-4xl xl:text-4xl font-medium">
              AI Software Development Solutions – Redefining  Innovation with Codework
             <br />
           </h1>
@@ -33,7 +33,7 @@ const Landing = () => {
 
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800 w-[90%]">
+          <p className="text-sm md:text-lg lg:text-lg xl:text-lg leading-relaxed text-gray-600 w-[90%]">
             In the dynamic world of modern technology, Artificial Intelligence (AI) is transforming 
             industries and unlocking endless possibilities. As a top AI software development company, 
             we excel in AI development, delivering cutting-edge intelligent solutions that help 

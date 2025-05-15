@@ -31,8 +31,8 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { href: "/ai-powered-technology", label: "About Us" },
-    { href: "/team", label: "Our Team" },
+    { href: "/about-us", label: "About Us" },
+    { href: "/about-us", label: "Our Team" },
   ];
 
   const contactLinks = [
@@ -42,20 +42,20 @@ const Footer = () => {
 
   const serviceLinks = [
     {
-      href: "/driving-innovation-cutting-edge-ai-services",
+      href: "/ai-services",
       label: "Services",
     },
-    { href: "/clients-custom-ai-solutions", label: "Our Clients" },
+    { href: "/our-blog-lists", label: "Blogs" },
   ];
 
   const educationLinks = [
-    { href: "/unique-ai-in-education", label: "Testimonials " },
-    { href: "/ai-in-ecommerce", label: "Expertise" },
+    { href: "/testimonials", label: "Testimonials " },
+    { href: "/ai-solutions", label: "Expertise" },
   ];
 
   const dataSecurityLinks = [
-    { href: "/ai-in-cybersecurity", label: "Industries" },
-    { href: "/ai-in-cybersecurity", label: "Case Studies" },
+    { href: "/industries-you-must-know", label: "Industries" },
+    { href: "/our-company-case-studies", label: "Case Studies" },
   ];
 
   const pathname = usePathname();
@@ -78,7 +78,7 @@ const Footer = () => {
       <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
       <ul className="space-y-2">
         {quickLinks.map((item) => (
-          <li key={item.href}>
+          <li key={`${item.href}-${item.label}`}>
             <Link
               href={item.href}
               className={`
@@ -215,11 +215,11 @@ const Footer = () => {
     </div>
   
    {/* Publish Your Blog */}
-<div className="text-right">
-  <h3 className="text-lg font-semibold mb-4">Publish Your Blog</h3>
-  <Link href="/blog-lists">
+<div className="text-center">
+  <h3 className="text-lg font-semibold mb-4">Connect with Us</h3>
+  <Link href="/contact-ai-solutions">
     <button className="bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-full py-2 px-6 flex items-center space-x-2">
-      <span>Create Blog</span>
+      <span>Get In Touch</span>
       <FaArrowRight size={16} />
     </button>
   </Link>

@@ -77,8 +77,8 @@ const AiInnovations = () => {
                     <svg width="0" height="0" className="absolute">
                       <defs>
                         <linearGradient id={`grad-${card.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" style={{ stopColor: "#60A5FA" }} />
-                          <stop offset="100%" style={{ stopColor: "#C084FC" }} />
+                          <stop offset="0%" style={{ stopColor: "#80DAFD" }} />
+                          <stop offset="100%" style={{ stopColor: "#C5BAFF" }} />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -124,10 +124,10 @@ const AiInnovations = () => {
                     </div>
 
                     {/* Title (default) and description (on hover) */}
-                    <h3 className="text-xl font-semibold block group-hover:hidden">
+                    <h3 className="text-xl  font-semibold block group-hover:hidden">
                       {card.title}
                     </h3>
-                    <p className="hidden group-hover:block text-sm">
+                    <p className="hidden  text-blue-950 group-hover:block text-sm">
                       {card.description}
                     </p>
                   </div>

@@ -42,7 +42,7 @@ const AreasExcellence = () => {
         <div className="relative">
           <div>
             <img
-              src="/areaExcellence.svg"
+              src="/areaExcellence.png"
               alt="People working on laptops"
               className="w-[300px] sm:w-[350px] md:w-[450px] h-[300px] sm:h-[400px] md:h-[550px] object-contain"
             />
@@ -52,7 +52,7 @@ const AreasExcellence = () => {
         {/* Right Side: Content */}
         <div className="w-full lg:w-1/2 ml-0 md:ml-12 lg:ml-28">
           <div className="-mt-4">
-            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-950 mb-2">
               Areas of Excellence
             </h2>
             <p className="text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl text-gray-600 mb-6">

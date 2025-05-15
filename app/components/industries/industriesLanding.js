@@ -22,15 +22,15 @@ const IndustriesLanding = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-24">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
+        <div className="heading-container mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold">
          Empowering Industries with Smart Tech Solutions
           </h1>
         </div>
 
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
+          <p className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg leading-relaxed text-gray-800">
 We deliver tailored digital solutions that address the unique challenges of the healthcare, education, finance, e-commerce, and cybersecurity sectors. Our industry-focused approach blends innovation and expertise to drive growth, security, and experiences.          </p>
         </div>
       </div>
