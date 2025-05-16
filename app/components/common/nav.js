@@ -54,17 +54,17 @@ export default function Navbar() {
                 {
                     href: "/our-company-case-studies",
                     label: "Case Studies",
-                    description: "Discover the industries and organizations we serve.",
+                    description: "Explore how Codework transforms challenges into smart software solutions.",
                 },
                 {
                     href: "/our-blog-lists",
                     label: "Blogs",
-                    description: "Discover the industries and organizations we serve.",
+                    description: "Insights, trends, and tech tips from the AI-driven minds behind Codework.",
                 },
                 {
                     href: "/testimonials",
                     label: "Testimonial",
-                    description: "Discover the industries and organizations we serve.",
+                    description: "Hear what our clients say about building smarter, faster, and better with Codework.",
                 },
             ],
         },
@@ -80,7 +80,7 @@ export default function Navbar() {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full border-4 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#ffffff] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
+            className={`fixed top-0 left-0 w-full border-2 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#ffffff] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
         >
             <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
                 <Link href="/">
@@ -105,17 +105,17 @@ export default function Navbar() {
                                 className="relative"
                             >
                                 <button
-                                    className={`relative text-black text-base font-regular ease-in-out duration-300 group hover:text-cyan-400 ${pathname === item.href ? "text-cyan-400" : ""}`}
+                                    className={`relative text-black text-base font-regular ease-in-out duration-300 group hover:text-cyan-500 ${pathname === item.href ? "text-cyan-400" : ""}`}
                                 >
                                     <Link href={item.href}>{item.label}</Link>
                                     <span
-                                        className={`absolute bottom-[-6px] left-1/2 h-[2px] bg-cyan-400 transition-all duration-300 ease-in-out transform -translate-x-1/2 ${pathname === item.href ? "w-full" : "w-0 group-hover:w-full"}`}
+                                        className={`absolute bottom-[-6px] left-1/2 h-[2px] bg-cyan-500 transition-all duration-300 ease-in-out transform -translate-x-1/2 ${pathname === item.href ? "w-full" : "w-0 group-hover:w-full"}`}
                                     ></span>
                                 </button>
                                 {/* Dropdown */}
                                 {isDropdownOpen === index && item.dropdown.length > 0 && (
                                     <div
-                                        className={`absolute bg-white rounded-lg text-black p-4 shadow-xl z-40 min-w-[220px] border border-gray-100 transform ${item.label === "Resources" ? "left-[10%] -translate-x-[10%]" : "left-0"} transition-all duration-200`}
+                                        className={`absolute bg-white rounded-lg text-black p-4 shadow-xl z-40 min-w-[300px] border border-gray-100 transform ${item.label === "Resources" ? "left-[10%] -translate-x-[10%]" : "left-0"} transition-all duration-200`}
                                     >
                                         {item.dropdown.map((dropdownItem, idx) => (
                                             <Link key={`${dropdownItem.href}-${idx}`} href={dropdownItem.href}>
@@ -127,7 +127,7 @@ export default function Navbar() {
                                                     >
                                                         {dropdownItem.label}
                                                         <span
-                                                            className="absolute bottom-[-4px] left-1/2 w-0 h-[2px] bg-cyan-400 group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"
+                                                            className="absolute bottom-[-4px] left-1/2 w-0 h-[2px] bg-cyan-500 group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"
                                                         ></span>
                                                     </h2>
                                                     <p className="text-sm text-gray-500 mt-1">{dropdownItem.description}</p>

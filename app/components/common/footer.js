@@ -211,8 +211,8 @@ const Footer = () => {
                 <FaMapMarkerAlt size={16} className="text-white" />
               </div>
               <p className="text-sm text-left max-w-xs">
-                Codeworkx LLC<br />
-                6, RIVER OAKS CIR W,<br />
+                Codeworkx LLC 6,<br />
+                 RIVER OAKS CIR W,<br />
                 BUFFALO GROVE, IL 60089, USA
               </p>
             </div>
