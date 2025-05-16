@@ -1,10 +1,10 @@
 {
-  "name": "Code Work",
+  "name": "CodeWork",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && rm -rf ./.next/cache",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
