@@ -22,15 +22,15 @@ const ServiceLanding = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-24">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
+        <div className="heading-container mb-10">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
           Driving Innovation Through Cutting-Edge AI Services
            
           </h1>
         </div>
 
         {/* Paragraph Container */}
-        <div className="paragraph-container mb-8">
+        <div className="paragraph-container mb-3">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
            We redefine possibilities with cutting-edge AI services designed to empower businesses in the digital era.
            Our offerings are not only quick, cost-effective, and accurate but also tailored to meet the unique needs of each client.

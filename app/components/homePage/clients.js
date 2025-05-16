@@ -17,7 +17,7 @@ const Clients = () => {
       <div className="w-full mx-auto text-center">
         {/* Single full width background box with a purple to cyan gradient */}
         <div className="bg-gradient-to-b from-purple-200 to-cyan-200 w-full min-h-[300px] sm:min-h-[400px] p-6 sm:p-10 md:p-12 lg:p-10 xl:p-10 rounded-tl-[100px] rounded-tr-[100px] sm:rounded-tl-[240px] sm:rounded-tr-[240px]">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-gray-800 mb-4 sm:mb-8 md:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-semibold text-gray-800 mb-4 sm:mb-8 md:mb-8">
             Our Happy Clients
           </h2>
           <Marquee

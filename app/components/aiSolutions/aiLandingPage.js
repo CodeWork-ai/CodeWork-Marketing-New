@@ -23,7 +23,7 @@ const AiLandingPage = () => {
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
         <div className="heading-container mb-11">
-          <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-bold">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-semibold ">
             Empowering Innovation with AI and  Advanced Technologies
             
           </h1>
@@ -31,7 +31,7 @@ const AiLandingPage = () => {
 
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
+          <p className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg leading-relaxed text-gray-800">
          we are driven by a passion for delivering intelligent,
             future-ready solutions powered by Artificial Intelligence and
             advanced technologies. Our expertise spans across key areas that

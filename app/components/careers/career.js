@@ -7,7 +7,7 @@ const CareerPage = () => {
       <div className="container mx-auto text-center px-4">
         {/* Call to Action Section */}
         <section className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#27364E] mb-6">
+          <h2 className="text-4xl md:text-4xl font-semibold text-[#27364E] mb-6">
             Ready to Take the Next Step?
           </h2>
           <p className="text-lg md:text-xl text-[#27364E] mb-12 leading-relaxed">

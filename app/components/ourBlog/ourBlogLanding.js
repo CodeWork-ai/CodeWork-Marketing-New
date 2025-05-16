@@ -23,14 +23,14 @@ const OurBlogLanding = () => {
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
         <div className="heading-container mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
-          Join Our Team         </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
+            Our Blog        </h1>
         </div>
 
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
-           we’re on a mission to shape the future with cutting-edge AI technology. Become part of a team that values innovation, collaboration, and excellence.          </p>
+            Stay updated with the latest news and insights from our blog.       </p>
         </div>
       </div>
     </section>

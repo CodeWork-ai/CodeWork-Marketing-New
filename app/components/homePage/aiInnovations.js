@@ -49,7 +49,7 @@ const AiInnovations = () => {
         
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-4">
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-gray-800">
             AI innovations and applications
           </h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">

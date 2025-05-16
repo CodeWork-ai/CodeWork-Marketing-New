@@ -172,7 +172,7 @@ const ContactLanding = () => {
       <div className="flex flex-col bg-gradient-to-b from-[#f0fbff] to-[#e7f8ff] lg:flex-row px-7 gap-10 pt-36  pb-10">
         {/* ─── Form Section ───────────────────────────────────────────────── */}
         <div className="flex-1 bg-white p-6 sm:p-8 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
-          <h2 className="text-[#3c30df] font-semibold text-2xl mb-6">
+          <h2 className="text-[#2f24be] font-semibold text-2xl mb-6">
             REQUEST A DEMO
           </h2>
 
@@ -189,7 +189,7 @@ const ContactLanding = () => {
                     type="text"
                     value={formData[field]}
                     onChange={handleChange}
-                    className="w-full p-3 text-sm border border-[#3c30df] rounded-lg placeholder-[#3c30df] outline-none"
+                    className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
                     placeholder={`Enter ${
                       field === "first_name" ? "First" : "Last"
                     } Name`}
@@ -211,7 +211,7 @@ const ContactLanding = () => {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-3 text-sm border border-[#3c30df] rounded-lg placeholder-[#3c30df] outline-none"
+                className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
                 placeholder="Enter Email"
               />
               {errors.email && (
@@ -227,7 +227,7 @@ const ContactLanding = () => {
                 type="tel"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="w-full p-3 text-sm border border-[#3c30df] rounded-lg placeholder-[#3c30df] outline-none"
+                className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
                 placeholder="Enter mobile Number"
               />
               {errors.mobile && (
@@ -245,7 +245,7 @@ const ContactLanding = () => {
                 type="text"
                 value={formData.referral}
                 onChange={handleChange}
-                className="w-full p-3 text-sm border border-[#3c30df] rounded-lg placeholder-[#3c30df] outline-none"
+                className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
                 placeholder="Message"
               />
               {errors.referral && (
@@ -264,7 +264,7 @@ const ContactLanding = () => {
               />
               <label>
                 Allow Codework to contact me for scheduling and marketing per the{" "}
-                <a href="https://codework.ai/privacy-policy" className="text-[#3c30df] underline">
+                <a href="https://codework.ai/privacy-policy" className="text-[#2f24be] underline">
                   Privacy Policy
                 </a>
                 .
@@ -281,7 +281,7 @@ const ContactLanding = () => {
               className={`w-full mt-4 py-3.5 text-base font-medium rounded-lg transition ${
                 loading
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-[#3c30df] text-white hover:opacity-90"
+                  : "bg-[#2f24be] text-white hover:opacity-90"
               }`}
             >
               {loading ? "Submitting…" : "Submit"}
@@ -289,7 +289,7 @@ const ContactLanding = () => {
 
             {/* Response Message */}
             {responseMessage && (
-              <p className="mt-4 text-center text-sm text-[#3c30df]">
+              <p className="mt-4 text-center text-sm text-[#2f24be]">
                 {responseMessage}
               </p>
             )}
@@ -304,14 +304,14 @@ const ContactLanding = () => {
           {accordionData.map((item, idx) => (
             <div
               key={idx}
-              className="border border-[#3c30df] rounded-lg mb-3 overflow-hidden"
+              className="border border-[#2f24be] rounded-lg mb-3 overflow-hidden"
             >
               <div
                 onClick={() => toggle(idx)}
                 className={`flex justify-between items-center px-4 py-3 cursor-pointer text-base font-medium ${
                   activeIndex === idx
-                    ? "bg-[#3c30df] text-white"
-                    : "bg-white text-[#3c30df]"
+                    ? "bg-[#2f24be] text-white"
+                    : "bg-white text-[#2f24be]"
                 }`}
               >
                 <span>{item.title}</span>

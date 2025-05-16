@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Section */}
         <div className="md:w-1/2 ml-0 md:-ml-6 lg:ml-6 mb-8 md:mb-0 md:pr-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">
             Why Choose Us?
           </h2>
           
