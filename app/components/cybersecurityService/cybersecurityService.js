@@ -90,7 +90,7 @@ export default function CybersecurityService() {
   }, []);
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] px-16">
+    <div className="relative py-20 bg-gradient-to-br from-[#fffdf4] to-[#f5fdff] px-16">
       <h2 className="text-black text-3xl font-semibold text-center mb-12">
         Comprehensive Cybersecurity Services
       </h2>

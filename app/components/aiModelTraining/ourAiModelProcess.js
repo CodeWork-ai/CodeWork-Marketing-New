@@ -77,7 +77,7 @@ const AgileSoftwareProcess = () => {
   }, []);
 
   return (
-    <div className="p-20 bg-gradient-to-b from-[#FBF8E6] to-[#ebf9ff]">
+    <div className="p-20 bg-gradient-to-b from-[#fffdf2] to-[#ebf9ff]">
       <h2 className="text-4xl font-bold text-black mb-6">
         Agile Software Process
       </h2>

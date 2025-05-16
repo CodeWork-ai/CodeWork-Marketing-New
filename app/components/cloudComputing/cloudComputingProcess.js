@@ -66,7 +66,7 @@ const CloudComputingProcess = () => {
   const indentTitles = ['Model Training and Evaluation', 'Deployment and Optimization']
 
   return (
-    <div className="p-20 bg-gradient-to-b from-[#FBF8E6] to-[#ebf9ff]">
+    <div className="p-20 bg-gradient-to-b from-[#fffdf3] to-[#ebf9ff]">
       <h2 className="text-4xl font-bold text-black mb-6">
        Streamlined Cloud Adoption Process
       </h2>

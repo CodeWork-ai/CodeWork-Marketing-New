@@ -163,7 +163,7 @@ const OurServices = () => {
       </div>
 
       {/* Tablet+ / Desktop only */}
-      <div className="hidden md:block relative bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF] p-8 md:p-44">
+      <div className="hidden md:block relative bg-gradient-to-b from-[#f9f7e8] to-[#EBF9FF] p-8 md:p-44">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start">
           {/* Left Column */}
           <div className="md:w-1/2">

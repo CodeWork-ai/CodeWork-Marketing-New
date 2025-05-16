@@ -72,7 +72,7 @@ const JoinUsForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between bg-gradient-to-b from-[#FBF8E6] to-[#ebf9ff] text-gray-800 p-8 md:p-16 space-y-8 md:space-y-2">
+    <div className="flex flex-col lg:flex-row justify-between bg-gradient-to-b from-[#fffdf0] to-[#ebf9ff] text-gray-800 p-8 md:p-16 space-y-8 md:space-y-2">
       {/* Left Section */}
       <div className="flex-1 space-y-4 mr-5">
         <h2 className="text-4xl font-bold">Apply Now</h2>

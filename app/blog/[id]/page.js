@@ -29,7 +29,7 @@ const BlogDetails = () => {
     : "";
 
   return (
-    <div className="bg-gradient-to-b from-[#faf7e7] to-[#EBF9FF] py-16">
+    <div className="bg-gradient-to-b from-[#fffef8] to-[#EBF9FF] py-16">
       {/* widen container to ~1280px */}
       <div className="max-w-screen-xl mx-auto px-4 pt-16 sm:px-6 lg:px-8">
         {/* Title (original sizes) */}

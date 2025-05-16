@@ -82,7 +82,7 @@ export default function CloudComputing() {
   }, []);
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] px-16">
+    <div className="relative py-20 bg-gradient-to-br from-[#fffdf3] to-[#f5fdff] px-16">
       <h2 className="text-black text-3xl font-semibold text-center mb-12">
         Cloud Computing Services
       </h2>

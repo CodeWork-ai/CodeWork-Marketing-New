@@ -58,7 +58,7 @@ const AgileSoftwareProcess = () => {
   const indentTitles = ['Model Training and Evaluation', 'Deployment and Optimization']
 
   return (
-    <div className="p-20 bg-gradient-to-b from-[#FBF8E6] to-[#ebf9ff]">
+    <div className="p-20 bg-gradient-to-b from-[#fcfaef] to-[#ebf9ff]">
       <h2 className="text-4xl font-bold text-black mb-6">
        Agile Software Development Process
       </h2>

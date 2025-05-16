@@ -5,7 +5,7 @@ const AiPdflanding = () => {
     <section className="bg-gradient-to-b w-full  py-36">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
         {/* Text Card with Gradient */}
-        <div className="md:w-5/12 bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] p-6 pb-4 rounded-2xl text-gray-800 z-20 -mr-28 md:-mr-32 self-end">
+        <div className="md:w-5/12 bg-gradient-to-br from-[#fffdf1] to-[#f5fdff] p-6 pb-4 rounded-2xl text-gray-800 z-20 -mr-28 md:-mr-32 self-end">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
           AI-Powered PDF Translator          </h2>
           <p className="text-sm md:text-base w-[90%] leading-relaxed">

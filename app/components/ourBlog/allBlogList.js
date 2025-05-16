@@ -33,7 +33,7 @@ const blogPosts = [
 
 const AllBlogList = () => {
   return (
-    <div className="grid grid-cols-1 py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF] px-8 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 py-40 bg-gradient-to-b from-[#fffef6] to-[#EBF9FF] px-8 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {blogPosts.map(post => {
         const formattedDate = new Date(post.date).toLocaleDateString(
           undefined,
