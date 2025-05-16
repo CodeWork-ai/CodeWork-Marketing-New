@@ -1,16 +1,18 @@
 import React from 'react'
 import CybersecurityServiceLanding from '../components/cybersecurityService/cybersecurityServiceLanding'
-import CybersecurityEssential from '../components/cybersecurityService/cybersecurityEssential'
-import CybersecurityApproach from '../components/cybersecurityService/cybersecurityApproach'
-import CybersecuritySolution from '../components/cybersecurityService/cybersecuritySolution'
+import WhyCybersecurity from '../components/cybersecurityService/whyCybersecurity'
+import CybersecurityService from '../components/cybersecurityService/cybersecurityService'
+import CybersecurityProcess from '../components/cybersecurityService/cybersecurityProcess'
+import CybersecuritySolutions from '../components/cybersecurityService/cybersecuritySolutions'
 
 const page = () => {
   return (
     <div>
-      <CybersecurityServiceLanding/>
-      <CybersecurityEssential/>
-      <CybersecurityApproach/>
-      <CybersecuritySolution/>
+        <CybersecurityServiceLanding/>
+        <WhyCybersecurity/>
+        <CybersecurityService/>
+        <CybersecurityProcess/>
+        <CybersecuritySolutions/>
     </div>
   )
 }

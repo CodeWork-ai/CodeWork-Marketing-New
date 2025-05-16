@@ -1,17 +1,16 @@
 import React from 'react'
-import SoftwareLanding from '../softwareDevelopment/softwareLanding'
-import SoftwareSolution from '../softwareDevelopment/softwareSolutions'
-import AgileSoftwareProcess from '../softwareDevelopment/agileSoftwareProcess'
-import InnovativeSoftware from '../softwareDevelopment/innovativeSoftware'
-
+import SoftwareLanding from '../components/softwareDevelopment/softwareLanding'
+import SoftwareDevelopment from '../components/softwareDevelopment/softwareDevelopment'
+import AgileSoftwareProcess from '../components/softwareDevelopment/agileSoftwareProcess'
+import SoftwareSolutions from '../components/softwareDevelopment/softwareSolutions'
 
 const page = () => {
   return (
     <div>
-      <SoftwareLanding/>
-      <SoftwareSolution/>
-      <AgileSoftwareProcess/>
-      <InnovativeSoftware/>
+        <SoftwareLanding/>
+        <SoftwareDevelopment/>
+        <AgileSoftwareProcess/>
+        <SoftwareSolutions/>
     </div>
   )
 }

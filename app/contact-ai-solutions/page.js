@@ -1,22 +1,13 @@
-"use client"
-import GetInTouchHeader from "../components/getInTouch/getInTouchHeader";
-import ContactForm from "../components/getInTouch/form";
-import ContactLanding from "../components/getInTouch/contactLanding";
-import ContactSupport from "../components/getInTouch/contactSupport";
-import ContactButton from "../components/getInTouch/contactButton";
-import Client from "../components/getInTouch/client";
+import React from 'react'
+import WeListening from '../components/homePage/weListening'
+import ContactLanding from '../components/contactUs/contactLanding'
 
-export default function Page() {
-    return (
-        <div className="">
-            <ContactLanding/>
-            <ContactSupport/>
-            <ContactButton/>
-            <Client/>
-            {/* <GetInTouchHeader />
-            <ContactForm /> */}
-            
-            
-        </div>
-    );
+const page = () => {
+  return (
+    <div>
+        <ContactLanding/>
+    </div>
+  )
 }
+
+export default page

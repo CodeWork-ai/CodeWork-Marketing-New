@@ -1,18 +1,21 @@
-import React from "react";
-import DevopsSolutionsLanding from "../components/devops-solutions/devopsSolutionsLanding";
-import DevopsSolutions from "../components/devops-solutions/devopsSolutions";
-import DevelopmentProcessDevops from "../components/devops-solutions/developmentProcessDevops";
-import TransformBusinessDevops from "../components/devops-solutions/transformBusinessDevops";
+import React from 'react'
+import DevopsSolutionsLanding from '../components/devopsSolutions/devopsSolutionsLanding'
+import BenefitsOfDevOps from '../components/devopsSolutions/benefitsOfDevOps'
+import DevopSolutions from '../components/devopsSolutions/devopSolutions'
+import DevopsDevelopment from '../components/devopsSolutions/devopsDevelopment'
+import DevelopmentProcess from '../components/customSoftware/developmentProcess'
 
-const Page = () => {
+const page = () => {
   return (
     <div>
       <DevopsSolutionsLanding/>
-      <DevopsSolutions />
-      <DevelopmentProcessDevops />
-      <TransformBusinessDevops />
-    </div>
-  );
-};
+      <BenefitsOfDevOps/>
+     <DevelopmentProcess/>
+      <DevopsDevelopment/>
+      <DevopSolutions/>
 
-export default Page;
+    </div>
+  )
+}
+
+export default page

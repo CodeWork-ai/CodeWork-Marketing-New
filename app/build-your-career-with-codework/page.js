@@ -1,14 +1,14 @@
-import React from 'react';
-import GroupsFeed from '../components/group/group';
-import GroupHeader from '../components/group/groupHeader';
+import React from 'react'
+import AiCommunityLanding from '../components/aiCommunity/aiCommunityLanding'
+import GroupsFeed from '../components/aiCommunity/groupsFeed'
 
-const Page = () => {
-    return (
-        <div className="text-white pb-5">
-            <GroupHeader />
-            <GroupsFeed />
-        </div>
-    );
-};
+const page = () => {
+  return (
+    <div>
+        <AiCommunityLanding/>
+        <GroupsFeed/>
+    </div>
+  )
+}
 
-export default Page;
+export default page

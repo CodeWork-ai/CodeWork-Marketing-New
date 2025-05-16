@@ -1,12 +1,18 @@
-"use client"
-import CareersHeader from "../components/careers/careersHeader";
+import React from "react";
 import CareerPage from "../components/careers/career";
+import CareersHeader from "../components/careers/careerHeader";
+import WhyJoinCodework from "../components/careers/whyJoinCodework";
+import CurrentOpportunitie from "../components/careers/currentOpportunitie";
 
-export default function Page() {
+const page = () => {
   return (
-    <div className="text-white bg-black bg-opacity-5 pb-5">
-      <CareersHeader/>
-      <CareerPage/>
+    <div>
+      <CareersHeader />
+      <CurrentOpportunitie />
+      <WhyJoinCodework />
+      <CareerPage />
     </div>
   );
-}
+};
+
+export default page;

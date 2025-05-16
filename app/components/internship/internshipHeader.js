@@ -1,27 +1,41 @@
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image";
 
 const InternshipHeader = () => {
-    return (
-        <div className='px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 mb-16'>
-            <div className="h-full">
-                <div className="h-full overflow-hidden">
-                    <section className="relative h-full">
-                        {/* Content on Top of Image */}
-                        <div className="h-full relative z-10 flex text-white pt-36 pb-10">
-                            <div className='w-full space-y-5'>
-                                <div className="w-4/6 text-2xl md:text-2xl lg:text-4xl 2xl:text-6xl text-gray-200">
-                                    Kickstart Your Career with Our Internship Program
-                                </div>
-                                <div className='w-4/6 text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-200'>
-                                    Are you ready to gain real-world experience in AI and technology? Join our internship program at Codework, where you'll learn, grow, and contribute to exciting projects. Apply now and take the first step toward your future!
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+  return (
+    <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-[#F6F5FF]">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {/* <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/landing.mp4" type="video/mp4" />
+        </video> */}
+        {/* Dark overlay for better text visibility */}
+      </div>
+
+      {/* Content Container - Updated width to 80% */}
+      <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
+        {/* Heading Container */}
+        <div className="heading-container mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
+          Kickstart Your Career with Our Internship Program
+          </h1>
         </div>
-    );
+
+        {/* Paragraph Container */}
+        <div className="paragraph-container mb-8">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
+         Are you ready to gain real-world experience in AI and technology? Join our internship program at Codework, where you'll learn, grow, and contribute to exciting projects. Apply now and take the first step toward your future! </p>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default InternshipHeader;

@@ -1,16 +1,19 @@
 import React from 'react'
 import CloudComputingLanding from '../components/cloudComputing/cloudComputingLanding'
-import KeyBenefitsCloud from '../components/cloudComputing/keyBenefitsCloud'
-import CloudAdoptionProcess from '../components/cloudComputing/cloudAdoptionProcess'
-import EnablingCloudComputing from '../components/cloudComputing/enablingCloudComputing'
+import CloudComputing from '../components/cloudComputing/cloudComputing'
+import BenefitsCloudComputing from '../components/cloudComputing/benefitsCloudComputing'
+import CloudComputingProcess from '../components/cloudComputing/cloudComputingProcess'
+import GrowthWithComputing from '../components/cloudComputing/growthWithComputing'
 
 const page = () => {
   return (
     <div>
-      <CloudComputingLanding/>
-      <KeyBenefitsCloud/>
-      <CloudAdoptionProcess/>
-      <EnablingCloudComputing/>
+        <CloudComputingLanding/>
+        <BenefitsCloudComputing/>
+        <CloudComputing/>
+        <CloudComputingProcess/>
+        <GrowthWithComputing/>
+
     </div>
   )
 }

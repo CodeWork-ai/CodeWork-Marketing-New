@@ -1,32 +1,22 @@
-"use client";
-import HomeHeader from "./components/home/homeHeader";
-import AiSolutionsSection from "./components/home/aiSolutionsSection";
-import ExploreAiPoweredSolutions from "./components/home/exploreAiPoweredSolutions";
-import ParallaxEffect from "./components/home/imageSection";
-import { GlobeDemo } from "./components/home/globe";
-import { AnimatedBeamDemo } from "./components/home/services";
-import { Clients } from "./components/home/clientsCarousel";
-import Contact from "./components/home/contact";
-import TestimonialCarousel from "./components/home/carouselCard";
-import BlogComponent from "@/components/ui/blog-component";
-import CardParallaxComponent from "./components/home/card-parallax";
+import React from "react";
+import Landing from "./components/homePage/landing";
+import AreasExcellence from "./components/homePage/areasExcellence";
+import Clients from "./components/homePage/clients";
+import WhatWeOffer from "./components/homePage/whatWeOffer";
+import ServicesCarousel from "./components/homePage/servicesCarousel";
+import AiInnovations from "./components/homePage/aiInnovations";
+import WhyChooseUs from "./components/homePage/whyChooseUs";
+import WeListening from "./components/homePage/weListening";
 
 export default function Home() {
-  return (
-    <>
-      <div className="text-white">
-        <HomeHeader />
-        <AiSolutionsSection />
-        <Clients />
-        <ExploreAiPoweredSolutions />
-        {/* <AnimatedBeamDemo /> */}
-        <CardParallaxComponent/>
-        <TestimonialCarousel/>
-        {/* <BlogComponent/> */}
-        <ParallaxEffect />
-        <GlobeDemo />
-        <Contact />
-      </div>
-    </>
-  );
+  return <div>
+    <Landing/>
+    <AreasExcellence/>
+    <Clients/>
+    <WhatWeOffer/>
+    <ServicesCarousel/>
+    <AiInnovations/>
+    <WhyChooseUs/>
+    <WeListening/>
+  </div>;
 }

@@ -1,13 +1,14 @@
-"use client"
-import JoinUsForm from "../components/joinUs/joinUsForm";
-import JoinUsHeader from "../components/joinUs/joinUsHeader";
+import React from 'react'
+import JoinUsHeader from '../components/jointUs/jointUsHeader'
+import JoinUsForm from '../components/jointUs/jointUsForm'
 
-export default function Page() {
-    return (
-        <div className="text-white pb-5">
-            {/* <FlickeringGridDemo /> */}
-            <JoinUsHeader />
-            <JoinUsForm/>
-        </div>
-    );
+const page = () => {
+  return (
+    <div>
+        <JoinUsHeader/>
+        <JoinUsForm/>
+    </div>
+  )
 }
+
+export default page

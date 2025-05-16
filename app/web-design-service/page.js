@@ -1,18 +1,20 @@
 import React from 'react'
-import WebDesignLanding from '@/app/components/webDesignService/webDesignLanding'
-import WebDesignProcess from '@/app//components/webDesignService/webDesignProcess'
-import ElevateWebDesign from '@/app/components/webDesignService/elevateWebDesign'
-import BenefitsProfessionalWebDesign from '@/app/components/webDesignService/BenefitsProfessionalWebDesign'
-
-
+import WebDesignLanding from '../components/webDesignService/webDesignLanding'
+import BenefitsWebDesign from '../components/webDesignService/benefitsWebDesign'
+import ExpertWebDesign from '../components/webDesignService/expertWebDesign'
+import WebDesignProcess from '../components/webDesignService/webDesignProcess'
+import WebDesign from '../components/webDesignService/webDesign'
 
 const page = () => {
   return (
     <div>
-      <WebDesignLanding/>
-      <BenefitsProfessionalWebDesign/>
-      <WebDesignProcess/>
-      <ElevateWebDesign/>
+        <WebDesignLanding/>
+        <WebDesign/>
+        <BenefitsWebDesign/>
+        <WebDesignProcess/>
+        <ExpertWebDesign/>
+        
+
     </div>
   )
 }

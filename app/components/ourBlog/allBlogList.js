@@ -1,0 +1,92 @@
+import React from 'react'
+import { FiArrowRight, FiClock } from 'react-icons/fi'
+
+const blogPosts = [
+  {
+    id: 1,
+    date: '2025-01-15',
+    image: '/blog/blog1.jpg',
+    title: 'Deep Dive Into Activity Launch Modes in Android.',
+    description:
+      'In Android, Activity Launch Modes determine how new instances of an activity are created and how they interact with existing activities. The four main launch modes are:',
+    link: '/launch-modes-andorid',
+  },
+  {
+    id: 2,
+    date: '2025-02-10',
+    image: 'blog/blog2.jpg',
+    title: 'From Algorithms to Agents',
+    description:
+      'Artificial Intelligence (AI) has become a transformative force in today’s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create. But how did we get here? In this blog,',
+    link: '/algorithms-to-agents',
+  },
+  {
+    id: 3,
+    date: '2025-03-05',
+    image: '/blog/blog3.jpg',
+    title: 'WorkManager. AlarmManager. JobScheduler : A Detailed Guide',
+    description:
+      'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
+    link: '/workmanager-alarmmanager-Jobscheduler',
+  },
+]
+
+const AllBlogList = () => {
+  return (
+    <div className="grid grid-cols-1 py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF] px-8 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {blogPosts.map(post => {
+        const formattedDate = new Date(post.date).toLocaleDateString(
+          undefined,
+          { month: 'long', day: 'numeric', year: 'numeric' }
+        )
+
+        return (
+          <div
+            key={post.id}
+            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-50 dark:border-gray-50 flex flex-col"
+          >
+            <a href={post.link}>
+              <img
+                className="rounded-t-lg"
+                src={post.image}
+                alt={post.title}
+              />
+            </a>
+            <div className="p-5 flex flex-col flex-grow">
+              {/* DATE with clock icon */}
+              <div className="flex items-center mb-2 text-sm text-gray-800 dark:text-gray-900">
+                <FiClock className="mr-1" />
+                <span>{formattedDate}</span>
+              </div>
+
+              {/* TITLE */}
+              <a href={post.link} className="hover:underline">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
+                  {post.title}
+                </h5>
+              </a>
+
+              {/* DESCRIPTION */}
+              <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 line-clamp-2">
+                {post.description}
+              </p>
+
+              {/* BUTTON aligned right */}
+              <div className="mt-auto flex justify-end">
+                <a
+                  href={post.link}
+                  className="group inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue-950 bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-600 dark:focus:ring-cyan-400"
+                >
+                  Read more
+                  <FiArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export default AllBlogList

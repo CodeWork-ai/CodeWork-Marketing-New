@@ -15,7 +15,7 @@ const Register = ({ onBackToLogin }) => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog/register_email?email=${registerData.email}`, {
+      const response = await fetch(`https://prod-api.codework.ai/api/v1/blog/register_email?email=${registerData.email}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

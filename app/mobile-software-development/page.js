@@ -1,17 +1,16 @@
 import React from 'react'
-import MobileSoftwareLanding from '../components/mobileSoftwareDevelopment/mobileSoftwareLanding'
-import MobileAppDevelopment from '../components/mobileSoftwareDevelopment/mobileAppDevelopment'
-import MobileAppProcess from '../components/mobileSoftwareDevelopment/mobileAppProcess'
-import MobileAppCycle from '../components/mobileSoftwareDevelopment/mobileAppCycle'
-import MobileSolution from '../components/mobileSoftwareDevelopment/mobileSolution'
+import MobileDevelopmentLanding from '../components/mobileDevelopment/mobileDevelopmentLanding'
+import MobileAppDevelopment from '../components/mobileDevelopment/mobileAppDevelopment'
+import MobileAppProcess from '../components/mobileDevelopment/mobileAppProcess'
+import MobileSolutions from '../components/mobileDevelopment/mobileSolutions'
 
 const page = () => {
   return (
     <div>
-      <MobileSoftwareLanding/>
-      <MobileAppDevelopment/>
-      <MobileAppProcess/>
-      <MobileSolution/>
+        <MobileDevelopmentLanding/>
+        <MobileAppDevelopment/>
+        <MobileAppProcess/>
+        <MobileSolutions/>
     </div>
   )
 }

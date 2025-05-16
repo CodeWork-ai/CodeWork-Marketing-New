@@ -1,14 +1,14 @@
 import React from 'react'
-import AiModalLanding from '../components/aiModalTraining/aiModalLanding'
-import AiModalProcess from '../components/aiModalTraining/aiModalProcess'
-import AiModalStart from '../components/aiModalTraining/aiModalStart'
+import AiModelLAnding from '../components/aiModelTraining/aiModelLanding'
+import OurAiModelProcess from '../components/aiModelTraining/ourAiModelProcess'
+import GetStarted from '../components/aiModelTraining/getStarted'
 
 const page = () => {
   return (
     <div>
-      <AiModalLanding/>
-      <AiModalProcess/>
-      <AiModalStart/>
+<AiModelLAnding/>
+<OurAiModelProcess/>
+<GetStarted/>
     </div>
   )
 }

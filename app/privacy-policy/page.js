@@ -1,11 +1,10 @@
 import React from 'react'
-import PrivacyPolicy from '../components/common/privacyPolicy'
-import PrivacyPolicyPage from '../components/common/privacyPolicy'
+import PrivacyPolicyPage from '../components/common/privacyPolicyPage'
 
 const page = () => {
   return (
     <div>
-       <PrivacyPolicyPage/> 
+        <PrivacyPolicyPage/>
     </div>
   )
 }

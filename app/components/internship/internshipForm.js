@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import ShineBorder from '../../../components/ui/shine-border';
 
 const InternshipForm = () => {
     const [formData, setFormData] = useState({
@@ -9,7 +8,7 @@ const InternshipForm = () => {
         designation: '',
         experience: '',
         contact: '',
-        resume: null, // Updated to handle file upload
+        resume: null, // Handle file upload as base64
     });
 
     const [responseMessage, setResponseMessage] = useState('');
@@ -71,29 +70,24 @@ const InternshipForm = () => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between bg-black bg-opacity-60 text-white p-8 md:p-16 space-y-8 md:space-y-2">
+        <div className="flex flex-col lg:flex-row justify-between bg-gradient-to-b from-[#ffebfd] to-[#ebf9ff] text-gray-800 p-8 md:p-16 space-y-8 md:space-y-2">
             {/* Left Section */}
             <div className="flex-1 space-y-4 mr-5">
-                <h2 className="text-2xl font-bold text-gray-200">Apply Now</h2>
-                <p className="text-gray-200">
+                <h2 className="text-3xl font-bold text-center md:text-left text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">Apply Now</h2>
+                <p className="text-lg">
                     We are committed to empowering the next generation of innovators through hands-on experience in AI, ML, and Data Science. Join our internship program to gain real-world skills, work on impactful projects, and build a strong foundation for your future career in technology.
                 </p>
-                <p className="text-gray-200">
+                <p className="text-lg">
                     If you’re interested, we’d love to hear from you!
                 </p>
-                <p className="text-gray-200">
+                <p className="text-lg">
                     Let’s make this an unforgettable journey together. Apply now and kickstart your career!
                 </p>
             </div>
 
-
             {/* Right Section: Form */}
-            <ShineBorder className="relative flex flex-col bg-black bg-opacity-50 overflow-hidden rounded-lg md:shadow-xl"
-                color={['#109eeb', '#109eeb', '#109eeb']}>
-                <form
-                    onSubmit={handleSubmit}
-                    className="flex-1 bg-black lg:w-[500px] xl:w-[700px] bg-opacity-5 p-6 rounded-md shadow-md space-y-6"
-                >
+            <div className="flex flex-col bg-gray-100 bg-opacity-5 p-6 rounded-md shadow-md space-y-6 lg:w-[500px] xl:w-[700px]">
+                <form onSubmit={handleSubmit} className="flex-1 space-y-4">
                     {/* Name */}
                     <input
                         type="text"
@@ -103,7 +97,7 @@ const InternshipForm = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 bg-black bg-opacity-5 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
                     {/* Email */}
@@ -115,7 +109,7 @@ const InternshipForm = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 bg-black bg-opacity-5 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
                     {/* Designation */}
@@ -127,7 +121,7 @@ const InternshipForm = () => {
                         required
                         value={formData.designation}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 bg-black bg-opacity-5 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
                     {/* Experience */}
@@ -139,7 +133,7 @@ const InternshipForm = () => {
                         required
                         value={formData.experience}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 bg-black bg-opacity-5 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
                     {/* Contact */}
@@ -151,13 +145,13 @@ const InternshipForm = () => {
                         required
                         value={formData.contact}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 bg-black bg-opacity-5 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
                     {/* Resume */}
                     <div>
                         <div>
-                            <label className='text-gray-300'>Attach Resume / CV</label>
+                            <label className="font-semibold">Attach Resume / CV</label>
                         </div>
                         <input
                             type="file"
@@ -166,23 +160,24 @@ const InternshipForm = () => {
                             accept="application/pdf"
                             required
                             onChange={handleFileChange}
-                            className="py-2 bg-black bg-opacity-5 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="py-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                         />
                     </div>
+
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-4 py-2 rounded-md transition duration-300"
+                        className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-white font-semibold px-6 py-3 rounded-md transition duration-300 hover:from-cyan-400 hover:to-purple-500"
                         disabled={loading}
                     >
                         {loading ? 'Submitting...' : 'Submit'}
                     </button>
 
                     {responseMessage && (
-                        <p className="mt-6 text-center text-sm text-gray-200">{responseMessage}</p>
+                        <p className="mt-6 text-center text-sm text-green-500">{responseMessage}</p>
                     )}
                 </form>
-            </ShineBorder>
+            </div>
         </div>
     );
 };
