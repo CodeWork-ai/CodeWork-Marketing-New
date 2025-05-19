@@ -1,0 +1,14 @@
+node_modules/
+test/
+tests/
+coverage/
+.vscode/
+.git/
+*.md
+*.log
+*.ts
+*.map
+.eslintrc*
+tsconfig.json
+jest.config.*
+.env
