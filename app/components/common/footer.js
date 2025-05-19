@@ -247,7 +247,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-300">
-        <div className="w-full bg-black text-white flex flex-col items-start sm:flex-row sm:items-center sm:justify-between py-6 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="w-full bg-black text-white flex flex-col items-start sm:flex-row sm:items-center sm:justify-between py-4 sm:py-6 px-4 sm:px-4 md:px-8 lg:px-6 xl:px-6">
           {/* Left: main company logo */}
           <div className="flex items-center mb-4 sm:mb-0">
             <Link href="/">
