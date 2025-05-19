@@ -8,37 +8,37 @@ const AiInnovations = () => {
       id: 1,
       title: "Data Security",
       description: "We protect sensitive information with advanced anomaly detection and robust, decentralized security protocols.",
-      bgImage: "/AiInnovations/DataSecurity.svg",
+      bgImage: "/AiInnovations/DataSecurity.png",
     },
     {
       id: 2,
       title: "E-commerce",
       description: "We redefine online shopping with predictive analytics for smarter recommendations.",
-      bgImage: "/AiInnovations/Ecommerce.svg",
+      bgImage: "/AiInnovations/Ecommerce.png",
     },
     {
       id: 3,
       title: "Healthcare",
       description: "We elevate patient care with AI-driven diagnostics and secure management of Electronic Health Records (EHR).",
-      bgImage: "/AiInnovations/Healthcare.svg",
+      bgImage: "/AiInnovations/Healthcare.png",
     },
     {
       id: 4,
       title: "Finance",
       description: "We enhance financial systems with AI-powered fraud detection and credit risk analysis.",
-      bgImage: "/AiInnovations/Finance.svg",
+      bgImage: "/AiInnovations/Finance.png",
     },
     {
       id: 5,
       title: "Education",
       description: "We personalize learning experiences with adaptive AI platforms and blockchain certification.  ",
-      bgImage: "/AiInnovations/Education.svg",
+      bgImage: "/AiInnovations/Education.png",
     },
     {
       id: 6,
       title: "SupplyChain",
       description: "We optimize operations and boost transparency with smart contract-enabled systems for seamless supply chain management.",
-      bgImage: "/AiInnovations/SupplyChain.svg",
+      bgImage: "/AiInnovations/SupplyChain.png",
     }
   ];
 
