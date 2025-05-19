@@ -9,7 +9,7 @@ const GetStarted = () => (
   ">
     {/* Text Column */}
     <div className="w-full md:w-1/2 max-w-lg">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
+      <h1 className="text-4xl md:text-4xl font-semi-bold text-[#1b2142] mb-4">
         Get Started with AI Model Training Today
       </h1>
       <p className="text-lg text-[#3b4368] mb-8 leading-relaxed">
@@ -22,7 +22,7 @@ const GetStarted = () => (
     {/* Image Column with clipped curve on left */}
     <div>
       <Image
-        src="/services/servicesModel.svg"
+        src="/AllServices/servicesModel.svg"
         alt="AI model training illustration"
         width={800}
         height={600}

@@ -59,49 +59,49 @@ const MobileSection = () => {
       id: 1,
       title: "AI Consulting",
       icon: RiBrain2Fill,
-      description: "Our AI model undergoes rigorous training using advanced techniques. We continuously test, validate, and refine the model to ensure it meets performance benchmarks and aligns with your business goals."
+      description: "Our AI consulting services are designed to deliver tailor-made solutions that align with your business goals. We help organizations identify opportunities for automation, efficiency, and growth by seamlessly integrating AI into their workflows. From ideation to execution, we ensure you unlock the full potential of AI."
     },
     {
       id: 2,
       title: "Generative AI",
       icon: BsStars,
-      description: "Create unique content and solutions using cutting-edge AI technology."
+      description: "Creativity meets technology with our Generative AI solutions. Whether it’s content generation, design assistance, or product innovation, we enable businesses to boost productivity and creativity. Our AI tools make it easy to manage tasks and turn your ideas into reality."
     },
     {
       id: 3,
       title: "Machine Learning",
       icon: GiGears,
-      description: "Custom ML solutions to automate and optimize your processes."
+      description: "With Machine Learning, Codework empowers businesses with predictive insights and more innovative automation. Leveraging advanced frameworks like PyTorch, Keras, and TensorFlow, we help analyze data, uncover patterns, and enable data-driven decisions. Our solutions, including Radi Insight Scan and Signature Identification, utilize ML concepts to provide deeper insights and enhanced automation. These innovations enable businesses to stay one step ahead of market demands and drive innovation."
     },
     {
       id: 4,
       title: "Natural Language Processing",
       icon: AiFillMessage,
-      description: "Shape Communication is key, and our NLP solutions make it smarter. We harness the power of advanced language processing to help businesses improve text analysis, automate customer support, and extract meaningful insights from unstructured data."
+      description: "Natural Language Processing (NLP) shapes communication, and our NLP solutions make it smarter. We leverage advanced language processing to enhance text analysis, automate customer support, and extract valuable insights from unstructured data. With NLP and ML, we have developed a Caregiver Communication with Text Analytics Tool to improve interactions, understand needs, and provide better support in caregiving environments."
     },
     {
       id: 5,
       title: "Data Engineering",
       icon: FaDatabase,
-      description: "Transform and optimize your data infrastructure with advanced engineering solutions."
+      description: "A robust data infrastructure is the backbone of any business. Our Data Engineering services ensure your data is well-organized, easily accessible, and efficiently processed, giving you the foundation to scale and innovate."
     },
     {
       id: 6,
       title: "Cyber Security",
       icon: MdOutlineSecurity,
-      description: "Protect your digital assets with state-of-the-art cybersecurity measures and protocols."
+      description: "Protecting digital assets is critical in today’s connected world. Codework’s cybersecurity solutions leverage advanced technologies, including XGBoost, to analyze threats, detect vulnerabilities, and provide comprehensive protection for your systems, data, and infrastructure. We ensure safety, trust, and resilience for your business in an ever-evolving digital landscape."
     },
     {
       id: 7,
       title: "Predictive Analysis",
       icon: BsFillBarChartLineFill,
-      description: "Leverage data-driven insights to forecast trends and make informed business decisions."
+      description: "Stay ahead of the curve with Predictive Analytics. We use AI-driven forecasting models to analyze trends, predict outcomes, and deliver actionable insights that enable businesses to plan and perform better."
     },
     {
       id: 8,
       title: "AI Chatbots",
       icon: FaRobot,
-      description: "Implement intelligent conversational AI solutions to enhance customer engagement."
+      description: "Enhance customer engagement with our intelligent AI chatbots. Codework’s chatbots provide real-time responses, improve user satisfaction, and streamline."
     }
   ];
 

@@ -8,7 +8,7 @@ const Clients = () => {
     { name: 'NALAM', logo: '/client/nalam.svg' },
     { name: 'MTM', logo: '/client/mtm.svg' },
     { name: 'STOREFRIES', logo: '/client/storefries.svg' },
-    { name: 'EXTRA1', logo: '/client/webSign.svg' },
+    { name: 'EXTRA1', logo: '/client/webSign.png' },
     { name: 'EXTRA2', logo: '/client/sparksGlobal.svg' },
   ];
 

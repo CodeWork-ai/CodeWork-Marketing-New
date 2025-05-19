@@ -68,9 +68,9 @@ const WhyChooseUs = () => {
         </div>
         
         {/* Right Section: World Map */}
-        {/* <div className="w-full pt-0 flex justify-end">
+        <div className="w-full pt-0 flex justify-end">
           <MapDemo />
-        </div> */}
+        </div>
       </div>
     </section>
   );
