@@ -27,7 +27,7 @@ const Finance = () => {
         {/* Main (larger) image */}
         <div className="absolute top-0 left-[10%] w-[70%] overflow-hidden">
           <img
-            src="/Industires/Finance.svg"
+            src="/Industires/Finance.png"
             alt="AI-driven diagnostics interface"
             className="block w-full h-auto"
           />

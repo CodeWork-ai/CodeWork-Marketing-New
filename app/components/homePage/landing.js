@@ -7,19 +7,10 @@ import Link from "next/link";
 const Landing = () => {
   return (
     <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-[#F6F5FF]">
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        {/* <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/landing.mp4" type="video/mp4" />
-        </video> */}
-        {/* Dark overlay for better text visibility */}
-      </div>
+      {/* Background Container using Tailwind background image */}
+      <div 
+        className="absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center bg-[url('/landingpages/home.jpeg')]"
+      ></div>
 
       {/* Content Container */}
       <div className="relative z-10 pt-16 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 max-w-7xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 text-center sm:text-left text-gray-800">

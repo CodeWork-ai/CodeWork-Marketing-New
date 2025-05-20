@@ -28,7 +28,7 @@ const Education = () => {
         {/* Main (larger) image */}
         <div className="absolute top-0 left-[10%] w-[70%] overflow-hidden">
           <img
-            src="/Industires/education.svg"
+            src="/Industires/education.png"
             alt="AI-driven diagnostics interface"
             className="block w-full h-auto"
           />
