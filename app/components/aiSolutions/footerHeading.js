@@ -10,12 +10,12 @@ const FooterHeading = () => {
         Together, we’ll shape a smarter, more connected world.
       </p>
       {/* Bottom Left Corner Decoration */}
-      <div className="absolute bottom-0 left-0">
+      {/* <div className="absolute bottom-0 left-0">
         <img 
           src="/straightLine.svg" 
           alt="Straight Line Decoration" 
         />
-      </div>
+      </div> */}
     </div>
   );
 };

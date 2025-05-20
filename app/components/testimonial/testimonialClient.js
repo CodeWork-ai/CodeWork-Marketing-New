@@ -3,7 +3,7 @@ import Image from "next/image"; // if using Next.js, or use regular <img> otherw
 
 const TestimonialClient = () => {
   return (
-    <div className="bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF] px-6 py-16 space-y-20 text-white">
+    <div className="bg-gradient-to-b from-[#fffef7] to-[#EBF9FF] px-6 py-16 space-y-20 text-white">
       
       {/* First Testimonial (Left Image) */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10">

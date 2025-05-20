@@ -3,7 +3,15 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaArrowRight, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaArrowRight,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { BsGlobe2 } from "react-icons/bs";
 
@@ -75,7 +83,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
           {/* 1. QUICK LINKS */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map((item) => (
                 <li key={`${item.href}-${item.label}`}>
@@ -83,7 +93,11 @@ const Footer = () => {
                     href={item.href}
                     className={`
                       hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${pathname === item.href ? "text-blue-600" : "text-[#1A3C5E]"}
+                      ${
+                        pathname === item.href
+                          ? "text-blue-600"
+                          : "text-[#1A3C5E]"
+                      }
                     `}
                   >
                     {item.label}
@@ -103,7 +117,11 @@ const Footer = () => {
                     href={item.href}
                     className={`
                       hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${pathname === item.href ? "text-blue-600" : "text-[#1A3C5E]"}
+                      ${
+                        pathname === item.href
+                          ? "text-blue-600"
+                          : "text-[#1A3C5E]"
+                      }
                     `}
                   >
                     {item.label}
@@ -123,7 +141,11 @@ const Footer = () => {
                     href={item.href}
                     className={`
                       hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${pathname === item.href ? "text-blue-600" : "text-[#1A3C5E]"}
+                      ${
+                        pathname === item.href
+                          ? "text-blue-600"
+                          : "text-[#1A3C5E]"
+                      }
                     `}
                   >
                     {item.label}
@@ -143,7 +165,11 @@ const Footer = () => {
                     href={item.href}
                     className={`
                       hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${pathname === item.href ? "text-blue-600" : "text-[#1A3C5E]"}
+                      ${
+                        pathname === item.href
+                          ? "text-blue-600"
+                          : "text-[#1A3C5E]"
+                      }
                     `}
                   >
                     {item.label}
@@ -163,7 +189,11 @@ const Footer = () => {
                     href={item.href}
                     className={`
                       hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${pathname === item.href ? "text-blue-600" : "text-[#1A3C5E]"}
+                      ${
+                        pathname === item.href
+                          ? "text-blue-600"
+                          : "text-[#1A3C5E]"
+                      }
                     `}
                   >
                     {item.label}
@@ -174,11 +204,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Row: Get In Touch + Company Details + Connect with Us */}
-        <div className="mt-6 sm:mt-8 lg:mt-10 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+        {/* Bottom Row: Get In Touch, India, USA, Connect With Us */}
+        <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full">
           {/* Get In Touch */}
-          <div className="mb-6 sm:mb-0">
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Get In Touch</h3>
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Get In Touch
+            </h3>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                 <FaPhone size={14} className="text-white sm:text-base" />
@@ -191,11 +223,18 @@ const Footer = () => {
               </div>
               <p className="text-xs sm:text-sm">sales@codework.ai</p>
             </div>
-            <div className="flex items-start">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
-                <FaMapMarkerAlt size={14} className="text-white sm:text-base" />
+          </div>
+
+          {/* India */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              India
+            </h3>
+            <div className="flex items-start space-x-4">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
+                <FaMapMarkerAlt size={16} className="text-white" />
               </div>
-              <p className="text-xs sm:text-sm pl-3 sm:pl-4">
+              <p className="text-xs sm:text-sm">
                 Level 3, Akshaya HQ, OMR, <br />
                 Kazhipattur, Chennai, <br />
                 Tamilnadu, 603103.
@@ -203,29 +242,29 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* New Company Details Section */}
-          <div className="hidden lg:flex flex-col text-left mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-4">US Location</h3>
-            <div className="flex items-start space-x-4 mb-4">
+          {/* USA */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              USA
+            </h3>
+            <div className="flex items-start space-x-4 ">
               <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                 <FaMapMarkerAlt size={16} className="text-white" />
               </div>
-              <p className="text-sm max-w-xs">
-                Codeworkx LLC 6,<br />
-                River Oaks Cir W,<br />
+              <p className="text-xs sm:text-sm">
+                Codeworkx LLC 6,
+                <br />
+                River Oaks Cir W,
+                <br />
                 Buffalo Grove, IL 60089, USA
               </p>
             </div>
             <div className="text-sm flex items-center justify-start">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center mr-2">
-                <BsGlobe2 size={16} className="text-white" />
-              </div>
-              Website:{" "}
               <a
                 href="https://thecodeworx.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-blue-500 hover:text-gray-500"
+                className="font-bold text-blue-500 hover:text-gray-500 ml-12 "
               >
                 codeworkx
               </a>
@@ -233,8 +272,10 @@ const Footer = () => {
           </div>
 
           {/* Connect with Us */}
-          <div className="text-left sm:text-center">
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Connect With Us</h3>
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+              Connect With Us
+            </h3>
             <Link href="/contact-ai-solutions">
               <button className="bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-full py-1.5 sm:py-2 px-4 sm:px-6 flex items-center space-x-2 text-xs sm:text-base">
                 <span>Get In Touch</span>
@@ -247,25 +288,47 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-300">
-        <div className="w-full bg-black text-white flex flex-col items-start sm:flex-row sm:items-center sm:justify-between py-4 sm:py-6 px-4 sm:px-4 md:px-8 lg:px-6 xl:px-6">
+        <div className="w-full bg-black text-white flex flex-col items-center sm:flex-row sm:items-center sm:justify-between py-6 sm:py-6 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6">
           {/* Left: main company logo */}
           <div className="flex items-center mb-4 sm:mb-0">
             <Link href="/">
-              <Image src="/Logo.svg" alt="Company Logo" width={140} height={100} className="sm:w-[170px] sm:h-[120px]" />
+              <Image
+                src="/Logo.svg"
+                alt="Company Logo"
+                width={180}
+                height={180}
+              />
             </Link>
           </div>
 
           {/* Middle: ISO logos */}
           <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-0">
-            <Image src="/iso/iso1.svg" alt="ISO Logo 1" width={32} height={32} className="rounded-full sm:w-10 sm:h-10" />
-            <Image src="/iso/iso2.svg" alt="ISO Logo 2" width={32} height={32} className="rounded-full sm:w-10 sm:h-10" />
+            <Image
+              src="/iso/iso1.svg"
+              alt="ISO Logo 1"
+              width={32}
+              height={32}
+              className="rounded-full sm:w-10 sm:h-10"
+            />
+            <Image
+              src="/iso/iso2.svg"
+              alt="ISO Logo 2"
+              width={32}
+              height={32}
+              className="rounded-full sm:w-10 sm:h-10"
+            />
           </div>
 
           {/* Right: copyright + privacy */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
-            <p className="text-[10px] sm:text-xs">2024 PRO CODEWORK. ALL RIGHTS RESERVED.</p>
+          <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
+            <p className="text-[10px] sm:text-xs">
+              2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All rights reserved.
+            </p>
             <span className="hidden sm:inline">•</span>
-            <Link href="/privacy-policy" className="text-[10px] sm:text-xs hover:text-blue-400">
+            <Link
+              href="/privacy-policy"
+              className="text-[10px] sm:text-xs hover:text-blue-400"
+            >
               PRIVACY POLICY
             </Link>
           </div>
@@ -273,7 +336,12 @@ const Footer = () => {
           {/* Far right: social icons */}
           <div className="flex space-x-4 sm:space-x-6 items-center">
             {socialMedia.map(({ label, Icon, link }) => (
-              <a key={label} href={link} target="_blank" rel="noopener noreferrer">
+              <a
+                key={label}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                   <Icon size={16} className="text-white sm:text-xl" />
                 </div>
