@@ -74,7 +74,7 @@ export default function Navbar() {
             dropdown: [],
         },
         { href: "/about-us", label: "About Us", dropdown: [] },
-        { href: "/careers-at-codework", label: "Career", dropdown: [] },
+        { href: "/careers-at-codework", label: "Careers", dropdown: [] },
         { href: "/build-your-career-with-codework", label: "AI Community", dropdown: [] },
     ];
 
