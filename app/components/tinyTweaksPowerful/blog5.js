@@ -26,9 +26,9 @@ const Blog5 = () => {
         {/* META (avatar, category, date) */}
         <div className="flex items-center text-sm text-gray-500 mb-10 space-x-3">
           <div className="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 font-extrabold">
-            A
+            p
           </div>
-          <span className="uppercase">Abhishek</span>
+          <span className="uppercase">pavithra</span>
           <span>•</span>
           <div className="flex items-center">
             <FiClock className="mr-1" />
