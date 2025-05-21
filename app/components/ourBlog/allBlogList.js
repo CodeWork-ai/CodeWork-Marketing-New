@@ -29,6 +29,24 @@ const blogPosts = [
       'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
     link: '/workmanager-alarmmanager-Jobscheduler',
   },
+  {
+    id: 4,
+    date: '2025-04-18',
+    image: '/blog/blog4.jpg',
+    title: 'How Model Context Protocol Is Transforming the Future of AI',
+    description:
+      'In the rapidly evolving world of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
+    link: '/model-context-protocol',
+  },
+  {
+    id: 5,
+    date: '2025-05-22',
+    image: '/blog/blog5.jpg',
+    title: 'Tiny Tweaks, Powerful Adaptations',
+    description:
+      'Fine-tuning large language models (LLMs) like LLaMA or GPT-3 can require billions of parameters, massive GPUs, and weeks of training. But what if you could achieve similar results by training just 0.1% of the parameters.',
+    link: '/tweaks-powerful-adaptations',
+  },
 ]
 
 const AllBlogList = () => {
