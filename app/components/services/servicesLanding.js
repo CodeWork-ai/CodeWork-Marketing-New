@@ -9,7 +9,7 @@ const ServiceLanding = () => {
       <div className="absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center bg-[url('/landingpages/ailandin.jpeg')]"></div>
 
       {/* Content Container - Updated width to 80% */}
-      <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
+      <div className="relative z-10 w-[80%] mx-auto px-4 mt-16 sm:mt-0 lg:mt-0 text-left text-gray-800">
         {/* Heading Container */}
         <div className="heading-container mb-10">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold">

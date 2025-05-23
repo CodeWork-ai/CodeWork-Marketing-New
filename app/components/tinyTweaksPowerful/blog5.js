@@ -85,11 +85,17 @@ const Blog5 = () => {
           It makes LoRA in NLP and LoRA for LLaMA/GPT models highly popular in the AI and deep learning communities.
         </p>
 
-        {/* SECTION 4 */}
-        <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Visual Representation</h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          The image above illustrates how LoRA fine-tuning works. Instead of updating the full pre-trained weight matrix (W), LoRA keeps W frozen and learns a small matrix ΔW, decomposed into Wₐ and W_b (of dimensions d×r and r×d). This low-rank adaptation saves resources and maintains high performance.
-        </p>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Visual Representation</h2>
+<Image
+  src="/blog/blogexplain.png" // update to your image path
+  alt="Visual Representation of LoRA"
+  width={800}
+  height={400}
+  className="rounded-lg mb-6 object-cover"
+/>
+<p className="text-gray-700 leading-relaxed mb-6">
+  The image above illustrates how LoRA fine-tuning works. Instead of updating the full pre-trained weight matrix (W), LoRA keeps W frozen and learns a small matrix ΔW, decomposed into Wₐ and W_b (of dimensions d×r and r×d). This low-rank adaptation saves resources and maintains high performance.
+</p>
 
         {/* CONCLUSION */}
         <h2 className="text-3xl font-semibold text-gray-800 mt-8 mb-4">Final Thoughts</h2>
