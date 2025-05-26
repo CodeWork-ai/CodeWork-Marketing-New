@@ -149,16 +149,29 @@ const gilroySemibold = localFont({
           description:
             "Codework delivers reliable software development solutions tailored to your goals. From planning to deployment, we cover it all.",
         };
+ default:
+        return {
+          title: "Codework",
+          description:
+            "Discover cutting-edge AI-powered solutions for your business.",
+          keywords:
+            "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
+        };
     }
-};
+  };
+
 
 export default function RootLayout({ children }) {
   return (
     // Make sure this <html> is NOT self‐closed!
     <html
       lang="en"
-      className={`${gilroyRegular.variable} ${gilroyMedium.variable} ${gilroySemibold.variable}`}
-    >
+      className={`${gilroyRegular.variable} ${gilroyMedium.variable} ${gilroySemibold.variable}`}>
+    <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icon.svg" />
+      </head>
       {/* And now the <body> lives INSIDE that <html> */}
       <body className="bg-white">
         <Navbar className="mb-36 px-10 md:px-20" />
