@@ -50,15 +50,12 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    {
-      href: "/ai-services",
-      label: "Services",
-    },
+    { href: "/ai-services", label: "Services" },
     { href: "/our-blog-lists", label: "Blogs" },
   ];
 
   const educationLinks = [
-    { href: "/testimonials", label: "Testimonials " },
+    { href: "/testimonials", label: "Testimonials" },
     { href: "/ai-solutions", label: "Expertise" },
   ];
 
@@ -79,11 +76,11 @@ const Footer = () => {
     <footer className="w-full bg-gradient-to-b from-[#ffffff] to-[rgba(200,200,255,0.9)] text-[#1A3C5E]">
       {/* Main Footer Content */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-6 sm:py-8">
-        {/* Top Row: 5 columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
-          {/* 1. QUICK LINKS */}
+        {/* Top Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-start">
+          {/* Quick Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+            <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -91,14 +88,11 @@ const Footer = () => {
                 <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
-                    className={`
-                      hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${
-                        pathname === item.href
-                          ? "text-blue-600"
-                          : "text-[#1A3C5E]"
-                      }
-                    `}
+                    className={`hover:text-blue-600 transition duration-150 text-xs sm:text-sm ${
+                      pathname === item.href
+                        ? "text-blue-600"
+                        : "text-[#1A3C5E]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -107,22 +101,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 2. CONTACT US */}
+          {/* Contact Us */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4"></h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {contactLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`
-                      hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${
-                        pathname === item.href
-                          ? "text-blue-600"
-                          : "text-[#1A3C5E]"
-                      }
-                    `}
+                    className={`hover:text-blue-600 transition duration-150 text-xs sm:text-sm ${
+                      pathname === item.href
+                        ? "text-blue-600"
+                        : "text-[#1A3C5E]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -131,22 +121,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 3. SERVICES */}
+          {/* Services */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4"></h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {serviceLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`
-                      hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${
-                        pathname === item.href
-                          ? "text-blue-600"
-                          : "text-[#1A3C5E]"
-                      }
-                    `}
+                    className={`hover:text-blue-600 transition duration-150 text-xs sm:text-sm ${
+                      pathname === item.href
+                        ? "text-blue-600"
+                        : "text-[#1A3C5E]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -155,22 +141,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 4. TESTIMONIALS */}
+          {/* Testimonials & Expertise */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4"></h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {educationLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`
-                      hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${
-                        pathname === item.href
-                          ? "text-blue-600"
-                          : "text-[#1A3C5E]"
-                      }
-                    `}
+                    className={`hover:text-blue-600 transition duration-150 text-xs sm:text-sm ${
+                      pathname === item.href
+                        ? "text-blue-600"
+                        : "text-[#1A3C5E]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -179,22 +161,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 5. INDUSTRIES */}
+          {/* Industries & Case Studies */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4"></h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {dataSecurityLinks.map((item) => (
                 <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
-                    className={`
-                      hover:text-blue-600 transition duration-150 text-xs sm:text-sm
-                      ${
-                        pathname === item.href
-                          ? "text-blue-600"
-                          : "text-[#1A3C5E]"
-                      }
-                    `}
+                    className={`hover:text-blue-600 transition duration-150 text-xs sm:text-sm ${
+                      pathname === item.href
+                        ? "text-blue-600"
+                        : "text-[#1A3C5E]"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -204,11 +182,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Row: Get In Touch, India, USA, Connect With Us */}
-        <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full">
+        {/* Bottom Row — Updated for mobile alignment */}
+        <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full text-left">
           {/* Get In Touch */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+            <h3 className="text-base lg:pt-9 sm:pt-0 xl:pt-9  sm:text-lg font-semibold mb-3 sm:mb-4">
               Get In Touch
             </h3>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
@@ -244,7 +222,7 @@ const Footer = () => {
 
           {/* USA */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
+            <h3 className="text-base  lg:pt-6 sm:pt-0 xl:pt-6 sm:text-lg font-semibold mb-3 sm:mb-4">
               USA
             </h3>
             <div className="flex items-start space-x-4 ">
@@ -252,9 +230,7 @@ const Footer = () => {
                 <FaMapMarkerAlt size={16} className="text-white" />
               </div>
               <p className="text-xs sm:text-sm">
-                Codeworkx LLC 6,
-                <br />
-                River Oaks Cir W,
+                 6, River Oaks Cir W,
                 <br />
                 Buffalo Grove, IL 60089, USA
               </p>
@@ -271,7 +247,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Connect with Us */}
+          {/* Connect With Us */}
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
               Connect With Us
@@ -289,7 +265,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="border-t border-gray-300">
         <div className="w-full bg-black text-white flex flex-col items-center sm:flex-row sm:items-center sm:justify-between py-6 sm:py-6 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6">
-          {/* Left: main company logo */}
+          {/* Logo */}
           <div className="flex items-center mb-4 sm:mb-0">
             <Link href="/">
               <Image
@@ -301,7 +277,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Middle: ISO logos */}
+          {/* ISO Logos */}
           <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-0">
             <Image
               src="/iso/iso1.svg"
@@ -319,7 +295,7 @@ const Footer = () => {
             />
           </div>
 
-          {/* Right: copyright + privacy */}
+          {/* Copyright + Privacy */}
           <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
             <p className="text-[10px] sm:text-xs">
               2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All rights reserved.
@@ -333,7 +309,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Far right: social icons */}
+          {/* Social Icons */}
           <div className="flex space-x-4 sm:space-x-6 items-center">
             {socialMedia.map(({ label, Icon, link }) => (
               <a
