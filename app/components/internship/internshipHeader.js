@@ -14,7 +14,7 @@ const InternshipHeader = () => {
         <div className="w-full pt-16   md:w-3/5 text-left">
           <div className="heading-container mb-8">
             <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold">
-              Kickstart Your Career with Our Internship Program
+              Kickstart Your Career with Our  Internship Program
             </h1>
           </div>
           <div className="paragraph-container mb-8">
