@@ -1,8 +1,11 @@
 // app/layout.js
+"use client";
+import React, { useEffect, useState } from "react";
 import "./globals.css";
 import Footer from "./components/common/footer";
 import Navbar from "./components/common/nav";
 import localFont from "next/font/local";
+import { usePathname } from "next/navigation";
 
 // 1) Regular (400)
 const gilroyRegular = localFont({
