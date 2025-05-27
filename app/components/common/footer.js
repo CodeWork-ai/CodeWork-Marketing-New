@@ -11,12 +11,18 @@ import {
   FaArrowRight,
   FaFacebook,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { BsGlobe2 } from "react-icons/bs";
 
 const Footer = () => {
   const socialMedia = [
+       {
+      label: "YouTube",
+      Icon: FaYoutube,
+      link: "https://www.youtube.com/@codework.aisolutions", 
+    },
     {
       label: "Twitter",
       Icon: FaSquareXTwitter,
