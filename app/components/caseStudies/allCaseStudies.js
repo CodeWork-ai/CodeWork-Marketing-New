@@ -12,7 +12,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: 'Colowatch',
+    title: 'Radi Insight 3D',
     description:
       'AI & 3D Modeling for Colon Cancer Detection.',
     imageUrl: '/CaseStudies/colonScan.jpg',

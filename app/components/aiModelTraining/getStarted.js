@@ -9,9 +9,9 @@ const GetStarted = () => (
   ">
     {/* Text Column */}
     <div className="w-full md:w-1/2 max-w-lg">
-      <h1 className="text-4xl md:text-4xl font-semi-bold text-[#1b2142] mb-4">
+      <h2 className="text-4xl md:text-4xl font-semi-bold text-[#1b2142] mb-4">
         Get Started with AI Model Training Today
-      </h1>
+      </h2>
       <p className="text-lg text-[#3b4368] mb-8 leading-relaxed">
         Enhance your business operations with AI-powered solutions. Let Codework help you build and deploy
         AI models that drive innovation and efficiency. Contact us today to discuss your AI requirements and

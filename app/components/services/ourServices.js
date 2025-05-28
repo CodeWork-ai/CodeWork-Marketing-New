@@ -167,9 +167,9 @@ const OurServices = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start">
           {/* Left Column */}
           <div className="md:w-1/2">
-            <h1 className="text-[#1A2B3B] text-4xl font-semibold mb-6">
+            <h2 className="text-[#1A2B3B] text-4xl font-semibold mb-6">
               Our Services
-            </h1>
+            </h2>
             <p className="text-[#1A2B3B] text-lg mb-12 max-w-2xl">
               With Codework, adopting technology means embracing innovation with
               a personal touch. Commitment to excellence ensures that every

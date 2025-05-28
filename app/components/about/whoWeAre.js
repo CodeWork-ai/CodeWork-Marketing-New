@@ -9,9 +9,9 @@ const WhoWeAre = () => {
 
         {/* ─── Why Choose Codework? ───────────────────────────── */}
         <div>
-          <h3 className="text-2xl md:text-3xl font-semibold text-gray-800">
+          <h1 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Why Choose Codework?
-          </h3>
+          </h1>
           <ul className="mt-4 list-disc list-inside space-y-2 text-gray-700">
             <li>
               <strong>AI-Driven Solutions:</strong> We specialize in crafting

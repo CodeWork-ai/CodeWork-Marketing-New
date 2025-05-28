@@ -6,7 +6,7 @@ const GroupsFeed = () => {
     <div className="bg-[#FCF6EE] min-h-screen py-10 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h1 className="text-3xl font-semibold text-gray-800">Groups Feed</h1>
+        <h2 className="text-3xl font-semibold text-gray-800">Groups Feed</h2>
         <p className="text-gray-600 mb-8">View groups and posts below.</p>
 
         {/* Post Card */}

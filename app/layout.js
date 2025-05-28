@@ -118,7 +118,7 @@ const getMetaTags = (pathname) => {
     case "/software-development-service":
       return {
         title: "Complete software development services by Codework",
-        description: "Codework delivers reliable software development solutions tailored to your goals. From planning to deployment, we cover it all.",
+        description: "Complete software development services by Codework",
       };
     case "/custom-software-development":
       return {
@@ -133,7 +133,7 @@ const getMetaTags = (pathname) => {
     case "/web-design-service":
       return {
         title: "Complete software development services by Codework",
-        description: "Codework delivers reliable software development solutions tailored to your goals. From planning to deployment, we cover it all.",
+        description: "Modern and creative web designing by Codework",
       };
     case "/it-staff-service":
       return {
@@ -150,6 +150,42 @@ const getMetaTags = (pathname) => {
         title: "Codework secures systems with penetration testing",
         description: "Identify vulnerabilities before attackers do. Codework offers expert penetration testing to secure your applications and networks.",
       };
+      case "/devops-solutions":
+      return {
+        title: "Accelerate delivery with DevOps solutions by Codework",
+        description: "Streamline software delivery with Codework’s DevOps solutions. CI/CD, automation, and cloud-native tools for better collaboration.",
+      };
+      case "/ai-powered-pdf-translator":
+      return {
+        title: "AI-powered PDF Translator by Codework for Multilingual User",
+        description: "Translate PDFs accurately into Tamil, Hindi, Malayalam, Telugu, and Kannada with Codework’s AI-powered PDF Translator. Retains layout and structure.",
+      };
+      case "/web-scraping-services":
+      return {
+        title: "Codework Web Scraping – Smart Data Collection Made Easy",
+        description: "Collect valuable web data quickly with Codework’s web scraping service—like having a smart assistant that gathers real-time online insights for your business.",
+      };
+         case "/signature-recognition-system":
+      return {
+        title: "Signature Recognition System – Accurate Signature Matching",
+        description: "Verify handwritten signatures using Codework’s recognition system. With image processing and template matching, it ensures precise, low-security authentication.",
+      };
+           case "/colowatch-case-studies":
+      return {
+        title: "Colowatch AI Colon Cancer Test – Accurate & Non-Invasive",
+        description: "Colowatch offers a non-invasive, AI-based colon cancer screening alternative to colonoscopies. Boosts accuracy, comfort, and early detection rates.",
+      };    
+            case "/radi-insight-scan":
+      return {
+        title: "Radi Insight Scan – Simplifying Medical Terms for Patients",
+        description: "Radi Insight Scan helps patients understand complex medical jargon by translating reports into clear, simple language, improving healthcare communication.",
+      };
+              case "/hyperflex-ai":
+      return {
+        title: "Smart Search Engine for Academic Research",
+        description: "Hyperflx.AI streamlines academic research by providing accurate, relevant, and well-organized educational content to enhance learning outcomes.",
+      };
+      
     default:
       return {
         title: "Codework",

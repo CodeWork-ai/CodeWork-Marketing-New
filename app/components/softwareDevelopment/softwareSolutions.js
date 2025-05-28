@@ -9,9 +9,9 @@ const SoftwareSolutions = () => (
   ">
     {/* Text Column */}
     <div className="w-full md:w-1/2 max-w-lg">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
+      <h3 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
         Empowering Businesses with Innovative Software Solutions
-      </h1>
+      </h3>
       <p className="text-lg text-[#3b4368] mb-8 leading-relaxed">
         High-performing software solutions drive business growth and digital transformation. Codework.ai leverages technology expertise to build applications that enhance operational efficiency and deliver seamless user experiences. Explore software development services at Codework and unlock the potential of technology-driven solutions.
       </p>

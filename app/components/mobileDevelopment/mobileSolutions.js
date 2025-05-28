@@ -9,9 +9,9 @@ const MobileSolutions = () => (
   ">
     {/* Text Column */}
     <div className="w-full md:w-1/2 max-w-lg">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
+      <h3 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
         Accelerate Business Growth with Custom Mobile Solutions
-      </h1>
+      </h3>
       <p className="text-lg text-[#3b4368] mb-8 leading-relaxed">
        Leverage the power of mobile technology to enhance digital presence and operational efficiency. Explore expert mobile software development services at Codework—transforming ideas into market-leading applications. 
  

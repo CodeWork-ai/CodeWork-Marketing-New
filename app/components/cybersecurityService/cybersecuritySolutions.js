@@ -9,9 +9,9 @@ const CybersecuritySolutions = () => (
   ">
     {/* Text Column */}
     <div className="w-full md:w-1/2 max-w-lg">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
+      <h3 className="text-4xl md:text-5xl font-bold text-[#1b2142] mb-4">
        Future-Proof Cybersecurity Solutions
-      </h1>
+      </h3>
       <p className="text-lg text-[#3b4368] mb-8 leading-relaxed">
        Cyber threats are constantly evolving, making advanced cybersecurity solutions a necessity. Codework.ai delivers proactive security strategies to keep businesses protected, compliant, and resilient in the face of cyber risks.
  
