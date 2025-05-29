@@ -65,6 +65,15 @@ const blogPosts = [
       'Colorectal cancer remains one of the leading causes of cancer-related deaths globally. The introduction of virtual colonoscopy through CT colonography offers a non-invasive, patient-friendly diagnostic',
     link: '/revolutionizing-virtual-colonoscopy',
   },
+       {
+    id: 7,
+    date: '2025-05-29',
+    image: '/blog/blog8.jpg',
+    title: 'UAE Makes History with Free ChatGPT Plus for Every Resident',
+    description:
+      'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
+    link: '/uae-makes-history',
+  },
 ]
 
 const AllBlogList = () => {
