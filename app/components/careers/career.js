@@ -24,7 +24,7 @@ const CareerPage = () => {
               <FaArrowRight className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="/intern-ship"
+              href="/internship"
               className="group flex items-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-blue-400 text-blue-500 font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               Apply for Internships
