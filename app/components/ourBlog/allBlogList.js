@@ -47,16 +47,16 @@ const blogPosts = [
       'Fine-tuning large language models (LLMs) like LLaMA or GPT-3 can require billions of parameters, massive GPUs, and weeks of training. But what if you could achieve similar results by training just 0.1% of the parameters.',
     link: '/tweaks-powerful-adaptations',
   },
-    {
+  {
     id: 6,
     date: '2025-05-28',
-    image: '/blog/blog6.jpg ',
-    title: '  Don’t Let the Hype Hijack the Goal',
+    image: '/blog/blog6.jpg',
+    title: 'Don’t Let the Hype Hijack the Goal',
     description:
       'Artificial Intelligence (AI) has become the crown jewel of innovation in today',
     link: '/hype-hijack-goal',
   },
-     {
+  {
     id: 7,
     date: '2025-05-29',
     image: '/blog/blog7.jpg',
@@ -65,8 +65,8 @@ const blogPosts = [
       'Colorectal cancer remains one of the leading causes of cancer-related deaths globally. The introduction of virtual colonoscopy through CT colonography offers a non-invasive, patient-friendly diagnostic',
     link: '/revolutionizing-virtual-colonoscopy',
   },
-       {
-    id: 7,
+  {
+    id: 8, // changed from 7 → 8
     date: '2025-05-29',
     image: '/blog/blog8.jpg',
     title: 'UAE Makes History with Free ChatGPT Plus for Every Resident',
