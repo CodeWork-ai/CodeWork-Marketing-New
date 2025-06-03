@@ -1,6 +1,6 @@
 import React from 'react'
 import Blog1 from '../components/launchModesAndorid/blog1'
-import Faqs1 from '../components/FAQsforBlog/faqs2'
+import Faqs1 from '../components/FAQsforBlog/faqs1'
 
 const page = () => {
   return (
