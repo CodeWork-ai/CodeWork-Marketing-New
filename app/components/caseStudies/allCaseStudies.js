@@ -63,8 +63,8 @@ const AllCaseStudies = () => {
   const visibleStudies = showAll ? caseStudies : caseStudies.slice(0, 4);
 
   return (
-    <div className="max-w-7xl bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] mx-auto px-16 py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-11">
+    <div className="bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] mx-auto px-24 py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
         {visibleStudies.map(({ id, title, description, imageUrl, link }) => (
           <div
             key={id}

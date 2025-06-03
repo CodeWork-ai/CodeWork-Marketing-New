@@ -11,7 +11,7 @@ const Clients = () => {
     { name: 'STOREFRIES', logo: '/client/storefries.svg' },
     { name: 'EXTRA1', logo: '/client/webSign.png' },
     { name: 'EXTRA2', logo: '/client/sparksGlobal.svg' },
-    { name: 'Prezerv', logo: '/client/Prezerv.svg' },
+    // { name: 'Prezerv', logo: '/client/Prezerv.svg' },
   ];
 
   return (
