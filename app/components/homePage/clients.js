@@ -5,14 +5,12 @@ const Clients = () => {
   const clientLogos = [
     { name: 'AIKYNF', logo: '/client/AIKYINE.png' },
     { name: 'INTULOGIC', logo: '/client/intulogic.svg' },
-    { name: 'Sparks Global', logo: '/client/Prezerv.svg' },
     { name: 'NALAM', logo: '/client/nalam.svg' },
     { name: 'MTM', logo: '/client/mtm.svg' },
     { name: 'STOREFRIES', logo: '/client/storefries.svg' },
     { name: 'EXTRA1', logo: '/client/webSign.png' },
     { name: 'EXTRA2', logo: '/client/sparksGlobal.svg' },
-    { name: 'Prezerv', logo: '/client/Prezerv.png' },
-    
+    { name: 'Prezerv', logo: '/client/Prezerv.svg' },
   ];
 
   return (
