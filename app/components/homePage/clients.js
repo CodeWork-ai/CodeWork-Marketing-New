@@ -5,6 +5,7 @@ const Clients = () => {
   const clientLogos = [
     { name: 'AIKYNF', logo: '/client/AIKYINE.png' },
     { name: 'INTULOGIC', logo: '/client/intulogic.svg' },
+    { name: 'Prezerv', logo: '/client/prezervv.png' },
     { name: 'NALAM', logo: '/client/nalam.svg' },
     { name: 'MTM', logo: '/client/mtm.svg' },
     { name: 'STOREFRIES', logo: '/client/storefries.svg' },
