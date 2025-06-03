@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 const Clients = () => {
   const clientLogos = [
     { name: 'AIKYNF', logo: '/client/AIKYINE.png' },
-    { name: 'Prezerv', logo: '/client/Prezerv.svg' },
+    { name: 'Prezerv', logo: '/client/Prezerv.png' },
     { name: 'INTULOGIC', logo: '/client/intulogic.svg' },
     { name: 'NALAM', logo: '/client/nalam.svg' },
     { name: 'MTM', logo: '/client/mtm.svg' },
