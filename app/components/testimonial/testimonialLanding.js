@@ -11,7 +11,7 @@ const TestimonialLanding = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10  w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-10">
+        <div className="heading-container pt-16 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 mb-10">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
           Testimonials 
           </h1>

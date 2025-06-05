@@ -1,5 +1,5 @@
-import React from 'react'
-import { FiArrowRight, FiClock } from 'react-icons/fi'
+import React from 'react';
+import { FiArrowRight, FiClock } from 'react-icons/fi';
 
 const blogPosts = [
   {
@@ -14,7 +14,7 @@ const blogPosts = [
   {
     id: 2,
     date: '2025-02-10',
-    image: 'blog/blog2.jpg',
+    image: '/blog/blog2.jpg',
     title: 'From Algorithms to Agents',
     description:
       'Artificial Intelligence (AI) has become a transformative force in today’s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create. But how did we get here? In this blog,',
@@ -66,7 +66,7 @@ const blogPosts = [
     link: '/revolutionizing-virtual-colonoscopy',
   },
   {
-    id: 8, // changed from 7 → 8
+    id: 8,
     date: '2025-05-29',
     image: '/blog/blog8.jpg',
     title: 'UAE Makes History with Free ChatGPT Plus for Every Resident',
@@ -74,63 +74,62 @@ const blogPosts = [
       'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
     link: '/uae-makes-history',
   },
-]
+];
 
 const AllBlogList = () => {
   return (
-    <div className="w-full px-4 py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF]">
-      <div className="flex flex-wrap px-8 -mx-6">
+    <div className="w-full px-4 sm:px-6 py-12 sm:py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF]">
+      <div className="flex flex-wrap px-4 sm:px-8 -mx-4 sm:-mx-6">
         {blogPosts.map(post => {
           const formattedDate = new Date(post.date).toLocaleDateString(undefined, {
             month: 'long',
             day: 'numeric',
             year: 'numeric',
-          })
+          });
 
           return (
             <div
               key={post.id}
-              className="w-full sm:w-1/2 lg:w-1/3 px-12 mb-12"
+              className="w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-12 mb-8 sm:mb-12"
             >
               <div className="h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-50 dark:border-gray-50 flex flex-col">
                 <a href={post.link}>
                   <img
-                    className="rounded-t-lg w-full object-cover"
+                    className="rounded-t-lg w-full h-48 sm:h-64 object-cover"
                     src={post.image}
                     alt={post.title}
                   />
                 </a>
-                <div className="p-5 flex flex-col flex-grow">
-                  <div className="flex items-center mb-2 text-sm text-gray-800 dark:text-gray-900">
+                <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                  <div className="flex items-center mb-2 text-xs sm:text-sm text-gray-800 dark:text-gray-900">
                     <FiClock className="mr-1" />
                     <span>{formattedDate}</span>
                   </div>
                   <a href={post.link} className="hover:underline">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
+                    <h5 className="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                       {post.title}
                     </h5>
                   </a>
-                  <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 line-clamp-2">
+                  <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 text-sm sm:text-base line-clamp-2">
                     {post.description}
                   </p>
                   <div className="mt-auto flex justify-end">
                     <a
                       href={post.link}
-                      className="group inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue-950 bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-600 dark:focus:ring-cyan-400"
+                      className="group inline-flex items-center px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium text-center text-blue-950 bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-600 dark:focus:ring-cyan-400"
                     >
                       Read more
-                      <FiArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-2" />
+                      <FiArrowRight className="ml-1 sm:ml-2 transition-transform duration-200 group-hover:translate-x-2" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-
-export default AllBlogList
+export default AllBlogList;

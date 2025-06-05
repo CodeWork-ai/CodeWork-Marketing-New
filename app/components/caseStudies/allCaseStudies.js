@@ -18,7 +18,6 @@ const caseStudies = [
     imageUrl: '/CaseStudies/colonScan.jpg',
     link: '/colowatch-case-studies',
   },
-  // …and six more items (3 through 8)…
   {
     id: 3,
     title: 'Hyperflex.ai',
@@ -63,8 +62,8 @@ const AllCaseStudies = () => {
   const visibleStudies = showAll ? caseStudies : caseStudies.slice(0, 4);
 
   return (
-    <div className="bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] mx-auto px-24 py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+    <div className="bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] mx-auto px-4 sm:px-6 md:px-24 py-12 sm:py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-20">
         {visibleStudies.map(({ id, title, description, imageUrl, link }) => (
           <div
             key={id}
@@ -73,11 +72,11 @@ const AllCaseStudies = () => {
             <img
               src={imageUrl}
               alt={title}
-              className="w-full h-64 object-cover"
+              className="w-full h-48 sm:h-64 object-cover"
             />
-            <div className="p-6">
-              <h3 className="text-2xl text-gray-800  font-semibold mb-2">{title}</h3>
-              <p className="text-gray-600 mb-4">{description}</p>
+            <div className="p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl text-gray-800 font-semibold mb-2">{title}</h3>
+              <p className="text-gray-600 text-sm sm:text-base mb-4">{description}</p>
               <a
                 href={link}
                 className="inline-block text-blue-600 font-medium hover:underline"
@@ -93,7 +92,7 @@ const AllCaseStudies = () => {
       <div className="mt-8 text-center">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="px-6 py-2 border border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-50"
+          className="px-4 py-2 sm:px-6 sm:py-2 border border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-50"
         >
           {showAll ? 'Show Less' : 'View All'}
         </button>
