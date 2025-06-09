@@ -137,12 +137,11 @@ const Blog9 = () => {
         {/* CALL TO ACTION */}
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Call to Action</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
-          Are you ready to build a responsible AI culture in your organization? Contact the <a href="https://codework.ai" className="text-blue-600 hover:underline">Codework.ai</a> team to learn how we can help you integrate safe, ethical, and innovative AI solutions into your business.
+          Are you ready to build a responsible AI culture in your organization? <br></br>
+           
+           Contact the <a href="https://codework.ai/contact-ai-solutions" className="text-blue-600 hover:underline">Codework.ai</a> team to learn how we can help you integrate safe, ethical, and innovative AI solutions into your business.
         </p>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          <strong>CODEWORK:</strong> Top AI Software Development Company | Custom AI Solutions<br />
-          Discover top-notch AI software development services tailored to your business needs. <a href="https://codework.ai" className="text-blue-600 hover:underline">Contact us</a> for custom AI solutions.
-        </p>
+
       </div>
     </div>
   );
