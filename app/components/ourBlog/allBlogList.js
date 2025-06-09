@@ -74,15 +74,15 @@ const blogPosts = [
       'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
     link: '/uae-makes-history',
   },
-  // {
-  //   id: 9,
-  //   date: '2025-05-29',
-  //   image: '/blog/blog9.jpg',
-  //   title: 'The Deepfake Dilemma: What Leaders Must Know',
-  //   description:
-  //     'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
-  //   link: '/',
-  // },
+  {
+    id: 9,
+    date: '2025-05-29',
+    image: '/blog/blog9.jpg',
+    title: 'The Deepfake Dilemma: What Leaders Must Know',
+    description:
+      'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
+    link: '/the-deepfake-dilemma',
+  },
 ];
 
 const AllBlogList = () => {
