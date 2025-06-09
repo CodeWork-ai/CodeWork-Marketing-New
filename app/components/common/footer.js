@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,11 +17,13 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { BsGlobe2 } from "react-icons/bs";
 
 const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   const socialMedia = [
-       {
+    {
       label: "YouTube",
       Icon: FaYoutube,
-      link: "https://www.youtube.com/@codework.aisolutions", 
+      link: "https://www.youtube.com/@codework.aisolutions",
     },
     {
       label: "Twitter",
@@ -70,7 +72,26 @@ const Footer = () => {
     { href: "/our-company-case-studies", label: "Case Studies" },
   ];
 
+  const allLinks = [
+    ...quickLinks,
+    ...contactLinks,
+    ...serviceLinks,
+    ...educationLinks,
+    { href: "/industries-you-must-know", label: "Industries" },
+  ];
+
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 640);
+      };
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -89,8 +110,8 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">
               Quick Links
             </h3>
-            <ul className="space-y-2">
-              {quickLinks.map((item) => (
+            <ul className="max-sm:grid max-sm:grid-cols-3 max-sm:gap-2 max-sm:grid-rows-3 sm:space-y-2">
+              {(isMobile ? allLinks : quickLinks).map((item) => (
                 <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
@@ -108,7 +129,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div>
+          <div className="max-sm:hidden">
             <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {contactLinks.map((item) => (
                 <li key={item.href}>
@@ -128,7 +149,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="max-sm:hidden">
             <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {serviceLinks.map((item) => (
                 <li key={item.href}>
@@ -148,7 +169,7 @@ const Footer = () => {
           </div>
 
           {/* Testimonials & Expertise */}
-          <div>
+          <div className="max-sm:hidden">
             <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {educationLinks.map((item) => (
                 <li key={item.href}>
@@ -168,7 +189,7 @@ const Footer = () => {
           </div>
 
           {/* Industries & Case Studies */}
-          <div>
+          <div className="max-sm:hidden">
             <ul className="space-y-2 sm:pt-0 lg:pt-9 xl:pt-9">
               {dataSecurityLinks.map((item) => (
                 <li key={`${item.href}-${item.label}`}>
@@ -188,11 +209,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Row — Updated for mobile alignment */}
+        {/* Bottom Row */}
         <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full text-left">
           {/* Get In Touch */}
           <div>
-            <h3 className="text-base lg:pt-9 sm:pt-0 xl:pt-9  sm:text-lg font-semibold mb-3 sm:mb-4">
+            <h3 className="text-base lg:pt-9 sm:pt-0 xl:pt-9 sm:text-lg font-semibold mb-3 sm:mb-4">
               Get In Touch
             </h3>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
@@ -228,15 +249,15 @@ const Footer = () => {
 
           {/* USA */}
           <div>
-            <h3 className="text-base  lg:pt-6 sm:pt-0 xl:pt-6 sm:text-lg font-semibold mb-3 sm:mb-4">
+            <h3 className="text-base lg:pt-6 sm:pt-0 xl:pt-6 sm:text-lg font-semibold mb-3 sm:mb-4">
               USA
             </h3>
-            <div className="flex items-start space-x-4 ">
+            <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                 <FaMapMarkerAlt size={16} className="text-white" />
               </div>
               <p className="text-xs sm:text-sm">
-                 6, River Oaks Cir W,
+                6, River Oaks Cir W,
                 <br />
                 Buffalo Grove, IL 60089, USA
               </p>
@@ -246,7 +267,7 @@ const Footer = () => {
                 href="https://thecodeworx.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-blue-500 hover:text-gray-500 ml-12 "
+                className="font-bold text-blue-500 hover:text-gray-500 ml-12"
               >
                 codeworkx
               </a>

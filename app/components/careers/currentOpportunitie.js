@@ -22,8 +22,8 @@ const CurrentOpportunitie = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
+        <div className="heading-container sm:mb-10 md:mb-16 lg:mb-16 xl:mb-16 pt-12">
+          <h2 className="text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
           Current Opportunities        </h2>
         </div>
 
