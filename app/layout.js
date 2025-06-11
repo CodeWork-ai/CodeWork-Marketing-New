@@ -185,7 +185,56 @@ const getMetaTags = (pathname) => {
         title: "Smart Search Engine for Academic Research",
         description: "Hyperflx.AI streamlines academic research by providing accurate, relevant, and well-organized educational content to enhance learning outcomes.",
       };
-      
+      case "/launch-modes-andorid":
+      return {
+        title: "Activity Launch Modes in Android Explained",
+        description: "Explore Android Activity Launch Modes in detail. Learn how Standard, SingleTop, SingleTask, and SingleInstance affect app behavior and user navigation.",
+        keywords: "Android Activity Launch Modes, Launch Modes in Android, Android app navigation, Activity lifecycle Android, Android development guide",
+
+      };
+      case "/algorithms-to-agents":
+      return {
+        title: "From Algorithms to Intelligent AI Agents",
+        description: "Discover the evolution from basic algorithms to intelligent agents in AI. Understand their roles, decision-making processes, and real-world applications.",
+        keywords: "AI agents, evolution of algorithms, artificial intelligence, intelligent systems, machine learning agents", 
+      };
+      case "/workmanager-alarmmanager-Jobscheduler":
+      return {
+        title: "WorkManager vs AlarmManager vs JobScheduler",
+        description: "Compare WorkManager, AlarmManager, and JobScheduler in Android. Learn when to use each for background tasks, scheduling, and optimal app performance.",
+        keywords: "WorkManager Android, AlarmManager Android, JobScheduler Android, Android background tasks, Android task scheduling",
+      };
+      case "/model-context-protocol":
+      return {
+        title: "Model Context Protocol in AI: A Game Changer",
+        description: "Explore how the Model Context Protocol is revolutionizing AI by enabling smarter interactions, enhanced context awareness, and improved performance.",
+        keywords: "Model Context Protocol, AI context awareness, advanced AI protocols, future of artificial intelligence, intelligent model interaction",
+      };
+      case "/tweaks-powerful-adaptations":
+      return {
+        title: "LoRA in AI: Small Changes, Big Improvements",
+        description: "Understand how Low-Rank Adaptation (LoRA) enhances AI models with minimal changes. Learn its role in fine-tuning and efficient model adaptation.",
+        keywords: "LoRA in AI, Low-Rank Adaptation, AI model fine-tuning, efficient AI training, LoRA explained",
+      };
+      case "/hype-hijack-goal":
+      return {
+        title: "Avoid AI Hype: Focus on Practical Business Solutions",
+        description: "Discover how to adopt AI responsibly by solving real problems first. Learn why simple, data-driven solutions often outperform complex AI strategies.",
+        keywords: "Responsible AI adoption, Practical AI strategies, Data readiness for AI, Business problem solving, Simple AI solutions, AI implementation guide, Avoid AI project failure",
+      };
+      case "/revolutionizing-virtual-colonoscopy":
+      return {
+        title: "Radi Insight 3D: Virtual Colonoscopy Tech",
+        description: "Explore how Radi Insight 3D is transforming virtual colonoscopy with advanced 3D imaging, enhancing diagnostic accuracy and patient experience.",
+        keywords: "Android Activity Launch Modes, Launch Modes in Android, Android app navigation, Activity lifecycle Android, Android development guide",
+      };
+      case "/uae-makes-history":
+      return {
+        title: "UAE Offers Free ChatGPT Plus to All Residents",
+        description: "UAE becomes the first nation to provide free ChatGPT Plus access to all residents, marking a bold step in AI accessibility and digital innovation.",
+        keywords: "AI agents, evolution of algorithms, artificial intelligence, intelligent systems, machine learning agents",
+      };
+
     default:
       return {
         title: "Codework",

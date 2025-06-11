@@ -32,49 +32,49 @@ const OurServices = () => {
       title: "Custom Development",
       icon: FaDatabase,
       tooltip: "Custom Development",
-      link: "/custom-software-development", // Added link here
+      link: "/custom-software-development",
     },
     { 
       title: "DevOps Solutions", 
       icon: BiSync, 
       tooltip: "DevOps Solutions",
-      link: "/devops-solutions" // Added link here
+      link: "/devops-solutions",
     },
     { 
       title: "Cloud Computing", 
       icon: FaCloud, 
       tooltip: "Cloud Computing",
-      link: "/cloud-computing" // Added link here
+      link: "/cloud-computing",
     },
     { 
       title: "Cyber security", 
       icon: FaShieldAlt, 
       tooltip: "Cyber security",
-      link: "/cybersecurity-service" // Added link here
+      link: "/cybersecurity-service",
     },
     {
       title: "Mobile Development",
       icon: FaMobile,
       tooltip: "Mobile Development",
-      link: "/mobile-software-development" // Added link here
+      link: "/mobile-software-development",
     },
     { 
       title: "Web Designing", 
       icon: FaGlobe, 
       tooltip: "Web Designing",
-      link: "/web-design-service" // Added link here
+      link: "/web-design-service",
     },
     {
       title: "IT Staff Augmentation",
       icon: FaUsers,
       tooltip: "IT Staff Augmentation",
-      link: "/it-staff-service" // Added link here
+      link: "/it-staff-service",
     },
     {
       title: "Penetration Testing",
       icon: FaLock,
       tooltip: "Penetration Testing",
-      link: "/penetration-testing-service" // Added link here
+      link: "/penetration-testing-service",
     },
   ];
 
@@ -83,25 +83,39 @@ const OurServices = () => {
   const row2 = services.slice(3, 7);
   const row3 = services.slice(7, 10);
 
-  // Render icon, now every service is wrapped in a Link, defaulting to '#' if missing
-  const renderIcon = (service, idx) => {
+  // Render icon with animation for specific columns
+  const renderIcon = (service, idx, rowIdx) => {
+    // Determine if the icon is in the first or last column of its row
+    const isFirstColumn = idx === 0;
+    const isLastColumn = 
+      (rowIdx === 0 && idx === row1.length - 1) ||
+      (rowIdx === 1 && idx === row2.length - 1) ||
+      (rowIdx === 2 && idx === row3.length - 1);
+    
+    // Define animation classes based on column position
+    let animationClass = "";
+    if (service.title === "AI Model Training" || service.title === "DevOps Solutions" || service.title === "Web Designing") {
+      animationClass = isFirstColumn ? "hover:-translate-x-2" : "";
+    } else if (isLastColumn) {
+      animationClass = "hover:translate-x-2";
+    }
+
     const iconContent = (
-      <div className="relative">
+      <div className="relative group">
         {/* Circle + border arc */}
         <div
-          className="
-            peer
+          className={`
             w-20 h-20
             bg-white
             rounded-full
             flex items-center justify-center
             shadow-sm hover:shadow-md
             hover:bg-gradient-to-b hover:from-purple-300 hover:to-cyan-300
-            transition-transform duration-300
+            transition-all duration-300
             cursor-pointer
-            transform hover:scale-110
+            transform hover:scale-110 ${animationClass}
             relative
-          "
+          `}
         >
           {React.createElement(service.icon, {
             className: "text-3xl text-indigo-950",
@@ -117,11 +131,11 @@ const OurServices = () => {
             "
           />
         </div>
-        {/* Tooltip, appears only on peer-hover */}
+        {/* Tooltip, appears only on hover */}
         <div
           className="
             absolute
-            opacity-0 peer-hover:opacity-100
+            opacity-0 group-hover:opacity-100
             -top-20 right-0
             w-64 px-6 py-3
             text-lg font-medium text-[#1A2B3B]
@@ -149,7 +163,7 @@ const OurServices = () => {
     );
 
     return (
-      <Link key={idx} href={service.link || "#"}>
+      <Link key={`${rowIdx}-${idx}`} href={service.link || "#"}>
         {iconContent}
       </Link>
     );
@@ -181,13 +195,13 @@ const OurServices = () => {
           {/* Right Column: Icon Grid */}
           <div className="md:w-1/2 flex flex-col items-end space-y-6">
             <div className="flex justify-end space-x-6">
-              {row1.map(renderIcon)}
+              {row1.map((service, idx) => renderIcon(service, idx, 0))}
             </div>
             <div className="flex justify-end space-x-7 transform translate-x-12">
-              {row2.map(renderIcon)}
+              {row2.map((service, idx) => renderIcon(service, idx, 1))}
             </div>
             <div className="flex justify-end space-x-6">
-              {row3.map(renderIcon)}
+              {row3.map((service, idx) => renderIcon(service, idx, 2))}
             </div>
           </div>
         </div>
