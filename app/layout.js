@@ -132,8 +132,9 @@ const getMetaTags = (pathname) => {
       };
     case "/web-design-service":
       return {
-        title: "Complete software development services by Codework",
-        description: "Modern and creative web designing by Codework",
+        title: "Creative web design services by Codework",
+        keywords: "web design, creative web design, modern web design, responsive web design, UI/UX design, website development, Codework web design",
+        description: "Transform your online presence with Codework’s creative web design services. We build modern, responsive websites that engage users and drive results.",
       };
     case "/it-staff-service":
       return {
@@ -154,6 +155,11 @@ const getMetaTags = (pathname) => {
       return {
         title: "Accelerate delivery with DevOps solutions by Codework",
         description: "Streamline software delivery with Codework’s DevOps solutions. CI/CD, automation, and cloud-native tools for better collaboration.",
+      };
+    case "/cloud-computing":
+      return {
+        title: "Cloud computing services by Codework",
+        description: "Leverage the power of the cloud with Codework’s computing services. Scalable, secure, and cost-effective solutions for your business.",
       };
       case "/ai-powered-pdf-translator":
       return {
@@ -233,6 +239,42 @@ const getMetaTags = (pathname) => {
         title: "UAE Offers Free ChatGPT Plus to All Residents",
         description: "UAE becomes the first nation to provide free ChatGPT Plus access to all residents, marking a bold step in AI accessibility and digital innovation.",
         keywords: "AI agents, evolution of algorithms, artificial intelligence, intelligent systems, machine learning agents",
+      };
+      case "/privacy-policy":
+      return {
+        title: "privacy-policy",
+        description: "",
+        keywords: "",
+      };
+      case "/careers-at-codework":
+      return {
+        title: "careers-at-codework",
+        description: "",
+        keywords: "",
+      };
+      case "/industries-you-must-know":
+      return {
+        title: "industries-you-must-know",
+        description: "",
+        keywords: "",
+      };
+      case "/join-our-team":
+      return {
+        title: "join-our-team",
+        description: "",
+        keywords: "",
+      };
+      case "/internship":
+      return {
+        title: "internship",
+        description: "",
+        keywords: "",
+      };
+      case "/the-deepfake-dilemma":
+      return {
+        title: "the-deepfake-dilemma",
+        description: "",
+        keywords: "",
       };
 
     default:
