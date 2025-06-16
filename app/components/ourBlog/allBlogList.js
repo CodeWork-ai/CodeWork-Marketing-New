@@ -83,6 +83,16 @@ const blogPosts = [
       'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
     link: '/the-deepfake-dilemma',
   },
+
+  {
+    id: 10,
+    date: '2025-06-13',
+    image: '/blog/blog10.jpg',
+    title: 'Revolutionizing Hiring: How CODEWORK is Automating Recruitment with AI',
+    description:
+      'The recruitment process is undergoing a major shift, and CODEWORK is leading the way. CODEWORK transforms traditional hiring into an efficient, data-driven system by integrating AI recruitment tools and automation technologies.',
+    link: '/revolutionizing-hiring',
+  },
 ];
 
 const AllBlogList = () => {
