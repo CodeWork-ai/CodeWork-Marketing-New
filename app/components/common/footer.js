@@ -220,7 +220,7 @@ const Footer = () => {
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                 <FaPhone size={14} className="text-white sm:text-base" />
               </div>
-              <p className="text-xs sm:text-sm">+91 75989 81500</p>
+              <p className="text-xs sm:text-sm">+91 9566176914</p>
             </div>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
