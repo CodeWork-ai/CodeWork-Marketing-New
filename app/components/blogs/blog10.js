@@ -112,7 +112,6 @@ const Blog10 = () => {
         </p>
 
         {/* CALL TO ACTION */}
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Call to Action</h2>
         <p className="text-gray-700 leading-relaxed mb-6">
           Ready to revolutionize your recruitment process?{" "}
           <a

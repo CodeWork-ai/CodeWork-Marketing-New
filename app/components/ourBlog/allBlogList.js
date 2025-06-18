@@ -93,6 +93,15 @@ const blogPosts = [
       'The recruitment process is undergoing a major shift, and CODEWORK is leading the way. CODEWORK transforms traditional hiring into an efficient, data-driven system by integrating AI recruitment tools and automation technologies.',
     link: '/revolutionizing-hiring',
   },
+  {
+    id: 11,
+    date: '2025-06-17',
+    image: '/blog/blog11.jpg',
+    title: 'Artificial Intelligence, or AI, has evolved beyond just being a trendy term—it',
+    description:
+      'It’s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
+    link: '/the-new-era-of-ai',
+  },
 ];
 
 const AllBlogList = () => {
