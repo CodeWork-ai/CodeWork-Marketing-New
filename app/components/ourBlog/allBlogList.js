@@ -97,7 +97,7 @@ const blogPosts = [
     id: 11,
     date: '2025-06-17',
     image: '/blog/blog11.jpg',
-    title: 'Artificial Intelligence, or AI, has evolved beyond just being a trendy term—it',
+    title: ' The New Era of AI: How Digital Marketing Will Never Be the Same Again',
     description:
       'It’s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
     link: '/the-new-era-of-ai',
