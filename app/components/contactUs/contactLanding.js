@@ -224,20 +224,20 @@ const ContactLanding = () => {
 						</div>
 
 						{/* mobile */}
-						<div>
-							<label className="text-sm mb-2 block">Mobile Number *</label>
-							<input
-								name="Mobile"
-								type="tel"
-								value={formData.mobile}
-								onChange={handleChange}
-								className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
-								placeholder="Enter Mobile Number"
-							/>
-							{errors.mobile && (
-								<p className="text-red-500 text-xs mt-1">{errors.mobile}</p>
-							)}
-						</div>
+<div>
+    <label className="text-sm mb-2 block">Mobile Number *</label>
+    <input
+        name="mobile" 
+        type="tel"
+        value={formData.mobile}
+        onChange={handleChange}
+        className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
+        placeholder="Enter Mobile Number"
+    />
+    {errors.mobile && (
+        <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>
+    )}
+</div>
 
 						{/* Referral */}
 						<div>
