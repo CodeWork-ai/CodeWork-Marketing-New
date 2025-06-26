@@ -36,7 +36,7 @@ const IndustriesCards = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-32">
+    <div className="container bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF] mx-auto px-4 py-32">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         {cardData.map((card, idx) => (
           <div
@@ -50,7 +50,7 @@ const IndustriesCards = () => {
                 className="w-full h-full object-cover"
               />
             </figure>
-            <div className="card-body p-6 flex flex-col justify-between h-48">
+            <div className="card-body bg-white p-6 flex flex-col justify-between h-48">
               <div>
                 <h2 className="card-title text-lg font-bold text-gray-800">
                   {card.title}

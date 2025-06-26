@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-const MobileDevelopmentLanding = () => {
+const DigitalMarketingLanding = () => {
   return (
     <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-[#F6F5FF]">
       {/* Background Video */}
@@ -24,7 +24,7 @@ const MobileDevelopmentLanding = () => {
         {/* Heading Container */}
         <div className="heading-container pt-16 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 mb-24">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold ">
-         Scalable and High-Performance Mobile Applications
+       Digital Marketing Services
             
           </h1>
         </div>
@@ -32,11 +32,11 @@ const MobileDevelopmentLanding = () => {
         {/* Paragraph Container */}
         <div className="paragraph-container mb-8">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
-Codework specializes in developing cutting-edge mobile applications to enhance user engagement, optimize business operations, and drive digital transformation. With expertise in native app development, cross-platform solutions, and AI-powered mobile applications, every project is designed for scalability, security, and seamless performance.          </p>
+Digital Marketing strategies for businesses to improve their online reach, attract potential leads, and boost conversions.</p>
         </div>
       </div>
     </section>
   );
 };
 
-export default MobileDevelopmentLanding;
+export default DigitalMarketingLanding;

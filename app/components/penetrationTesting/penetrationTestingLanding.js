@@ -22,8 +22,8 @@ const PenetrationTestingLanding = () => {
       {/* Content Container - Updated width to 80% */}
       <div className="relative z-10 w-[80%] mx-auto px-4 text-left text-gray-800">
         {/* Heading Container */}
-        <div className="heading-container mb-24">
-          <h1 className="text-3xl sm:text-4xl pt-7 md:text-4xl lg:text-4xl xl:text-4xl font-semibold">
+        <div className="heading-container pt-16 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 mb-24">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold">
         Penetration Testing Services: Strengthening Cybersecurity 
           with Ethical Hacking
           </h1>
