@@ -146,7 +146,7 @@ const AllBlogList = () => {
                       href={post.link}
                       className="group inline-flex items-center px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium text-center text-blue-950 bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-600 dark:focus:ring-cyan-400"
                     >
-                      Read more
+                      Continue Reading
                       <FiArrowRight className="ml-1 sm:ml-2 transition-transform duration-200 group-hover:translate-x-2" />
                     </a>
                   </div>

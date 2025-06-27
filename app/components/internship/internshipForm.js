@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { FiUploadCloud, FiFile, FiCheckCircle, FiX } from "react-icons/fi";
 
 const InternshipForm = () => {
     const [formData, setFormData] = useState({
@@ -13,6 +14,10 @@ const InternshipForm = () => {
 
     const [responseMessage, setResponseMessage] = useState('');
     const [loading, setLoading] = useState(false);
+    const [dragActive, setDragActive] = useState(false);
+    const [fileName, setFileName] = useState("");
+    const [fileError, setFileError] = useState("");
+    const fileInputRef = useRef(null);
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -21,7 +26,15 @@ const InternshipForm = () => {
 
     const handleFileChange = async (e) => {
         const file = e.target.files[0];
-        if (file && file.type === 'application/pdf') {
+        handleFile(file);
+    };
+
+    const handleFile = (file) => {
+        setFileError("");
+        if (!file) return;
+        
+        if (file.type === 'application/pdf') {
+            setFileName(file.name);
             const reader = new FileReader();
             reader.onload = () => {
                 const base64 = reader.result.split(',')[1]; // Extract base64 content
@@ -29,7 +42,40 @@ const InternshipForm = () => {
             };
             reader.readAsDataURL(file);
         } else {
-            alert('Please upload a valid PDF file.');
+            setFileError("Please upload a valid PDF file.");
+            setFileName("");
+            setFormData({ ...formData, resume: null });
+        }
+    };
+
+    const handleDrag = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.type === "dragenter" || e.type === "dragover") {
+            setDragActive(true);
+        } else if (e.type === "dragleave") {
+            setDragActive(false);
+        }
+    };
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragActive(false);
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            handleFile(e.dataTransfer.files[0]);
+        }
+    };
+
+    const onButtonClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const removeFile = () => {
+        setFileName("");
+        setFormData({ ...formData, resume: null });
+        if (fileInputRef.current) {
+            fileInputRef.current.value = "";
         }
     };
 
@@ -61,7 +107,10 @@ const InternshipForm = () => {
                 contact: '',
                 resume: null,
             });
-            document.getElementById('resume').value = ''; // Reset file input
+            setFileName("");
+            if (fileInputRef.current) {
+                fileInputRef.current.value = ''; // Reset file input
+            }
         } catch (error) {
             setResponseMessage('Something went wrong. Please try again later.');
         } finally {
@@ -78,10 +127,10 @@ const InternshipForm = () => {
                     We are committed to empowering the next generation of innovators through hands-on experience in AI, ML, and Data Science. Join our internship program to gain real-world skills, work on impactful projects, and build a strong foundation for your future career in technology.
                 </p>
                 <p className="text-lg">
-                    If you’re interested, we’d love to hear from you!
+                    If you're interested, we'd love to hear from you!
                 </p>
                 <p className="text-lg">
-                    Let’s make this an unforgettable journey together. Apply now and kickstart your career!
+                    Let's make this an unforgettable journey together. Apply now and kickstart your career!
                 </p>
             </div>
 
@@ -148,20 +197,76 @@ const InternshipForm = () => {
                         className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
                     />
 
-                    {/* Resume */}
-                    <div>
-                        <div>
-                            <label className="font-semibold">Attach Resume / CV</label>
+                    {/* Resume - Enhanced File Upload */}
+                    <div className="space-y-2">
+                        <label
+                            htmlFor="resume"
+                            className="block font-semibold text-gray-700"
+                        >
+                            Attach Resume / CV *
+                        </label>
+                        
+                        <div 
+                            className={`relative border-2 border-dashed rounded-lg p-6 ${dragActive ? 'border-cyan-500 bg-cyan-50' : 'border-gray-300'} ${fileName ? 'bg-gray-50' : ''} transition-all duration-200 ease-in-out`}
+                            onDragEnter={handleDrag}
+                            onDragLeave={handleDrag}
+                            onDragOver={handleDrag}
+                            onDrop={handleDrop}
+                        >
+                            <input
+                                type="file"
+                                id="resume"
+                                name="resume"
+                                ref={fileInputRef}
+                                accept="application/pdf"
+                                required={!formData.resume}
+                                onChange={handleFileChange}
+                                className="hidden"
+                            />
+                            
+                            {!fileName ? (
+                                <div className="flex flex-col items-center justify-center space-y-3">
+                                    <FiUploadCloud className="w-10 h-10 text-cyan-500" />
+                                    <div className="text-center">
+                                        <p className="text-gray-700 font-medium">Drag & drop your resume here</p>
+                                        <p className="text-sm text-gray-500">or</p>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        onClick={onButtonClick}
+                                        className="px-4 py-2 bg-cyan-100 text-cyan-600 rounded-md hover:bg-cyan-200 transition-colors duration-200 font-medium text-sm"
+                                    >
+                                        Browse Files
+                                    </button>
+                                    <p className="text-xs text-gray-500 mt-2">Supports PDF files only</p>
+                                </div>
+                            ) : (
+                                <div className="flex items-center justify-between bg-white p-3 rounded-md border border-gray-200">
+                                    <div className="flex items-center space-x-3">
+                                        <div className="bg-cyan-100 p-2 rounded-md">
+                                            <FiFile className="text-cyan-600 w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium text-gray-700 truncate max-w-[200px]">{fileName}</p>
+                                            <p className="text-xs text-green-600 flex items-center">
+                                                <FiCheckCircle className="mr-1" /> Ready to upload
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button 
+                                        type="button" 
+                                        onClick={removeFile}
+                                        className="text-gray-500 hover:text-red-500 transition-colors duration-200"
+                                    >
+                                        <FiX className="w-5 h-5" />
+                                    </button>
+                                </div>
+                            )}
                         </div>
-                        <input
-                            type="file"
-                            id="resume"
-                            name="resume"
-                            accept="application/pdf"
-                            required
-                            onChange={handleFileChange}
-                            className="py-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50"
-                        />
+                        
+                        {fileError && (
+                            <p className="text-red-500 text-sm mt-1">{fileError}</p>
+                        )}
                     </div>
 
                     {/* Submit Button */}
