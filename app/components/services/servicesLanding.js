@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceLanding = () => {
   return (
@@ -20,10 +21,13 @@ const ServiceLanding = () => {
         {/* Paragraph Container */}
         <div className="paragraph-container mb-3">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
-            We redefine possibilities with cutting-edge AI services designed to
+            We redefine possibilities with cutting-edge AI services designed to
             empower businesses in the digital era. Our offerings are not only
             quick, cost-effective, and accurate but also tailored to meet the
             unique needs of each client.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800 mt-12">
+            See how we have developed business in <Link href="/our-company-case-studies" className="text-blue-600 hover:text-blue-800 underline font-medium">our casestudies</Link>
           </p>
         </div>
       </div>

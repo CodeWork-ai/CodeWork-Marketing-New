@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div>
       <CareersHeader />
-      <CurrentOpportunitie />
+      {/* <CurrentOpportunitie /> */}
       <WhyJoinCodework />
       <CareerPage />
     </div>

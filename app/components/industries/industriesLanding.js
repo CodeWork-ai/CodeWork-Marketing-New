@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const IndustriesLanding = () => {
   return (
@@ -24,6 +25,9 @@ const IndustriesLanding = () => {
             challenges of the healthcare, education, finance, e-commerce, and
             cybersecurity sectors. Our industry-focused approach blends
             innovation and expertise to drive growth, security, and experiences.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800 mt-12">
+            Need AI for your field ? <Link href="/ai-services" className="text-blue-600 hover:text-blue-800 underline font-medium">Explore our full Services</Link>
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CaseStudiesLanding = () => {
   return (
@@ -21,6 +22,9 @@ const CaseStudiesLanding = () => {
         <div className="paragraph-container mb-8">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
             Transforming Challenges into Opportunities.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800 mt-12">
+            Looking to get similar results?  <Link href="/contact-ai-solutions" className="text-blue-600 hover:text-blue-800 underline font-medium">contact us</Link>
           </p>
         </div>
       </div>

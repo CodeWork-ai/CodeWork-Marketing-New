@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom responsive utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

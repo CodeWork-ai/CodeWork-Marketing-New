@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FaBrain,
@@ -12,6 +12,7 @@ import {
   FaGlobe,
   FaUsers,
   FaLock,
+  FaBullhorn,
 } from "react-icons/fa";
 import { BiSync } from "react-icons/bi";
 
@@ -27,6 +28,7 @@ const MobileOurServices = () => {
     { title: "Web Designing", icon: FaGlobe, link: "/web-design-service" },
     { title: "IT Staff Augmentation", icon: FaUsers, link: "/it-staff-service" },
     { title: "Penetration Testing", icon: FaLock, link: "/penetration-testing-service" },
+    { title: "Digital Marketing", icon: FaBullhorn, link: "/digital-marketing-services" },
   ];
 
   const totalPages = 2;
@@ -70,6 +72,7 @@ const MobileOurServices = () => {
                       {/* Left arrow decoration */}
                       <span
                         className="
+                          hidden xs:block
                           absolute left-0 top-1/2
                           transform -translate-x-full -translate-y-1/2
                           border-t-[35px] border-t-transparent

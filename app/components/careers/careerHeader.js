@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CareersHeader = () => {
   return (
@@ -21,6 +22,9 @@ const CareersHeader = () => {
         <div className="paragraph-container mb-4">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800">
             We’re on a mission to shape the future with cutting-edge AI technology. Become part of a team that values innovation, collaboration, and excellence.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl leading-relaxed text-gray-800 mt-12">
+           Want to know our story? <Link href="/about-us" className="text-blue-600 hover:text-blue-800 underline font-medium">visit the About us.</Link>
           </p>
         </div>
       </div>
