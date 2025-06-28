@@ -5,8 +5,9 @@ import AllBlogList from '../components/ourBlog/allBlogList'
 const page = () => {
   return (
     <div>
-      <OurBlogLanding/>
-      <AllBlogList/>
+      <OurBlogLanding />
+      <AllBlogList />
+      
     </div>
   )
 }

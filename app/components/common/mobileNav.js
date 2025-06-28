@@ -45,7 +45,7 @@ export default function MobileNavbar() {
           description: "Discover the industries and organizations we serve.",
         },
         {
-          href: "/blog-lists",
+          href: "/our-blog-lists",
           label: "Blogs",
           description:
             "Explore detailed insights from our successful projects.",

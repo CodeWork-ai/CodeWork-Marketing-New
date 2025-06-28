@@ -106,8 +106,8 @@ const blogPosts = [
 
 const AllBlogList = () => {
   return (
-    <div className="w-full px-4 sm:px-6 py-12 sm:py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF]">
-      <div className="flex flex-wrap px-4 sm:px-8 -mx-4 sm:-mx-6">
+    <div className="w-full px-2 sm:px-6 py-8 sm:py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF]">
+      <div className="flex flex-wrap px-0 sm:px-8 -mx-2 sm:-mx-6">
         {blogPosts.map(post => {
           const formattedDate = new Date(post.date).toLocaleDateString(undefined, {
             month: 'long',
@@ -118,12 +118,12 @@ const AllBlogList = () => {
           return (
             <div
               key={post.id}
-              className="w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-12 mb-8 sm:mb-12"
+              className="w-full sm:w-1/2 lg:w-1/3 px-2 sm:px-12 mb-8 sm:mb-12"
             >
               <div className="h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-50 dark:border-gray-50 flex flex-col">
                 <a href={post.link}>
                   <img
-                    className="rounded-t-lg w-full h-48 sm:h-64 object-cover"
+                    className="rounded-t-lg w-full h-40 sm:h-64 object-cover"
                     src={post.image}
                     alt={post.title}
                   />
@@ -134,11 +134,11 @@ const AllBlogList = () => {
                     <span>{formattedDate}</span>
                   </div>
                   <a href={post.link} className="hover:underline">
-                    <h5 className="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
+                    <h5 className="mb-2 text-lg sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                       {post.title}
                     </h5>
                   </a>
-                  <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 text-sm sm:text-base line-clamp-2">
+                  <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 text-xs sm:text-base line-clamp-2">
                     {post.description}
                   </p>
                   <div className="mt-auto flex justify-end">
