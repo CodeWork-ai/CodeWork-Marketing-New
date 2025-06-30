@@ -21,6 +21,25 @@ const ManagementTeam = () => {
       imgSrc: '/managementTeam/mathu-cw-team.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/mathumitha-chennakesavan-027892168/'
     },
+    
+    {
+      name: 'Archana Arun ',
+      title: 'Director',
+      imgSrc: '/managementTeam/DSC_0017.JPG',
+      linkedinUrl: 'https://www.linkedin.com/in'
+    },
+    {
+      name: 'Keerthika M',
+      title: 'Project Manager',
+      imgSrc: '/managementTeam/Keerthika.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/keerthika-mathi-68633419a/'
+    },
+    {
+      name: 'Aparna Prassanakumar ',
+      title: 'Senior Project Manager',
+      imgSrc: '/managementTeam/DSC_0067.JPG',
+      linkedinUrl: 'https://www.linkedin.com/in/aparna-prasannakumar-527aa519/'
+    },
   ];
 
   return (
