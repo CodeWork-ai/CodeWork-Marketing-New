@@ -39,9 +39,9 @@ const getMetaTags = (pathname) => {
     case "/":
       return {
         title:
-          "CODEWORK: Top AI Software Development Company | Custom AI Solutions",
+          "AI Software Development company-CODEWORk/ Custom AI solutions",
         description:
-          "CODEWORK: Discover top-notch AI software development services tailored to your business needs. Contact us for custom AI solutions.",
+          "Unlock powerful AI software development solutions tailored to your business, only at CODEWORK.",
         keywords:
           "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
       };
