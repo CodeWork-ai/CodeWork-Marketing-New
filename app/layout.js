@@ -514,7 +514,52 @@ export default function RootLayout({ children }) {
         <Navbar className="mb-36 px-10 md:px-20" />
         <main>{children}</main>
         <Footer />
-       {/* <ChatBot/> */}
+
+        {/* ChatBot Component below */}
+        <div
+          className={`
+            fixed right-4 bottom-4 z-50
+            transition-all duration-500
+            ${scrollY > 100
+              ? "opacity-100 pointer-events-auto animate-fallDown"
+              : "opacity-0 pointer-events-none animate-fallUp"
+            }
+          `}
+          style={{ willChange: "transform, opacity" }}
+        >
+          <ChatBot />
+        </div>
+
+        {/* Animation styles */}
+        <style jsx global>{`
+          @keyframes fallDown {
+            0% {
+              opacity: 0;
+              transform: translateY(40px) scale(0.95);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+          @keyframes fallUp {
+            0% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(40px) scale(0.95);
+            }
+          }
+          .animate-fallDown {
+            animation: fallDown 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+          }
+          .animate-fallUp {
+            animation: fallUp 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+          }
+        `}</style>
+        {/* End of ChatBot Component */}
       </body>
     </html>
   );
