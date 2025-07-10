@@ -7,12 +7,12 @@ const formatBotResponse = (text) => {
   // Handle JSON response format
   try {
     const parsed = JSON.parse(text);
-    responseText = parsed.answer || text;
+    responseText = parsed.answer || parsed.response || parsed.message || text;
   } catch (e) {
     // If not valid JSON, check for partial JSON format like "{'answer': 'content'}"
     if (text.includes("{'answer':") || text.includes('{"answer":')) {
       // Extract content between quotes after 'answer':
-      const match = text.match(/['"]answer['"]:\s*['"]([^'"]*)['"]/);
+      const match = text.match(/['"]answer['"]:\\s*['"]([^'"]*)['"]/);
       if (match && match[1]) {
         responseText = match[1];
       } else {
@@ -31,13 +31,13 @@ const formatBotResponse = (text) => {
   }
 
   return responseText
-    .replace(/\*\*/g, '') // Remove Markdown bold
-    .replace(/\\n/g, '<br>') // Replace escaped newlines with <br>
-    .replace(/\n/g, '<br>') // Replace actual newlines with <br>
-    .replace(/\{'answer':\s*'/g, '') // Remove {'answer': ' prefix
-    .replace(/\{"answer":\s*"/g, '') // Remove {"answer": " prefix
-    .replace(/'\}$/g, '') // Remove trailing '}
-    .replace(/"\}$/g, '') // Remove trailing "}
+    .replace(/\\*\\*/g, '') // Remove Markdown bold
+    .replace(/\\\\n/g, '<br>') // Replace escaped newlines with <br>
+    .replace(/\\n/g, '<br>') // Replace actual newlines with <br>
+    .replace(/\\{'answer':\\s*'/g, '') // Remove {'answer': ' prefix
+    .replace(/\\{"answer":\\s*"/g, '') // Remove {"answer": " prefix
+    .replace(/'\\}$/g, '') // Remove trailing '}
+    .replace(/"\\}$/g, '') // Remove trailing "}
     .trim();
 };
 
@@ -77,7 +77,6 @@ const ChatBot = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const socketRef = useRef(null);
   const chatContainerRef = useRef(null);
   const quickActionsRef = useRef(null);
 
@@ -100,18 +99,37 @@ const ChatBot = () => {
     }
   }, [messages, isTyping]);
 
-  // WebSocket connection
-  useEffect(() => {
-    socketRef.current = new WebSocket("ws://localhost:8000/api/v1/chatbot");
+  // API call function
+  const sendMessageToAPI = async (question) => {
+    try {
+      setIsTyping(true);
+      setIsSubmitting(true);
 
-    socketRef.current.onopen = () => {
-      console.log("✅ WebSocket connected");
-    };
+      const response = await fetch(`https://prod-api.codework.ai/api/v1/chatbot?question=${encodeURIComponent(question)}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          
+        },
+      });
 
-    socketRef.current.onmessage = (event) => {
-      setIsTyping(false); // Stop typing animation
-      setIsSubmitting(false); // Stop submit animation
-      const formattedText = formatBotResponse(event.data);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.text(); 
+      
+      // Try to parse as JSON, fallback to text
+      let botResponse;
+      try {
+        const jsonData = JSON.parse(data);
+        botResponse = jsonData.answer || jsonData.response || jsonData.message || data;
+      } catch (e) {
+        botResponse = data;
+      }
+
+      const formattedText = formatBotResponse(botResponse);
+      
       setMessages((prev) => [
         ...prev,
         {
@@ -121,26 +139,27 @@ const ChatBot = () => {
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         },
       ]);
-    };
 
-    socketRef.current.onerror = (err) => {
-      console.error("❌ WebSocket error:", err);
+    } catch (error) {
+      console.error("❌ API error:", error);
+      
+      // Add error message to chat
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: prev.length + 1,
+          text: "Sorry, I'm having trouble connecting right now. Please try again later.",
+          sender: "bot",
+          timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        },
+      ]);
+    } finally {
       setIsTyping(false);
       setIsSubmitting(false);
-    };
+    }
+  };
 
-    socketRef.current.onclose = () => {
-      console.warn("⚠️ WebSocket closed");
-      setIsTyping(false);
-      setIsSubmitting(false);
-    };
-
-    return () => {
-      socketRef.current?.close();
-    };
-  }, []);
-
-  const handleSendMessage = (e) => {
+  const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
 
@@ -152,17 +171,14 @@ const ChatBot = () => {
     };
 
     setMessages((prev) => [...prev, newMessage]);
-    setIsTyping(true); // Start typing animation
-    setIsSubmitting(true); // Start submit animation
-
-    if (socketRef.current?.readyState === WebSocket.OPEN) {
-      socketRef.current.send(inputMessage);
-    }
-
+    
+    // Send message to API
+    await sendMessageToAPI(inputMessage);
+    
     setInputMessage("");
   };
 
-  const handleQuickAction = (action) => {
+  const handleQuickAction = async (action) => {
     const newMessage = {
       id: messages.length + 1,
       text: action,
@@ -171,12 +187,9 @@ const ChatBot = () => {
     };
 
     setMessages((prev) => [...prev, newMessage]);
-    setIsTyping(true); // Start typing animation
-    setIsSubmitting(true); // Start submit animation
-  
-    if (socketRef.current?.readyState === WebSocket.OPEN) {
-      socketRef.current.send(action);
-    }
+    
+    // Send action to API
+    await sendMessageToAPI(action);
   };
 
   return (
@@ -420,6 +433,7 @@ const ChatBot = () => {
                     key={index}
                     onClick={() => handleQuickAction(action)}
                     className="px-3 py-1 border border-purple-500 text-purple-500 rounded-full text-xs whitespace-nowrap hover:bg-purple-100 transition-all duration-300 flex-shrink-0"
+                    disabled={isTyping}
                   >
                     {action}
                   </button>
@@ -436,13 +450,14 @@ const ChatBot = () => {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Type Something"
-                className="flex-1 border border-gray-300 text-black placeholder-gray-500 placeholder-opacity-80 rounded-full py-2 xs:py-2 sm:py-2.5 md:py-2.5 lg:py-1.5 px-4 xs:px-4 sm:px-5 md:px-5 lg:px-4 focus:outline-none focus:ring-2 focus:ring-[#C5BAFF] text-sm xs:text-sm sm:text-base md:text-base lg:text-sm transition-all"
+                disabled={isTyping}
+                className="flex-1 border border-gray-300 text-black placeholder-gray-500 placeholder-opacity-80 rounded-full py-2 xs:py-2 sm:py-2.5 md:py-2.5 lg:py-1.5 px-4 xs:px-4 sm:px-5 md:px-5 lg:px-4 focus:outline-none focus:ring-2 focus:ring-[#C5BAFF] text-sm xs:text-sm sm:text-base md:text-base lg:text-sm transition-all disabled:opacity-50"
               />
               <button
                 type="submit"
-                disabled={!inputMessage.trim()}
+                disabled={!inputMessage.trim() || isTyping}
                 className={`rounded-full w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-9 lg:h-9 flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-                  !inputMessage.trim()
+                  !inputMessage.trim() || isTyping
                     ? "bg-gradient-to-r from-[#C5BAFF] to-[#80DAFD] text-white cursor-not-allowed opacity-50"
                     : "bg-gradient-to-r from-[#C5BAFF] to-[#80DAFD] text-white hover:from-[#C5BAFF] hover:to-[#7bdaff] hover:shadow-lg"
                 } ${isSubmitting ? 'bounce-submit' : ''}`}
