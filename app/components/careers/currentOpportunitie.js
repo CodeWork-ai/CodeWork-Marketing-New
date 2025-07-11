@@ -17,11 +17,6 @@ const CurrentOpportunitie = () => {
       workMode: "Hybrid"
     },
     {
-      title: "Jr. HR Executive (Recruitment + Operations)",
-      experience: "Maximum 2 years Experience",
-      workMode: "Onsite"
-    },
-    {
       title: "Jr. Software Tester (Certified)",
       experience: "Minimum 1 year",
       workMode: "Onsite"
@@ -41,11 +36,7 @@ const CurrentOpportunitie = () => {
       experience: "2+ years",
       workMode: "Onsite"
     },
-    {
-      title: "Front-end Developer (React JS)",
-      experience: "Minimum 2+ Years",
-      workMode: "Onsite"
-    }
+    
   ];
 
   return (
