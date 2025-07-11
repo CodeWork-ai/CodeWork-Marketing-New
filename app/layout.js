@@ -515,20 +515,9 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
 
-        {/* ChatBot Component below */}
-        <div
-          className={`
-            fixed right-4 bottom-4 z-50
-            transition-all duration-500
-            ${scrollY > 100
-              ? "opacity-100 pointer-events-auto animate-fallDown"
-              : "opacity-0 pointer-events-none animate-fallUp"
-            }
-          `}
-          style={{ willChange: "transform, opacity" }}
-        >
+        
           <ChatBot />
-        </div>
+        
 
         {/* Animation styles */}
         <style jsx global>{`
