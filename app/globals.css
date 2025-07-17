@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
 /* Custom responsive utilities */
 @layer utilities {
   .text-balance {
@@ -16,9 +18,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-gilroy-semibold: 'Gilroy-Semibold', sans-serif;
-  --font-gilroy-regular: 'Gilroy-Regular', sans-serif;
-  --font-gilroy-medium: 'Gilroy-Medium', sans-serif;
+  --font-outfit-semibold: 'Outfit-Semibold', sans-serif;
+  --font-outfit-regular: 'Outfit-Regular', sans-serif;
+  --font-outfit-medium: 'Outfit-Medium', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,18 +33,45 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-outfit-regular);
 }
 
-
-.font-gilroy-semibold {
-  font-family: var(--font-gilroy-semibold);
+.font-outfit-semibold {
+  font-family: var(--font-outfit-semibold);
 }
 
-.font-gilroy-regular {
-  font-family: var(--font-gilroy-regular);
+.font-outfit-regular {
+  font-family: var(--font-outfit-regular);
 }
 
-.font-gilroy-medium {
-  font-family: var(--font-gilroy-medium);
+.font-outfit-medium {
+  font-family: var(--font-outfit-medium);
 }
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+

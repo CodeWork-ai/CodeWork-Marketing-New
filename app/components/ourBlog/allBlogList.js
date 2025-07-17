@@ -102,6 +102,33 @@ const blogPosts = [
       'It’s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
     link: '/the-new-era-of-ai',
   },
+  {
+    id: 12,
+    date: '2025-07-15',
+    image: '/blog/blog12.jpg',
+    title: ' How is AI Transforming Software Development?',
+    description:
+      '  Artificial intelligence (AI) transforms software development by offering tools and practices that increase efficiency, accuracy, and innovation. Artificial Intelligence, especially generative AI and large language models,',
+    link: '/ai-transforming-software',
+  },
+    {
+    id: 13,
+    date: '2025-07-16',
+    image: '/blog/blog13.jpg',
+    title: '  Code Generation Automation: Revolutionizing Software Development with AI',
+    description:
+      'In the fast-paced world of software development, AI-driven code generation automation is transforming how developers write, test, and optimize code. By leveraging machine learning algorithms, AI can generate high-quality code, reducing development time and minimizing errors. This innovation is a key aspect of how AI is transforming software development.',
+    link: '/code-generation-automation',
+  },
+  {
+    id: 14,
+    date: '2025-07-16',
+    image: '/blog/blog14.jpg',
+    title: '  Generative AI is revolutionizing software development.',
+    description:
+      'Development with Intelligent Automation Generative AI is revolutionizing software development',
+    link: '/generative-ai',
+  },
 ];
 
 const AllBlogList = () => {

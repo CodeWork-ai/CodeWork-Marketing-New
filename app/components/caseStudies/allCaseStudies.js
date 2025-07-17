@@ -10,44 +10,30 @@ const caseStudies = [
     imageUrl: '/CaseStudies/AI-Poweredpdf.jpg',
     link: '/ai-powered-pdf-translator',
   },
+  
   {
     id: 2,
-    title: 'Radi Insight 3D',
-    description:
-      'AI & 3D Modeling for Colon Cancer Detection.',
-    imageUrl: '/CaseStudies/colonScan.jpg',
-    link: '/colowatch-case-studies',
-  },
-  {
-    id: 3,
-    title: 'Hyperflex.ai',
-    description: 'AI-Powered Search Engine for Education.',
-    imageUrl: '/CaseStudies/hyperfleex.jpg',
-    link: '/hyperflex-ai',
-  },
-  {
-    id: 4,
     title: 'Web Scraping',
     description: 'Get the Data Your Business Needs.',
     imageUrl: '/CaseStudies/webscrapingh.jpg',
     link: '/web-scraping-services',
   },
   {
-    id: 5,
+    id: 3,
     title: 'Text Analytics',
     description: 'Transforming Caregiver Communication with Text Analytics.',
     imageUrl: '/CaseStudies/textanla.jpg',
     link: '/text-analytics',
   },
   {
-    id: 6,
+    id: 4,
     title: 'Radi Insight Scan',
     description: 'Making Medical Reports More Accessible.',
     imageUrl: '/CaseStudies/scans.jpg',
     link: '/radi-insight-scan',
   },
   {
-    id: 7,
+    id: 5,
     title: 'Signature Recognition System',
     description: 'Advanced Handwritten Signature Recognition System.',
     imageUrl: '/CaseStudies/signaturess.jpg',

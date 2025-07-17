@@ -1,12 +1,12 @@
 import React from 'react'
-import AiCommunityLanding from '../components/aiCommunity/aiCommunityLanding'
-import GroupsFeed from '../components/aiCommunity/groupsFeed'
+import OurProduct from '../components/ourProduct/ourProduct'
+import ProductLanding from '../components/ourProduct/productLanding'
 
 const page = () => {
   return (
     <div>
-        <AiCommunityLanding/>
-        <GroupsFeed/>
+        <ProductLanding/>
+        <OurProduct/>
     </div>
   )
 }

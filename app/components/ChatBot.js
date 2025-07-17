@@ -310,7 +310,7 @@ const ChatBot = () => {
         
           <button
             onClick={toggleChat}
-            className={`text-black rounded-full w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center transition-all duration-300 relative z-10 ${
+            className={`text-black rounded-full w-12 h-12 xs:w-14 xs:h-14 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-[70px] lg:h-[70px] flex items-center justify-center transition-all duration-300 relative z-10 ${
               isOpen ? 'chat-bounce' : ''
             }`}
             aria-label="Toggle chat"
@@ -336,7 +336,7 @@ const ChatBot = () => {
               </span>
             ) : (
               // Chat icon when chat is closed - Use video for animation
-              <div className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-20 lg:h-20 flex items-center justify-center">
+              <div className="w-10 h-10 xs:w-14 xs:h-14 sm:w-14 sm:h-14 md:w-12 md:h-12 lg:w-20 lg:h-20 flex items-center justify-center">
                 <video
                   src="/bot.webm"
                   autoPlay
@@ -443,7 +443,7 @@ const ChatBot = () => {
             {/* Input Form - Reduced input height and smaller submit button */}
             <form
               onSubmit={handleSendMessage}
-              className=" px-4 xs:px-4 sm:px-5 md:px-5 lg:px-4 xl:px-6 pt-8 xs:pt-8 sm:pt-8 md:pt-3 lg:pt-3  bg-white border-t border-gray-100 flex items-center gap-3 xs:gap-3 sm:gap-4 md:gap-4 lg:gap-3 "
+              className=" px-4 xs:px-4 sm:px-5 md:px-5 lg:px-4 xl:px-6 pt-4 xs:pt-4 sm:pt-4 md:pt-3 lg:pt-3  bg-white border-t border-gray-100 flex items-center gap-3 xs:gap-3 sm:gap-4 md:gap-4 lg:gap-3 "
             >
               <input
                 type="text"
