@@ -1,19 +1,20 @@
-import React from 'react';
-import Marquee from 'react-fast-marquee';
+import React from "react";
+import Marquee from "react-fast-marquee";
 
 const Clients = () => {
   const clientLogos = [
-    { name: 'AIKYNF', logo: '/client/AIKYINE.png' },
-    { name: 'INTULOGIC', logo: '/client/intulogic.svg' },
-    { name: 'Prezerv', logo: '/client/prezervv.png' },
-    { name: 'NALAM', logo: '/client/nalam.svg' },
-    { name: 'MTM', logo: '/client/mtm.svg' },
-    { name: 'STOREFRIES', logo: '/client/storefries.svg' },
-    { name: 'EXTRA1', logo: '/client/webSign.png' },
-    { name: 'EXTRA2', logo: '/client/sparksGlobal.svg' },
-     { name: 'EXTRA3', logo: '/client/futuroinfo.png' },
-      { name: 'EXTRA4', logo: '/client/robocon.png' },
-    // { name: 'Prezerv', logo: '/client/Prezerv.svg' },
+    { name: "AIKYNF", logo: "/client/AIKYINE.png" },
+    { name: "INTULOGIC", logo: "/client/intulogic.svg" },
+    { name: "Prezerv", logo: "/client/prezervv.png" },
+    { name: "NALAM", logo: "/client/nalam.svg" },
+    { name: "EXTRA6", logo: "/client/radiin.svg" },
+    { name: "MTM", logo: "/client/mtm.svg" },
+    { name: "STOREFRIES", logo: "/client/storefries.svg" },
+    { name: "EXTRA1", logo: "/client/webSign.png" },
+    { name: "EXTRA5", logo: "/client/hyper.svg" },
+    { name: "EXTRA2", logo: "/client/sparksGlobal.svg" },
+    { name: "EXTRA3", logo: "/client/futuroinfo.png" },
+    { name: "EXTRA4", logo: "/client/robocon.png" },
   ];
 
   return (
@@ -33,7 +34,10 @@ const Clients = () => {
             className="py-4"
           >
             {clientLogos.map((client, index) => (
-              <div key={index} className="mx-8 sm:mx-14 flex items-center justify-center">
+              <div
+                key={index}
+                className="mx-8 sm:mx-14 flex items-center justify-center"
+              >
                 <img src={client.logo} alt={client.name} />
               </div>
             ))}
