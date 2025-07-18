@@ -75,7 +75,7 @@ export default function Navbar() {
         },
         { href: "/about-us", label: "About Us", dropdown: [] },
         { href: "/careers-at-codework", label: "Careers", dropdown: [] },
-        { href: "/build-your-career-with-codework", label: "Our Product", dropdown: [] },
+        { href: "/build-your-career-with-codework", label: "Our Products", dropdown: [] },
     ];
 
     return (

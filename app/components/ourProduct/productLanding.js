@@ -25,7 +25,7 @@ const ProductLanding = () => {
     };
 
     // Start animations for each stat
-    animateNumber(98, setClientSatisfaction, 2500); // 2.5s duration
+    animateNumber(100, setClientSatisfaction, 2500); // 2.5s duration
     animateNumber(50, setProductsDelivered, 2500);
     animateNumber(24, setSupportAvailable, 2500);
   }, []);

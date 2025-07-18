@@ -3,43 +3,16 @@ import React, { useEffect, useState } from "react";
 import "./globals.css";
 import Footer from "./components/common/footer";
 import Navbar from "./components/common/nav";
-import localFont from "next/font/local";
 import { usePathname } from "next/navigation";
 import ChatBot from "./components/ChatBot";
 
-// Font imports/config
-const gilroyRegular = localFont({
-  src: "./fonts/gilroy-regular.ttf",
-  weight: "400",
-  style: "normal",
-  variable: "--font-gilroy-regular",
-  display: "swap",
-});
-
-// 2) Medium (500)
-const gilroyMedium = localFont({
-  src: "./fonts/gilroy-medium.ttf",
-  weight: "500",
-  style: "normal",
-  variable: "--font-gilroy-medium",
-  display: "swap",
-});
-
-// 3) SemiBold (600)
-const gilroySemibold = localFont({
-  src: "./fonts/gilroy-semibold.ttf",
-  weight: "600",
-  style: "normal",
-  variable: "--font-gilroy-semibold",
-  display: "swap",
-});
 
 const getMetaTags = (pathname) => {
   switch (pathname) {
     case "/":
       return {
         title:
-          "AI Software Development company-CODEWORk/ Custom AI solutions",
+          "Codework-AI Software Solutions | Empower Your Business with AI Tools",
         description:
           "Unlock powerful AI software development solutions tailored to your business, only at CODEWORK.",
         keywords:
@@ -392,7 +365,6 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${gilroyRegular.variable} ${gilroyMedium.variable} ${gilroySemibold.variable}`}
     >
       <head>
         <meta charSet="UTF-8" />

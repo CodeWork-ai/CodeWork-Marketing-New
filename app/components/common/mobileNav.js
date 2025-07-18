@@ -66,7 +66,7 @@ export default function MobileNavbar() {
     { href: "/careers-at-codework", label: "Career", dropdown: [] },
     {
       href: "/build-your-career-with-codework",
-      label: "Our Product",
+      label: "Our Products",
       dropdown: [],
     },
   ];
