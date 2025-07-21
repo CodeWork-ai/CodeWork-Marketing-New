@@ -14,8 +14,8 @@ export default function Home() {
     <div>
       {/* Microsoft Clarity Script - Loads after the page is interactive */}
       <Script
-        id="ms-clarity" // Unique ID for the script (helps with debugging)
-        strategy="afterInteractive" // Loading strategy: after page is interactive
+        id="ms-clarity"
+        strategy="afterInteractive" 
       >
         {`(function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

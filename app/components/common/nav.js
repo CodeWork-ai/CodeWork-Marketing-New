@@ -80,7 +80,7 @@ export default function Navbar() {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full border-2 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#ffffff] ${backgroundOpacity} ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
+            className={`fixed top-0 left-0 w-full border-2 border-blue-900 border-l-0 border-r-0 border-t-0 z-50 transition-transform duration-300 px-4 sm:px-4 md:px-10 lg:px-14 xl:px-20 bg-[#0e007d] ${isVisible ? "translate-y-0" : "-translate-y-full"} rounded-b-3xl`}
         >
             <div className="h-20 hidden md:flex items-center justify-between bg-opacity-100">
                 <Link href="/">
@@ -105,7 +105,7 @@ export default function Navbar() {
                                 className="relative"
                             >
                                 <button
-                                    className={`relative text-black text-base font-regular ease-in-out duration-300 group hover:text-cyan-500 ${pathname === item.href ? "text-cyan-400" : ""}`}
+                                    className={`relative text-white text-base font-regular ease-in-out duration-300 group hover:text-cyan-500 ${pathname === item.href ? "text-cyan-400" : ""}`}
                                 >
                                     <Link href={item.href}>{item.label}</Link>
                                     <span
