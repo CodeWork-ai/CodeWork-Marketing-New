@@ -1,18 +1,19 @@
 "use client";
 import React, { useState } from 'react';
+import Link from "next/link";
 
 const AreasExcellence = () => {
   const expertiseAreas = [
-    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting' },              
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'Generative AI' },   
-    { icon: '/AreasExcellenceICON/MLICON.svg', name: 'Machine Learning' }, 
-    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration' },                  
-    { icon: '/AreasExcellenceICON/DLICON.svg', name: 'Deep Learning' },  
-    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity' }, 
-    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis' },                                                                              
-    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks' },  
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP' },  
-    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering' },                                   
+    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting', link: '/ai-consulting' },              
+    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'Generative AI', link: '/generative-ai' },   
+    { icon: '/AreasExcellenceICON/MLICON.svg', name: 'Machine Learning', link: '/machine-learning' }, 
+    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration', link: '/ai-chatbot-integration' },                  
+    { icon: '/AreasExcellenceICON/DLICON.svg', name: 'Deep Learning', link: '/deep-learning' },  
+    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity', link: '/ai-cybersecurity' }, 
+    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis', link: '/predictive-analysis' },                                                                               
+    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks', link: '/neural-networks' },  
+    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP', link: '/nlp' },  
+    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering', link: '/data-engineering' },                                   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,21 +63,18 @@ const AreasExcellence = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {visibleAreas.map((area, index) => (
-              <div
-                key={index}
-                className="flex items-center h-[60px] sm:h-[72px] bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow"
-              >
-                {area.icon.startsWith('/') ? (
+              <Link href={area.link} key={index}>
+                <div
+                  className="flex items-center h-[60px] sm:h-[72px] bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                >
                   <img
                     src={area.icon}
                     alt={`${area.name} icon`}
                     className="w-[50px] sm:w-[65px] md:w-[65px] lg:w-[65px] xl:w-[65px] h-[50px] sm:h-[72px] md:h-[72px] lg:h-[72px] xl:h-[72px] mr-3"
                   />
-                ) : (
-                  <span className="text-2xl mr-3">{area.icon}</span>
-                )}
-                <span className="text-gray-800 font-medium">{area.name}</span>
-              </div>
+                  <span className="text-gray-800 font-medium">{area.name}</span>
+                </div>
+              </Link>
             ))}
           </div>
 

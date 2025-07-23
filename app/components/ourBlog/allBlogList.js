@@ -129,6 +129,24 @@ const blogPosts = [
       'Development with Intelligent Automation Generative AI is revolutionizing software development',
     link: '/generative-ai',
   },
+  {
+    id: 15,
+    date: '2025-07-21',
+    image: '/blog/blog15.jpg',
+    title: 'What is Machine Learning? A Comprehensive Guide',
+    description:
+      'Machine learning (ML), a subset of artificial intelligence (AI), empowers machines to learn from experience, operate independently, and enhance accuracy through exposure to data.',
+    link: '/machine-learning',
+  },
+  {
+    id: 16,
+    date: '2025-07-22',
+    image: '/blog/blog16.jpg',
+    title: '   What is Deep Learning? A Comprehensive Guide',
+    description:
+      ' Deep learning is a part of machine learning that uses multiple-layered neural networks to imitate the human brain’s decision-making process.',
+    link: '/deep-learning',
+  },
 ];
 
 const AllBlogList = () => {
