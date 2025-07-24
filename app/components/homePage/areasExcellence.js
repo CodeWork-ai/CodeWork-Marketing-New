@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const AreasExcellence = () => {
   const expertiseAreas = [
-    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting',  },              
+    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting'  },              
     { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'Generative AI', link: '/generative-ai' },   
     { icon: '/AreasExcellenceICON/MLICON.svg', name: 'Machine Learning', link: '/machine-learning' }, 
-    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration', },                  
+    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration' },                  
     { icon: '/AreasExcellenceICON/DLICON.svg', name: 'Deep Learning', link: '/deep-learning' },  
-    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity',  }, 
-    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis',  },                                                                               
-    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks',  },  
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP', link: '/nlp' },  
-    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering', },                                   
+    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity'  }, 
+    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis'  },                                                                               
+    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks'  },  
+    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP' },  
+    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering' },                                   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
