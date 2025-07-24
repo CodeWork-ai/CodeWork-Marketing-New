@@ -15,7 +15,7 @@ const Blog5 = () => {
         {/* FEATURE IMAGE */}
         <div className="relative w-full h-[400px] border-4 border-cyan-300 border-t-0 border-l-0 rounded-lg overflow-hidden mb-6">
           <Image
-            src="/blog/blog5.jpg" // You might want to replace this with a relevant LoRA image path
+            src="/blog/blog5.jpg" // update to your image path
             alt="LoRA Fine-Tuning Explained"
             fill
             className="object-cover"

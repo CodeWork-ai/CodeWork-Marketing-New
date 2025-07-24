@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const AreasExcellence = () => {
   const expertiseAreas = [
-    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting'  },              
+    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting', link: '/ai-powered-pdf-translator' },              
     { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'Generative AI', link: '/generative-ai' },   
     { icon: '/AreasExcellenceICON/MLICON.svg', name: 'Machine Learning', link: '/machine-learning' }, 
-    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration' },                  
+    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration', link: '/algorithms-to-agents' },                  
     { icon: '/AreasExcellenceICON/DLICON.svg', name: 'Deep Learning', link: '/deep-learning' },  
-    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity'  }, 
-    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis'  },                                                                               
-    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks'  },  
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP' },  
-    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering' },                                   
+    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity', link: '/cybersecurity-service' }, 
+    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis', link: '/tweaks-powerful-adaptations' },                                                                               
+    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks', link: '/hype-hijack-goal' },  
+    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP', link: '/revolutionizing-hiring' },  
+    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering', link: '/model-context-protocol' },                                   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
