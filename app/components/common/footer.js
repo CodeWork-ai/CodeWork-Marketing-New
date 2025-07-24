@@ -54,7 +54,7 @@ const Footer = () => {
 
   const contactLinks = [
     { href: "/contact-ai-solutions", label: "Contact Us" },
-    { href: "/build-your-career-with-codework", label: "AI Community" },
+    { href: "/build-your-career-with-codework", label: "Our Products" },
   ];
 
   const serviceLinks = [

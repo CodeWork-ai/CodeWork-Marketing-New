@@ -8,7 +8,7 @@ const page = () => {
     <div>
         <ProductLanding/>
         <OurProduct/>
-        {/* <AnimatedRows/> */}
+        <AnimatedRows/>
     </div>
   )
 }

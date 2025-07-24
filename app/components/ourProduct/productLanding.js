@@ -60,7 +60,7 @@ const ProductLanding = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Our{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
-                Product
+                Products
               </span>
             </h1>
 
@@ -84,7 +84,7 @@ const ProductLanding = () => {
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 transition-all duration-300">
                   {productsDelivered}+
                 </h3>
-                <p className="text-sm text-gray-600">Products Delivered</p>
+                <p className="text-sm text-gray-600">Projects Delivered</p>
               </div>
               <div className="text-center lg:text-left">
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 transition-all duration-300">

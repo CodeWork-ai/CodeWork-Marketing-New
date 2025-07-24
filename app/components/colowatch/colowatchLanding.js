@@ -1,15 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 const ColowatchLanding = () => {
   return (
-    <section className="bg-gradient-to-b w-full py-12 sm:py-16 md:py-24 lg:py-36 pt-20 sm:pt-16 md:pt-24 lg:pt-36">
+    <section className="bg-gradient-to-b w-full py-12 sm:py-16 md:py-24 lg:py-36 pt-20 sm:pt-16 md:pt-24 lg:pt-36 relative"> {/* Added relative for logo positioning */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
+        {/* Logo at top left - Positioned absolutely */}
+        <img
+          src="/RadiInsight.svg" /* Adjust src to your actual logo path */
+          alt="Colowatch Logo"
+          className="absolute top-24 left-4 w-32 h-auto z-30" /* Adjust size (e.g., w-24) and positioning as needed */
+        />
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 lg:pr-8"> {/* Changed to justify-center for balanced positioning; added lg:pr-8 for slight right padding */}
           {/* Text Card with Gradient - Further reduced size for laptop */}
           <div className="w-full lg:w-1/4 xl:w-5/12 bg-gradient-to-br from-[#FBF8E6] to-[#f5fdff] p-4 sm:p-6 lg:p-4 xl:p-8 rounded-xl sm:rounded-2xl text-gray-800 z-20 
                          lg:-mr-16 xl:-mr-32 
                          order-2 lg:order-1 lg:self-end
-                         shadow-md lg:shadow-lg">
+                         shadow-md lg:shadow-lg lg:ml-4"> {/* Added lg:ml-4 for subtle leftward positioning */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-2xl xl:text-5xl font-bold mb-3 sm:mb-4 lg:mb-3 xl:mb-6 leading-tight">
               AI & 3D Modeling for Colon Cancer Detection
             </h1>
@@ -29,10 +35,6 @@ const ColowatchLanding = () => {
                   <span className="text-blue-500 font-bold text-base lg:text-sm xl:text-lg mt-1">•</span>
                   <span>60% of cases are diagnosed late, reducing survival rates.</span>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-blue-500 font-bold text-base lg:text-sm xl:text-lg mt-1">•</span>
-                  <span>15-20% error margin in traditional screening leads to misdiagnoses.</span>
-                </div>
               </div>
               
             </div>
@@ -43,7 +45,7 @@ const ColowatchLanding = () => {
                          h-64 sm:h-80 md:h-96 lg:h-[320px] xl:h-[500px] 
                          overflow-hidden rounded-xl sm:rounded-2xl 
                          shadow-lg lg:shadow-xl z-10 
-                         order-1 lg:order-2">
+                         order-1 lg:order-2 lg:ml-2"> {/* Added lg:ml-2 for subtle leftward positioning */}
             <img
               src="/CaseStudies/colon.jpg"
               alt="Colowatch AI colon cancer detection technology interface"
@@ -53,7 +55,7 @@ const ColowatchLanding = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ColowatchLanding
+export default ColowatchLanding;

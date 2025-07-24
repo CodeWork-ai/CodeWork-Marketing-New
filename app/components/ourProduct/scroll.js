@@ -15,7 +15,7 @@ const AnimatedRows = () => {
           background-color: #0000;
           background-position: 0 0;
           background-size: cover;
-          height: 100vh;
+          height: 70vh; /* Reduced from 100vh to 70vh (30% reduction) */
           position: relative;
           overflow: hidden;
         }
@@ -46,19 +46,19 @@ const AnimatedRows = () => {
           inset: 0%;
         }
       `}</style>
-      <div className="row" style={{ backgroundColor: '#AE97CB' }}>
+      <div className="row" style={{ backgroundColor: '#040c26' }}>
         <div className="text-holder">
-          <div className="text" style={{ color: '#2B0955' }}>Hello world.</div>
+          <div className="text" style={{ color: '#1ad0e1' }}>Innovation</div>
         </div>
       </div>
-      <div className="row" style={{ backgroundColor: '#2B0955' }}>
+      <div className="row" style={{ backgroundColor: '#1ad0e1' }}>
         <div className="text-holder">
-          <div className="text" style={{ color: '#AE97CB' }}>How are you?</div>
+          <div className="text" style={{ color: '#040c26' }}>Starts with a</div>
         </div>
       </div>
       <div className="row">
-        <div className="text-holder" style={{ backgroundColor: '#AE97CB' }}>
-          <div className="text" style={{ color: '#2B0955' }}>Let's go!</div>
+        <div className="text-holder" style={{ backgroundColor: '#040c26' }}>
+          <div className="text" style={{ color: '#1ad0e1' }}>Conversation</div>
         </div>
       </div>
     </>
