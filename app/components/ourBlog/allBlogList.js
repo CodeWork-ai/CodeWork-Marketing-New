@@ -147,6 +147,51 @@ const blogPosts = [
       ' Deep learning is a part of machine learning that uses multiple-layered neural networks to imitate the human brain’s decision-making process.',
     link: '/deep-learning',
   },
+  {
+    id: 17,
+    date: '2025-07-22',
+    image: '/blog/blog17.jpg',
+    title: 'Chatbots in 2025: Your Everyday AI Companion',
+    description:
+      '          Ever chatted with an online helper and thought, “Wow, this thing almost feels human!”? That’s the charm of today’s chatbots—smarter, friendlier, and more helpful than ever. ',
+    link: '/everyday-ai-companion',
+  },
+  {
+    id: 18,
+    date: '2025-07-23',
+    image: '/blog/blog18.jpg',
+    title: ' Mixture of Experts: Making AI Smarter, Not Just Bigger',
+    description:
+      ' Large Language Models (LLMs) like GPT-4 and Claude are impressive - but they’re also expensive. ',
+    link: '/mixture-of-experts',
+  },
+  {
+    id: 19,
+    date: '2025-07-23',
+    image: '/blog/blog19.jpg',
+    title: 'Demystifying Generative AI: A Friendly Guide to Different Model Types',
+    description:
+      'Generative AI has quickly moved from a trending term to a foundational technology powering many modern applications. From powering conversational chatbots',
+    link: '/demystifying-generative',
+  },
+  {
+    id: 20,
+    date: '2025-07-23',
+    image: '/blog/blog20.jpg',
+    title: 'What is Predictive Analytics?',
+    description:
+      'Predictive analytics is a powerful branch of data science that utilizes statistical techniques, machine learning, deep learning,',
+    link: '/predictive-analytics',
+  },
+   {
+    id: 21,
+    date: '2025-07-24',
+    image: '/blog/blog21.jpg',
+    title: 'What is a Neural Network?',
+    description:
+      'A neural network is a type of machine learning model inspired by the way neurons in the human ',
+    link: '/neural-network',
+  },
 ];
 
 const AllBlogList = () => {

@@ -45,6 +45,8 @@ export default function Navbar() {
             dropdown: [
                 { href: "/ai-solutions", label: "Expertise", description: "Explore our expertise in AI." },
                 { href: "/ai-services", label: "Service", description: "Learn how our services transform business challenges into opportunities." },
+                // { href: "/ai-services", label: "AI Training", description: "AI training is a process of teaching machines to learn from data." },
+
             ],
         },
         {
