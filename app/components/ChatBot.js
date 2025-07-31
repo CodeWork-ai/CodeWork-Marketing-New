@@ -88,8 +88,6 @@ const ChatBot = () => {
     "Products", 
     "AI Solutions",
     "Contact Us",
-    "About Us",
-    "industries",
   ];
 
   // Scroll to bottom when new message arrives
@@ -425,7 +423,7 @@ const ChatBot = () => {
             <div className="bg-white flex-shrink-0">
               <div
                 ref={quickActionsRef}
-                className="flex gap-2 overflow-x-auto quick-actions-scroll py-1"
+                className="flex gap-2 overflow-x-auto quick-actions-scroll pl-3 py-1"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {quickActions.map((action, index) => (
