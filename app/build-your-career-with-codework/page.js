@@ -1,7 +1,7 @@
 import React from 'react'
 import OurProduct from '../components/ourProduct/ourProduct'
 import ProductLanding from '../components/ourProduct/productLanding'
-import AnimatedRows from '../components/ourProduct/scroll'
+import AnimatedRows from '../components/common/scroll'
 
 const page = () => {
   return (

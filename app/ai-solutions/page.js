@@ -2,7 +2,6 @@ import React from 'react'
 import AiLandingPage from '../components/aiSolutions/aiLandingPage'
 import AiCardSection from '../components/aiSolutions/aiCardSection'
 import DrivingInnovation from '../components/aiSolutions/drivingInnovation'
-import FooterHeading from '../components/aiSolutions/footerHeading'
 
 const page = () => {
   return (
@@ -10,7 +9,7 @@ const page = () => {
       <AiLandingPage/>
       <AiCardSection/>
       <DrivingInnovation/> 
-      <FooterHeading/> 
+      {/* <FooterHeading/>  */}
     </div>
   )
 }

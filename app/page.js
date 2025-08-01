@@ -8,6 +8,7 @@ import ServicesCarousel from "./components/homePage/servicesCarousel";
 import AiInnovations from "./components/homePage/aiInnovations";
 import WhyChooseUs from "./components/homePage/whyChooseUs";
 import WeListening from "./components/homePage/weListening";
+import AnimatedRows from "./components/common/scroll";
 
 export default function Home() {
   return (
@@ -29,7 +30,8 @@ export default function Home() {
       <AreasExcellence />
       <Clients />
       <WhatWeOffer />
-      <ServicesCarousel />
+      <AnimatedRows />
+      {/* <ServicesCarousel /> */}
       <AiInnovations />
       <WhyChooseUs />
       <WeListening />

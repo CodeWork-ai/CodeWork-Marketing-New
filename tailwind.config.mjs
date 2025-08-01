@@ -15,6 +15,10 @@ export default {
       '2xl': '1536px',
     },
     extend: {
+      colors: {
+        primary: '#050c25',
+        secondary: '#1ddfea',
+      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
