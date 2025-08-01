@@ -20,7 +20,7 @@ const PricingAndContact = () => {
   const placementPartners = [
     {  logo: "/client/webSign.png" },
     { logo: "/client/sparksGlobal.svg" },
-    {  logo: "/client/webSign.png" },
+    {  logo: "/client/Lovio.svg" },
     {  logo: "/client/intulogic.svg" },
     {  logo: "/client/aikyne.svg" },
     {  logo: "/client/nalam.svg" },
