@@ -7,6 +7,12 @@ const OurProduct = () => {
         {/* Card 1 */}
         <div className="relative group cursor-pointer overflow-hidden duration-500 w-80 h-96 bg-slate-50 text-gray-50 p-6 rounded-lg shadow-lg">
           <div>
+            {/* Image label above main image */}
+            <img
+              src="/Hyperflx.svg" 
+              alt="Product Label"
+              className="absolute top-2 left-[25%] -translate-x-1/2 w-24 h-24 object-contain z-10 shadow"
+            />
             <img
               src="/CaseStudies/hyperfleex.jpg"
               alt="Hyperflex AI"
@@ -27,6 +33,12 @@ const OurProduct = () => {
         {/* Card 2 */}
         <div className="relative group cursor-pointer overflow-hidden duration-500 w-80 h-96 bg-slate-50 text-gray-50 p-6 rounded-lg shadow-lg">
           <div>
+            {/* Image label above main image */}
+            <img
+              src="/RadiInsight.svg" // <-- replace with your label image path
+              alt="Product Label"
+              className="absolute top-2 left-[25%] -translate-x-1/2 w-24 h-24 object-contain z-10 shadow"
+            />
             <img
               src="/CaseStudies/scans.jpg"
               alt="Radi Insight Scan"

@@ -28,16 +28,7 @@ import {
 function ColowatchStudies() {
   return (
     <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-screen">
-      {/* Logo at top left */}
-      <div className="w-full flex items-center px-8 pt-8">
-        <img
-          src="/RadiInsight.svg"
-          alt="Radi Insight Logo"
-          className="h-40 w-40"
-        />
-      </div>
-
-      <div className="container mx-auto px-8 lg:px-16">
+      <div className="container mx-auto  pt-10 px-8 lg:px-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">

@@ -51,7 +51,7 @@ export default function Navbar() {
         },
         {
           href: "/ai-services",
-          label: "Service",
+          label: "Services",
           description:
             "Learn how our services transform business challenges into opportunities.",
         },
@@ -81,7 +81,7 @@ export default function Navbar() {
         },
         {
           href: "/testimonials",
-          label: "Testimonial",
+          label: "Testimonials",
           description:
             "Hear what our clients say about building smarter, faster, and better with Codework.",
         },
@@ -93,15 +93,24 @@ export default function Navbar() {
       dropdown: [],
     },
     {
-      href: "/about-us",
+      href: "",
       label: "About Us",
       dropdown: [
+
+         {
+          href: "/about-us",
+          label: "Our Team",
+          description:
+            "Learn about our team and their roles.",
+        },
+
         {
           href: "/event-updates",
           label: "Events & Updates",
           description:
             "Stay updated with our latest events and company news.",
         },
+        
       ],
     },
     { href: "/careers-at-codework", label: "Careers", dropdown: [] },

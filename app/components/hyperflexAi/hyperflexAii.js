@@ -24,15 +24,7 @@ import {
 function Hyperflexai() {
   return (
     <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-screen">
-      {/* Logo at top left */}
-      <div className="w-full flex items-center px-8 pt-8">
-        <img
-          src="/Hyperflx.svg"
-          alt="Hyperflx Logo"
-          className="w-40 h-40"
-        />
-      </div>
-      <div className="container mx-auto px-8 lg:px-16 ">
+      <div className="container pt-8 mx-auto px-8 lg:px-16 ">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
