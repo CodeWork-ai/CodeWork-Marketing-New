@@ -56,7 +56,7 @@ export default function Navbar() {
 
   const navLinks = [
     {
-      href: "/ai-solutions",
+      href: "",
       label: "AI Solutions",
       dropdown: [
         {
@@ -65,10 +65,10 @@ export default function Navbar() {
         },
         {
           href: "/ai-services",
-          label: "Service",
+          label: "Services",
         },
         {
-          href: "/industries-you-must-know",
+          href: "/ai-training",
           label: "AI Training",
         },
         
@@ -76,7 +76,7 @@ export default function Navbar() {
       dropdownImage: "/navmenu1.jpg"
     },
     {
-      href: "/our-company-case-studies",
+      href: "",
       label: "Resources",
       dropdown: [
         {
@@ -89,7 +89,7 @@ export default function Navbar() {
         },
         {
           href: "/testimonials",
-          label: "Testimonial",
+          label: "Testimonials",
         },
         {
           href: "/industries-you-must-know",
@@ -98,8 +98,12 @@ export default function Navbar() {
       ],
       dropdownImage: "/navmenu2.jpg"
     },
-    { href: "/about-us", label: "About Us", dropdown: [
-
+    { href: "", label: "About Us", dropdown: [
+      
+      {
+          href: "/about-us",
+          label: "Our Team ",
+        },
       {
           href: "/industries-you-must-know",
           label: "Events ",
@@ -149,7 +153,7 @@ export default function Navbar() {
                   className="relative"
                 >
                   <button
-                    className={`relative text-white text-xs sm:text-sm lg:text-base font-medium ease-in-out duration-300 group hover:text-secondary flex items-center gap-1 whitespace-nowrap px-1 py-2 ${
+                    className={`relative text-white text-xs sm:text-sm lg:text-sm font-sans ease-in-out duration-300 group hover:text-secondary flex items-center gap-1 whitespace-nowrap px-1 py-2 ${
                       pathname === item.href ? "text-secondary" : ""
                     }`}
                   >
@@ -270,7 +274,7 @@ export default function Navbar() {
                         className="group"
                       >
                         <div className="px-3 sm:px-4 py-1.5 sm:py-2 group hover:bg-secondary/10 hover:scale-105 transition-all duration-200 rounded-md">
-                          <h2 className="relative text-sm sm:text-base font-medium text-white group-hover:text-secondary transition-colors duration-200">
+                          <h2 className="relative text-sm sm:text-base font-sans text-white group-hover:text-secondary transition-colors duration-200">
                             {dropdownItem.label}
                             <span className="absolute bottom-[-2px] left-1/2 w-0 h-[2px] bg-secondary group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"></span>
                           </h2>

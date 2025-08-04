@@ -3,340 +3,519 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import {
+  FaRobot,
+  FaUsers,
+  FaLaptopCode,
+  FaHospitalUser,
+  FaShieldAlt,
+  FaMoneyBillWave,
+  FaShoppingCart,
+  FaLightbulb,
+} from "react-icons/fa";
 
 const accordionData = [
-	{
-		title: "AI consulting services:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Get expert guidance to streamline your digital transformation journey.
-				We help businesses innovate with strategic technology solutions.
-			</p>
-		),
-	},
-	{
-		title: "IT Staffing solutions:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				We provide skilled IT professionals to meet your project needs. Our
-				staffing solutions ensure you have the right talent at the right time.
-			</p>
-		),
-	},
-	{
-		title: "Software Development:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				From web and mobile apps to full-stack enterprise systems, our
-				engineers build scalable, maintainable software tailored to your
-				requirements.
-			</p>
-		),
-	},
-	{
-		title: "AI in Healthcare:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Leverage AI for better diagnostics, patient monitoring, and
-				personalized care. We help healthcare providers deploy safe,
-				compliant ML solutions.
-			</p>
-		),
-	},
-	{
-		title: "Cybersecurity Services:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Protect your assets with our vulnerability assessments, penetration
-				testing, and ongoing security monitoring services.
-			</p>
-		),
-	},
-	{
-		title: "Finance Technology Solutions:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Build secure, high-performance fintech platforms, from trading
-				applications to regulatory compliance tooling.
-			</p>
-		),
-	},
-	{
-		title: "E-commerce Solutions:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Our team delivers custom e-commerce stores, payment integrations, and
-				scalable architectures to grow your online business.
-			</p>
-		),
-	},
-	{
-		title: "Smart Recommendation Systems:",
-		content: (
-			<p className="text-[#5C5C5C] text-sm leading-relaxed">
-				Personalize user experiences with ML-driven recommendations for
-				content, products, or services.
-			</p>
-		),
-	},
+  {
+    title: "AI consulting services:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Get expert guidance to streamline your digital transformation journey.
+        We help businesses innovate with strategic technology solutions.
+      </p>
+    ),
+    icon: FaRobot,
+  },
+  {
+    title: "IT Staffing solutions:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        We provide skilled IT professionals to meet your project needs. Our
+        staffing solutions ensure you have the right talent at the right time.
+      </p>
+    ),
+    icon: FaUsers,
+  },
+  {
+    title: "Software Development:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        From web and mobile apps to full-stack enterprise systems, our engineers
+        build scalable, maintainable software tailored to your requirements.
+      </p>
+    ),
+    icon: FaLaptopCode,
+  },
+  {
+    title: "AI in Healthcare:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Leverage AI for better diagnostics, patient monitoring, and personalized
+        care. We help healthcare providers deploy safe, compliant ML solutions.
+      </p>
+    ),
+    icon: FaHospitalUser,
+  },
+  {
+    title: "Cybersecurity Services:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Protect your assets with our vulnerability assessments, penetration
+        testing, and ongoing security monitoring services.
+      </p>
+    ),
+    icon: FaShieldAlt,
+  },
+  {
+    title: "Finance Technology Solutions:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Build secure, high-performance fintech platforms, from trading
+        applications to regulatory compliance tooling.
+      </p>
+    ),
+    icon: FaMoneyBillWave,
+  },
+  {
+    title: "E-commerce Solutions:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Our team delivers custom e-commerce stores, payment integrations, and
+        scalable architectures to grow your online business.
+      </p>
+    ),
+    icon: FaShoppingCart,
+  },
+  {
+    title: "Smart Recommendation Systems:",
+    content: (
+      <p className="text-white/80 text-sm leading-relaxed">
+        Personalize user experiences with ML-driven recommendations for content,
+        products, or services.
+      </p>
+    ),
+    icon: FaLightbulb,
+  },
 ];
 
 const ContactLanding = () => {
-	// ─── Form State ─────────────────────────────────────────────────────────
-	const [formData, setFormData] = useState({
-		first_name: "",
-		last_name: "",
-		email: "",
-		mobile: "",
-		referral: "",
-		agreement: false,
-	});
-	const [errors, setErrors] = useState({});
-	const [loading, setLoading] = useState(false);
-	const [responseMessage, setResponseMessage] = useState("");
+  // ─── Form State ─────────────────────────────────────────────────────────
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    mobile: "",
+    referral: "",
+    agreement: false,
+  });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
-	// ─── Accordion State ─────────────────────────────────────────────────────
-	const [activeIndex, setActiveIndex] = useState(0);
-	const toggle = (idx) => setActiveIndex(activeIndex === idx ? -1 : idx);
+  // ─── Accordion State ─────────────────────────────────────────────────────
+  const [activeIndex, setActiveIndex] = useState(0);
+  const toggle = (idx) => setActiveIndex(activeIndex === idx ? -1 : idx);
 
-	// ─── Handlers ────────────────────────────────────────────────────────────
-	const handleChange = (e) => {
-		const { name, value, type, checked } = e.target;
-		if (name === "mobile" && !/^\d*$/.test(value)) return; // digits only
-		setFormData((prev) => ({
-			...prev,
-			[name]: type === "checkbox" ? checked : value,
-		}));
-		setErrors((prev) => ({ ...prev, [name]: "" }));
-	};
+  // ─── Handlers ────────────────────────────────────────────────────────────
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (name === "mobile" && !/^\d*$/.test(value)) return; // digits only
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  };
 
-	const validate = () => {
-		const newErrors = {};
-		if (!formData.first_name) newErrors.first_name = "First name is required";
-		if (!formData.last_name) newErrors.last_name = "Last name is required";
-		if (!formData.email) newErrors.email = "Email is required";
-		if (!formData.mobile) newErrors.mobile = "Mobile number is required";
-		if (!formData.referral) newErrors.referral = "This field is required";
-		if (!formData.agreement) newErrors.agreement = "You must agree to proceed";
-		setErrors(newErrors);
-		return Object.keys(newErrors).length === 0;
-	};
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.first_name) newErrors.first_name = "First name is required";
+    if (!formData.last_name) newErrors.last_name = "Last name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.mobile) newErrors.mobile = "Mobile number is required";
+    if (!formData.referral) newErrors.referral = "This field is required";
+    if (!formData.agreement) newErrors.agreement = "You must agree to proceed";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-		if (!validate()) return;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validate()) return;
 
-		setLoading(true);
-		setResponseMessage("");
+    setLoading(true);
+    setResponseMessage("");
 
-		const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_demo_contact`;
-		console.log("Submitting to:", url);
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_demo_contact`;
+    console.log("Submitting to:", url);
 
-		try {
-			const res = await fetch(url, {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
-			});
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-			// parse JSON to extract server message
-			const result = await res.json();
+      const result = await res.json();
 
-			if (!res.ok) {
-				setResponseMessage(result.message || "Failed to send contact details.");
-			} else {
-				setResponseMessage(result.message || "Thank you! We’ll be in touch.");
-				// reset form on success
-				setFormData({
-					first_name: "",
-					last_name: "",
-					email: "",
-					mobile: "",
-					referral: "",
-					agreement: false,
-				});
-			}
-		} catch (err) {
-			console.error("Contact form error:", err);
-			setResponseMessage(
-				err.message || "Something went wrong. Please try again later."
-			);
-		} finally {
-			setLoading(false);
-		}
-	};
+      if (!res.ok) {
+        setResponseMessage(result.message || "Failed to send contact details.");
+      } else {
+        setResponseMessage(result.message || "Thank you! We'll be in touch.");
+        setFormData({
+          first_name: "",
+          last_name: "",
+          email: "",
+          mobile: "",
+          referral: "",
+          agreement: false,
+        });
+      }
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setResponseMessage(
+        err.message || "Something went wrong. Please try again later."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
-	return (
-		<div>
-			<div className="flex flex-col bg-gradient-to-b from-[#f0fbff] to-[#e7f8ff] lg:flex-row px-7 gap-10 pt-36  pb-10">
-				{/* ─── Form Section ───────────────────────────────────────────────── */}
-				<div className="flex-1 bg-white p-6 sm:p-8 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
-					<h2 className="text-[#2f24be] font-semibold text-2xl mb-6">
-						REQUEST A DEMO
-					</h2>
+  return (
+    <div className="bg-primary relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
+        <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary/10 rounded-full animate-blob animation-delay-1000"></div>
+      </div>
 
-					<form
-						onSubmit={handleSubmit}
-						className="flex  text-black flex-col space-y-4"
-					>
-						{/* Name Fields */}
-						<div className="flex flex-col  sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-							{["first_name", "last_name"].map((field) => (
-								<div className="flex-1" key={field}>
-									<label className="text-sm mb-2 block">
-										{field === "first_name"
-											? "First Name *"
-											: "Last Name *"}
-									</label>
-									<input
-										name={field}
-										type="text"
-										value={formData[field]}
-										onChange={handleChange}
-										className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
-										placeholder={`Enter ${
-											field === "first_name" ? "First" : "Last"
-										} Name`}
-									/>
-									{errors[field] && (
-										<p className="text-red-500 text-xs mt-1">
-											{errors[field]}
-										</p>
-									)}
-								</div>
-							))}
-						</div>
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-32 left-16 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
+        <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-56 left-1/4 w-4 h-4 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
+      </div>
 
-						{/* Email */}
-						<div>
-							<label className="text-sm mb-2 block">Business Email Id *</label>
-							<input
-								name="email"
-								type="email"
-								value={formData.email}
-								onChange={handleChange}
-								className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
-								placeholder="Enter Email"
-							/>
-							{errors.email && (
-								<p className="text-red-500 text-xs mt-1">{errors.email}</p>
-							)}
-						</div>
+      <div className="flex flex-col lg:flex-row px-7 gap-10 pt-36 pb-10 relative z-10">
+        {/* ─── Enhanced Form Section ───────────────────────────────────────────────── */}
+        <div className="flex-1 bg-primary/30 backdrop-blur-xl border border-white/10 p-6 sm:p-8 rounded-3xl shadow-2xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-slide-up">
+          {/* Enhanced Header */}
+          <div className="mb-8">
+            <div className="inline-flex items-center px-3 py-1 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-4">
+              <span className="text-secondary text-xs font-medium">
+                — Get Started —
+              </span>
+            </div>
+            <h2 className="text-white font-bold text-3xl mb-2">
+              <span className="text-white">REQUEST A </span>
+              <span className="text-secondary">DEMO</span>
+            </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
+          </div>
 
-						{/* mobile */}
-<div>
-    <label className="text-sm mb-2 block">Mobile Number *</label>
-    <input
-        name="mobile" 
-        type="tel"
-        value={formData.mobile}
-        onChange={handleChange}
-        className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
-        placeholder="Enter Mobile Number"
-    />
-    {errors.mobile && (
-        <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>
-    )}
-</div>
+          <form
+            onSubmit={handleSubmit}
+            className="flex text-white flex-col space-y-6"
+          >
+            {/* Enhanced Name Fields */}
+            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+              {["first_name", "last_name"].map((field) => (
+                <div className="flex-1" key={field}>
+                  <label className="text-sm mb-2 block text-white/90 font-medium">
+                    {field === "first_name" ? "First Name *" : "Last Name *"}
+                  </label>
+                  <input
+                    name={field}
+                    type="text"
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className="w-full p-4 text-sm bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl placeholder-white/50 outline-none focus:border-secondary focus:bg-white/10 transition-all duration-300"
+                    placeholder={`Enter ${
+                      field === "first_name" ? "First" : "Last"
+                    } Name`}
+                  />
+                  {errors[field] && (
+                    <p className="text-red-400 text-xs mt-1">{errors[field]}</p>
+                  )}
+                </div>
+              ))}
+            </div>
 
-						{/* Referral */}
-						<div>
-							<label className="text-sm mb-2 block">
-								How did you hear about Codework? *
-							</label>
-							<input
-								name="referral"
-								type="text"
-								value={formData.referral}
-								onChange={handleChange}
-								className="w-full p-3 text-sm border border-[#2f24be] rounded-lg placeholder-[#2f24be] outline-none"
-								placeholder="Message"
-							/>
-							{errors.referral && (
-								<p className="text-red-500 text-xs mt-1">{errors.referral}</p>
-							)}
-						</div>
+            {/* Enhanced Email */}
+            <div>
+              <label className="text-sm mb-2 block text-white/90 font-medium">
+                Business Email Id *
+              </label>
+              <input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-4 text-sm bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl placeholder-white/50 outline-none focus:border-secondary focus:bg-white/10 transition-all duration-300"
+                placeholder="Enter Email"
+              />
+              {errors.email && (
+                <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+              )}
+            </div>
 
-						{/* Agreement */}
-						<div className="flex items-center space-x-2 text-xs text-[#5C5C5C]">
-							<input
-								name="agreement"
-								type="checkbox"
-								checked={formData.agreement}
-								onChange={handleChange}
-								className=""
-							/>
-							<label>
-								Allow Codework to contact me for scheduling and marketing per the{" "}
-								<a
-									href="https://codework.ai/privacy-policy"
-									className="text-[#2f24be] underline"
-								>
-									Privacy Policy
-								</a>
-								.
-							</label>
-						</div>
-						{errors.agreement && (
-							<p className="text-red-500 text-xs">{errors.agreement}</p>
-						)}
+            {/* Enhanced Mobile */}
+            <div>
+              <label className="text-sm mb-2 block text-white/90 font-medium">
+                Mobile Number *
+              </label>
+              <input
+                name="mobile"
+                type="tel"
+                value={formData.mobile}
+                onChange={handleChange}
+                className="w-full p-4 text-sm bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl placeholder-white/50 outline-none focus:border-secondary focus:bg-white/10 transition-all duration-300"
+                placeholder="Enter Mobile Number"
+              />
+              {errors.mobile && (
+                <p className="text-red-400 text-xs mt-1">{errors.mobile}</p>
+              )}
+            </div>
 
-						{/* Submit Button */}
-						<button
-							type="submit"
-							disabled={loading}
-							className={`w-full mt-4 py-3.5 text-base font-medium rounded-lg transition ${
-								loading
-									? "bg-gray-400 cursor-not-allowed"
-									: "bg-[#2f24be] text-white hover:opacity-90"
-							}`}
-						>
-							{loading ? "Submitting…" : "Submit"}
-						</button>
+            {/* Enhanced Referral */}
+            <div>
+              <label className="text-sm mb-2 block text-white/90 font-medium">
+                How did you hear about Codework? *
+              </label>
+              <input
+                name="referral"
+                type="text"
+                value={formData.referral}
+                onChange={handleChange}
+                className="w-full p-4 text-sm bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl placeholder-white/50 outline-none focus:border-secondary focus:bg-white/10 transition-all duration-300"
+                placeholder="Message"
+              />
+              {errors.referral && (
+                <p className="text-red-400 text-xs mt-1">{errors.referral}</p>
+              )}
+            </div>
 
-						{/* Response Message */}
-						{responseMessage && (
-							<p className="mt-4 text-center text-sm text-[#2f24be]">
-								{responseMessage}
-							</p>
-						)}
-					</form>
-				</div>
+            {/* Enhanced Agreement */}
+            <div className="flex items-start space-x-3 text-xs text-white/80">
+              <input
+                name="agreement"
+                type="checkbox"
+                checked={formData.agreement}
+                onChange={handleChange}
+                className="mt-1 accent-secondary"
+              />
+              <label className="leading-relaxed">
+                Allow Codework to contact me for scheduling and marketing per
+                the{" "}
+                <a
+                  href="https://codework.ai/privacy-policy"
+                  className="text-secondary underline hover:text-secondary/80 transition-colors duration-300"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </label>
+            </div>
+            {errors.agreement && (
+              <p className="text-red-400 text-xs">{errors.agreement}</p>
+            )}
 
-				{/* ─── Accordion Section ──────────────────────────────────────────────── */}
-				<div className="flex-1">
-					<h1 className="text-3xl font-semibold text-black -m-3 mb-6">
-						Codework AI for Service Professionals
-					</h1>
-					{accordionData.map((item, idx) => (
-						<div
-							key={idx}
-							className="border border-[#2f24be] rounded-lg mb-3 overflow-hidden"
-						>
-							<div
-								onClick={() => toggle(idx)}
-								className={`flex justify-between items-center px-4 py-3 cursor-pointer text-base font-medium ${
-									activeIndex === idx
-										? "bg-[#2f24be] text-white"
-										: "bg-white text-[#2f24be]"
-								}`}
-							>
-								<span>{item.title}</span>
-								{activeIndex === idx ? (
-									<HiChevronUp className="text-xl" />
-								) : (
-									<HiChevronDown className="text-xl" />
-								)}
-							</div>
-							{activeIndex === idx && (
-								<div className="p-4 bg-white">{item.content}</div>
-							)}
-						</div>
-					))}
-				</div>
-			</div>
-		</div>
-	);
+            {/* Enhanced Submit Button with Increased Width */}
+            <button
+              type="submit"
+              disabled={loading}
+              className={`cursor-pointer relative bg-white/10 py-3 rounded-full min-w-[9.5rem] min-h-[2.92rem] max-w-lg mx-auto flex items-center justify-start shadow-[inset_1px_2px_5px_#00000080] overflow-hidden group ${
+                loading
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-secondary transition-all duration-[0.8s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]"
+              }`}
+            >
+              {/* Animated Background Bar */}
+              <div className="absolute flex px-1 py-0.5 justify-start items-center inset-0">
+                <div className="w-[0%] group-hover:w-full transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] bg-secondary h-full rounded-full"></div>
+
+                {/* Icon Circle */}
+                <div className="rounded-full shrink-0 flex justify-center items-center shadow-[inset_1px_-1px_3px_0_black] h-full aspect-square bg-secondary transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] group-hover:bg-primary">
+                  <div className="size-[0.8rem] text-primary group-hover:text-secondary group-hover:-rotate-45 transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 16 16"
+                      height="100%"
+                      width="100%"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Button Text */}
+              <div className="pl-[3.4rem] pr-[1.1rem] group-hover:pl-[1.1rem] group-hover:pr-[3.4rem] transition-all duration-[1s] ease-[cubic-bezier(0.510,0.026,0.368,1.016)] group-hover:text-primary text-white relative z-10">
+                {loading ? "Submitting…" : "Submit Request"}
+              </div>
+            </button>
+
+            {/* Enhanced Response Message */}
+            {responseMessage && (
+              <div className="mt-4 p-4 bg-secondary/10 backdrop-blur-sm border border-secondary/30 rounded-xl">
+                <p className="text-center text-sm text-secondary font-medium">
+                  {responseMessage}
+                </p>
+              </div>
+            )}
+          </form>
+        </div>
+
+        {/* ─── Enhanced Accordion Section ──────────────────────────────────────────────── */}
+        <div className="flex-1 animate-slide-up animation-delay-200">
+          {/* Enhanced Header */}
+          <div className="mb-8">
+            <div className="inline-flex items-center px-3 py-1 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-4">
+              <span className="text-secondary text-xs font-medium">
+                — Our Services —
+              </span>
+            </div>
+            <h1 className="text-3xl font-bold text-white mb-2">
+              <span className="text-white">Codework AI for </span>
+              <span className="text-secondary">Service Professionals</span>
+            </h1>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-transparent rounded-full"></div>
+          </div>
+
+          {/* Enhanced Accordion Items with React Icons */}
+          <div className="space-y-4">
+            {accordionData.map((item, idx) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-primary/30 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:bg-primary/40 hover:border-secondary/30 transition-all duration-300 animate-card-float"
+                  style={{ animationDelay: `${idx * 100}ms` }}
+                >
+                  <div
+                    onClick={() => toggle(idx)}
+                    className={`flex justify-between items-center px-6 py-4 cursor-pointer text-base font-semibold transition-all duration-300 ${
+                      activeIndex === idx
+                        ? "bg-gradient-to-r from-secondary to-secondary/80 text-primary"
+                        : "text-white hover:text-secondary"
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <IconComponent className="text-xl" />
+                      <span>{item.title}</span>
+                    </div>
+                    <div
+                      className={`transform transition-transform duration-300 ${
+                        activeIndex === idx ? "rotate-180" : ""
+                      }`}
+                    >
+                      <HiChevronDown className="text-xl" />
+                    </div>
+                  </div>
+
+                  {/* Accordion Content with Animation */}
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      activeIndex === idx
+                        ? "max-h-40 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="p-6 bg-white/5 backdrop-blur-sm border-t border-white/10">
+                      {item.content}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced Bottom Decoration */}
+      <div className="absolute bottom-0 right-0 opacity-20">
+        <div className="w-64 h-32 bg-gradient-to-l from-secondary/30 to-transparent rounded-tl-full"></div>
+      </div>
+
+      {/* Enhanced CSS Animations */}
+      <style jsx>{`
+        @keyframes blob {
+          0% {
+            transform: translate(0px, 0px) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+          100% {
+            transform: translate(0px, 0px) scale(1);
+          }
+        }
+
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes cardFloat {
+          from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+
+        .animate-slide-up {
+          animation: slideUp 0.8s ease-out;
+        }
+
+        .animate-card-float {
+          animation: cardFloat 0.6s ease-out;
+        }
+
+        .animation-delay-200 {
+          animation-delay: 0.2s;
+        }
+
+        .animation-delay-1000 {
+          animation-delay: 1s;
+        }
+
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+
+        .animation-delay-3000 {
+          animation-delay: 3s;
+        }
+
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default ContactLanding;

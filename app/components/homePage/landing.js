@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 import Link from "next/link";
 
 const Landing = () => {
@@ -41,7 +39,7 @@ const Landing = () => {
           <div className="w-full md:w-1/2 lg:w-3/5 text-center md:text-left pt-12 md:pt-0">
             
             {/* Enhanced Heading Container */}
-            <div className="heading-container mb-8 sm:mb-10 md:mb-12">
+            <div className="heading-container mb-8 pt-16  sm:pt-16 md:pt-24 lg:pt-24 xl:pt-28">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight">
                 <span className="text-white">AI </span>
                 <span className="relative inline-block">

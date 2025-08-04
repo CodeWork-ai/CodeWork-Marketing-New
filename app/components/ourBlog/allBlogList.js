@@ -1,206 +1,320 @@
+"use client";
 import React from 'react';
-import { FiArrowRight, FiClock } from 'react-icons/fi';
-
+import { FiArrowRight, FiClock, FiUser } from 'react-icons/fi';
 const blogPosts = [
   {
     id: 1,
     date: '2025-01-15',
     image: '/blog/blog1.jpg',
     title: 'Deep Dive Into Activity Launch Modes in Android.',
-    description:
-      'In Android, Activity Launch Modes determine how new instances of an activity are created and how they interact with existing activities. The four main launch modes are:',
+    description: 'In Android, Activity Launch Modes determine how new instances of an activity are created and how they interact with existing activities. The four main launch modes are:',
     link: '/launch-modes-andorid',
+    category: 'Android',
+    readTime: '5 min read'
   },
   {
     id: 2,
     date: '2025-02-10',
     image: '/blog/blog2.jpg',
     title: 'From Algorithms to Agents',
-    description:
-      'Artificial Intelligence (AI) has become a transformative force in today’s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create. But how did we get here? In this blog,',
+    description: 'Artificial Intelligence (AI) has become a transformative force in today\'s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create.',
     link: '/algorithms-to-agents',
+    category: 'AI',
+    readTime: '8 min read'
   },
   {
     id: 3,
     date: '2025-03-05',
     image: '/blog/blog3.jpg',
     title: 'WorkManager. AlarmManager. JobScheduler : A Detailed Guide',
-    description:
-      'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
+    description: 'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
     link: '/workmanager-alarmmanager-Jobscheduler',
+    category: 'Development',
+    readTime: '12 min read'
   },
   {
     id: 4,
     date: '2025-04-18',
     image: '/blog/blog4.jpg',
     title: 'How Model Context Protocol Is Transforming the Future of AI',
-    description:
-      'In the rapidly evolving world of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
+    description: 'In the rapidly evolving world of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
     link: '/model-context-protocol',
+    category: 'AI',
+    readTime: '10 min read'
   },
   {
     id: 5,
     date: '2025-05-22',
     image: '/blog/blog5.jpg',
     title: 'Tiny Tweaks, Powerful Adaptations',
-    description:
-      'Fine-tuning large language models (LLMs) like LLaMA or GPT-3 can require billions of parameters, massive GPUs, and weeks of training. But what if you could achieve similar results by training just 0.1% of the parameters.',
+    description: 'Fine-tuning large language models (LLMs) like LLaMA or GPT-3 can require billions of parameters, massive GPUs, and weeks of training. But what if you could achieve similar results by training just 0.1% of the parameters.',
     link: '/tweaks-powerful-adaptations',
+    category: 'Machine Learning',
+    readTime: '7 min read'
   },
   {
     id: 6,
     date: '2025-05-28',
     image: '/blog/blog6.jpg',
-    title: 'Don’t Let the Hype Hijack the Goal',
-    description:
-      'Artificial Intelligence (AI) has become the crown jewel of innovation in today',
+    title: 'Don\'t Let the Hype Hijack the Goal',
+    description: 'Artificial Intelligence (AI) has become the crown jewel of innovation in today',
     link: '/hype-hijack-goal',
+    category: 'Opinion',
+    readTime: '6 min read'
   },
   {
     id: 7,
     date: '2025-05-29',
     image: '/blog/blog7.jpg',
     title: 'Revolutionizing Virtual Colonoscopy',
-    description:
-      'Colorectal cancer remains one of the leading causes of cancer-related deaths globally. The introduction of virtual colonoscopy through CT colonography offers a non-invasive, patient-friendly diagnostic',
+    description: 'Colorectal cancer remains one of the leading causes of cancer-related deaths globally. The introduction of virtual colonoscopy through CT colonography offers a non-invasive, patient-friendly diagnostic',
     link: '/revolutionizing-virtual-colonoscopy',
+    category: 'Healthcare',
+    readTime: '9 min read'
   },
   {
     id: 8,
     date: '2025-05-29',
     image: '/blog/blog8.jpg',
     title: 'UAE Makes History with Free ChatGPT Plus for Every Resident',
-    description:
-      'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
+    description: 'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
     link: '/uae-makes-history',
+    category: 'News',
+    readTime: '4 min read'
   },
   {
     id: 9,
     date: '2025-05-29',
     image: '/blog/blog9.jpg',
     title: 'The Deepfake Dilemma: What Leaders Must Know',
-    description:
-      'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
+    description: 'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
     link: '/the-deepfake-dilemma',
+    category: 'AI Ethics',
+    readTime: '11 min read'
   },
-
   {
     id: 10,
     date: '2025-06-13',
     image: '/blog/blog10.jpg',
     title: 'Revolutionizing Hiring: How CODEWORK is Automating Recruitment with AI',
-    description:
-      'The recruitment process is undergoing a major shift, and CODEWORK is leading the way. CODEWORK transforms traditional hiring into an efficient, data-driven system by integrating AI recruitment tools and automation technologies.',
+    description: 'The recruitment process is undergoing a major shift, and CODEWORK is leading the way. CODEWORK transforms traditional hiring into an efficient, data-driven system by integrating AI recruitment tools and automation technologies.',
     link: '/revolutionizing-hiring',
+    category: 'Business',
+    readTime: '8 min read'
   },
   {
     id: 11,
     date: '2025-06-17',
     image: '/blog/blog11.jpg',
-    title: ' The New Era of AI: How Digital Marketing Will Never Be the Same Again',
-    description:
-      'It’s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
+    title: 'The New Era of AI: How Digital Marketing Will Never Be the Same Again',
+    description: 'It\'s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
     link: '/the-new-era-of-ai',
+    category: 'Marketing',
+    readTime: '10 min read'
   },
   {
     id: 12,
     date: '2025-07-15',
     image: '/blog/blog12.jpg',
-    title: ' How is AI Transforming Software Development?',
-    description:
-      '  Artificial intelligence (AI) transforms software development by offering tools and practices that increase efficiency, accuracy, and innovation. Artificial Intelligence, especially generative AI and large language models,',
+    title: 'How is AI Transforming Software Development?',
+    description: 'Artificial intelligence (AI) transforms software development by offering tools and practices that increase efficiency, accuracy, and innovation. Artificial Intelligence, especially generative AI and large language models,',
     link: '/ai-transforming-software',
+    category: 'Development',
+    readTime: '9 min read'
   },
-    {
+  {
     id: 13,
     date: '2025-07-16',
     image: '/blog/blog13.jpg',
-    title: '  Code Generation Automation: Revolutionizing Software Development with AI',
-    description:
-      'In the fast-paced world of software development, AI-driven code generation automation is transforming how developers write, test, and optimize code. By leveraging machine learning algorithms, AI can generate high-quality code, reducing development time and minimizing errors. This innovation is a key aspect of how AI is transforming software development.',
+    title: 'Code Generation Automation: Revolutionizing Software Development with AI',
+    description: 'In the fast-paced world of software development, AI-driven code generation automation is transforming how developers write, test, and optimize code. By leveraging machine learning algorithms, AI can generate high-quality code, reducing development time and minimizing errors. This innovation is a key aspect of how AI is transforming software development.',
     link: '/code-generation-automation',
+    category: 'Automation',
+    readTime: '12 min read'
   },
   {
     id: 14,
     date: '2025-07-16',
     image: '/blog/blog14.jpg',
-    title: '  Generative AI is revolutionizing software development.',
-    description:
-      'Development with Intelligent Automation Generative AI is revolutionizing software development',
+    title: 'Generative AI is revolutionizing software development.',
+    description: 'Development with Intelligent Automation Generative AI is revolutionizing software development',
     link: '/generative-ai',
+    category: 'AI',
+    readTime: '6 min read'
   },
   {
     id: 15,
     date: '2025-07-21',
     image: '/blog/blog15.jpg',
     title: 'What is Machine Learning? A Comprehensive Guide',
-    description:
-      'Machine learning (ML), a subset of artificial intelligence (AI), empowers machines to learn from experience, operate independently, and enhance accuracy through exposure to data.',
+    description: 'Machine learning (ML), a subset of artificial intelligence (AI), empowers machines to learn from experience, operate independently, and enhance accuracy through exposure to data.',
     link: '/machine-learning',
+    category: 'Machine Learning',
+    readTime: '15 min read'
   },
   {
     id: 16,
     date: '2025-07-22',
     image: '/blog/blog16.jpg',
-    title: '   What is Deep Learning? A Comprehensive Guide',
-    description:
-      ' Deep learning is a part of machine learning that uses multiple-layered neural networks to imitate the human brain’s decision-making process.',
+    title: 'What is Deep Learning? A Comprehensive Guide',
+    description: 'Deep learning is a part of machine learning that uses multiple-layered neural networks to imitate the human brain\'s decision-making process.',
     link: '/deep-learning',
+    category: 'Deep Learning',
+    readTime: '13 min read'
+  },
+  {
+    id: 17,
+    date: '2025-07-22',
+    image: '/blog/blog17.jpg',
+    title: 'Chatbots in 2025: Your Everyday AI Companion',
+    description: 'Ever chatted with an online helper and thought, "Wow, this thing almost feels human!"? That\'s the charm of today\'s chatbots—smarter, friendlier, and more helpful than ever.',
+    link: '/everyday-ai-companion',
+    category: 'Chatbots',
+    readTime: '7 min read'
+  },
+  {
+    id: 18,
+    date: '2025-07-23',
+    image: '/blog/blog18.jpg',
+    title: 'Mixture of Experts: Making AI Smarter, Not Just Bigger',
+    description: 'Large Language Models (LLMs) like GPT-4 and Claude are impressive - but they\'re also expensive.',
+    link: '/mixture-of-experts',
+    category: 'AI Architecture',
+    readTime: '11 min read'
+  },
+  {
+    id: 19,
+    date: '2025-07-23',
+    image: '/blog/blog19.jpg',
+    title: 'Demystifying Generative AI: A Friendly Guide to Different Model Types',
+    description: 'Generative AI has quickly moved from a trending term to a foundational technology powering many modern applications. From powering conversational chatbots',
+    link: '/demystifying-generative',
+    category: 'AI',
+    readTime: '10 min read'
+  },
+  {
+    id: 20,
+    date: '2025-07-23',
+    image: '/blog/blog20.jpg',
+    title: 'What is Predictive Analytics?',
+    description: 'Predictive analytics is a powerful branch of data science that utilizes statistical techniques, machine learning, deep learning,',
+    link: '/predictive-analytics',
+    category: 'Analytics',
+    readTime: '8 min read'
+  },
+  {
+    id: 21,
+    date: '2025-07-24',
+    image: '/blog/blog21.jpg',
+    title: 'What is a Neural Network?',
+    description: 'A neural network is a type of machine learning model inspired by the way neurons in the human',
+    link: '/neural-network',
+    category: 'Neural Networks',
+    readTime: '9 min read'
   },
 ];
 
 const AllBlogList = () => {
   return (
-    <div className="w-full px-2 sm:px-6 py-8 sm:py-40 bg-gradient-to-b from-[#FBF8E6] to-[#EBF9FF]">
-      <div className="flex flex-wrap px-0 sm:px-8 -mx-2 sm:-mx-6">
-        {blogPosts.map(post => {
-          const formattedDate = new Date(post.date).toLocaleDateString(undefined, {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric',
-          });
+    <div className="w-full px-4 py-16 bg-primary relative overflow-hidden">
+      {/* Static Background Decorative Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
+        <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full"></div>
+        <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full"></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary/10 rounded-full"></div>
+      </div>
 
-          return (
+      {/* Header */}
+      <div className="text-center mb-16 relative z-10">
+        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
+          <span className="text-secondary text-sm font-medium">— Latest Articles —</span>
+        </div>
+        
+        <h1 className="text-4xl font-bold mb-6">
+          <span className="text-white">Our </span>
+          <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
+            Blog Posts
+          </span>
+        </h1>
+        
+        <div className="w-16 h-0.5 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto"></div>
+      </div>
+
+      {/* Consistent Card Grid - No animations */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="w-full sm:w-1/2 lg:w-1/3 px-2 sm:px-12 mb-8 sm:mb-12"
+              className="group bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 h-full flex flex-col"
             >
-              <div className="h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-50 dark:border-gray-50 flex flex-col">
-                <a href={post.link}>
-                  <img
-                    className="rounded-t-lg w-full h-40 sm:h-64 object-cover"
-                    src={post.image}
-                    alt={post.title}
-                  />
-                </a>
-                <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                  <div className="flex items-center mb-2 text-xs sm:text-sm text-gray-800 dark:text-gray-900">
-                    <FiClock className="mr-1" />
-                    <span>{formattedDate}</span>
+              {/* Image Section - No Label Text */}
+              <div className="relative">
+                <img
+                  className="w-full h-48 object-cover"
+                  src={post.image}
+                  alt={post.title}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-6 flex flex-col flex-grow">
+                {/* Date and Read Time */}
+                <div className="flex items-center justify-between mb-3 text-white/70 text-sm">
+                  <div className="flex items-center">
+                    <FiClock className="mr-2 text-secondary" />
+                    <span>{new Date(post.date).toLocaleDateString()}</span>
                   </div>
-                  <a href={post.link} className="hover:underline">
-                    <h5 className="mb-2 text-lg sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
-                      {post.title}
-                    </h5>
+                  <div className="flex items-center">
+                    <FiUser className="mr-1 text-secondary" />
+                    <span>{post.readTime}</span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-3 leading-tight line-clamp-2">
+                  {post.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/80 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                  {post.description}
+                </p>
+
+                {/* Read More Button */}
+                <div className="mt-auto">
+                  <a
+                    href={post.link}
+                    className="inline-flex items-center text-secondary hover:text-white text-sm font-semibold border border-secondary/50 hover:border-secondary hover:bg-secondary/10 px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm w-full justify-center"
+                  >
+                    <span>Continue Reading</span>
+                    <FiArrowRight className="ml-2 w-4 h-4" />
                   </a>
-                  <p className="mb-4 font-normal text-gray-700 dark:text-gray-800 text-xs sm:text-base line-clamp-2">
-                    {post.description}
-                  </p>
-                  <div className="mt-auto flex justify-end">
-                    <a
-                      href={post.link}
-                      className="group inline-flex items-center px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium text-center text-blue-950 bg-cyan-400 rounded-lg hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-600 dark:focus:ring-cyan-400"
-                    >
-                      Continue Reading
-                      <FiArrowRight className="ml-1 sm:ml-2 transition-transform duration-200 group-hover:translate-x-2" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
+
+      {/* Line clamp CSS */}
+      <style jsx>{`
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </div>
   );
 };
