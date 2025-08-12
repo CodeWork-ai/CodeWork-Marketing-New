@@ -181,7 +181,7 @@ const ContactLanding = () => {
   };
 
   return (
-    <div className="bg-primary relative overflow-hidden">
+    <div className="bg-primary relative py-10 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
@@ -310,7 +310,7 @@ const ContactLanding = () => {
                 Allow Codework to contact me for scheduling and marketing per
                 the{" "}
                 <a
-                  href="https://codework.ai/privacy-policy"
+                  href="/privacy-policy"
                   className="text-secondary underline hover:text-secondary/80 transition-colors duration-300"
                 >
                   Privacy Policy

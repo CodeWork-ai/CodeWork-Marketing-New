@@ -128,14 +128,14 @@ const AreasExcellence = () => {
         {/* Right Side: Content */}
         <div className="w-full lg:w-1/2 ml-0 md:ml-12 lg:ml-28">
   <div className="-mt-4">
-    <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+    <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tight mb-4">
       <span className="bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent drop-shadow-lg">
         Areas of Excellence
       </span>
       {/* Decorative underline */}
       <div className="w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mt-2"></div>
     </h2>
-    <p className="text-lg sm:text-xl md:text-lg lg:text-lg xl:text-2xl text-white/90 leading-relaxed font-light tracking-wide mb-6">
+    <p className="text-lg sm:text-xl md:text-lg lg:text-lg xl:text-xl text-white/90 leading-relaxed font-light tracking-wide mb-6">
       We bring <span className="text-white font-medium">innovation to life</span> through 
     </p>
   </div>

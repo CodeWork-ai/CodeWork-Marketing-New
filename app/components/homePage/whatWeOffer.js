@@ -45,7 +45,7 @@ const WhatWeOffer = () => {
             {/* Enhanced Description */}
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
-              <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed pl-6">
+              <p className="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg font-normal leading-relaxed">
                 Codework redefines possibilities with cutting-edge AI services
                 designed to empower businesses in the digital era. From AI model
                 training that enhances system intelligence to custom software

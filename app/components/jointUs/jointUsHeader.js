@@ -24,7 +24,7 @@ const JoinUsHeader = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
         
         {/* Left Content Section */}
-        <div className="w-full lg:w-2/3 text-center lg:text-left">
+        <div className="w-full lg:w-2/3 text-center lg:pl-10 xl:pl-10 lg:-mt-44 xl:-mt-44 lg:text-left">
           {/* Section Badge */}
           <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-4 sm:mb-6 md:mb-8">
             <span className="text-secondary text-xs sm:text-sm font-medium">— Start Your Journey —</span>
@@ -32,7 +32,7 @@ const JoinUsHeader = () => {
 
           {/* Enhanced Heading - Reduced Size */}
           <div className="heading-container mb-6 sm:mb-8 md:mb-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight">
               <span className="text-white">Build Your Career with </span>
               <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
                 Codework
@@ -44,10 +44,10 @@ const JoinUsHeader = () => {
           </div>
 
           {/* Enhanced Paragraph - Reduced Size */}
-          <div className="paragraph-container mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto lg:mx-0">
+          <div className="paragraph-container mb-8 sm:mb-10 md:mb-32 max-w-4xl mx-auto lg:mx-0">
             <div className="relative">
               <div className="absolute -left-2 md:-left-3 lg:-left-4 top-0 w-0.5 sm:w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full hidden lg:block"></div>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white/90 lg:pl-6 xl:pl-8 font-light">
+              <p className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg leading-relaxed text-white/90 lg:pl-6 xl:pl-8 font-light">
                 Looking for a career in <span className="text-secondary font-medium">AI and technology</span>? 
                 Join Codework to innovate, grow, and <span className="text-secondary font-medium">shape the future</span>. 
                 Upload your resume and take the next step with us.

@@ -1,5 +1,5 @@
 import React from "react";
-import Script from "next/script"; // Import Next.js Script component
+import Script from "next/script";
 import Landing from "./components/homePage/landing";
 import AreasExcellence from "./components/homePage/areasExcellence";
 import Clients from "./components/homePage/clients";
@@ -9,6 +9,7 @@ import AiInnovations from "./components/homePage/aiInnovations";
 import WhyChooseUs from "./components/homePage/whyChooseUs";
 import WeListening from "./components/homePage/weListening";
 import AnimatedRows from "./components/common/scroll";
+
 
 export default function Home() {
   return (
@@ -25,9 +26,16 @@ export default function Home() {
         })(window, document, "clarity", "script", "seqq1pj0lx");`}
       </Script>
 
-      {/* Your existing components */}
-      <Landing />
-      <AreasExcellence />
+      {/* Animated Logo - Limited to first two components only */}
+      {/* <AnimatedLogo /> */}
+
+      {/* Animation Trigger Zone - First Two Components */}
+      <div id="animation-zone">
+        <Landing />
+        <AreasExcellence />
+      </div>
+
+      {/* Remaining Components - No Animation */}
       <Clients />
       <WhatWeOffer />
       <AnimatedRows />

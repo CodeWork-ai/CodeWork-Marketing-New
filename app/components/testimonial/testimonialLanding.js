@@ -32,7 +32,7 @@ const TestimonialLanding = () => {
 
           {/* Enhanced Heading */}
           <div className="heading-container mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight">
               <span className="text-white">Client </span>
               <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
                 Testimonials
@@ -47,7 +47,7 @@ const TestimonialLanding = () => {
           <div className="paragraph-container mb-12">
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl leading-relaxed text-white/90 pl-6 font-light">
+              <p className="text-lg sm:text-lg md:text-lg lg:text-lg xl:text-xl leading-relaxed text-white/90 pl-6 font-light">
                 Hear from our clients! Discover how our services have made a <span className="text-secondary font-medium">lasting impact</span>. 
                 Their words inspire us to keep delivering <span className="text-secondary font-medium">exceptional results</span>.
               </p>

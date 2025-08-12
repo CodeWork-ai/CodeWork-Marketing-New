@@ -326,7 +326,7 @@ const Footer = () => {
           </div>
 
           {/* ISO Logos */}
-          <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-0 relative z-10">
+          {/* <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-0 relative z-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-full p-1 border border-secondary/20">
               <Image
                 src="/iso/iso1.svg"
@@ -345,7 +345,7 @@ const Footer = () => {
                 className="rounded-full sm:w-10 sm:h-10"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Copyright + Privacy */}
           <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0 relative z-10">

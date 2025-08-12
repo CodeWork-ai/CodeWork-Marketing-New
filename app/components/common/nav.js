@@ -105,7 +105,7 @@ export default function Navbar() {
           label: "Our Team ",
         },
       {
-          href: "/industries-you-must-know",
+          href: "/event-updates",
           label: "Events ",
         },
         {

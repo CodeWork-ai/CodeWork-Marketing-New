@@ -95,7 +95,7 @@ const AiInnovations = () => {
             {cards.map((card) => (
               <div key={card.id} className="px-4">
                 <div 
-                  className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-72 md:h-96 lg:w-80 lg:h-[28rem] bg-center bg-cover rounded-3xl overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 shadow-2xl"
+                  className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-72 md:h-96 lg:w-80 lg:h-[28rem] bg-center bg-cover rounded-3xl overflow-hidden group cursor-pointer transform transition-all duration-500 shadow-2xl"
                   style={{ backgroundImage: `url('${card.bgImage}')` }}
                 >
                   {/* Enhanced Gradient Overlays */}
@@ -169,10 +169,10 @@ const AiInnovations = () => {
                         {card.title}
                       </h3>
                       <div className="hidden group-hover:block transform transition-all duration-500 ease-out">
-                        <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 drop-shadow-lg">
+                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 drop-shadow-lg">
                           {card.title}
                         </h3>
-                        <p className="text-primary/90 text-sm sm:text-base leading-relaxed font-medium">
+                        <p className="text-white text-sm sm:text-base leading-relaxed font-medium">
                           {card.description}
                         </p>
                       </div>
