@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // enable static HTML export for Azure SWA
+  output: 'export', // This creates the /out folder after build
 };
 
 export default nextConfig;
