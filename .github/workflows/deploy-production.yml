@@ -25,5 +25,5 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "out" # static export output folder
+          output_location: ".next" # static export output folder
           app_build_command: "npm install && npm run build"
