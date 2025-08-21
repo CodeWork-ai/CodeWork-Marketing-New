@@ -52,7 +52,7 @@ function ColowatchStudies() {
                   { icon: <FaExclamationTriangle className="text-red-500" />, text: "Confusion about their health and diagnosis" },
                   { icon: <FaUnlink className="text-red-500" />, text: "A sense of disconnection from their healthcare journey" },
                   { icon: <FaFrown className="text-red-500" />, text: "Rising stress and anxiety" }
-                ].map((item, index) => (
+                ].map((item, index) => (  
                   <div key={index} className="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
                     <div className="flex items-center space-x-3">
                       <span className="text-2xl">{item.icon}</span>

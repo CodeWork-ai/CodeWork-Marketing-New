@@ -36,6 +36,11 @@ const CurrentOpportunitie = () => {
       experience: "2+ years",
       workMode: "Onsite"
     },
+    {
+      title: "AI Technical Project Manager ",  
+      experience: "3 - 6 years ",
+      workMode: "Onsite"
+    },
     
   ];
 
