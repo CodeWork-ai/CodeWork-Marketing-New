@@ -18,17 +18,16 @@ import { BiSync } from "react-icons/bi";
 
 const MobileOurServices = () => {
   const services = [
-    { title: "AI Model Training", icon: FaBrain, link: "/ai-model-training" },
-    { title: "Software Development", icon: FaCode, link: "/software-development-service" },
-    { title: "Custom Development", icon: FaDatabase, link: "/custom-software-development" },
+    { title: "AI Model Training & Fine Tuning", icon: FaBrain, link: "/ai-model-training" },
+    { title: "AI Driven Custom Software Development", icon: FaCode, link: "/custom-software-development" },
     { title: "DevOps Solutions", icon: BiSync, link: "/devops-solutions" },
     { title: "Cloud Computing", icon: FaCloud, link: "/cloud-computing" },
-    { title: "Cybersecurity Services", icon: FaShieldAlt, link: "/cybersecurity-service" },
-    { title: "Mobile Development", icon: FaMobile, link: "/mobile-software-development" },
-    { title: "Web Designing", icon: FaGlobe, link: "/web-design-service" },
+    { title: "AI Automation", icon: FaDatabase, link: "/ai-automation" },
+    { title: "Agentic AI", icon: FaMobile, link: "/agentic-ai" },
+    { title: " AI Cybersecurity Services", icon: FaShieldAlt, link: "/cybersecurity-service" },    
     { title: "IT Staff Augmentation", icon: FaUsers, link: "/it-staff-service" },
-    { title: "Penetration Testing", icon: FaLock, link: "/penetration-testing-service" },
-    { title: "Digital Marketing", icon: FaBullhorn, link: "/digital-marketing-services" },
+    { title: "AI Implementation", icon: FaLock, link: "/ai-implementation" },
+    { title: " AI in Digital Marketing Services", icon: FaBullhorn, link: "/digital-marketing-services" },
   ];
 
   const totalPages = 2;

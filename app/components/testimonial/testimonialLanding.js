@@ -3,7 +3,7 @@ import React from "react";
 
 const TestimonialLanding = () => {
   return (
-    <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-primary overflow-hidden">
+    <section className="relative w-full h-auto sm:h-[90vh] md:h-screen flex items-center pb-10 bg-primary overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -177,7 +177,7 @@ const TestimonialLanding = () => {
           <div className="text-white/70 text-sm">Happy Clients</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-secondary">98%</div>
+          <div className="text-2xl font-bold text-secondary">100%</div>
           <div className="text-white/70 text-sm">Satisfaction</div>
         </div>
         <div className="text-center">

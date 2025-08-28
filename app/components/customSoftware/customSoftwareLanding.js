@@ -1,152 +1,237 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const CustomSoftwareLanding = () => {
   const pathname = usePathname();
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const services = [
     { title: "AI Model Training", link: "/ai-model-training" },
-    { title: "Software Development", link: "/software-development-service" },
-    { title: "Custom Development", link: "/custom-software-development" },
-    { title: "DevOps Solutions", link: "/devops-solutions" },
-    { title: "Cloud Computing", link: "/cloud-computing" },
-    { title: "Cyber Security", link: "/cybersecurity-service" },
-    { title: "Mobile Development", link: "/mobile-software-development" },
-    { title: "Web Designing", link: "/web-design-service" },
+    { 
+      title: "AI Driven Custom Software Development", 
+      link: "/custom-software-development",
+    },
+    { 
+      title: "AI Automation", 
+      link: "/ai-automation",
+    },
+    { 
+      title: "Cloud Computing", 
+      link: "/cloud-computing",
+    },
+    {
+      title: "DevOps Solutions",
+      link: "/devops-solutions",
+    },
+    { 
+      title: "Agentic AI", 
+      link: "/agentic-ai",
+    },
+    {
+      title: "AI Implementation",
+      link: "/ai-implementation" 
+    },
+    { title: "AI in Cyber Security", link: "/cybersecurity-service" },
     { title: "IT Staff Augmentation", link: "/it-staff-service" },
-    { title: "Penetration Testing", link: "/penetration-testing-service" },
-    { title: "Digital Marketing Services", link: "/digital-marketing-services" },
+    { title: "AI in Digital Marketing Services", link: "/digital-marketing-services" },
   ];
 
+
+  // Function to check if link is active
   const isActiveLink = (linkPath) => {
     return pathname === linkPath;
   };
 
+  // Check if any dropdown item is active
+  const isDropdownActive = (service) => {
+    if (!service.dropdown) return false;
+    return service.dropdown.some(item => pathname === item.link) || pathname === service.link;
+  };
+
+  // Toggle dropdown
+  const toggleDropdown = (index) => {
+    setOpenDropdown(openDropdown === index ? null : index);
+  };
+
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-primary overflow-hidden">
+    <section className="relative w-full min-h-screen bg-primary overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 md:w-40 md:h-40 bg-secondary/20 rounded-full"></div>
-        <div className="absolute top-60 right-32 w-24 h-24 md:w-32 md:h-32 bg-secondary/15 rounded-full"></div>
-        <div className="absolute bottom-40 left-1/3 w-36 h-36 md:w-48 md:h-48 bg-secondary/25 rounded-full"></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 md:w-24 md:h-24 bg-secondary/10 rounded-full"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
+        <div className="absolute top-1/3 right-24 w-24 h-24 bg-secondary/15 rounded-full"></div>
+        <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full"></div>
+        <div className="absolute top-2/3 right-1/3 w-32 h-32 bg-secondary/12 rounded-full"></div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Dots */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-32 left-16 w-2 h-2 md:w-3 md:h-3 bg-secondary rounded-full"></div>
-        <div className="absolute top-48 right-20 w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full"></div>
-        <div className="absolute bottom-56 left-1/4 w-3 h-3 md:w-4 md:h-4 bg-secondary/80 rounded-full"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 md:w-2 md:h-2 bg-white/40 rounded-full"></div>
+        <div className="absolute top-28 left-16 w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+        <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-56 left-1/4 w-3 h-3 bg-secondary/80 rounded-full animate-ping"></div>
+        <div className="absolute top-3/4 right-4 w-1 h-1 bg-white/40 rounded-full animate-pulse"></div>
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 pt-40">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-start">
           
-          {/* Left Side - Enhanced Content (8 columns) */}
-          <div className="lg:col-span-8 text-center lg:text-left">
+          {/* Left Side - Main Content (Takes 2 columns) */}
+          <div className="lg:col-span-2 text-left">
             {/* Section Badge */}
-            <div className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6 md:mb-8">
-              <span className="text-secondary text-sm font-medium">— Custom Software Development —</span>
+            <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+              <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
+              Custom Software Development Solutions
             </div>
 
-            {/* Enhanced Heading */}
-            <div className="heading-container mb-8 md:mb-10">
-              <h1 className="text-5xl font-bold text-white leading-tight mb-6">
-                <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-                  Scalable
-                </span>{" "}
-                and Tailored Software for Business Growth
+            <div className="heading-container mb-8">
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Scalable and Tailored Software</span> for Business Growth
               </h1>
               
               {/* Decorative underline */}
-              <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto lg:mx-0"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-8"></div>
             </div>
 
-            {/* Enhanced Paragraph */}
-            <div className="paragraph-container mb-8 md:mb-10 max-w-4xl mx-auto lg:mx-0">
-              <div className="relative">
-                <div className="absolute -left-3 md:-left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full hidden lg:block"></div>
-                <p className="text-lg text-white/90 leading-relaxed lg:pl-8 font-light">
-                  Codework.ai specializes in <span className="text-secondary font-medium">custom software development</span>, delivering solutions that align with specific business objectives. Whether it's an <span className="text-secondary font-medium">enterprise application</span>, a web platform, or a mobile app, every software solution aims to deliver efficiency, <span className="text-secondary font-medium">seamless user experience</span>, and business scalability.
-                </p>
+            <div className="paragraph-container mb-8 max-w-3xl">
+              <p className="text-lg text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+                The core of <span className="text-secondary font-medium">Codework</span> is creating bespoke software solutions that perfectly align with your unique business requirements. Every project is crafted to enhance operational efficiency and drive digital transformation. Whether developing enterprise applications, web platforms, or specialized software systems, expert developers ensure scalable and innovative solutions that deliver exceptional results.
+              </p>
+              
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold text-secondary mb-4">Transform your business with custom software solutions built for your success.</h3>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Enhanced Services (4 columns) */}
-          <div className="lg:col-span-4">
-            <div className="bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25 relative">
+          {/* Right Side - Services Navigation */}
+          <div className="lg:col-span-1">
+            <div className="bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-8 sticky top-8">
+              <div className="flex items-center mb-6">
+                <div className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></div>
+                <h3 className="text-xl font-bold text-white">Our Services</h3>
+              </div>
               
-
-              {/* Services Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">
-                Our <span className="text-secondary">Services</span>
-              </h3>
-              
-              {/* Services List */}
-              <div className="space-y-2 max-h-80 overflow-y-auto custom-scrollbar">
+              <div className="space-y-2">
                 {services.map((service, index) => (
-                  <Link 
-                    key={index}
-                    href={service.link}
-                    className={`block px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 border-l-4 group ${
-                      isActiveLink(service.link)
-                        ? 'bg-secondary/20 text-secondary border-secondary font-semibold shadow-lg backdrop-blur-sm'
-                        : 'text-white/80 hover:text-secondary hover:bg-secondary/10 border-transparent hover:border-secondary/50 backdrop-blur-sm'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {service.title}
-                      </span>
-                      <svg 
-                        className={`w-4 h-4 transition-all duration-300 ${
-                          isActiveLink(service.link) 
-                            ? 'text-secondary rotate-0' 
-                            : 'text-white/40 group-hover:text-secondary group-hover:rotate-12'
-                        }`} 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                  <div key={index}>
+                    {/* Main Service Item */}
+                    <div 
+                      className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 border-l-4 group relative overflow-hidden ${
+                        isActiveLink(service.link) || isDropdownActive(service)
+                          ? 'bg-secondary/20 text-secondary border-secondary font-bold shadow-lg backdrop-blur-sm'
+                          : 'text-white/80 hover:text-white hover:bg-white/10 border-transparent hover:border-secondary/50 hover:shadow-md'
+                      }`}
+                    >
+                      {/* Hover background effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10 flex items-center justify-between">
+                        <Link href={service.link} className="flex-1">
+                          <span>{service.title}</span>
+                        </Link>
+                        
+                        <div className="flex items-center space-x-2">
+                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            isActiveLink(service.link) || isDropdownActive(service)
+                              ? 'bg-secondary animate-pulse' 
+                              : 'bg-white/30 group-hover:bg-secondary/60'
+                          }`}></div>
+                          
+                          {/* Dropdown Arrow */}
+                          {service.dropdown && (
+                            <button 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                toggleDropdown(index);
+                              }}
+                              className="p-1"
+                            >
+                              <svg 
+                                className={`w-4 h-4 transition-transform duration-200 ${
+                                  openDropdown === index ? 'rotate-180' : ''
+                                } ${
+                                  isDropdownActive(service) ? 'text-secondary' : 'text-white/60'
+                                }`} 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                            </button>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                  </Link>
+
+                    {/* Dropdown Items */}
+                    {service.dropdown && (
+                      <div className={`overflow-hidden transition-all duration-300 ${
+                        openDropdown === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}>
+                        <div className="ml-4 mt-2 space-y-1 border-l-2 border-secondary/20 pl-4">
+                          {service.dropdown.map((dropdownItem, dropIndex) => (
+                            <Link 
+                              key={dropIndex}
+                              href={dropdownItem.link}
+                              className={`block px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${
+                                isActiveLink(dropdownItem.link)
+                                  ? 'bg-secondary/15 text-secondary border-l-2 border-secondary'
+                                  : 'text-white/70 hover:text-secondary hover:bg-white/5'
+                              }`}
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
 
-              {/* Bottom glow */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+              {/* Bottom decoration in services card */}
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex items-center text-white/60 text-xs">
+                  <div className="w-1 h-1 bg-secondary rounded-full mr-2"></div>
+                  <span>Navigate through our services</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Bottom Decoration */}
+      {/* Bottom Decoration */}
       <div className="absolute bottom-0 right-0 opacity-20">
-        <div className="w-32 h-16 md:w-64 md:h-32 bg-gradient-to-l from-secondary/30 to-transparent rounded-tl-full"></div>
+        <div className="w-40 h-20 bg-gradient-to-l from-secondary/30 to-transparent rounded-tl-full"></div>
       </div>
 
-      {/* Custom CSS for Scrollbar */}
+      {/* Animation Styles */}
       <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
         }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(5, 12, 37, 0.1);
-          border-radius: 2px;
+        .animate-pulse {
+          animation: pulse 2s infinite;
         }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(29, 223, 234, 0.6);
-          border-radius: 2px;
+        
+        @keyframes bounce {
+          0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+          50% { transform: none; animation-timing-function: cubic-bezier(0,0,0.2,1); }
         }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+        .animate-bounce {
+          animation: bounce 1s infinite;
+        }
+        
+        @keyframes ping {
+          75%, 100% { transform: scale(2); opacity: 0; }
+        }
+        .animate-ping {
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
       `}</style>
     </section>

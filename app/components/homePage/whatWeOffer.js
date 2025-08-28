@@ -9,7 +9,7 @@ import { MdPhoneIphone, MdWeb, MdCloud } from "react-icons/md";
 
 const WhatWeOffer = () => {
   return (
-    <section className="bg-primary w-full py-16 pt-8 relative sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
+    <section className="bg-primary w-full py-9 pt-8 relative sm:py-12 md:py-14 lg:py-14 xl:py-14 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>

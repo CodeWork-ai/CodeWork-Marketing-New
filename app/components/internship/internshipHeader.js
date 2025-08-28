@@ -24,7 +24,7 @@ const InternshipHeader = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           
           {/* Left Section: Content */}
-          <div className="flex-1 text-center pt-16 lg:text-left">
+          <div className="flex-1 text-center pt-16 pl-20 lg:text-left">
             {/* Section Badge */}
             <div className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 pt-20 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6 md:mb-8">
               <span className="text-secondary text-xs font-medium">— Internship Program —</span>

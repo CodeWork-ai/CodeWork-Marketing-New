@@ -5,7 +5,7 @@ import DataSecurity from '../components/dataSecurity/dataSecurity'
 const page = () => {
   return (
     <div>
-      <DataSecurityLanding/>
+      {/* <DataSecurityLanding/> */}
       <DataSecurity/>
         
     </div>

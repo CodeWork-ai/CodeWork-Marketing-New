@@ -2,7 +2,7 @@ import React from 'react'
 
 const EventUpdates = () => {
   return (
-    <div className="min-h-screen bg-primary relative overflow-hidden py-16 px-4">
+    <div className="min-h-screen bg-primary relative overflow-hidden pt-36 py-16 px-4">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 md:w-40 md:h-40 bg-secondary/20 rounded-full"></div>

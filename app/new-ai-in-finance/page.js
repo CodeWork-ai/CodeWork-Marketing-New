@@ -5,7 +5,7 @@ import Finance from '../components/industryFinance/Finance'
 const page = () => {
   return (
     <div>
-        <FinanceLanding/>
+        {/* <FinanceLanding/> */}
         <Finance/>
     </div>
   )

@@ -25,13 +25,6 @@ const caseStudies = [
   },
   {
     id: 4,
-    title: 'Radi Insight Scan',
-    description: 'Making Medical Reports More Accessible.',
-    imageUrl: '/CaseStudies/scans.jpg',
-    link: '/radi-insight-scan',
-  },
-  {
-    id: 5,
     title: 'Signature Recognition System',
     description: 'Advanced Handwritten Signature Recognition System.',
     imageUrl: '/CaseStudies/signaturess.jpg',
@@ -139,7 +132,7 @@ const AllCaseStudies = () => {
       </div>
 
       {/* Enhanced Toggle Button */}
-      <div className="mt-12 text-center relative z-10 animate-slide-up animation-delay-800">
+      {/* <div className="mt-12 text-center relative z-10 animate-slide-up animation-delay-800">
         <button
           onClick={() => setShowAll(!showAll)}
           className="relative bg-primary/30 backdrop-blur-xl border-2 border-secondary/30 text-secondary font-bold px-8 py-4 rounded-full hover:bg-primary/40 hover:border-secondary hover:shadow-lg hover:shadow-secondary/25 transform hover:scale-105 transition-all duration-300 overflow-hidden group"
@@ -161,11 +154,9 @@ const AllCaseStudies = () => {
               </>
             )}
           </span>
-          
-          {/* Button background effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
         </button>
-      </div>
+      </div> */}
 
       {/* Stats Section */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 relative z-10 animate-slide-up animation-delay-1000">

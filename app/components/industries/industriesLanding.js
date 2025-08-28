@@ -34,7 +34,7 @@ const IndustriesLanding = () => {
           {/* Enhanced Heading */}
           <div className="heading-container mb-6 md:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight">
-              <span className="text-white">Smart Tech for </span>
+              <span className="text-white">AI  for </span>
               <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
                 Every Industry
               </span>

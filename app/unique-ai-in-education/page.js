@@ -5,7 +5,7 @@ import Education from '../components/industryEducation/Education'
 const page = () => {
   return (
     <div>
-        <EducationLanding/>
+        {/* <EducationLanding/> */}
         <Education/>
     </div>
   )

@@ -28,7 +28,7 @@ const ServiceLanding = () => {
       </div>
 
       {/* Enhanced Content Container */}
-      <div className="relative z-10 w-[80%] mx-auto px-4 mt-16 sm:mt-0 lg:mt-0 flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-10 w-[80%] mx-auto px-4 mt-16 sm:mt-16 lg:mt-16 flex flex-col md:flex-row items-center justify-between">
         
         {/* Left: Enhanced Content with Reduced Text */}
         <div className="w-full md:w-3/5 text-left space-y-6">

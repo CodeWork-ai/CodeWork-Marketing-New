@@ -3,7 +3,7 @@ import React from "react";
 
 const TestimonialClient = () => {
   return (
-    <div className="bg-primary relative overflow-hidden px-6 py-20 space-y-32">
+    <div className="bg-primary relative overflow-hidden px-6 md:py-20  space-y-20">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -52,7 +52,7 @@ const TestimonialClient = () => {
             <div className="w-full h-full rounded-full bg-white/5 backdrop-blur-xl border border-white/20 p-8 flex items-center justify-center relative overflow-hidden">
               {/* Image */}
               <img
-                src="/testimonial/Client1.jpg"
+                src="/testimonial/Testimonials1.svg"
                 alt="WebSignX"
                 className="h-48 w-auto object-contain z-10 relative group-hover:scale-110 transition-all duration-500"
               />
@@ -185,7 +185,7 @@ const TestimonialClient = () => {
             {/* Image Container */}
             <div className="relative w-56 h-56 bg-primary/40 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl shadow-secondary/20 group-hover:scale-105 transition-all duration-500 border border-white/10">
               <img
-                src="/testimonial/Client2.jpg"
+                src="/testimonial/Testimonials2.svg"
                 alt="Client Image"
                 className="h-40 w-auto object-contain z-10 group-hover:scale-110 transition-all duration-500"
               />
@@ -221,7 +221,7 @@ const TestimonialClient = () => {
             {/* Image Container */}
             <div className="relative w-full h-64 bg-primary/20 rounded-2xl flex items-center justify-center overflow-hidden border border-white/10">
               <img
-                src="/testimonial/Client3.jpg"
+                src="/testimonial/Testimonials3.svg"
                 alt="WebSignX"
                 className="h-52 w-auto object-contain z-10 group-hover:scale-110 transition-all duration-500"
               />

@@ -12,7 +12,7 @@ const formatBotResponse = (text) => {
     // If not valid JSON, check for partial JSON format like "{'answer': 'content'}"
     if (text.includes("{'answer':") || text.includes('{"answer":')) {
       // Extract content between quotes after 'answer':
-      const match = text.match(/['"]answer['"]:\\s*['"]([^'"]*)['"]/);
+      const match = text.match(/['"]answer['"]:\s*['"]([^'"]*)['"]/);
       if (match && match[1]) {
         responseText = match[1];
       } else {
@@ -31,13 +31,13 @@ const formatBotResponse = (text) => {
   }
 
   return responseText
-    .replace(/\\*\\*/g, '') // Remove Markdown bold
-    .replace(/\\\\n/g, '<br>') // Replace escaped newlines with <br>
-    .replace(/\\n/g, '<br>') // Replace actual newlines with <br>
-    .replace(/\\{'answer':\\s*'/g, '') // Remove {'answer': ' prefix
-    .replace(/\\{"answer":\\s*"/g, '') // Remove {"answer": " prefix
-    .replace(/'\\}$/g, '') // Remove trailing '}
-    .replace(/"\\}$/g, '') // Remove trailing "}
+    .replace(/\*\*/g, '') // Remove Markdown bold
+    .replace(/\\n/g, '<br>') // Replace escaped newlines with <br>
+    .replace(/\n/g, '<br>') // Replace actual newlines with <br>
+    .replace(/\{'answer':\s*'/g, '') // Remove {'answer': ' prefix
+    .replace(/\{"answer":\s*"/g, '') // Remove {"answer": " prefix
+    .replace(/'\}$/g, '') // Remove trailing '}
+    .replace(/"\}$/g, '') // Remove trailing "}
     .trim();
 };
 
@@ -65,6 +65,7 @@ const TypingAnimation = () => {
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showPromotion, setShowPromotion] = useState(true); // New state for promotion banner
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -80,7 +81,32 @@ const ChatBot = () => {
   const chatContainerRef = useRef(null);
   const quickActionsRef = useRef(null);
 
-  const toggleChat = () => setIsOpen(!isOpen);
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    // Hide promotion when chat is opened
+    if (!isOpen) {
+      setShowPromotion(false);
+    }
+  };
+
+  const dismissPromotion = () => {
+    setShowPromotion(false);
+  };
+
+  // Handle banner click to open chat
+  const handleBannerClick = () => {
+    setIsOpen(true);
+    setShowPromotion(false);
+  };
+
+  // Auto-hide promotion after 10 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPromotion(false);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Quick Actions Data
   const quickActions = [
@@ -346,7 +372,101 @@ const ChatBot = () => {
         .quick-action-animate:hover {
           animation: quick-action-hover 0.4s ease-in-out;
         }
+
+        /* Promotion Banner Animations */
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(100px) scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+          }
+        }
+
+        @keyframes slideOutToRight {
+          from {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+          }
+          to {
+            opacity: 0;
+            transform: translateX(100px) scale(0.9);
+          }
+        }
+
+        .promotion-slide-in {
+          animation: slideInFromRight 0.6s ease-out;
+        }
+
+        .promotion-slide-out {
+          animation: slideOutToRight 0.4s ease-in forwards;
+        }
+
+        @keyframes gentle-bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
+        }
+
+        .gentle-bounce {
+          animation: gentle-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes wiggle {
+          0%, 100% { transform: rotate(0deg); }
+          25% { transform: rotate(-5deg); }
+          75% { transform: rotate(5deg); }
+        }
+
+        .wiggle-animation {
+          animation: wiggle 1s ease-in-out infinite;
+        }
+
+        /* Banner Click Hover Effect */
+        @keyframes banner-hover {
+          0% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-2px) scale(1.02); }
+          100% { transform: translateY(0) scale(1); }
+        }
+
+        .banner-clickable:hover {
+          animation: banner-hover 0.3s ease-in-out;
+          cursor: pointer;
+        }
       `}</style>
+
+      {/* Updated Promotional Banner - With Rounder Corners */}
+{showPromotion && !isOpen && (
+  <div className="fixed bottom-20 right-4 xs:bottom-24 xs:right-6 sm:bottom-28 sm:right-8 md:bottom-32 md:right-10 lg:bottom-28 lg:right-7 z-40 promotion-slide-in">
+    <div 
+      onClick={handleBannerClick}
+      className="relative bg-gradient-to-r from-primary/95 to-primary/90 backdrop-blur-xl border-2 border-secondary/30 rounded-[25px] p-4 shadow-2xl max-w-[200px] xs:max-w-[290px] sm:max-w-[260px] glow-effect gentle-bounce banner-clickable"
+    >
+      {/* Close Button */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation(); // Prevent banner click when closing
+          dismissPromotion();
+        }}
+        className="absolute -top-2 -right-2 w-6 h-6 bg-secondary hover:bg-secondary/80 text-primary rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 hover:scale-110 shadow-lg border-2 border-white/20 z-10"
+      >
+        ×
+      </button>
+
+      {/* Content - Updated to match your image exactly */}
+      <div className="text-white text-center">
+        <h4 className="font-mono text-base xs:text-lg mb-0 leading-tight">
+          Hi There 👋, Welcome to CODEWORK AI
+        </h4>
+      </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-2 right-8 w-2 h-2 bg-secondary/40 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-3 left-3 w-1 h-1 bg-secondary/60 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+    </div>
+  </div>
+)}
 
       {/* Chatbot positioned at bottom */}
       <div className="fixed bottom-4 right-4 xs:bottom-6 xs:right-6 sm:bottom-8 sm:right-8 md:bottom-6 md:right-10 lg:bottom-3 lg:right-7 z-50">
@@ -414,17 +534,17 @@ const ChatBot = () => {
               <div className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mr-3 flex-shrink-0 overflow-hidden border-2 border-secondary/40 shadow-xl">
                 <img 
                   src="/chaticon.svg" 
-                  alt="Codework AI" 
+                  alt="chat icon" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
             
               {/* Enhanced Text Content */}
               <div className="flex flex-col min-w-0 flex-1">
-                <h3 className="font-bold text-lg leading-tight text-white drop-shadow-sm">
-                  <span className="text-white">Code</span>work AI
+                <h3 className="font-semibold text-lg leading-tight text-white drop-shadow-sm">
+                  <span className="text-white">CODE</span>WORK AI
                 </h3>
-                <p className="text-sm opacity-90 leading-tight text-white/80">
+                <p className="text-xs opacity-90 leading-tight text-white/80">
                   AI Assistant • <span className="text-secondary">Online</span>
                 </p>
               </div>

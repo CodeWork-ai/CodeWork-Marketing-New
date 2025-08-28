@@ -5,7 +5,7 @@ import HealthcareLanding from '../components/industryHealthcare/healthcareLandin
 const page = () => {
   return (
     <div>
-        <HealthcareLanding/>
+        {/* <HealthcareLanding/> */}
         <HealthCare/>
     </div>
   )

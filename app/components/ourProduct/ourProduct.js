@@ -140,6 +140,55 @@ const OurProduct = () => {
             <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
           </div>
 
+                {/* Card 3 - Radi Insight Scan */}
+          <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
+            
+            {/* Product Label */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="w-28 h-14  backdrop-blur-sm p-1 rounded-2xl  shadow-lg border border-white/20">
+                <img
+                  src="/RadiInsightscan.svg"
+                  alt="Radi Insight Scan"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-t-3xl">
+              <img
+                src="/CaseStudies/colonScan.jpg"
+                alt="Radi Insight 3D"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
+                Radi Insight Scan
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                 Making Medical Reports More Accessible.
+                </p>
+                <a
+                  href="/radi-insight-scan"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 text-sm font-medium opacity-0 group-hover:opacity-100 delay-200"
+                >
+                  Explore Product
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
+          </div>
         </div>
       </div>
 

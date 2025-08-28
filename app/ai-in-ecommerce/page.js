@@ -5,7 +5,7 @@ import Ecommerce from '../components/industryEcommerce/ecommerce'
 const page = () => {
   return (
     <div>
-        <EcommerceLanding/>
+        {/* <EcommerceLanding/> */}
         <Ecommerce/>
     </div>
   )

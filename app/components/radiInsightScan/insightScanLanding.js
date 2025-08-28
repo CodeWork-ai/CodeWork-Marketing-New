@@ -1,9 +1,9 @@
 "use client";
-import React from 'react'
+import React from 'react';
 
 const InsightScanLanding = () => {
   return (
-    <section className="relative bg-primary w-full pl-36 py-36 overflow-hidden">
+    <section className="relative bg-primary w-full py-12 sm:py-16 md:py-24 lg:py-36 pt-20 sm:pt-16 md:pt-24 lg:pt-36 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 md:w-40 md:h-40 bg-secondary/20 rounded-full"></div>
@@ -20,74 +20,89 @@ const InsightScanLanding = () => {
         <div className="absolute top-3/4 right-1/3 w-1 h-1 md:w-2 md:h-2 bg-white/40 rounded-full animate-pulse"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 relative z-10">
-        {/* Enhanced Text Card with Brand Colors */}
-        <div className="md:w-5/12 bg-gradient-to-br from-primary/40 via-primary/60 to-primary/80 backdrop-blur-xl border border-white/20 p-8 pb-6 rounded-3xl text-white z-20 -mr-28 md:-mr-32 self-end shadow-2xl shadow-secondary/25 hover:scale-105 transition-all duration-500 relative overflow-hidden">
-          
-          {/* Corner Decorations */}
-          <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
-          
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-            <span className="text-secondary text-sm font-medium">— Medical Report Accessibility —</span>
-          </div>
-
-          {/* Enhanced Heading with Gradient Text */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-            Making{" "}
-            <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-              Medical Reports
-            </span>{" "}
-            <span className="text-white">More Accessible</span>
-          </h2>
-          
-          {/* Decorative underline */}
-          <div className="w-16 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-6"></div>
-          
-          {/* Enhanced Paragraph */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Enhanced Logo with glow effect */}
+        <div className="absolute left-4 z-30">
           <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
-            <p className="text-base md:text-lg w-[90%] leading-relaxed text-white/90 pl-6 font-light">
-              <span className="text-secondary font-medium">Radi Insight Scan</span> bridges the gap between <span className="text-secondary font-medium">medical jargon</span> and <span className="text-secondary font-medium">patient understanding</span>, meeting the growing need for <span className="text-secondary font-medium">clear communication</span> in <span className="text-secondary font-medium">healthcare</span>.
-            </p>
+            <img
+              src="/RadiInsightscan.svg"
+              alt="Colowatch Logo"
+              className="w-32 h-auto drop-shadow-lg"
+            />
+            <div className="absolute inset-0 w-32 h-auto bg-secondary/20 rounded-lg blur-xl -z-10"></div>
           </div>
-
-          {/* Bottom glow */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
-          
-          {/* Subtle pattern overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"></div>
         </div>
 
-        {/* Enhanced Full-cover Image */}
-        <div className="md:w-1/2 h-80 md:h-auto overflow-hidden rounded-3xl shadow-2xl z-10 relative group">
-          {/* Image container with enhanced effects */}
-          <div className="relative h-full">
-            <img
-              src="/CaseStudies/InsightScan.jpg"
-              alt="Radi Insight Scan Medical Report Accessibility"
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            />
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 lg:pr-8">
+          {/* Enhanced Text Card with Brand Colors */}
+          <div className="w-full lg:w-1/4 xl:w-5/12 bg-gradient-to-br from-primary/40 via-primary/60 to-primary/80 backdrop-blur-xl border border-white/20 p-6 sm:p-8 lg:p-4 xl:p-8 rounded-xl sm:rounded-3xl text-white z-20 lg:-mr-16 xl:-mr-32 order-2 lg:order-1 lg:self-end shadow-2xl shadow-secondary/25 hover:scale-105 transition-all duration-500 relative overflow-hidden lg:ml-4">
             
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-secondary/20 group-hover:from-primary/20 group-hover:to-secondary/30 transition-all duration-500"></div>
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
             
-            {/* Floating tech elements */}
-            <div className="absolute top-4 right-4 w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-float">
-              <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-4 sm:mb-6">
+              <span className="text-secondary text-sm font-medium">— Healthcare AI Innovation —</span>
             </div>
+
+            {/* Enhanced Heading with Gradient Text */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-2xl xl:text-5xl font-bold mb-3 sm:mb-4 lg:mb-3 xl:mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
+              Making Medical Reports 
+              </span>{" "}
+             More Accessible
+            </h1>
             
-            <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-pulse">
-              <svg className="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5 1.41-1.41L9 14.17 18.59 7.41 20 6z"/>
-              </svg>
+            {/* Decorative underline */}
+            <div className="w-16 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-4 sm:mb-6"></div>
+            
+            {/* Enhanced Content */}
+            <div className="text-sm sm:text-base md:text-lg lg:text-xs xl:text-lg w-full sm:w-[95%] lg:w-full xl:w-[85%] leading-relaxed text-white/90 space-y-2 lg:space-y-1 xl:space-y-3 relative">
+              <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full hidden sm:block"></div>
+              <div className="sm:pl-6">
+                <p className="font-light">
+                   <span className="text-secondary font-medium">Radi Insight Scan</span> bridges the gap between medical<span className="text-secondary font-medium">  jargon and patient</span>  understanding, meeting the growing 
+                </p>need for clear communication in healthcare.
+                            </div>
             </div>
+
+            {/* Bottom glow */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
             
-            {/* Enhanced border with glow effect */}
-            <div className="absolute inset-0 rounded-3xl border-2 border-secondary/30 group-hover:border-secondary/50 transition-all duration-500"></div>
+            {/* Subtle pattern overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* Enhanced Full-cover Image */}
+          <div className="w-full lg:w-3/4 xl:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[320px] xl:h-[500px] overflow-hidden rounded-xl sm:rounded-3xl shadow-2xl z-10 order-1 lg:order-2 lg:ml-2 relative group">
+            {/* Image container with enhanced effects */}
+            <div className="relative h-full">
+              <img
+                src="/CaseStudies/colonScan.jpg"
+                alt="Colowatch AI colon cancer detection technology interface"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-secondary/20 group-hover:from-primary/20 group-hover:to-secondary/30 transition-all duration-500"></div>
+              
+              {/* Floating tech elements */}
+              <div className="absolute top-4 right-4 w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-float">
+                <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              
+              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-pulse">
+                <svg className="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              
+              {/* Enhanced border with glow effect */}
+              <div className="absolute inset-0 rounded-xl sm:rounded-3xl border-2 border-secondary/30 group-hover:border-secondary/50 transition-all duration-500"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -109,7 +124,7 @@ const InsightScanLanding = () => {
         }
       `}</style>
     </section>
-  )
-}
+  );
+};
 
-export default InsightScanLanding
+export default InsightScanLanding;

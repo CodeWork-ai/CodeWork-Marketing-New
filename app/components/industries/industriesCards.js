@@ -5,7 +5,7 @@ import React from "react";
 const IndustriesCards = () => {
   const cardData = [
     {
-      title: "Healthcare",
+      title: "AI-Healthcare",
       img: "/Industires/healthcare.jpg",
       description:
         "Our AI-powered healthcare solutions revolutionize diagnostics with precision and speed, enabling personalized treatment plans tailored to each patient.",
@@ -17,7 +17,7 @@ const IndustriesCards = () => {
       ),
     },
     {
-      title: "Education",
+      title: " AI-Education",
       img: "/Industires/education.jpg",
       description:
         "Explore unique insights into how AI in education empowers and transforms student learning experiences for a brighter future.",
@@ -29,7 +29,7 @@ const IndustriesCards = () => {
       ),
     },
     {
-      title: "E-commerce",
+      title: " AI-E-commerce",
       img: "/Industires/ecommerce.jpg",
       description:
         "Discover the secrets of integrating AI in e-commerce and unlock remarkable success for your business with our expert strategies.",
@@ -41,7 +41,7 @@ const IndustriesCards = () => {
       ),
     },
     {
-      title: "Finance",
+      title: " AI-Finance",
       img: "/Industires/finance.jpg",
       description:
         "Find out how new AI technologies in finance are empowering decisions and paving the way for a brighter, more efficient financial future.",
@@ -53,7 +53,7 @@ const IndustriesCards = () => {
       ),
     },
     {
-      title: "Data Security",
+      title: "  AI-Data Security",
       img: "/Industires/datascurity.jpg",
       description:
         "AI in data security refers to the use of artificial intelligence to detect, prevent, and respond to cybersecurity threats by analyzing patterns.",

@@ -20,78 +20,90 @@ import MobileOurServices from "./mobileOurServices";
 const OurServices = () => {
   const services = [
     {
-      title: "AI Model Training",
-      description: "Advanced machine learning solutions and AI model development for your business needs.",
+      title: "AI Model Training & Fine Tuning",
+      description:
+        "Advanced machine learning solutions and AI model development for your business needs.",
       icon: FaBrain,
       link: "/ai-model-training",
       image: "/servicesCard/6.jpg",
     },
+
     {
-      title: "Software Development",
-      description: "Custom software solutions tailored to streamline your business processes.",
-      icon: FaCode,
-      link: "/software-development-service",
-      image: "/servicesCard/2.jpg",
-    },
-    {
-      title: "Custom Development",
-      description: "Bespoke development solutions designed specifically for your unique requirements.",
+      title: "AI Driven Custom Software Development",
+      description:
+        "Bespoke development solutions designed specifically for your unique requirements.",
       icon: FaDatabase,
       link: "/custom-software-development",
       image: "/servicesCard/7.jpg",
     },
     {
       title: "DevOps Solutions",
-      description: "Streamlined deployment and integration processes for efficient development cycles.",
+      description:
+        "Streamlined deployment and integration processes for efficient development cycles.",
       icon: BiSync,
       link: "/devops-solutions",
       image: "/servicesCard/9.jpg",
     },
     {
       title: "Cloud Computing",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
+      description:
+        "Scalable cloud infrastructure and migration services for modern businesses.",
       icon: FaCloud,
       link: "/cloud-computing",
       image: "/servicesCard/3.jpg",
     },
+        {
+      title: "AI Implementation",
+      description:
+        "Strategic AI Implementation for Business Success.",
+      icon: FaLock,
+      link: "/ai-implementation",
+      image: "/servicesCard/2.jpg",
+    },
     {
-      title: "Cyber Security",
-      description: "Comprehensive security solutions to protect your digital assets and data.",
+      title: "AI in Cyber Security",
+      description:
+        "Comprehensive security solutions to protect your digital assets and data.",
       icon: FaShieldAlt,
       link: "/cybersecurity-service",
       image: "/servicesCard/8.jpg",
     },
     {
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
+      title: "AI Automation",
+      description:
+        "Transform Your Business with AI Automation.",
       icon: FaMobile,
-      link: "/mobile-software-development",
+      link: "/ai-automation",
       image: "/servicesCard/5.jpg",
     },
     {
-      title: "Web Designing",
-      description: "Modern, responsive web designs that deliver exceptional user experiences.",
+      title: "Agentic AI",
+      description:
+        "Empower Your Business with Agentic AI.",
       icon: FaGlobe,
-      link: "/web-design-service",
+      link: "/agentic-ai",
       image: "/servicesCard/1.jpg",
     },
     {
       title: "IT Staff Augmentation",
-      description: "Skilled IT professionals to enhance your team's capabilities and capacity.",
+      description:
+        "Skilled IT professionals to enhance your team's capabilities and capacity.",
       icon: FaUsers,
       link: "/it-staff-service",
       image: "/servicesCard/10.jpg",
     },
     {
-      title: "Penetration Testing",
-      description: "Comprehensive security testing to identify and resolve vulnerabilities.",
+      title: "AI Implementation",
+      description:
+        "Strategic AI Implementation for Business Success.",
       icon: FaLock,
-      link: "/penetration-testing-service",
-      image: "/servicesCard/4.jpg",
+      link: "/ai-implementation",
+      image: "/servicesCard/7.jpg",
     },
     {
-      title: "Digital Marketing Services",
-      description: "Codework offers tailored Digital Marketing to boost conversions.",
+      title: " AI in Digital Marketing Services",
+      description:
+        "Codework offers tailored Digital Marketing to boost conversions.",
       icon: FaBullhorn,
       link: "/digital-marketing-services",
       image: "/servicesCard/11.jpg",
@@ -144,7 +156,9 @@ const OurServices = () => {
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               {/* Section Badge */}
               <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6 animate-fade-in">
-                <span className="text-secondary text-sm font-medium">— Our Services —</span>
+                <span className="text-secondary text-sm font-medium">
+                  — Our Services —
+                </span>
               </div>
 
               {/* Enhanced Title */}
@@ -159,8 +173,15 @@ const OurServices = () => {
               <div className="relative animate-slide-up animation-delay-400">
                 <div className="absolute left-1/2 transform -translate-x-1/2 -top-2 w-16 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent rounded-full"></div>
                 <p className="text-white/90 text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
-                  With <span className="text-secondary font-medium">Codework</span>, adopting technology means embracing innovation with a personal touch. 
-                  Our commitment to excellence ensures every project is delivered with <span className="text-secondary font-medium">precision and care</span>.
+                  With{" "}
+                  <span className="text-secondary font-medium">Codework</span>,
+                  adopting technology means embracing innovation with a personal
+                  touch. Our commitment to excellence ensures every project is
+                  delivered with{" "}
+                  <span className="text-secondary font-medium">
+                    precision and care
+                  </span>
+                  .
                 </p>
               </div>
             </div>
@@ -187,7 +208,8 @@ const OurServices = () => {
                     {/* Enhanced Icon */}
                     <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg group-hover:bg-secondary/90 transition-all duration-500 animate-float">
                       {React.createElement(service.icon, {
-                        className: "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
+                        className:
+                          "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
                       })}
                     </div>
                   </div>
@@ -196,7 +218,7 @@ const OurServices = () => {
                   <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-4 right-4 bg-primary/20 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-2xl z-10 group-hover:bg-primary/30 group-hover:border-secondary/30 transition-all duration-500 group-hover:scale-105">
                     {/* Subtle inner glow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-secondary/5 rounded-2xl"></div>
-                    
+
                     <h3 className="relative text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 text-center group-hover:text-secondary transition-colors duration-500">
                       {service.title}
                     </h3>
@@ -205,10 +227,12 @@ const OurServices = () => {
                     </p>
                     <div className="relative text-center">
                       <Link href={service.link || "#"}>
-                        <div className="inline-flex items-center bg-gradient-to-r from-secondary to-secondary/80 text-primary px-4 py-2 rounded-full text-sm font-semibold hover:from-secondary/90 hover:to-secondary hover:shadow-lg hover:shadow-secondary/25 transform hover:scale-105 transition-all duration-300 group-hover:animate-bounce-subtle">
-                          <span>Read More</span>
-                          <FaArrowRight className="ml-2 text-xs transform group-hover:translate-x-1 transition-transform duration-300" />
-                        </div>
+                        <button className="relative bg-secondary text-primary font-medium text-[15px] px-3 py-[0.2em] pl-4 h-[2.2em] rounded-[0.8em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#1ddfea] group">
+                          <span className="mr-8">Read More</span>
+                          <div className="absolute right-[0.25em] bg-primary h-[1.7em] w-[1.7em] rounded-[0.6em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.5em)] shadow-[0.1em_0.1em_0.5em_0.15em_#1ddfea] active:scale-95">
+                            <FaArrowRight className="w-[0.8em] transition-transform duration-300 text-secondary group-hover:translate-x-[0.1em]" />
+                          </div>
+                        </button>
                       </Link>
                     </div>
                   </div>
@@ -216,13 +240,17 @@ const OurServices = () => {
               ))}
 
               {/* Last Two Services - Centered Layout */}
-              <div className="lg:col-start-1 lg:col-span-3">
+              <div className="lg:col-start-1  lg:col-span-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:max-w-5xl lg:mx-auto">
                   {services.slice(-2).map((service, index) => (
                     <div
                       key={index}
                       className="group relative mb-12 sm:mb-16 md:mb-20 animate-card-float"
-                      style={{ animationDelay: `${(services.length - 2 + index) * 100}ms` }}
+                      style={{
+                        animationDelay: `${
+                          (services.length - 2 + index) * 100
+                        }ms`,
+                      }}
                     >
                       {/* Enhanced Card Container */}
                       <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden rounded-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-secondary/25">
@@ -238,7 +266,8 @@ const OurServices = () => {
                         {/* Enhanced Icon */}
                         <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg group-hover:bg-secondary/90 transition-all duration-500 animate-float">
                           {React.createElement(service.icon, {
-                            className: "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
+                            className:
+                              "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
                           })}
                         </div>
                       </div>
@@ -247,7 +276,7 @@ const OurServices = () => {
                       <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-4 right-4 bg-primary/20 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-2xl z-10 group-hover:bg-primary/30 group-hover:border-secondary/30 transition-all duration-500 group-hover:scale-105">
                         {/* Subtle inner glow */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-secondary/5 rounded-2xl"></div>
-                        
+
                         <h3 className="relative text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 text-center group-hover:text-secondary transition-colors duration-500">
                           {service.title}
                         </h3>
@@ -256,10 +285,12 @@ const OurServices = () => {
                         </p>
                         <div className="relative text-center">
                           <Link href={service.link || "#"}>
-                            <div className="inline-flex items-center bg-gradient-to-r from-secondary to-secondary/80 text-primary px-4 py-2 rounded-full text-sm font-semibold hover:from-secondary/90 hover:to-secondary hover:shadow-lg hover:shadow-secondary/25 transform hover:scale-105 transition-all duration-300 group-hover:animate-bounce-subtle">
-                              <span>Read More</span>
-                              <FaArrowRight className="ml-2 text-xs transform group-hover:translate-x-1 transition-transform duration-300" />
-                            </div>
+                            <button className="relative bg-secondary text-primary font-medium text-[15px] px-3 py-[0.2em] pl-4 h-[2.2em] rounded-[0.8em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#1ddfea] group">
+                              <span className="mr-8">Read More</span>
+                              <div className="absolute right-[0.25em] bg-primary h-[1.7em] w-[1.7em] rounded-[0.6em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.5em)] shadow-[0.1em_0.1em_0.5em_0.15em_#1ddfea] active:scale-95">
+                                <FaArrowRight className="w-[0.8em] transition-transform duration-300 text-secondary group-hover:translate-x-[0.1em]" />
+                              </div>
+                            </button>
                           </Link>
                         </div>
                       </div>
@@ -293,7 +324,8 @@ const OurServices = () => {
             }
 
             @keyframes float {
-              0%, 100% {
+              0%,
+              100% {
                 transform: translateY(0px);
               }
               50% {
@@ -335,7 +367,8 @@ const OurServices = () => {
             }
 
             @keyframes bounceSubtle {
-              0%, 100% {
+              0%,
+              100% {
                 transform: translateY(0);
               }
               50% {
