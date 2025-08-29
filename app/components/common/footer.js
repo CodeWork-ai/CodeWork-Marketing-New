@@ -255,7 +255,7 @@ const Footer = () => {
                 <FaMapMarkerAlt size={16} className="text-primary" />
               </div>
               <p className="text-xs sm:text-sm text-white/90">
-                Level 3, Akshaya HQ, OMR, <br />
+                Suite 305, 3rd Floor, Akshaya HQ, OMR, <br />
                 Kazhipattur, Chennai, <br />
                 Tamilnadu, 603103.
               </p>

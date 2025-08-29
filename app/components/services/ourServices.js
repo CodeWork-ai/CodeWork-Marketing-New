@@ -20,6 +20,14 @@ import MobileOurServices from "./mobileOurServices";
 const OurServices = () => {
   const services = [
     {
+      title: "AI Implementation",
+      description:
+        "Strategic AI Implementation for Business Success.",
+      icon: FaLock,
+      link: "/ai-implementation",
+      image: "/servicesCard/7.jpg",
+    },
+    {
       title: "AI Model Training & Fine Tuning",
       description:
         "Advanced machine learning solutions and AI model development for your business needs.",
@@ -52,14 +60,6 @@ const OurServices = () => {
       link: "/cloud-computing",
       image: "/servicesCard/3.jpg",
     },
-        {
-      title: "AI Implementation",
-      description:
-        "Strategic AI Implementation for Business Success.",
-      icon: FaLock,
-      link: "/ai-implementation",
-      image: "/servicesCard/2.jpg",
-    },
     {
       title: "AI in Cyber Security",
       description:
@@ -91,14 +91,6 @@ const OurServices = () => {
       icon: FaUsers,
       link: "/it-staff-service",
       image: "/servicesCard/10.jpg",
-    },
-    {
-      title: "AI Implementation",
-      description:
-        "Strategic AI Implementation for Business Success.",
-      icon: FaLock,
-      link: "/ai-implementation",
-      image: "/servicesCard/7.jpg",
     },
     {
       title: " AI in Digital Marketing Services",
@@ -188,7 +180,7 @@ const OurServices = () => {
 
             {/* Enhanced Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
-              {services.slice(0, -2).map((service, index) => (
+              {services.slice(0, -1).map((service, index) => (
                 <div
                   key={index}
                   className="group relative mb-12 sm:mb-16 md:mb-20 animate-card-float"
@@ -238,65 +230,63 @@ const OurServices = () => {
                   </div>
                 </div>
               ))}
+            </div>
 
-              {/* Last Two Services - Centered Layout */}
-              <div className="lg:col-start-1  lg:col-span-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:max-w-5xl lg:mx-auto">
-                  {services.slice(-2).map((service, index) => (
-                    <div
-                      key={index}
-                      className="group relative mb-12 sm:mb-16 md:mb-20 animate-card-float"
-                      style={{
-                        animationDelay: `${
-                          (services.length - 2 + index) * 100
-                        }ms`,
-                      }}
-                    >
-                      {/* Enhanced Card Container */}
-                      <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden rounded-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-secondary/25">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
-                        />
-                        {/* Enhanced Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent rounded-2xl"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+            {/* Last Service - Centered Layout */}
+            <div className="mt-8 lg:mt-12">
+              <div className="max-w-xl mx-auto">
+                {services.slice(-1).map((service, index) => (
+                  <div
+                    key={index}
+                    className="group relative mb-12 sm:mb-16 md:mb-20 animate-card-float"
+                    style={{
+                      animationDelay: `${(services.length - 1 + index) * 100}ms`,
+                    }}
+                  >
+                    {/* Enhanced Card Container */}
+                    <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden rounded-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-secondary/25">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
+                      />
+                      {/* Enhanced Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent rounded-2xl"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
 
-                        {/* Enhanced Icon */}
-                        <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg group-hover:bg-secondary/90 transition-all duration-500 animate-float">
-                          {React.createElement(service.icon, {
-                            className:
-                              "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
-                          })}
-                        </div>
-                      </div>
-
-                      {/* Enhanced Glass-morphism Info Card */}
-                      <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-4 right-4 bg-primary/20 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-2xl z-10 group-hover:bg-primary/30 group-hover:border-secondary/30 transition-all duration-500 group-hover:scale-105">
-                        {/* Subtle inner glow */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-secondary/5 rounded-2xl"></div>
-
-                        <h3 className="relative text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 text-center group-hover:text-secondary transition-colors duration-500">
-                          {service.title}
-                        </h3>
-                        <p className="relative text-white/80 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed text-center line-clamp-2">
-                          {service.description}
-                        </p>
-                        <div className="relative text-center">
-                          <Link href={service.link || "#"}>
-                            <button className="relative bg-secondary text-primary font-medium text-[15px] px-3 py-[0.2em] pl-4 h-[2.2em] rounded-[0.8em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#1ddfea] group">
-                              <span className="mr-8">Read More</span>
-                              <div className="absolute right-[0.25em] bg-primary h-[1.7em] w-[1.7em] rounded-[0.6em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.5em)] shadow-[0.1em_0.1em_0.5em_0.15em_#1ddfea] active:scale-95">
-                                <FaArrowRight className="w-[0.8em] transition-transform duration-300 text-secondary group-hover:translate-x-[0.1em]" />
-                              </div>
-                            </button>
-                          </Link>
-                        </div>
+                      {/* Enhanced Icon */}
+                      <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg group-hover:bg-secondary/90 transition-all duration-500 animate-float">
+                        {React.createElement(service.icon, {
+                          className:
+                            "w-full h-full text-primary group-hover:text-white transition-colors duration-500",
+                        })}
                       </div>
                     </div>
-                  ))}
-                </div>
+
+                    {/* Enhanced Glass-morphism Info Card */}
+                    <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-4 right-4 bg-primary/20 backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 shadow-2xl z-10 group-hover:bg-primary/30 group-hover:border-secondary/30 transition-all duration-500 group-hover:scale-105">
+                      {/* Subtle inner glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-secondary/5 rounded-2xl"></div>
+
+                      <h3 className="relative text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 text-center group-hover:text-secondary transition-colors duration-500">
+                        {service.title}
+                      </h3>
+                      <p className="relative text-white/80 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed text-center line-clamp-2">
+                        {service.description}
+                      </p>
+                      <div className="relative text-center">
+                        <Link href={service.link || "#"}>
+                          <button className="relative bg-secondary text-primary font-medium text-[15px] px-3 py-[0.2em] pl-4 h-[2.2em] rounded-[0.8em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#1ddfea] group">
+                            <span className="mr-8">Read More</span>
+                            <div className="absolute right-[0.25em] bg-primary h-[1.7em] w-[1.7em] rounded-[0.6em] flex items-center justify-center transition-all duration-300 group-hover:w-[calc(100%-0.5em)] shadow-[0.1em_0.1em_0.5em_0.15em_#1ddfea] active:scale-95">
+                              <FaArrowRight className="w-[0.8em] transition-transform duration-300 text-secondary group-hover:translate-x-[0.1em]" />
+                            </div>
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

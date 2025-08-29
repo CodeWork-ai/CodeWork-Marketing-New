@@ -186,9 +186,9 @@ const AiCardSection = () => {
           <span className="text-secondary text-sm font-medium">— AI Solutions —</span>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-          <span className="text-white"> Our Expertise </span>
+          <span className="text-white"> Our  </span>
           <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-           instead of service
+          Expertise
           </span>
         </h2>
         <p className="text-white/80 text-lg max-w-2xl mx-auto">
