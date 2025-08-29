@@ -1,0 +1,286 @@
+"use client";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from "react";
+
+export default function Healthcare() {
+  // Industry cards data from your IndustriesCards component
+  const industryCards = [
+    {
+      title: "Education",
+      img: "/Industires/education.jpg",
+      description: "Explore unique insights into how AI in education empowers and transforms student learning experiences for a brighter future.",
+      link: "/unique-ai-in-education",
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+        </svg>
+      ),
+    },
+    {
+      title: "E-commerce",
+      img: "/Industires/ecommerce.jpg",
+      description: "Discover the secrets of integrating AI in e-commerce and unlock remarkable success for your business with our expert strategies.",
+      link: "/ai-in-ecommerce",
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Finance",
+      img: "/Industires/finance.jpg",
+      description: "Find out how new AI technologies in finance are empowering decisions and paving the way for a brighter, more efficient financial future.",
+      link: "/new-ai-in-finance",
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+        </svg>
+      ),
+    },
+  ];
+
+  return (
+    <div className="bg-primary text-white min-h-screen">
+      
+      {/* Hero Section */}
+      <section className="relative bg-primary min-h-screen overflow-hidden">
+        {/* Background overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70 z-10"></div>
+        
+        {/* Background image positioned at bottom half with responsive positioning */}
+        <div className="absolute bottom-0 left-[5%] sm:left-[10%] md:left-[15%] lg:left-[20%] h-1/4 sm:h-1/3 md:h-2/5 lg:h-1/2 w-[90%] sm:w-4/5 md:w-4/5 lg:w-4/5">
+          <Image
+            src="/blog/blog7.jpg"
+            alt="AI in Healthcare"
+            fill
+            className="object-cover rounded-tl-xl sm:rounded-tl-2xl md:rounded-tl-3xl"
+            priority
+          />
+        </div>
+
+        {/* Contact button - HIDDEN on mobile, visible from tablet up */}
+       <div className="absolute hidden sm:block top-24 right-6 md:top-32 md:right-8 lg:top-52 lg:right-8 z-30">
+  <Link href="/contact-ai-solutions">
+    <button className="bg-secondary hover:bg-secondary/90 text-primary font-bold py-2.5 px-6 md:py-3 md:px-8 text-sm md:text-base rounded-full transition-colors duration-200 shadow-lg">
+      Contact us →
+    </button>
+  </Link>
+</div>
+
+        {/* Content wrapper - responsive with proper mobile spacing */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-12 md:py-16 lg:py-20 min-h-screen flex items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center w-full h-full">
+            
+            {/* Left side - Text content with balanced spacing */}
+            <div className="flex flex-col pl-12 justify-center space-y-4 sm:space-y-6 md:space-y-8 pt-8 pb-16 sm:pt-8 sm:pb-8 md:pt-4 md:pb-4 lg:pt-0 lg:pb-0">            
+              <div>
+                <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-glow leading-tight">
+                  AI in Healthcare
+                </h1>
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-white/90 leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
+                  AI in Healthcare: What It Is, Uses, Examples & Benefits. Artificial Intelligence (AI) in healthcare refers to the use of smart computer systems that can think, learn, and make decisions like humans—but faster and often more accurately.
+                </p>
+              </div>
+            </div>
+
+            {/* Right side - Decorative elements - hidden on mobile and small screens */}
+            <div className="relative hidden md:block">
+              <div className="absolute -top-4 -right-4 w-20 h-20 lg:w-24 lg:h-24 bg-secondary/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 lg:w-32 lg:h-32 bg-secondary/10 rounded-full blur-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <section className="max-w-7xl mx-auto px-6 pt-16 sm:pt-12 md:pt-16 lg:pt-20 pb-8 sm:pb-12 md:pb-16 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          
+          {/* Contact Form */}
+          <div className="bg-primary/80 rounded-xl p-8 border border-secondary/30">
+            <h2 className="text-2xl font-bold text-secondary mb-4">Fill the form to receive a call</h2>
+            <p className="text-white/70 mb-6">
+              Connect with our healthcare AI experts to learn how we can help transform your medical practice.
+            </p>
+            
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-white/80 mb-2">Full name</label>
+                <input 
+                  type="text" 
+                  placeholder="John Carter"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-white/80 mb-2">Email address</label>
+                <input 
+                  type="email" 
+                  placeholder="example@yourdomain.com"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-white/80 mb-2">Phone number</label>
+                <input 
+                  type="tel" 
+                  placeholder="(123) 456-7890"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                />
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+              >
+                Receive a call →
+              </button>
+            </form>
+          </div>
+
+          {/* Content */}
+          <div className="lg:col-span-2 space-y-8">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">What is AI in Healthcare?</h2>
+              <p className="text-white/80 leading-relaxed mb-6">
+                Instead of replacing doctors and nurses, AI acts as a powerful assistant that helps them diagnose illnesses, plan treatments, and improve patient care. AI uses technologies like machine learning, natural language processing, and computer vision to analyze huge amounts of medical data. This could be patient records, lab results, medical images, or even real-time monitoring from wearable devices. The goal is to spot patterns, predict outcomes, and support decision-making.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-secondary mb-4">Uses of AI in Healthcare</h3>
+              <p className="text-white/80 mb-6">
+                AI is transforming healthcare through various innovative applications that enhance medical practice efficiency and patient outcomes.
+              </p>
+              
+              <ul className="space-y-3 text-white/80">
+                <li className="flex items-start space-x-3">
+                  <span className="text-secondary">•</span>
+                  <span><strong>Early disease detection</strong> – AI can analyze scans to detect cancer, heart disease, or eye conditions earlier than the human eye.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-secondary">•</span>
+                  <span><strong>Personalized treatment</strong> – AI tailors treatment plans to each patient's unique needs.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-secondary">•</span>
+                  <span><strong>Drug discovery</strong> – AI speeds up the process of finding and testing new medicines.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-secondary">•</span>
+                  <span><strong>Administrative automation</strong> – It handles tasks like scheduling, billing, and updating records.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-secondary mb-4">Real-World Examples</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
+                  <h4 className="font-semibold text-white mb-2">IBM Watson Health</h4>
+                  <p className="text-white/70 text-sm">Helps doctors interpret complex medical data.</p>
+                </div>
+                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
+                  <h4 className="font-semibold text-white mb-2">Google DeepMind</h4>
+                  <p className="text-white/70 text-sm">Detects eye diseases by analyzing retina scans.</p>
+                </div>
+                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
+                  <h4 className="font-semibold text-white mb-2">PathAI</h4>
+                  <p className="text-white/70 text-sm">Improves accuracy in diagnosing diseases from pathology slides.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-secondary mb-4">Benefits of AI in Healthcare</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-white/80"><strong>Faster diagnoses</strong> – Cuts the time needed to detect and treat illnesses.</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-white/80"><strong>Higher accuracy</strong> – Reduces human error in reading tests or scans.</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-white/80"><strong>Cost savings</strong> – Streamlines workflows and reduces unnecessary tests.</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-white/80"><strong>Better patient outcomes</strong> – Patients get more precise, timely care.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Healthcare Image */}
+            <div className="relative h-80 rounded-lg overflow-hidden">
+              <Image
+                src="/Industires/healthcare.jpg"
+                alt="Healthcare AI Application"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="bg-secondary/10 rounded-lg p-6 border border-secondary/30">
+              <p className="text-white/90 text-lg leading-relaxed">
+                <strong>AI in healthcare is not about replacing humans</strong> — it's about giving medical professionals the best tools to save lives and improve health for everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* More Industries Section */}
+      <section className="bg-primary/50 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-center mb-12">
+  <h2 className="text-4xl font-bold text-white">More Industries</h2>
+  <Link href="/industries-you-must-know" className="text-secondary hover:text-secondary/80 font-semibold">
+    Browse all industries →
+  </Link>
+</div>
+
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {industryCards.map((card, idx) => (
+              <div key={idx} className="bg-primary/80 rounded-lg p-6 border border-secondary/30 hover:border-secondary/50 transition-colors group">
+                <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src={card.img}
+                    alt={card.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary">
+                    {card.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
+                <p className="text-white/70 mb-4">{card.description}</p>
+                <Link href={card.link} className="text-secondary group-hover:text-secondary/80 font-semibold">
+                  Learn more →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .drop-shadow-glow {
+          text-shadow: 0 0 20px rgba(29, 223, 234, 0.6), 0 0 4px rgba(34, 48, 68, 0.6);
+        }
+      `}</style>
+    </div>
+  );
+}
