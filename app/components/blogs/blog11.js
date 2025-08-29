@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { FiClock } from "react-icons/fi";
-
+import Link from "next/link";
 const Blog11 = () => {
   return (
     <div className="bg-primary py-12 pt-40 min-h-screen">
@@ -64,7 +64,7 @@ const Blog11 = () => {
           Leveraged by Artificial Intelligence, companies can now analyze enormous datasets to provide tailored emails, product recommendations, and even custom websites.
         </p>
         <ul className="list-disc ml-6 text-white/80 mb-6 space-y-1">
-          <li><strong>Enhanced Targeting:</strong> Thanks to machine learning, advertisers can group audiences into micro-segments using interests, behaviors, and intent, resulting in far more cost-efficient advertising.</li>
+          <li><strong>Enhanced Targeting:</strong> Thanks to <Link href="/machine-learning" className="text-secondary hover:underline font-medium"> machine learning</Link> , advertisers can group audiences into micro-segments using interests, behaviors, and intent, resulting in far more cost-efficient advertising.</li>
           <li><strong>Improved Decision-Making:</strong> With AI dashboards, marketers can monitor real-time metrics like click-through rates, conversions, and even bounce rates, allowing them to make strategic instant shifts.</li>
           <li><strong>Scalability:</strong> Managing 10 or even 100 campaigns, AI technologies require little to no human involvement in large-scale marketing operations.</li>
         </ul>

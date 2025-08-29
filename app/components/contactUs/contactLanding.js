@@ -16,81 +16,73 @@ import {
 
 const accordionData = [
   {
-    title: "AI consulting services:",
+    title: "AI in Digital Marketing Services:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Get expert guidance to streamline your digital transformation journey.
-        We help businesses innovate with strategic technology solutions.
+      Drive smarter campaigns with AI-powered insights and personalization.
       </p>
     ),
     icon: FaRobot,
   },
   {
-    title: "IT Staffing solutions:",
+    title: "AI in Cybersecurity:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        We provide skilled IT professionals to meet your project needs. Our
-        staffing solutions ensure you have the right talent at the right time.
+       Strengthen defenses with intelligent threat detection and prevention.
       </p>
     ),
     icon: FaUsers,
   },
   {
-    title: "Software Development:",
+    title: "AI Implementation:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        From web and mobile apps to full-stack enterprise systems, our engineers
-        build scalable, maintainable software tailored to your requirements.
+       Seamlessly integrate AI solutions tailored to your business needs.
       </p>
     ),
     icon: FaLaptopCode,
   },
   {
-    title: "AI in Healthcare:",
+    title: "AI Automation",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Leverage AI for better diagnostics, patient monitoring, and personalized
-        care. We help healthcare providers deploy safe, compliant ML solutions.
+       Streamline processes and boost efficiency with intelligent automation.
       </p>
     ),
     icon: FaHospitalUser,
   },
   {
-    title: "Cybersecurity Services:",
+    title: "Agentic AI:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Protect your assets with our vulnerability assessments, penetration
-        testing, and ongoing security monitoring services.
+        Power intelligent systems that self-learn, adapt, and act independently.
       </p>
     ),
     icon: FaShieldAlt,
   },
   {
-    title: "Finance Technology Solutions:",
+    title: "Cloud Computing:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Build secure, high-performance fintech platforms, from trading
-        applications to regulatory compliance tooling.
+       Scalable, secure, and reliable cloud solutions for every business need.
       </p>
     ),
     icon: FaMoneyBillWave,
   },
   {
-    title: "E-commerce Solutions:",
+    title: "DevOps Solutions:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Our team delivers custom e-commerce stores, payment integrations, and
-        scalable architectures to grow your online business.
+        Accelerate development and deployment with seamless DevOps practices.
       </p>
     ),
     icon: FaShoppingCart,
   },
   {
-    title: "Smart Recommendation Systems:",
+    title: "AI-Driven Custom Software Development:",
     content: (
       <p className="text-white/80 text-sm leading-relaxed">
-        Personalize user experiences with ML-driven recommendations for content,
-        products, or services.
+       Build tailored applications powered by artificial intelligence.
       </p>
     ),
     icon: FaLightbulb,

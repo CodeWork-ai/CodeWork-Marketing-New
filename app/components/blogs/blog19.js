@@ -123,9 +123,6 @@ const Blog19 = () => {
         <p className="text-white/80 leading-relaxed mb-6">
           Grasping the main types of generative AI models is the essential first step to gaining deeper insight into how generative AI functions and to developing effective AI-powered solutions. As the field advances, we can anticipate more specialized models and new categories emerging to tackle unique use cases and technical hurdles.
         </p>
-        <p className="text-white/80 leading-relaxed mb-6">
-          Thanks for reading.
-        </p>
 
         {/* SECTION: Internal Link */}
         <p className="text-white/80 leading-relaxed mb-6">

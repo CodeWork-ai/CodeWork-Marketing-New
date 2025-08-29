@@ -54,7 +54,7 @@ const OurCompany = () => {
               <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-4 hover:transform hover:scale-105 transition-all duration-500 group">
                 <img
                   className="w-full h-auto rounded-2xl group-hover:brightness-110 transition-all duration-500"
-                  src="/CaseStudies/caseStudy.svg"
+                  src="/CaseStudies/caseStudy.jpg"
                   alt="Team working on laptop"
                 />
                 

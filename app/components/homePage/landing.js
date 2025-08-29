@@ -319,9 +319,9 @@ const Landing = () => {
 
             {/* Enhanced Paragraph Container */}
             <div className="paragraph-container mb-10 sm:mb-12 w-full lg:w-[70vw] xl:w-[70vw]">
-              <p className="text-base sm:text-lg md:text-lg lg:text-lg leading-relaxed text-white/90 font-light">
-                We craft intelligent software solutions <span className="">intelligent software solutions </span> 
-                we transform <span className="font-medium">ideas into </span> digital experiences.
+              <p className="text-base sm:text-lg md:text-xl lg:text-xl leading-relaxed text-white/90 font-light">
+               Empowering organizations to    <span className="">adapt, evolve, </span> 
+                 <span className="font-medium">and thrive in the </span> AI-driven era.
               </p>
               
               {/* Decorative line */}

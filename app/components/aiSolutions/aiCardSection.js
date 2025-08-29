@@ -186,9 +186,9 @@ const AiCardSection = () => {
           <span className="text-secondary text-sm font-medium">— AI Solutions —</span>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-          <span className="text-white">Our </span>
+          <span className="text-white"> Our Expertise </span>
           <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-            AI Services
+           instead of service
           </span>
         </h2>
         <p className="text-white/80 text-lg max-w-2xl mx-auto">
@@ -209,7 +209,7 @@ const AiCardSection = () => {
               className="relative px-12 py-4 text-primary font-bold rounded-full transition-all duration-500 bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary hover:shadow-2xl hover:shadow-secondary/25 transform hover:scale-110 overflow-hidden group"
               onClick={() => setShowMore(true)}
             >
-              <span className="relative z-10">View All Services</span>
+              <span className="relative z-10">View All</span>
               {/* Button shine effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
             </button>

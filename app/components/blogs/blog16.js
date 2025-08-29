@@ -53,9 +53,6 @@ const Blog16 = () => {
           For instance, in image recognition, the initial layer may detect edges, the next layer captures geometric patterns, and the final layer categorizes objects such as traffic signs or medical scans.
         </p>
         <p className="text-white/80 leading-relaxed mb-4">
-          Feel free to ask if you'd like an example from another area, such as retail, security, or industrial automation. I can adjust it to suit your needs.
-        </p>
-        <p className="text-white/80 leading-relaxed mb-4">
           Neural networks become more effective as they receive larger datasets and greater computational resources, which makes them ideal for complex and demanding tasks.
         </p>
 

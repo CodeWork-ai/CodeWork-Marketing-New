@@ -71,7 +71,20 @@ export default function MobileNavbar() {
         },
       ] 
     },
-    { href: "/careers-at-codework", label: "Career", dropdown: [] },
+    { href: "/careers-at-codework", label: "Career", dropdown: [
+       {
+          href: "/careers-at-codework",
+          label: "Join Our Team",
+        },
+        {
+          href: "/join-our-team",
+          label: "Job Opportunities",
+        },
+        {
+          href: "/internship",
+          label: "Internship Program",
+        },
+    ] },
     {
       href: "/build-your-career-with-codework",
       label: "Our Products",

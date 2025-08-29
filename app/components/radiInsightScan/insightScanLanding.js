@@ -21,19 +21,18 @@ const InsightScanLanding = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Enhanced Logo with glow effect */}
-        <div className="absolute left-4 z-30">
-          <div className="relative">
-            <img
-              src="/RadiInsightscan.svg"
-              alt="Colowatch Logo"
-              className="w-32 h-auto drop-shadow-lg"
-            />
-            <div className="absolute inset-0 w-32 h-auto bg-secondary/20 rounded-lg blur-xl -z-10"></div>
-          </div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 lg:pr-8">
+        {/* Enhanced Logo with glow effect - Alternative Flex approach */}
+<div className="absolute top-1 left-0 right-0 flex justify-center z-30">
+  <div className="relative">
+    <img
+      src="/RadiInsightscan.svg"
+      alt="Colowatch Logo"
+      className="w-32 h-auto drop-shadow-lg"
+    />
+    <div className="absolute inset-0 w-32 h-auto bg-secondary/20 rounded-lg blur-xl -z-10"></div>
+  </div>
+</div>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 pt-16 lg:pr-8">
           {/* Enhanced Text Card with Brand Colors */}
           <div className="w-full lg:w-1/4 xl:w-5/12 bg-gradient-to-br from-primary/40 via-primary/60 to-primary/80 backdrop-blur-xl border border-white/20 p-6 sm:p-8 lg:p-4 xl:p-8 rounded-xl sm:rounded-3xl text-white z-20 lg:-mr-16 xl:-mr-32 order-2 lg:order-1 lg:self-end shadow-2xl shadow-secondary/25 hover:scale-105 transition-all duration-500 relative overflow-hidden lg:ml-4">
             

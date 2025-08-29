@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 import Link from "next/link";
-// Import React Icons
-import { RiRobot2Fill } from "react-icons/ri";
-import { MdPhoneIphone, MdWeb, MdCloud } from "react-icons/md";
+// Import AI-related icons
+import { RiAiGenerate, RiRobot2Fill, RiBrainLine } from "react-icons/ri";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 const WhatWeOffer = () => {
   return (
@@ -59,34 +58,40 @@ const WhatWeOffer = () => {
               {[
                 { 
                   icon: <RiRobot2Fill className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
-                  title: "AI Solutions", 
-                  desc: "Advanced AI & ML services" 
+                  title: "AI Model Training", 
+                  desc: "Smarter models, better outcomes",
+                  link: "/ai-model-training"
                 },
                 { 
-                  icon: <MdPhoneIphone className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
-                  title: "App Development", 
-                  desc: "iOS & Android applications" 
+                  icon: <GiArtificialIntelligence className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
+                  title: "AI Driven Custom Software Development", 
+                  desc: "Tailored solutions powered by AI",
+                  link: "/custom-software-development"
                 },
                 { 
-                  icon: <MdWeb className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
-                  title: "Web Design", 
-                  desc: "Stunning digital experiences" 
+                  icon: <RiAiGenerate className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
+                  title: "AI Automation", 
+                  desc: "Streamline tasks, boost efficiency",
+                  link: "/ai-automation"
                 },
                 { 
-                  icon: <MdCloud className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
-                  title: "Cloud Computing", 
-                  desc: "Scalable cloud solutions" 
+                  icon: <RiBrainLine className="text-2xl text-secondary group-hover:text-white transition-colors duration-300" />, 
+                  title: "Agentic AI",
+                  desc: "Autonomous intelligence for action",
+                  link: "/agentic-ai"
                 }
               ].map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-secondary/30 transition-all duration-300 hover:transform hover:scale-105 group">
-                  <div className="group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                <Link href={feature.link} key={index} className="block">
+                  <div className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-secondary/30 transition-all duration-300 hover:transform hover:scale-105 group cursor-pointer">
+                    <div className="group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold text-sm">{feature.title}</h4>
+                      <p className="text-white/70 text-xs">{feature.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-white font-semibold text-sm">{feature.title}</h4>
-                    <p className="text-white/70 text-xs">{feature.desc}</p>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
 
