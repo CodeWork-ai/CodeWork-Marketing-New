@@ -88,7 +88,7 @@ const WhatWeOffer = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold text-sm">{feature.title}</h4>
-                      <p className="text-white/70 text-xs">{feature.desc}</p>
+                      <p className="text-white/90 text-xs">{feature.desc}</p>
                     </div>
                   </div>
                 </Link>
