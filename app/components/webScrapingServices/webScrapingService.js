@@ -25,14 +25,14 @@ function WebScrapingService() {
         <div className="mb-12">
           <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full text-sm text-secondary font-medium mb-6">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
-            Web Scraping
+            Web data extraction
           </div>
           <h2 className="text-5xl font-bold text-white mb-6">
             Introduction: <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary text-transparent bg-clip-text">Why Data Matters for Businesses</span>
           </h2>
           <p className="text-white/90 leading-relaxed border-l-4 border-secondary/40 pl-4 max-w-4xl">
             In today’s digital world, data is the key to growth. Whether you’re tracking competitors, finding leads, or understanding market trends — 
-            having the right information at the right time gives your business a strong edge. Web scraping is a smart way to collect this data quickly 
+            having the right information at the right time gives your business a strong edge. Web data extraction is a smart way to collect this data quickly 
             and accurately, just like having a 24/7 digital assistant.
           </p>
         </div>
@@ -55,7 +55,7 @@ function WebScrapingService() {
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-white mb-4">Strategic Shift: Moving to Smart Data Collection</h3>
           <p className="text-white/90 mb-4">
-            To overcome these challenges, we adopted custom web scraping tools that automate the entire process. Instead of wasting hours, we now get accurate 
+            To overcome these challenges, we adopted custom web data extraction tools that automate the entire process. Instead of wasting hours, we now get accurate 
             data in minutes — in formats like Excel or CSV — ready for use in decision-making.
           </p>
           <h4 className="text-xl font-bold text-secondary mb-2">How It Works:</h4>
@@ -91,7 +91,7 @@ function WebScrapingService() {
         {/* ==== BENEFITS ==== */}
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-primary/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-primary/50 transition">
-            <h3 className="text-3xl font-bold text-white mb-6">Benefits of In-House Web Scraping Solutions</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">Benefits of In-House Web data extraction Solutions</h3>
             <ul className="space-y-3 text-white/90">
               <li>Customize data output as per team needs</li>
               <li>Save costs by avoiding third-party data services</li>
@@ -131,7 +131,7 @@ function WebScrapingService() {
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"></div>
             <h3 className="text-4xl font-bold mb-8">Conclusion: Smarter Decisions Start with Better Data</h3>
             <p className="text-xl font-light leading-relaxed text-white/90">
-              Web scraping is no longer optional — it’s a must-have tool for data-driven businesses. 
+              Web data extraction is no longer optional — it’s a must-have tool for data-driven businesses. 
               By switching to automated, in-house scraping, we saved time, cut costs, and made faster, smarter decisions. 
               Whether you're a startup or an enterprise, having real-time web data can give you a competitive edge in any industry.
             </p>

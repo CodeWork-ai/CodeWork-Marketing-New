@@ -21,7 +21,6 @@ const Blog20 = () => {
     { id: "industry-use-cases", title: "Industry Use Cases" },
     { id: "benefits-of-predictive-modeling", title: "Benefits of Predictive Modeling" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
   ];
 
   // Smooth scroll to section

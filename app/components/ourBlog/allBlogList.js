@@ -212,6 +212,86 @@ const blogPosts = [
     category: 'Neural Networks',
     readTime: '9 min read'
   },
+  {
+    id: 22,
+    date: '2025-07-24',
+    image: '/blog/blog2.jpg',
+    title: ' AI Consulting ',
+    description: 'Transform your business with AI consulting and development services that position you as an industry leader.',
+    link: '/ai-consulting',
+    category: 'AI',
+    readTime: '6 min read'
+  },
+  {
+    id: 23,
+    date: '2025-07-24',
+    image: '/blog/blog23.jpg',
+    title: 'What is Artificial Intelligence?',
+    description: 'Artificial Intelligence (AI) refers to the capability of machines to carry out tasks that usually demand human intelligence. These tasks include learning from data, recognizing patterns, making decisions, understanding language, and interacting with humans.',
+    link: '/artificial-intelligence',
+    category: 'AI',
+    readTime: '8 min read'
+  },
+  {
+    id: 24,
+    date: '2025-07-25',
+    image: '/blog/blog24.jpg',
+    title: 'Data Engineering: The Backbone of Smart Data Systems',
+    description: 'In the rapidly evolving digital landscape, businesses rely on data to drive smart decision-making. However, before it can be analyzed or fed into AI models, data must be gathered, refined, and structured. It is the role of data engineering — a field that builds and maintains the systems responsible for turning raw data into usable information.',
+    link: '/data-engineering',
+    category: 'Data Engineering',
+    readTime: '10 min read'
+  },
+  {
+    id: 25,
+    date: '2025-07-25',
+    image: '/blog/blog25.jpg',
+    title: 'AI in Cybersecurity',
+    description: 'At CodeWorkAI, we use AI for real-time detection, prevention, and responsive actions on different threats.',
+    link: '/ai-in-cybersecurity',
+    category: 'AI',
+    readTime: '12 min read'
+  },
+  {
+    id: 26,
+    date: '2025-07-26',
+    image: '/blog/blog26.jpg',
+    title: 'AI Chatbot Integration',
+    description: 'AI chatbot integration is the process of connecting a chatbot with existing business systems such as websites,',
+    link: '/ai-chatbot-integration',
+    category: 'AI',
+    readTime: '10 min read'
+  },
+  {
+    id: 27,
+    date: '2025-07-26',
+    image: '/blog/blog27.jpg',
+    title: 'Natural Language Processing (NLP) Essentials',
+    description: 'Natural Language Processing (NLP) is the branch of artificial intelligence that focuses on enabling machines to read, ',
+    link: '/natural-language-processing',
+    category: 'AI',
+    readTime: '9 min read'
+  },
+  {
+    id: 28,
+    date: '2025-07-27',
+    image: '/blog/blog18.jpg',
+    title: 'what is SDLC',
+    description: 'The Software Development Life Cycle (SDLC) is a structured process used by development teams to design, develop, test, and deploy high-quality software applications. It provides a systematic approach to software development, ensuring that projects are completed on time, within budget, and meet the required standards.',
+    link: '/software-development-life-cycle',
+    category: 'AI',
+    readTime: '10 min read'
+  },
+  {
+    id: 29,
+    date: '2025-07-27',
+    image: '/blog/blog22.jpg',
+    title: 'What is CI/CD?',
+    description: 'CI/CD refers to Continuous Integration and Continuous Deployment (or Delivery). bles teams to automate workflows, allowing them to release',
+    link: '/continuous-integration-continuous-deployment',
+    category: 'AI',
+    readTime: '10 min read'
+  },
 ];
 
 const AllBlogList = () => {

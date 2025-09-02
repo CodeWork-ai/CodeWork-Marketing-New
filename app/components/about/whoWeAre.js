@@ -137,7 +137,7 @@ const WhoWeAre = () => {
               </div>
               
               <p className="text-white/80 text-base md:text-lg leading-relaxed">
-                At Pro Codework, we're not just building technology. We're <span className="text-secondary font-medium">shaping the future</span> of businesses. Let's innovate together!
+             Codework, we're not just building technology. We're <span className="text-secondary font-medium">shaping the future</span> of businesses. Let's innovate together!
               </p>
             </div>
 

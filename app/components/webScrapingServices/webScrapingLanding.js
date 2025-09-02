@@ -49,7 +49,7 @@ const WebScrapingLanding = () => {
           <div className="relative">
             <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
             <p className="text-base md:text-lg w-[90%] leading-relaxed text-white/90 pl-6 font-light">
-              <span className="text-secondary font-medium">Web scraping</span> helps businesses collect information quickly and easily from websites. Think of it like having a <span className="text-secondary font-medium">super-fast assistant</span> who can gather important details from all over the internet.
+              <span className="text-secondary font-medium">Web data extraction</span> helps businesses collect information quickly and easily from websites. Think of it like having a <span className="text-secondary font-medium">super-fast assistant</span> who can gather important details from all over the internet.
             </p>
           </div>
 

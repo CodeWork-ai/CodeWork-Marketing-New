@@ -77,7 +77,7 @@ export default function Ecommerce() {
             <div className="flex flex-col pl-4 sm:pl-8 md:pl-12 justify-center space-y-4 sm:space-y-6 md:space-y-8 pt-8 pb-16 sm:pt-8 sm:pb-8 md:pt-4 md:pb-4 lg:pt-0 lg:pb-0">            
               <div>
                 <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-glow leading-tight">
-                  AI in E-commerce
+                  AI in <br/> E-commerce
                 </h1>
                 <p className="text-base sm:text-lg md:text-lg lg:text-lg text-white/90 leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
                   How AI is Quietly Rewriting the Rules of E-Commerce. Artificial Intelligence has been silently shaping online shopping, transforming basic suggestions into powerful systems that predict, personalize, and optimize the entire shopping journey.

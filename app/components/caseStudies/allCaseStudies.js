@@ -11,7 +11,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: 'Web Scraping',
+    title: 'Web data extraction',
     description: 'Get the Data Your Business Needs.',
     imageUrl: '/CaseStudies/webscrapingh.jpg',
     link: '/web-scraping-services',

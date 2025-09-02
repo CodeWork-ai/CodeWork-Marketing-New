@@ -34,7 +34,7 @@ const OurBlogLanding = () => {
             <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="text-white">Our </span>
               <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-                Blog
+                blogs
               </span>
             </h1>
             
