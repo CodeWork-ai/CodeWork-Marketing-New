@@ -75,3 +75,31 @@ body {
   animation-delay: 4s;
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(34, 48, 68, 0.3); /* primary color with opacity */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007d84; /* secondary color */
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 181, 190, 0.8); /* secondary color with opacity on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(34, 48, 68, 0.3);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #16c0c9 rgba(34, 48, 68, 0.3);
+}
