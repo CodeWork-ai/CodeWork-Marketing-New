@@ -45,7 +45,7 @@ const EventUpdates = () => {
           </h2>
           
           {/* Coming Soon Card */}
-          <div className="bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 lg:p-10 text-center hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden shadow-2xl shadow-secondary/25 mb-8 md:mb-12">
+          {/* <div className="bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 lg:p-10 text-center hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden shadow-2xl shadow-secondary/25 mb-8 md:mb-12">
             <div className="mb-6 md:mb-8">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-xl">
                 <svg className="w-8 h-8 md:w-10 md:h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,10 +59,10 @@ const EventUpdates = () => {
                 We're working on some amazing announcements and events. Stay tuned for updates!
               </p>
             </div>
-            
+             */}
             {/* Bottom glow */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
-          </div>
+            {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+          </div> */}
 
           {/* Placeholder Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
