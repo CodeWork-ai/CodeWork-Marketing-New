@@ -20,7 +20,7 @@ const Blog21 = () => {
     { id: "neural-networks-vs-deep-learning", title: "Neural Networks vs. Deep Learning" },
     { id: "history-of-neural-networks", title: "History of Neural Networks" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+
   ];
 
   // Smooth scroll to section

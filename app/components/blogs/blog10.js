@@ -20,7 +20,6 @@ const Blog10 = () => {
     { id: "data-backed-decisions", title: "Data-Backed Hiring Decisions" },
     { id: "benefits", title: "Benefits for Businesses and HR Teams" },
     { id: "future-recruitment", title: "Future of Recruitment with CODEWORK" },
-    { id: "call-to-action", title: "Get Started with CODEWORK" },
   ];
 
   // Smooth scroll to section

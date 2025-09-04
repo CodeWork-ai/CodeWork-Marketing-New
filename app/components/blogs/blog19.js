@@ -18,7 +18,7 @@ const Blog19 = () => {
     { id: "large-multimodal-models", title: "Large Multimodal Models (LMMs)" },
     { id: "emerging-developments", title: "Emerging Developments" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+    
   ];
 
   // Smooth scroll to section

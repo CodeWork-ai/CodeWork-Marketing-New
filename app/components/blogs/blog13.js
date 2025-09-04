@@ -17,7 +17,6 @@ const Blog13 = () => {
     { id: "popular-tools", title: "Popular AI-Powered Code Generation Tools" },
     { id: "challenges", title: "Challenges in Code Generation Automation" },
     { id: "future-ai", title: "Future of AI in Software Development" },
-    { id: "explore-more", title: "Explore More" },
   ];
 
   // Smooth scroll to section

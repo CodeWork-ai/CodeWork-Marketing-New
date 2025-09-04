@@ -20,7 +20,7 @@ const Blog17 = () => {
     { id: "should-you-trust-a-chatbot", title: "Should You Trust a Chatbot?" },
     { id: "your-say", title: "Your Say: The Chatbot Feature You Crave" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+   
   ];
 
   // Smooth scroll to section

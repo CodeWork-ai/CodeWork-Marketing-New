@@ -17,7 +17,7 @@ const Blog18 = () => {
     { id: "real-world-moe-models", title: "Real-World MoE Models" },
     { id: "benefits-of-moe", title: "Benefits of MoE" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+   
   ];
 
   // Smooth scroll to section

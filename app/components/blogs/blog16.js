@@ -18,7 +18,7 @@ const Blog16 = () => {
     { id: "deep-learning-use-cases", title: "Deep Learning Use Cases" },
     { id: "deep-learning-in-industry", title: "Deep Learning in Industry Applications" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+  
   ];
 
   // Smooth scroll to section

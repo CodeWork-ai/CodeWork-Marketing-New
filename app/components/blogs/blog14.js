@@ -17,7 +17,7 @@ const Blog14 = () => {
     { id: "future-of-generative-ai", title: "Future of Generative AI in Software Engineering" },
     { id: "benefits-for-organizations", title: "Benefits for Organizations" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "explore-more", title: "Explore More" },
+   
   ];
 
   // Smooth scroll to section

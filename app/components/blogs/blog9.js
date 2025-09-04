@@ -25,7 +25,6 @@ const Blog9 = () => {
     { id: "ethical-practices", title: "Ethical Practices" },
     { id: "preparedness", title: "Preparedness" },
     { id: "conclusion", title: "Conclusion: From Risk to Responsibility" },
-    { id: "call-to-action", title: "Call to Action" },
   ];
 
   // Smooth scroll to section
@@ -292,14 +291,14 @@ const Blog9 = () => {
           </section>
 
           {/* CALL TO ACTION */}
-          <section id="call-to-action" className="scroll-mt-24">
+          {/* <section id="call-to-action" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-white mb-4">Call to Action</h2>
             <p className="text-white/80 leading-relaxed mb-6">
               Are you ready to build a responsible AI culture in your organization?
               <br/><br/>
               Contact the <a href="https://codework.ai/contact-ai-solutions" className="text-secondary hover:underline font-semibold">Codework.ai</a> team to learn how we can help you integrate safe, ethical, and innovative AI solutions into your business.
             </p>
-          </section>
+          </section> */}
         </div>
       </div>
 
