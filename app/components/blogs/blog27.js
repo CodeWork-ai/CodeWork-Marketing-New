@@ -261,7 +261,7 @@ X = vectorizer.fit_transform(["NLP is awesome", "Machine learning is fun"])`}
               <li><strong>Transformers:</strong> Like BERT, GPT—current SOTA (state-of-the-art)</li>
             </ul>
             <p className="text-white/80 leading-relaxed mb-10">
-              Transformers such as BERT are utilized in Google Search, summarization tools, and sentiment analysis engines[65][66].
+              Transformers such as BERT are utilized in Google Search, summarization tools, and sentiment analysis engines.
             </p>
           </section>
 

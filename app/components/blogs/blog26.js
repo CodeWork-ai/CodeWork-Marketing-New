@@ -153,7 +153,7 @@ const Blog26 = () => {
           {/* SECTION: AI Consulting Overview */}
           <section id="ai-consulting-overview" className="scroll-mt-24">
             <p className="text-white/80 text-xl leading-relaxed mb-10">
-              Transform your business with AI consulting and development services that position you as an industry leader[65][66].
+              Transform your business with AI consulting and development services that position you as an industry leader.
             </p>
           </section>
 

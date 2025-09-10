@@ -160,7 +160,7 @@ const Blog14 = () => {
               Generative AI simplifies complex engineering processes, driving a new era in software development. Here's how it makes an impact:
             </p>
             <ul className="list-disc ml-6 text-white/80 mb-10 space-y-2">
-              <li><strong>Automated Code Generation:</strong> AI-powered tools analyze patterns and generate optimized code snippets, significantly reducing manual coding efforts. (Learn more in our detailed blog on <em>Code Generation Automation</em>)</li>
+              <li><strong>Automated Code Generation:</strong> AI-powered tools analyze patterns and generate optimized code snippets, significantly reducing manual coding efforts.</li>
               <li><strong>Error Detection and Debugging:</strong> AI-driven systems identify and correct errors in real time, minimizing software vulnerabilities.</li>
               <li><strong>Natural Language Processing (NLP) for Coding:</strong> AI models understand human language and translate it into executable code, making programming more accessible.</li>
               <li><strong>Improved Software Maintenance:</strong> Generative AI continuously learns from existing codebases, providing suggestions to enhance code quality and maintainability.</li>

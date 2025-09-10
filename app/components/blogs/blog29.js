@@ -211,7 +211,7 @@ const Blog29 = () => {
               <div className="bg-primary/40 border border-secondary/20 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-secondary mb-3">Maintenance & Support</h3>
                 <p className="text-white/80 leading-relaxed">
-                  Post-release, any bugs or issues are resolved. Updates and new features are also handled during this phase[65][66].
+                  Post-release, any bugs or issues are resolved. Updates and new features are also handled during this phase.
                 </p>
               </div>
             </div>

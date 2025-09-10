@@ -156,7 +156,7 @@ const Blog28 = () => {
                 <h2 className="text-xl font-bold text-secondary">Advanced AI Protection</h2>
               </div>
               <p className="text-white/80 leading-relaxed">
-                Transform your cybersecurity posture with intelligent, adaptive defense systems powered by cutting-edge AI technology[65][66].
+                Transform your cybersecurity posture with intelligent, adaptive defense systems powered by cutting-edge AI technology.
               </p>
             </div>
           </section>
