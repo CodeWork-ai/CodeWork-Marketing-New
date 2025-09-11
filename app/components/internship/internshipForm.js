@@ -83,20 +83,31 @@ const InternshipForm = () => {
         e.preventDefault();
         setLoading(true);
         setResponseMessage('');
-
+    
         try {
+            // Create request data with role: 1 for internship
+            const requestData = {
+                name: formData.name,
+                email: formData.email,
+                role: 1, // Set role as number 1 for internship
+                designation: formData.designation,
+                experience: formData.experience,
+                contact: formData.contact,
+                resume: formData.resume
+            };
+    
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/marketing_site/add_internship_profile`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(requestData), // Use requestData instead of formData
             });
-
+    
             if (!response.ok) {
                 throw new Error('Failed to send candidate details.');
             }
-
+    
             const data = await response.json();
             setResponseMessage(data.message);
             setFormData({

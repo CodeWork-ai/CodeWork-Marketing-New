@@ -13,6 +13,7 @@ import {
   FaGlobe,
   FaBook
 } from 'react-icons/fa'
+import Link from 'next/link';
 
 const PricingAndContact = () => {
   const placementPartners = [
@@ -264,14 +265,16 @@ const PricingAndContact = () => {
                   <span className="text-secondary font-medium"> AI training program</span>.
                 </p>
                 <div className="space-y-4">
-                  <button className="w-full bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-secondary/25 relative overflow-hidden group">
-                    <span className="relative z-10 flex items-center justify-center">
-                      <FaRocket className="mr-3" />
-                      Apply Now
-                    </span>
-                    {/* Button shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
-                  </button>
+                  <Link href="/trainee-apply-form" className="block w-full">
+                    <button className="w-full bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-secondary/25 relative overflow-hidden group">
+                      <span className="relative z-10 flex items-center justify-center">
+                        <FaRocket className="mr-3" />
+                        Apply Now
+                      </span>
+                      {/* Button shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
