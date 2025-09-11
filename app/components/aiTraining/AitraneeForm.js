@@ -153,7 +153,7 @@ const AitraneeForm = () => {
                     <div className="flex-1 text-center lg:pl-14 lg:text-left">
                         {/* Section Badge */}
                         <div className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6 md:mb-8">
-                            <span className="text-secondary text-sm font-medium">— Internship Application —</span>
+                            <span className="text-secondary text-sm font-medium">— AI Trainee Application —</span>
                         </div>
 
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 md:mb-8 leading-tight">
