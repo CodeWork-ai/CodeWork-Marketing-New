@@ -292,6 +292,16 @@ const blogPosts = [
     category: 'AI',
     readTime: '10 min read'
   },
+  {
+    id: 30,
+    date: '2025-09-12',
+    image: '/blog/blog12.jpg',
+    title: 'The Human Side of AI Projects',
+    description: 'Managing Teams Through Digital Transformation is a key aspect of AI-driven software development. In this blog post, we will explore the human side of AI projects, including the importance of human-centered design, user experience, and collaboration.',
+    link: '/human-side-ai-projects',
+    category: 'AI',
+    readTime: '7 min read'
+  },
 ];
 
 const AllBlogList = () => {
