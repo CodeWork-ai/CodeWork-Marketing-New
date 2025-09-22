@@ -302,6 +302,26 @@ const blogPosts = [
     category: 'AI',
     readTime: '7 min read'
   },
+  {
+    id: 31,
+    date: '2025-09-22', 
+    image: '/blog/blog3.jpg',
+    title: 'Underground Mapping: A Complete Guide',
+    description: 'Underground mapping is the process of creating a detailed digital representation of the underground infrastructure of a city or region. This includes tunnels, tunnels, and other complex structures that are not visible to the naked eye. Underground mapping is used by a variety of industries, including construction, engineering, and the military.',
+    link: '/underground-mapping',
+    category: 'AI',
+    readTime: '7 min read'
+    },
+    {
+      id: 32,
+      date: '2025-09-22', 
+      image: '/blog/blog2.jpg',
+      title: 'Computer Vision: How Machines Learn to See TL,DR',
+      description: 'Computer vision is the field of study that focuses on enabling machines to understand and interpret visual data. It involves developing algorithms that can recognize patterns and objects in images or videos. In this blog post, we will explore the basics of computer vision and how it is used in various applications.',
+      link: '/computer-vision',
+      category: 'AI',
+      readTime: '7 min read'
+    },
 ];
 
 const AllBlogList = () => {
