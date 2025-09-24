@@ -137,11 +137,11 @@ export default function Navbar() {
       dropdown: [
         {
           href: "/careers-at-codework",
-          label: "Join Our Team",
+          label: "Job Opportunities",
         },
         {
           href: "/join-our-team",
-          label: "Job Opportunities",
+          label: "Join Our Team",
         },
         {
           href: "/internship",

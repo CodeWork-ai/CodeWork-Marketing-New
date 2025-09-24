@@ -24,23 +24,12 @@ const CurrentOpportunities = () => {
       type: "Full-time"
     },
     {
-      title: "AI DevOps + Cloud",
-      experience: "2+ Years",
-      workMode: "Onsite",
-      type: "Full-time"
-    },
-    {
       title: "AI Consultant",
       experience: "Minimum 3 years",
       workMode: "Onsite",
       type: "Contract"
     },
-    {
-      title: "Backend Developer",
-      experience: "2+ years",
-      workMode: "Onsite",
-      type: "Full-time"
-    },
+   
   ];
 
   return (
