@@ -18,6 +18,8 @@ const WebDesignLanding = () => {
     { title: "IT Staff Augmentation", link: "/it-staff-service" },
     { title: "Penetration Testing", link: "/penetration-testing-service" },
     { title: "Digital Marketing Services", link: "/digital-marketing-services" },
+          { title: "Professional Annotation Services", link: "/annotation-services" },
+
   ];
 
   // Function to check if link is active

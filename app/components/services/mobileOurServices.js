@@ -28,6 +28,8 @@ const MobileOurServices = () => {
     { title: "IT Staff Augmentation", icon: FaUsers, link: "/it-staff-service" },
     { title: "AI Implementation", icon: FaLock, link: "/ai-implementation" },
     { title: " AI in Digital Marketing Services", icon: FaBullhorn, link: "/digital-marketing-services" },
+          { title: "Professional Annotation Services", link: "/annotation-services" },
+
   ];
 
   const totalPages = 2;

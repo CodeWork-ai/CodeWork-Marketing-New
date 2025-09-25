@@ -19,6 +19,8 @@ const AgenticAIPage = () => {
     { title: "AI in Cyber Security", link: "/cybersecurity-service" },
     { title: "IT Staff Augmentation", link: "/it-staff-service" },
     { title: "AI in Digital Marketing Services", link: "/digital-marketing-services" },
+          { title: "Professional Annotation Services", link: "/annotation-services" },
+
   ];
 
   // Function to check if link is active
