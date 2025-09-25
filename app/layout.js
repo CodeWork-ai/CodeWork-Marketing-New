@@ -402,6 +402,12 @@ const getMetaTags = (pathname) => {
         description: "",
         keywords: "",
       };
+    case "/annotation-services":
+      return {
+        title: "Trusted Annotation Services for AI & ML Projects",
+        description: "Codework provides accurate Annotation Services for AI & ML. Empower your business with text, image, audio, and video data labeling.",
+        keywords: "Annotation Services, AI data labeling, ML data annotation, text annotation, image annotation, audio annotation, video annotation, data labeling services, AI training data, machine learning datasets",
+      };
     default:
       return {
         title: "Codework",
