@@ -1,15 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { 
-  FaImage, 
-  FaFileAlt, 
-  FaVolumeUp, 
-  FaVideo, 
-  FaIndustry, 
-  FaShieldAlt 
+  FaHospital, 
+  FaShoppingCart, 
+  FaCar, 
+  FaUniversity, 
+  FaRocket, 
+  FaIndustry 
 } from 'react-icons/fa';
 
-export default function AnnotationServicesOffered() {
+export default function WhoUsesAnnotation() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
@@ -19,39 +19,39 @@ export default function AnnotationServicesOffered() {
 
   const cards = [
     {
-      title: "Image Annotation",
-      text: `Transform visual data into AI-ready datasets through bounding boxes, polygons, segmentation, and object tagging. Our precise image annotation services support computer vision applications including autonomous vehicles, medical imaging, and retail product recognition.`,
-      Icon: FaImage,
+      title: "Healthcare Providers",
+      text: "For medical imaging, diagnostics, and patient record analysis.",
+      Icon: FaHospital,
       gradient: "from-secondary/80 to-secondary/60",
     },
     {
-      title: "Text Annotation",
-      text: `Enhance natural language processing models through entity recognition, intent labelling, and sentiment analysis. Our text annotation services enable chatbots, content classification, and document processing systems to understand context and meaning.`,
-      Icon: FaFileAlt,
+      title: "E-commerce & Retail Companies",
+      text: "To tag products, track customer sentiment, and personalize shopping experiences.",
+      Icon: FaShoppingCart,
       gradient: "from-secondary/70 to-secondary/50",
     },
     {
-      title: "Audio Annotation",
-      text: `Convert audio data into structured formats through speech tagging, transcription, and speaker identification. Our audio annotation services support voice assistants, call center analytics, and speech recognition systems with high accuracy.`,
-      Icon: FaVolumeUp,
+      title: "Autonomous Vehicle Developers",
+      text: "To train self-driving cars with video and image annotation for objects, pedestrians, and road signs.",
+      Icon: FaCar,
       gradient: "from-secondary/60 to-secondary/40",
     },
     {
-      title: "Video Annotation",
-      text: `Enable dynamic AI applications through frame-by-frame tracking, activity recognition, and motion tagging. Our video annotation services power surveillance systems, sports analytics, and autonomous vehicle training with temporal understanding.`,
-      Icon: FaVideo,
+      title: "Financial Institutions",
+      text: "For fraud detection, document processing, and compliance monitoring.",
+      Icon: FaUniversity,
       gradient: "from-secondary/80 to-secondary/60",
     },
     {
-      title: "Industry Applications",
-      text: `Serving healthcare providers for medical imaging, e-commerce companies for product cataloging, financial institutions for fraud detection, and manufacturing for quality control. Our annotation services adapt to any domain with industry-specific expertise.`,
-      Icon: FaIndustry,
+      title: "Technology & AI Startups",
+      text: "To build smarter apps, chatbots, and recommendation systems.",
+      Icon: FaRocket,
       gradient: "from-secondary/70 to-secondary/50",
     },
     {
-      title: "Quality Assurance",
-      text: `We don't just label data—we ensure your datasets are high-quality, consistent, and ready for AI adoption. Our secure processes, skilled workforce, and advanced tools make us a trusted partner for businesses seeking reliable annotation services.`,
-      Icon: FaShieldAlt,
+      title: "Manufacturing & Robotics",
+      text: "For predictive maintenance, quality control, and machine vision systems.",
+      Icon: FaIndustry,
       gradient: "from-secondary/90 to-secondary/70",
     },
   ];
@@ -113,17 +113,20 @@ export default function AnnotationServicesOffered() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
-            Annotation Services Portfolio
+            Industry Applications
           </div>
           <h2 className="text-5xl font-bold text-white mb-6">
-            Comprehensive <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Data Annotation</span> Solutions
+            Who Uses <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Annotation Services?</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-6"></div>
+          <p className="text-xl text-white/90 leading-relaxed max-w-4xl mx-auto mb-16">
+            Annotation services are widely used across industries that depend on artificial intelligence, machine learning, and automation.
+          </p>
         </div>
 
-        {/* Carousel Container */}
+        {/* Carousel Container - MOVED HERE */}
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden mb-20"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -196,7 +199,7 @@ export default function AnnotationServicesOffered() {
         </div>
 
         {/* Navigation Controls */}
-        <div className="flex items-center justify-center gap-8 mt-12">
+        <div className="flex items-center justify-center gap-8 mb-20">
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
@@ -262,6 +265,50 @@ export default function AnnotationServicesOffered() {
               />
             </svg>
           </button>
+        </div>
+
+        {/* Services Section - MOVED BELOW CAROUSEL */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-6">
+              Our Comprehensive <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Annotation Services</span>
+            </h3>
+            <p className="text-lg text-white/90">We provide tailored solutions to match the needs of different industries:</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+              <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-secondary font-bold">IMG</span>
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Image Annotation</h4>
+              <p className="text-sm text-white/80">Bounding boxes, polygons, segmentation, and object tagging.</p>
+            </div>
+            
+            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+              <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-secondary font-bold">TXT</span>
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Text Annotation</h4>
+              <p className="text-sm text-white/80">Entity recognition, intent labelling, sentiment analysis.</p>
+            </div>
+            
+            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+              <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-secondary font-bold">AUD</span>
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Audio Annotation</h4>
+              <p className="text-sm text-white/80">Speech tagging, transcription, speaker identification.</p>
+            </div>
+            
+            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+              <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <span className="text-secondary font-bold">VID</span>
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Video Annotation</h4>
+              <p className="text-sm text-white/80">Frame-by-frame tracking, activity recognition, motion tagging.</p>
+            </div>
+          </div>
         </div>
       </div>
 

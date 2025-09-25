@@ -67,24 +67,43 @@ const AnnotationLanding = () => {
             {/* Section Badge */}
             <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
-              Professional Annotation Services
+              AI & Machine Learning
             </div>
             <div className="heading-container mb-8">
               <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                Transform Raw Data into <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">AI-Ready Datasets</span>
+                <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Professional Annotation Services</span> for AI and Machine Learning
               </h1>
               {/* Decorative underline */}
               <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-8"></div>
             </div>
             <div className="paragraph-container mb-8 max-w-3xl">
               <p className="text-lg text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
-                Data is the foundation of every successful AI and machine learning model. Without properly labelled data, even the most advanced algorithms fail to perform effectively. <span className="text-secondary font-medium">Codework's Professional Annotation Services</span> transform raw, unstructured information into structured datasets ready for AI training, designed to deliver accuracy, scalability, and reliability for businesses across different industries.<br/><br/>
-                Annotation is the key enabler of artificial intelligence. AI systems learn from data, and without correctly labelled datasets, they cannot recognize patterns or make accurate predictions. Whether it's detecting objects in images, analysing customer reviews, or converting speech to text, our annotation services provide the ground truth that trains machine learning models to perform with precision and reliability.
+                Data is the foundation of every successful AI and machine learning model. Without properly labelled data, even the most advanced algorithms fail to perform effectively. At Codework, we specialize in providing Annotation Services that transform raw, unstructured information into structured datasets ready for AI training. Our services are designed to deliver accuracy, scalability, and reliability for businesses across different industries.
               </p>
-              <div className="mt-6">
-                <h3 className="text-lg font-semibold text-secondary mb-4">
-                  Ready to build smarter AI solutions? <br />Connect with our annotation specialists and discover how quality data transforms your machine learning capabilities.
-                </h3>
+              <div className="mt-8">
+                <h2 className="text-2xl font-bold text-white mb-4">Why Annotation is Important</h2>
+                <p className="text-lg text-white/90 leading-relaxed mb-6">
+                  Annotation is the key enabler of artificial intelligence. AI systems learn from data, and without correctly labelled datasets, they cannot recognize patterns or make accurate predictions. Whether it is detecting objects in images, analysing customer reviews, or converting speech to text, annotation provides the ground truth that trains machine learning models.
+                </p>
+                <p className="text-lg text-white/90 leading-relaxed mb-4">Some major reasons why annotation is important:</p>
+                <ul className="space-y-3 text-white/90">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span><strong className="text-secondary">Enhances AI Accuracy</strong> – Properly annotated data improves the quality of predictions and decisions made by AI.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span><strong className="text-secondary">Supports Industry Growth</strong> – From healthcare to retail, annotation drives innovation in real-world applications.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span><strong className="text-secondary">Speeds Up AI Adoption</strong> – Well-prepared data reduces errors and makes AI deployment faster.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span><strong className="text-secondary">Customizable for Every Use Case</strong> – Annotation adapts to any domain, ensuring industry-specific solutions.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -113,28 +132,9 @@ const AnnotationLanding = () => {
                         </Link>
                         <div className="flex items-center space-x-2">
                           <div className={`w-2 h-2 rounded-full transition-all duration-300 ${isActiveLink(service.link) || isDropdownActive(service) ? 'bg-secondary animate-pulse' : 'bg-white/30 group-hover:bg-secondary/60'}`}></div>
-                          {service.dropdown && (
-                            <button 
-                              onClick={e => { e.preventDefault(); toggleDropdown(index); }}
-                              className="p-1"
-                            >
-                              <svg className={`w-4 h-4 transition-transform duration-200 ${openDropdown === index ? 'rotate-180' : ''} ${isDropdownActive(service) ? 'text-secondary' : 'text-white/60'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </button>
-                          )}
                         </div>
                       </div>
                     </div>
-                    {service.dropdown && (
-                      <div className={`overflow-hidden transition-all duration-300 ${openDropdown === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="ml-4 mt-2 space-y-1 border-l-2 border-secondary/20 pl-4">
-                          {service.dropdown.map((dropdownItem, dropIndex) => (
-                            <Link key={dropIndex} href={dropdownItem.link} className={`block px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${isActiveLink(dropdownItem.link) ? 'bg-secondary/15 text-secondary border-l-2 border-secondary' : 'text-white/70 hover:text-secondary hover:bg-white/5'}`}>{dropdownItem.title}</Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>

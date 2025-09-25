@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
@@ -187,12 +188,12 @@ const AgileSoftwareProcess = () => {
                 Our agile process ensures your AI implementation is successful, scalable, and delivers real business value from day one.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-8 py-4 rounded-xl hover:from-secondary/90 hover:to-secondary hover:scale-105 transition-all duration-300 shadow-lg">
+                <Link href="/contact-ai-solutions" className="bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-8 py-4 rounded-xl hover:from-secondary/90 hover:to-secondary hover:scale-105 transition-all duration-300 shadow-lg inline-block text-center">
                   Start Your Project
-                </button>
-                <button className="border-2 border-secondary/50 text-white font-bold px-8 py-4 rounded-xl hover:bg-secondary/10 hover:border-secondary transition-all duration-300">
+                </Link>
+                <Link href="/ai-services" className="border-2 border-secondary/50 text-white font-bold px-8 py-4 rounded-xl hover:bg-secondary/10 hover:border-secondary transition-all duration-300 inline-block text-center">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const AnnotationSolution = () => (
+const PartnerWithCodework = () => (
   <section className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
@@ -28,31 +28,37 @@ const AnnotationSolution = () => (
           {/* Section Badge */}
           <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
-            AI-Ready Data Solutions
+            Partnership Excellence
           </div>
 
-          {/* Heading - Updated to text-5xl */}
+          {/* Heading */}
           <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Build Smarter AI</span> with Quality Data
+            Why Partner with <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Codework?</span>
           </h2>
 
           {/* Decorative underline */}
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-6"></div>
 
-          {/* Description - Updated to larger text */}
-          <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
-            Partner with Codework for more than data annotation—get the foundation for building smarter, future-ready AI solutions. Connect with our specialists today and transform your raw data into powerful machine learning assets.
-          </p>
+          {/* Description */}
+          <div className="space-y-6">
+            <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+              We don't just label data—we ensure your datasets are high-quality, consistent, and ready for AI adoption. Our secure processes, skilled workforce, and advanced tools make us a trusted partner for businesses seeking reliable Annotation Services.
+            </p>
+            
+            <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+              With Codework, you get more than data annotation—you get the foundation for building smarter, future-ready AI solutions.
+            </p>
+          </div>
         </div>
 
-        {/* Image Column - Simplified with primary color overlay */}
+        {/* Image Column */}
         <div className="w-full lg:w-auto lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:-mr-12 xl:-mr-20 2xl:-mr-20">
           <div className="relative">
             {/* Primary color overlay with low opacity */}
             <div className="absolute inset-0 bg-primary opacity-20 rounded-2xl"></div>
             <Image
               src="/AllServices/Cybersecurity.svg"
-              alt="AI annotation services illustration"
+              alt="Professional annotation services illustration"
               width={600}
               height={600}
               className="w-full max-w-[400px] lg:max-w-[500px] h-auto block relative z-10 filter drop-shadow-2xl rounded-2xl"
@@ -81,4 +87,4 @@ const AnnotationSolution = () => (
   </section>
 );
 
-export default AnnotationSolution;
+export default PartnerWithCodework;
