@@ -247,24 +247,35 @@ const Footer = () => {
 
           {/* India */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
+            <h3 className="text-base sm:text-lg pt-6 font-semibold text-secondary">
               India
             </h3>
-            <div className="flex items-start space-x-4">
+            <div className="flex items-start pt-3 space-x-4">
               <div className="w-8 h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
                 <FaMapMarkerAlt size={16} className="text-primary" />
               </div>
-              <p className="text-xs sm:text-sm text-white/90">
-                Suite 305, 3rd Floor, Akshaya HQ, OMR, <br />
-                Kazhipattur, Chennai, <br />
-                Tamilnadu, 603103.
-              </p>
+              <div>
+                <p className="text-xs sm:text-sm text-white/90">
+                  Suite 305, 3rd Floor, Akshaya HQ, OMR, <br />
+                  Kazhipattur, Chennai, <br />
+                  Tamilnadu, 603103.
+                </p>
+                <a
+                  href="https://cplc.codework.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-xs sm:text-sm text-secondary hover:text-secondary/80 mt-2 transition-colors duration-300"
+                >
+                  <BsGlobe2 className="text-secondary" />
+                  <span>Join our AI course website</span>
+                </a>
+              </div>
             </div>
           </div>
 
           {/* USA */}
           <div>
-            <h3 className="text-base lg:pt-6 sm:pt-0 xl:pt-6 sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
+            <h3 className="text-base  sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
               USA
             </h3>
             <div className="flex items-start space-x-4">
@@ -276,10 +287,8 @@ const Footer = () => {
                 <br />
                 Buffalo Grove, IL 60089, USA
                 <br />
-                ‎ 
-               
+                ‎
               </p>
-              
             </div>
             <div className="text-sm flex items-center justify-start">
               <a
@@ -295,7 +304,7 @@ const Footer = () => {
 
           {/* Connect With Us */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
+            <h3 className="text-base sm:text-lg font-semibold mb-8 text-secondary">
               Connect With Us
             </h3>
             <Link href="/contact-ai-solutions">
@@ -315,7 +324,7 @@ const Footer = () => {
         <div className="w-full bg-gradient-to-r from-primary via-primary/95 to-primary text-white flex flex-col items-center sm:flex-row sm:items-center sm:justify-between py-6 sm:py-6 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 relative">
           {/* Subtle Background Glow */}
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-transparent to-secondary/5"></div>
-          
+
           {/* Logo */}
           <div className="flex items-center mb-4 sm:mb-0 relative z-10">
             <Link href="/">
