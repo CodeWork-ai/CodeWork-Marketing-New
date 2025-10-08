@@ -1,11 +1,13 @@
 import React from 'react'
 import Blog9 from '../components/blogs/blog9'
-import Faqs9 from '../components/FAQsforBlog/faqs9'
+
+import DeepfakeFaq from '../components/FAQsforBlog/deepfakeFaq'
 
 const page = () => {
   return (
     <div>
-      <Blog9/>      
+      <Blog9/> 
+    <DeepfakeFaq/>     
     </div>
   )
 }

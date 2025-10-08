@@ -267,7 +267,7 @@ const Footer = () => {
                   className="inline-flex items-center space-x-2 text-xs sm:text-sm text-secondary hover:text-secondary/80 mt-2 transition-colors duration-300"
                 >
                   <BsGlobe2 className="text-secondary" />
-                  <span>Join our AI course website</span>
+                  <span>Join our AI course</span>
                 </a>
               </div>
             </div>
