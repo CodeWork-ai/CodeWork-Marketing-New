@@ -129,11 +129,14 @@ const ChatBot = () => {
       setIsTyping(true);
       setIsSubmitting(true);
 
-      const response = await fetch(`https://prod-api.codework.ai/api/v1/chatbot?question=${encodeURIComponent(question)}`, {
-        method: 'GET',
+      const response = await fetch(`https://prod-api.codework.ai/api/v1/ask-simple`, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          question: question
+        })
       });
 
       if (!response.ok) {
@@ -166,7 +169,6 @@ const ChatBot = () => {
     } catch (error) {
       console.error("❌ API error:", error);
       
-      // Add error message to chat
       setMessages((prev) => [
         ...prev,
         {

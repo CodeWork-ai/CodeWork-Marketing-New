@@ -87,7 +87,7 @@ export default function Navbar() {
           label: "Services",
         },
         {
-          href: "/ai-training",
+          href: "https://cplc.codework.ai/",
           label: "AI Training",
         },
       ],
@@ -430,31 +430,54 @@ export default function Navbar() {
                     {/* Responsive Menu List */}
                     <div className="grid gap-1 sm:gap-2 w-full max-w-sm sm:max-w-md mx-auto md:mx-0">
                       {navLinks[isDropdownOpen].dropdown.map(
-                        (dropdownItem, idx) => (
-                          <Link
-                            key={`${dropdownItem.href}-${idx}`}
-                            href={dropdownItem.href}
-                            className="group"
-                          >
-                            <div className={`px-3 sm:px-4 py-1.5 sm:py-2 group hover:bg-secondary/10 hover:scale-105 transition-all duration-200 rounded-md ${
-                              pathname === dropdownItem.href 
-                                ? "bg-secondary/20 border border-secondary/30" 
-                                : ""
-                            }`}>
-                              <h2 className={`relative text-sm sm:text-base font-sans group-hover:text-secondary transition-colors duration-200 ${
+                        (dropdownItem, idx) => {
+                          const isExternalLink = dropdownItem.href.startsWith('http');
+                          
+                          if (isExternalLink) {
+                             return (
+                               <a
+                                 key={`${dropdownItem.href}-${idx}`}
+                                 href={dropdownItem.href}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 className="group"
+                               >
+                                <div className={`px-3 sm:px-4 py-1.5 sm:py-2 group hover:bg-secondary/10 hover:scale-105 transition-all duration-200 rounded-md`}>
+                                  <h2 className={`relative text-sm sm:text-base font-sans group-hover:text-secondary transition-colors duration-200 text-white`}>
+                                    {dropdownItem.label}
+                                    <span className="absolute bottom-[-2px] left-1/2 w-0 h-[2px] bg-secondary group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"></span>
+                                  </h2>
+                                </div>
+                              </a>
+                            );
+                          }
+                          
+                          return (
+                            <Link
+                              key={`${dropdownItem.href}-${idx}`}
+                              href={dropdownItem.href}
+                              className="group"
+                            >
+                              <div className={`px-3 sm:px-4 py-1.5 sm:py-2 group hover:bg-secondary/10 hover:scale-105 transition-all duration-200 rounded-md ${
                                 pathname === dropdownItem.href 
-                                  ? "text-secondary font-semibold" 
-                                  : "text-white"
+                                  ? "bg-secondary/20 border border-secondary/30" 
+                                  : ""
                               }`}>
-                                {dropdownItem.label}
-                                <span className="absolute bottom-[-2px] left-1/2 w-0 h-[2px] bg-secondary group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"></span>
-                                {pathname === dropdownItem.href && (
-                                  <span className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-secondary rounded-full animate-pulse"></span>
-                                )}
-                              </h2>
-                            </div>
-                          </Link>
-                        )
+                                <h2 className={`relative text-sm sm:text-base font-sans group-hover:text-secondary transition-colors duration-200 ${
+                                  pathname === dropdownItem.href 
+                                    ? "text-secondary font-semibold" 
+                                    : "text-white"
+                                }`}>
+                                  {dropdownItem.label}
+                                  <span className="absolute bottom-[-2px] left-1/2 w-0 h-[2px] bg-secondary group-hover:w-full transition-all duration-300 ease-in-out transform -translate-x-1/2"></span>
+                                  {pathname === dropdownItem.href && (
+                                    <span className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-1 h-1 bg-secondary rounded-full animate-pulse"></span>
+                                  )}
+                                </h2>
+                              </div>
+                            </Link>
+                          );
+                        }
                       )}
                     </div>
                   </div>
