@@ -24,7 +24,7 @@ const page = () => {
   return (
     <div>
       <Blog31 />
-      <UndergroundFaq />
+      {/* <UndergroundFaq /> */}
     </div>
   )
 }
