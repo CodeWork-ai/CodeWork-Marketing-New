@@ -129,7 +129,7 @@ const ChatBot = () => {
       setIsTyping(true);
       setIsSubmitting(true);
 
-      const response = await fetch(`https://prod-api.codework.ai/api/v1/ask-stream`, {
+      const response = await fetch(`https://prod-api.codework.ai/api/v1/ask-simple`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
