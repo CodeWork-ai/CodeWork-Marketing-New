@@ -61,7 +61,7 @@ export default function Navbar() {
   // Function to check if current page is active
   const isPageActive = (item) => {
     // For "Our Products" page
-    if (item.href === "/build-your-career-with-codework" && pathname === "/build-your-career-with-codework") {
+    if (item.href === "/products-we-build" && pathname === "/products-we-build") {
       return true;
     }
     
@@ -151,7 +151,7 @@ export default function Navbar() {
       dropdownImage: "/navmenu4.jpg",
     },
     {
-      href: "/build-your-career-with-codework",
+      href: "/products-we-build",
       label: "Our Products",
       dropdown: [],
     },
