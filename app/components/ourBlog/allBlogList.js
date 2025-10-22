@@ -322,6 +322,16 @@ const blogPosts = [
       category: 'AI',
       readTime: '7 min read'
     },
+    {
+      id: 33,
+      date: '2025-10-22', 
+      image: '/blog/blog3.jpg',
+      title: 'Crowd Management: Ensuring Safety and Order in Large Gatherings',
+      description: 'Crowd management is about planning, monitoring, and guiding large groups to ensure safety, comfort, and order. It involves understanding crowd behavior, preparing for risks,',
+      link: '/crowd-management',
+      category: 'AI',
+      readTime: '7 min read'
+    },
 ];
 
 const AllBlogList = () => {

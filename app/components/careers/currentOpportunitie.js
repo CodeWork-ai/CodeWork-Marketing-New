@@ -27,7 +27,25 @@ const CurrentOpportunities = () => {
       title: "AI Consultant",
       experience: "Minimum 3 years",
       workMode: "Onsite",
-      type: "Contract"
+      type: "Full-time"
+    },
+    {
+      title: "Senior .Net Developer",
+      experience: "Minimum 4 years",
+      workMode: "Onsite",
+      type: "Full-time"
+    },
+    {
+      title: "Senior UI Developer",
+      experience: "Minimum 3 years",
+      workMode: "Onsite",
+      type: "Full-time"
+    },
+    {
+      title: "Quality Analyst",
+      experience: "Minimum 2 years",
+      workMode: "Onsite",
+      type: "Full-time"
     },
    
   ];
