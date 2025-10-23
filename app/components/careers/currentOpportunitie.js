@@ -6,6 +6,24 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaArrowRight } from "react-
 const CurrentOpportunities = () => {
   const jobOpenings = [
     {
+      title: "Senior .Net Developer",
+      experience: "Minimum 4 years",
+      workMode: "Onsite",
+      type: "Full-time"
+    },
+    {
+      title: "Senior UI Developer",
+      experience: "Minimum 3 years",
+      workMode: "Onsite",
+      type: "Full-time"
+    },
+    {
+      title: "Quality Analyst",
+      experience: "Minimum 2 years",
+      workMode: "Onsite",
+      type: "Full-time"
+    },
+    {
       title: "Senior Front-end Developer (React JS)",
       experience: "Minimum 5+ Years",
       workMode: "Hybrid",
@@ -26,24 +44,6 @@ const CurrentOpportunities = () => {
     {
       title: "AI Consultant",
       experience: "Minimum 3 years",
-      workMode: "Onsite",
-      type: "Full-time"
-    },
-    {
-      title: "Senior .Net Developer",
-      experience: "Minimum 4 years",
-      workMode: "Onsite",
-      type: "Full-time"
-    },
-    {
-      title: "Senior UI Developer",
-      experience: "Minimum 3 years",
-      workMode: "Onsite",
-      type: "Full-time"
-    },
-    {
-      title: "Quality Analyst",
-      experience: "Minimum 2 years",
       workMode: "Onsite",
       type: "Full-time"
     },
