@@ -228,7 +228,7 @@ const Footer = () => {
         <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full text-left">
           {/* Get In Touch */}
           <div>
-            <h3 className="text-base lg:pt-9 sm:pt-0 xl:pt-9 sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
+            <h3 className="text-base lg:pt-12 sm:pt-0 xl:pt-12 sm:text-lg font-semibold mb-12 sm:mb-12 text-secondary">
               Get In Touch
             </h3>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
@@ -260,22 +260,18 @@ const Footer = () => {
                   Kazhipattur, Chennai, <br />
                   Tamilnadu, 603103.
                 </p>
-                <a
-                  href="https://cplc.codework.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-xs sm:text-sm text-secondary hover:text-secondary/80 mt-2 transition-colors duration-300"
-                >
-                  <BsGlobe2 className="text-secondary" />
-                  <span>Join our AI course</span>
-                </a>
+                <p className="text-xs sm:text-sm text-white/90 mt-3">
+                  No. 305, 3rd Floor, Alpha Block, <br />
+                  SSPDL Alpha City, Navalur, OMR, <br />
+                  Chennai, Tamil Nadu 600130
+                </p>
               </div>
             </div>
           </div>
 
           {/* USA */}
           <div>
-            <h3 className="text-base  sm:text-lg font-semibold mb-3 sm:mb-4 text-secondary">
+            <h3 className="text-base  sm:text-lg font-semibold mb-10  sm:mb-12 text-secondary">
               USA
             </h3>
             <div className="flex items-start space-x-4">
@@ -287,8 +283,9 @@ const Footer = () => {
                 <br />
                 Buffalo Grove, IL 60089, USA
                 <br />
-                +13144455064
+                 Call:+13144455064
               </p>
+              
           
                
               
@@ -318,6 +315,15 @@ const Footer = () => {
                 </button>
               </div>
             </Link>
+            <a
+              href="https://cplc.codework.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-xs sm:text-sm text-secondary hover:text-secondary/80 mt-4 transition-colors duration-300"
+            >
+              <BsGlobe2 className="text-secondary" />
+              <span>Join our AI course</span>
+            </a>
           </div>
         </div>
       </div>

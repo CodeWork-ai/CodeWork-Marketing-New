@@ -1,5 +1,18 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+// API endpoint configuration with backward-compatible fallback
+const API_ENDPOINTS = {
+  ASK_STREAM: process.env.NEXT_PUBLIC_CHATBOT_ENDPOINT || "https://prod-api.codework.ai/api/v1/ask-stream",
+};
+
+// Utility: make URLs clickable anchor tags
+const linkifyUrls = (text) => {
+  const urlRegex = /(https?:\/\/[^\s<]+)/g;
+  return text.replace(urlRegex, (url) => {
+    const cleanUrl = url.replace(/[`'\"]/g, "");
+    return `<a href="${cleanUrl}" class="text-blue-500" target="_blank" rel="noopener noreferrer">${cleanUrl}</a>`;
+  });
+};
 
 const formatBotResponse = (text) => {
   let responseText = text;
@@ -29,6 +42,17 @@ const formatBotResponse = (text) => {
       }
     }
   }
+
+  // Strip any SSE 'data:' prefixes line-by-line and normalize
+  responseText = responseText
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^data:\s*/, "").trim())
+    .filter((line) => line && line !== "[DONE]")
+    .join("\n");
+
+  // Replace backticked URLs and linkify
+  responseText = responseText.replace(/`(https?:\/\/[^`\s]+)`/g, "$1");
+  responseText = linkifyUrls(responseText);
 
   return responseText
     .replace(/\*\*/g, '') // Remove Markdown bold
@@ -129,38 +153,88 @@ const ChatBot = () => {
       setIsTyping(true);
       setIsSubmitting(true);
 
-      const response = await fetch(`https://prod-api.codework.ai/api/v1/ask-simple`, {
+      const response = await fetch(API_ENDPOINTS.ASK_STREAM, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'text/event-stream',
         },
         body: JSON.stringify({
-          question: question
-        })
+          question: question,
+        }),
       });
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.text(); 
-      
-      // Try to parse as JSON, fallback to text
-      let botResponse;
-      try {
-        const jsonData = JSON.parse(data);
-        botResponse = jsonData.answer || jsonData.response || jsonData.message || data;
-      } catch (e) {
-        botResponse = data;
+      let combinedAnswer = '';
+      let finalUrl = null;
+
+      // Prefer streaming reader when available
+      const reader = response.body && response.body.getReader ? response.body.getReader() : null;
+      if (reader) {
+        const decoder = new TextDecoder();
+        let doneReading = false;
+
+        while (!doneReading) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          const chunkText = decoder.decode(value, { stream: true });
+
+          // Process SSE lines
+          const lines = chunkText.split(/\r?\n/);
+          for (const rawLine of lines) {
+            const line = rawLine.trim();
+            if (!line.startsWith('data:')) continue;
+
+            const payload = line.replace(/^data:\s*/, '');
+            if (payload === '[DONE]') {
+              doneReading = true;
+              break;
+            }
+
+            try {
+              const json = JSON.parse(payload);
+              if (json.answer) {
+                combinedAnswer += json.answer.endsWith('\n') ? json.answer : json.answer + '\n';
+              }
+              if (json.url) {
+                const clean = String(json.url).replace(/[`'\"]/g, '').trim();
+                if (clean) finalUrl = clean;
+              }
+            } catch {
+              // Not JSON, append raw text (without 'data:') and ensure newline
+              combinedAnswer += payload + '\n';
+            }
+          }
+        }
+      } else {
+        // Fallback: non-streaming
+        const data = await response.text();
+        // Try to parse as JSON, fallback to text
+        try {
+          const jsonData = JSON.parse(data);
+          combinedAnswer = jsonData.answer || jsonData.response || jsonData.message || data;
+          if (jsonData.url) {
+            const clean = String(jsonData.url).replace(/[`'\"]/g, '').trim();
+            if (clean) finalUrl = clean;
+          }
+        } catch {
+          combinedAnswer = data;
+        }
       }
 
-      const formattedText = formatBotResponse(botResponse);
-      
+      const formattedText = formatBotResponse(combinedAnswer);
+      const finalHtml = finalUrl
+        ? `${formattedText}<br>Learn more: <a href="${finalUrl}" class="text-blue-500" target="_blank" rel="noopener noreferrer">${finalUrl}</a>`
+        : formattedText;
+
       setMessages((prev) => [
         ...prev,
         {
           id: prev.length + 1,
-          text: formattedText,
+          text: finalHtml,
           sender: "bot",
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         },
@@ -168,7 +242,7 @@ const ChatBot = () => {
 
     } catch (error) {
       console.error("❌ API error:", error);
-      
+
       setMessages((prev) => [
         ...prev,
         {
@@ -675,3 +749,5 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
+
+// (moved to top)
