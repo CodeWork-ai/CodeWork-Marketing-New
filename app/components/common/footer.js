@@ -260,7 +260,14 @@ const Footer = () => {
                   Kazhipattur, Chennai, <br />
                   Tamilnadu, 603103.
                 </p>
-                <p className="text-xs sm:text-sm text-white/90 mt-3">
+              </div>
+            </div>
+            <div className="flex items-start pt-3 space-x-4">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
+                <FaMapMarkerAlt size={16} className="text-primary" />
+              </div>
+              <div>
+                <p className="text-xs sm:text-sm text-white/90">
                   No. 305, 3rd Floor, Alpha Block, <br />
                   SSPDL Alpha City, Navalur, OMR, <br />
                   Chennai, Tamil Nadu 600130
