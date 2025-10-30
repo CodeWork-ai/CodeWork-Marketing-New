@@ -21,31 +21,31 @@ const OurProduct = () => {
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6 md:mb-8">
             <span className="text-secondary text-sm font-medium">— Our Products —</span>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight px-4">
             Our <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Products</span>
           </h1>
           
-          <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-8"></div>
+          <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-6 md:mb-8"></div>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light px-4">
             Innovative <span className="text-secondary font-medium">AI-powered solutions</span> designed to transform industries and improve lives.
           </p>
         </div>
 
-        {/* Product Cards */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+        {/* First Row - Product Cards */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 mb-12 md:mb-16 lg:mb-20">
           
           {/* Card 1 - Hyperflex AI */}
           <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
             
             {/* Product Label */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="w-28 h-14  backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20">
+              <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20">
                 <img
                   src="/Hyperflx.svg"
                   alt="Hyperflex AI Logo"
@@ -95,7 +95,7 @@ const OurProduct = () => {
             
             {/* Product Label */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="w-28 h-14  backdrop-blur-sm p-1 rounded-2xl  shadow-lg border border-white/20">
+              <div className="w-28 h-14 backdrop-blur-sm p-1 rounded-2xl shadow-lg border border-white/20">
                 <img
                   src="/RadiInsight.svg"
                   alt="Radi Insight Logo"
@@ -140,12 +140,12 @@ const OurProduct = () => {
             <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
           </div>
 
-                {/* Card 3 - Radi Insight Scan */}
+          {/* Card 3 - Radi Insight Scan */}
           <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
             
             {/* Product Label */}
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="w-28 h-14  backdrop-blur-sm p-1 rounded-2xl  shadow-lg border border-white/20">
+              <div className="w-28 h-14 backdrop-blur-sm p-1 rounded-2xl shadow-lg border border-white/20">
                 <img
                   src="/RadiInsightscan.svg"
                   alt="Radi Insight Scan"
@@ -158,7 +158,7 @@ const OurProduct = () => {
             <div className="relative overflow-hidden rounded-t-3xl">
               <img
                 src="/CaseStudies/colonScan.jpg"
-                alt="Radi Insight 3D"
+                alt="Radi Insight Scan"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
@@ -168,10 +168,10 @@ const OurProduct = () => {
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
-                Radi Insight Scan
+                  Radi Insight Scan
                 </h3>
                 <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                 Making Medical Reports More Accessible.
+                  Making Medical Reports More Accessible.
                 </p>
                 <a
                   href="/radi-insight-scan"
@@ -189,7 +189,216 @@ const OurProduct = () => {
             <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
             <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
           </div>
+          
         </div>
+
+        {/* Second Row - Product Cards */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 mb-12 md:mb-16 lg:mb-20">
+          
+          {/* Card 1 - WorkLogix */}
+          <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
+            
+            {/* Product Label */}
+           <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+  <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20 flex items-center justify-center">
+    <p className="font-bold text-base bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent tracking-wide">
+      Work Logix
+    </p>
+  </div>
+</div>
+
+
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-t-3xl">
+              <img
+                src="/CaseStudies/wl.jpg"
+                alt="WorkLogix"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
+                  WorkLogix
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  Smarter Task and Team Management
+                </p>
+                <a
+                  href="/worklogix-ai"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 text-sm font-medium opacity-0 group-hover:opacity-100 delay-200"
+                >
+                  Explore Product
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
+          </div>
+
+          {/* Card 2 - HireLens */}
+          <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
+            
+            {/* Product Label */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+  <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20 flex items-center justify-center">
+    <p className="font-bold text-base bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent tracking-wide">
+      HireLens
+    </p>
+  </div>
+</div>
+
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-t-3xl">
+              <img
+                src="/CaseStudies/Hireleancs.jpg"
+                alt="HireLens"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
+                  HireLens
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  Secure Online Interview and Exam Proctoring 
+                </p>
+                <a
+                  href="/hirelense-ai"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 text-sm font-medium opacity-0 group-hover:opacity-100 delay-200"
+                >
+                  Explore Product
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
+          </div>
+
+          {/* Card 3 - Hirelysze */}
+          <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
+            
+            {/* Product Label */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+  <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20 flex items-center justify-center">
+    <p className="font-bold text-base bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent tracking-wide">
+      Hirelysze
+    </p>
+  </div>
+</div>
+
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-t-3xl">
+              <img
+                src="/CaseStudies/hire.jpg"
+                alt="Hirelysze"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
+                  Hirelysze
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  Intelligent AI Interview Platform
+                </p>
+                <a
+                  href="/hirelyszs-ai"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 text-sm font-medium opacity-0 group-hover:opacity-100 delay-200"
+                >
+                  Explore Product
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
+          </div>
+          
+        </div>
+
+        {/* Third Row - Single Product Card (Centered on Left) */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-start gap-8 lg:gap-12 xl:gap-16">
+          
+          {/* Card 1 - Additional Product */}
+          <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 shadow-2xl shadow-secondary/25">
+            
+            {/* Product Label */}
+             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+  <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20 flex items-center justify-center">
+    <p className="font-bold text-base bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent tracking-wide">
+      Edubot
+    </p>
+  </div>
+</div>
+
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-t-3xl">
+              <img
+                src="/CaseStudies/edu.jpg"
+                alt="Product Image"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+            </div>
+
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary via-primary/95 to-transparent">
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">
+                  Edubot
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                   AI Powered Smart Learning Assistant
+                </p>
+                <a
+                  href="/edubot-ai"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 text-sm font-medium opacity-0 group-hover:opacity-100 delay-200"
+                >
+                  Explore Product
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Corner Decorations */}
+            <div className="absolute -top-2 -left-2 w-8 h-8 border-l-4 border-t-4 border-secondary rounded-tl-2xl opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-4 border-b-4 border-secondary rounded-br-2xl opacity-60"></div>
+          </div>
+          
+        </div>
+      </div>
+
+      {/* Enhanced Top Decoration */}
+      <div className="absolute top-0 left-0 opacity-20">
+        <div className="w-32 h-16 md:w-64 md:h-32 bg-gradient-to-r from-secondary/30 to-transparent rounded-br-full"></div>   
       </div>
 
       {/* Enhanced Bottom Decoration */}
