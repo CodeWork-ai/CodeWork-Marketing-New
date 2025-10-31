@@ -81,7 +81,7 @@ const HirelyszsLanding = () => {
               {/* Image container with enhanced effects */}
               <div className="relative h-full">
                 <img
-                  src="/CaseStudies/hire.jpg"
+                  src="/CaseStudies/Hires.jpg"
                   alt="Hirelysze AI interview platform interface"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />

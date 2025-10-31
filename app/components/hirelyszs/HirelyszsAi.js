@@ -104,7 +104,7 @@ function HirelyszsAi() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/hirelysze1.jpg"
+                src="/CaseStudies/Hirelyss1.jpg"
                 alt="Hirelysze AI interview platform interface"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -118,7 +118,7 @@ function HirelyszsAi() {
             
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/Hirelysze.jpg"
+                src="/CaseStudies/Hirelyss.jpg"
                 alt="Hirelysze recruiter dashboard"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />

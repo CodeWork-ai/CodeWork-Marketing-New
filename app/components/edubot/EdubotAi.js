@@ -105,7 +105,7 @@ function EdubotAi() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/edub1.jpg"
+                src="/CaseStudies/Edubots1.jpg"
                 alt="Edubot interactive learning interface"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -119,7 +119,7 @@ function EdubotAi() {
             
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/edub2.jpg"
+                src="/CaseStudies/Edubots2.jpg"
                 alt="Edubot personalized learning dashboard"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
