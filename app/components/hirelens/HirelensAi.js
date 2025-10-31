@@ -115,7 +115,7 @@ function HirelensAi() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/hirelens1.jpg"
+                src="/CaseStudies/Hirelans1.jpg"
                 alt="HireLens proctoring interface"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -129,7 +129,7 @@ function HirelensAi() {
             
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/hirelens2.jpg"
+                src="/CaseStudies/Hirelans2.jpg"
                 alt="HireLens exam management view"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />

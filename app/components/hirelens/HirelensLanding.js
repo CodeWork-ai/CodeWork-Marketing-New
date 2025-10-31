@@ -95,7 +95,7 @@ const HirelensLanding = () => {
               {/* Image container with enhanced effects */}
               <div className="relative h-full">
                 <img
-                  src="/CaseStudies/hirelens.jpg"
+                  src="/CaseStudies/Hirelans.jpg"
                   alt="HireLens proctoring interface"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />

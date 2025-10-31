@@ -86,7 +86,7 @@ const WorklogixLanding = () => {
               {/* Image container with enhanced effects */}
               <div className="relative h-full">
                 <img
-                  src="/CaseStudies/worklogix.jpg"
+                  src="/CaseStudies/Work1.jpg"
                   alt="WorkLogix dashboard interface"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />

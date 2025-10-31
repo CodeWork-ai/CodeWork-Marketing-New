@@ -211,7 +211,7 @@ const OurProduct = () => {
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-t-3xl">
               <img
-                src="/CaseStudies/wl.jpg"
+                src="/CaseStudies/worklogix.jpg"
                 alt="WorkLogix"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -259,7 +259,7 @@ const OurProduct = () => {
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-t-3xl">
               <img
-                src="/CaseStudies/Hireleancs.jpg"
+                src="/CaseStudies/Hirelanss.jpg"
                 alt="HireLens"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -307,7 +307,7 @@ const OurProduct = () => {
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-t-3xl">
               <img
-                src="/CaseStudies/hire.jpg"
+                src="/CaseStudies/Hires.jpg"
                 alt="Hirelysze"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -360,7 +360,7 @@ const OurProduct = () => {
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-t-3xl">
               <img
-                src="/CaseStudies/edu.jpg"
+                src="/CaseStudies/Edus.jpg"
                 alt="Product Image"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />

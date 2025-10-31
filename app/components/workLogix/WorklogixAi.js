@@ -110,7 +110,7 @@ function WorklogixAi() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/worklogix1.jpg"
+                src="/CaseStudies/worklog1.jpg"
                 alt="WorkLogix dashboard interface"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -124,7 +124,7 @@ function WorklogixAi() {
             
             <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/CaseStudies/worklogic.jpg"
+                src="/CaseStudies/working.jpg"
                 alt="WorkLogix project management view"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
