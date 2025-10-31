@@ -28,11 +28,11 @@ const WorklogixLanding = () => {
          {/* Enhanced Logo with glow effect - Alternative Flex approach */}
 <div className="absolute top-1 left-0 right-0 flex justify-center z-30">
   <div className="relative">
-    <img
-      src="/WorkLogix.svg"
-      alt="WorkLogix Logo"
-      className="w-32 h-auto drop-shadow-lg"
-    />
+    <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20 flex items-center justify-center">
+    <p className="font-bold text-base bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent tracking-wide">
+      WorkLogix
+    </p>
+  </div>
     <div className="absolute inset-0 w-32 h-auto bg-secondary/20 rounded-lg blur-xl -z-10"></div>
   </div>
 </div>

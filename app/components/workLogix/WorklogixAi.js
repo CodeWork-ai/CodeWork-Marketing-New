@@ -68,9 +68,10 @@ function WorklogixAi() {
                 <span className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></span>
                 Why We Built WorkLogix
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
-                At <span className="text-secondary font-medium">Codework</span>, we saw how organizations struggle with scattered communication, missed deadlines, and unclear accountability. So, we built <span className="text-secondary font-medium">WorkLogix</span> — a web-based platform that brings leadership, managers, and employees together in one streamlined workspace. WorkLogix helps companies assign, monitor, and complete projects efficiently while giving leaders full visibility across teams.
-              </p>
+              <p className="text-lg text-white/90 leading-relaxed text-justify">
+  At <span className="text-secondary font-medium">Codework</span>, we saw how organizations struggle with scattered communication, missed deadlines, and unclear accountability. So, we built <span className="text-secondary font-medium">WorkLogix</span> — a web-based platform that brings leadership, managers, and employees together in one streamlined workspace. WorkLogix helps companies assign, monitor, and complete projects efficiently while giving leaders full visibility across teams.
+</p>
+
               
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
             </div>
@@ -254,7 +255,7 @@ function WorklogixAi() {
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none"></div>
             
             <h3 className="text-4xl font-bold mb-6 relative z-10">
-              Result: Simpler Management, Smarter Teams
+              Simpler Management, Smarter Teams
             </h3>
             <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-8 text-primary/90 relative z-10">
               <span className="font-medium">WorkLogix</span> helps organizations stay on top of projects without the chaos. With clear roles, instant reporting, and transparent collaboration — leadership gains control, managers gain clarity, and employees stay focused.

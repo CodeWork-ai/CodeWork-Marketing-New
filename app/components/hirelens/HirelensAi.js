@@ -71,7 +71,7 @@ function HirelensAi() {
                 <span className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></span>
                 Why We Built HireLens
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-white/90 leading-relaxed text-justify">
                 Many organizations struggle to run reliable remote assessments. Scheduling conflicts, manual monitoring, inconsistent evaluations, and risk of malpractice make remote hiring stressful for recruiters and candidates. We built <span className="text-secondary font-medium">HireLens</span> to provide a secure, scalable, and automated way to run remote interviews and exams. The platform reduces manual effort, improves transparency, and protects exam integrity.
               </p>
               
@@ -263,7 +263,7 @@ function HirelensAi() {
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none"></div>
             
             <h3 className="text-4xl font-bold mb-6 relative z-10">
-              Result: Secure Remote Hiring, Trusted Assessment
+               Secure Remote Hiring, Trusted Assessment
             </h3>
             <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-8 text-primary/90 relative z-10">
               <span className="font-medium">HireLens</span> provides a modern, secure, and intelligent way to manage online interviews and exams during hiring. By combining automation, monitoring, and reporting, it ensures organizations can confidently assess candidates remotely without compromising exam integrity.

@@ -65,7 +65,7 @@ function HirelyszsAi() {
                 <span className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></span>
                 Why We Built Hirelysze
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-white/90 leading-relaxed text-justify">
                 We noticed that traditional interviews often consume too much time and lack consistency. Recruiters struggle to manage large volumes of applications, while candidates experience delayed feedback and subjective evaluations. We built <span className="text-secondary font-medium">Hirelysze</span> to address these gaps. It is designed to make interviews <span className="text-secondary font-medium">faster, more accurate, and bias free</span> by simulating human like conversations powered by AI and 3D technology. The goal is simple: to help recruiters find the right talent with speed and confidence.
               </p>
               
@@ -252,7 +252,7 @@ function HirelyszsAi() {
             </p>
             <div className="bg-primary/20 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto relative z-10 border border-primary/30">
               <p className="text-lg font-medium">
-                Result: Faster screening, consistent results, and an immersive interview experience for every candidate.
+               Faster screening, consistent results, and an immersive interview experience for every candidate.
               </p>
             </div>
           </div>
