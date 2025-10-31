@@ -62,7 +62,7 @@ function Hyperflexai() {
                 <span className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></span>
                 Why We Built Hyperflx
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-white/90 leading-relaxed text-justify">
                 At <span className="text-secondary font-medium">Codework</span>, we saw a gap in how students and researchers access reliable academic content. We built <span className="text-secondary font-medium">Hyperflx</span>, an AI-powered search engine made specifically for education and research. It delivers trusted, easy-to-understand, and well-organized results to make learning smoother and faster.
               </p>
               

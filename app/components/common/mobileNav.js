@@ -86,7 +86,7 @@ export default function MobileNavbar() {
         },
     ] },
     {
-      href: "/build-your-career-with-codework",
+      href: "/products-we-build",
       label: "Our Products",
       dropdown: [],
     },

@@ -65,7 +65,7 @@ function EdubotAi() {
                 <span className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></span>
                 Why We Built Edubot
               </h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <p className="text-lg text-white/90 leading-relaxed text-justify">
                 We noticed that many students struggle to stay motivated and organized while learning online. Traditional study tools often lack interaction, instant feedback, and personalization. We created <span className="text-secondary font-medium">Edubot</span> to bring the experience of a real tutor into a digital space. The system understands each learner's pace, adjusts lessons accordingly, and provides support whenever students need it.
               </p>
               
